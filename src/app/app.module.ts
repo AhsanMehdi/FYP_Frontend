@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { SignupPageComponent } from './components/signuppage/signuppage.component';
 import { SigninPageComponent } from './components/signinpage/signinpage.component';
+import { ProjectDetailsComponent } from './components/projectdetails/projectdetails.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
 
@@ -21,7 +22,8 @@ import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-ui
     FooterComponent,
     HomeComponent,
     SignupPageComponent,
-    SigninPageComponent
+    SigninPageComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,

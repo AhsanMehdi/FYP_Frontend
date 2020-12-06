@@ -8,6 +8,9 @@ import {ProjecteditComponent} from './components/projectedit/projectedit.compone
 import {NgosignupComponent} from './components/ngosignup/ngosignup.component';
 import {NgohomeComponent} from './components/ngohome/ngohome.component';
 import {SigninPageComponent} from './components/signinpage/signinpage.component';
+import {ProjectDetailsComponent} from './components/projectdetails/projectdetails.component';
+
+
 
 const routes: Routes = [
   {
@@ -18,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: 'signinpage', component: SigninPageComponent
+  },
+  {
+    path: 'projectdetails', component: ProjectDetailsComponent
   },
   {
     path: 'home', component: HomeComponent
