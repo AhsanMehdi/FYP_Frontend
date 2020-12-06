@@ -1,0 +1,31 @@
+<mdb-stepper #stepper>
+    <mdb-step name="Step 1" [stepForm]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <div class="md-form">
+          <input type="text" class="form-control" mdbInput mdbValidate formControlName="email">
+          <label for="">Email</label>
+          <mdb-error *ngIf="email.invalid && (email.dirty || email.touched)">Input invalid</mdb-error>
+          <mdb-success *ngIf="email.valid && (email.dirty || email.touched)">Input valid</mdb-success>
+        </div>
+      </form>
+      <button mdbBtn size="sm" color="primary" (click)="stepper.next()">CONTINUE</button>
+    </mdb-step>
+    <mdb-step name="Step 2" [stepForm]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <div class="md-form">
+          <input type="password" class="form-control" mdbInput mdbValidate formControlName="password">
+          <label for="">Password</label>
+          <mdb-error *ngIf="password.invalid && (password.dirty || password.touched)">Input invalid</mdb-error>
+          <mdb-success *ngIf="password.valid && (password.dirty || password.touched)">Input valid</mdb-success>
+        </div>
+      </form>
+      <button mdbBtn size="sm" color="primary" (click)="stepper.next()">CONTINUE</button>
+      <button mdbBtn size="sm" color="secondary" (click)="stepper.previous()">BACK</button>
+    </mdb-step>
+    <mdb-step name="Step 3" label="Step 3 label">
+      <p class="pl-2">Finish!</p>
+      <div class="step-actions">
+        <button mdbBtn  size="sm" color="primary" (click)="onSubmit()">SUBMIT</button>
+      </div>
+    </mdb-step>
+  </mdb-stepper>
