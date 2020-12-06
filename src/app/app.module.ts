@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { SignupPageComponent } from './components/signuppage/signuppage.component';
+import { SigninPageComponent } from './components/signinpage/signinpage.component';
+import { AppRoutingModule } from './app-routing.module';
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
 
 @NgModule({
@@ -16,13 +19,16 @@ import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-ui
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    SignupPageComponent,
+    SigninPageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
     ToastModule.forRoot(),
     MDBBootstrapModulesPro.forRoot(),
     AgmCoreModule.forRoot({
