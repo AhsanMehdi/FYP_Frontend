@@ -14,6 +14,10 @@ import { SigninPageComponent } from './components/signinpage/signinpage.componen
 import { ProjectDetailsComponent } from './components/projectdetails/projectdetails.component';
 import { UploadProjectComponent } from './components/uploadproject/uploadproject.component';
 import { ChatBoxComponent } from './components/chatbox/chatbox.component';
+import { DonorProfileComponent } from './components/donorprofile/donorprofile.component';
+import { NgoProfileComponent } from './components/ngoprofile/ngoprofile.component';
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +33,9 @@ import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-ui
     SigninPageComponent,
     ProjectDetailsComponent,
     UploadProjectComponent,
-    ChatBoxComponent
+    ChatBoxComponent,
+    DonorProfileComponent,
+    NgoProfileComponent
 
   ],
   imports: [

@@ -11,6 +11,9 @@ import {SigninPageComponent} from './components/signinpage/signinpage.component'
 import {ProjectDetailsComponent} from './components/projectdetails/projectdetails.component';
 import { UploadProjectComponent } from './components/uploadproject/uploadproject.component';
 import { ChatBoxComponent } from './components/chatbox/chatbox.component';
+import { DonorProfileComponent } from './components/donorprofile/donorprofile.component';
+import { NgoProfileComponent } from './components/ngoprofile/ngoprofile.component';
+
 
 
 
@@ -35,6 +38,12 @@ const routes: Routes = [
   },
   {
     path: 'chatbox', component: ChatBoxComponent
+  },
+  {
+    path: 'donorprofile', component: DonorProfileComponent
+  },
+  {
+    path: 'ngoprofile', component: NgoProfileComponent
   },
   {
     path: 'home', component: HomeComponent
