@@ -2,7 +2,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
@@ -16,7 +15,7 @@ import { UploadProjectComponent } from './components/uploadproject/uploadproject
 import { ChatBoxComponent } from './components/chatbox/chatbox.component';
 import { DonorProfileComponent } from './components/donorprofile/donorprofile.component';
 import { NgoProfileComponent } from './components/ngoprofile/ngoprofile.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -42,6 +41,7 @@ import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-ui
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     ToastModule.forRoot(),

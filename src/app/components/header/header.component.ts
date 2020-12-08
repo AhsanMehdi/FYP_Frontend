@@ -6,8 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  showTrnsaparent = true
+  constructor() {
 
-  constructor() { }
+
+    if (window.location.href != "http://localhost:4200/"  ) {
+
+      this.showTrnsaparent=false
+    }
+
+    console.log( window.location.href);
+   }
 
   ngOnInit(): void {
   }
