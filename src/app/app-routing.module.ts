@@ -10,6 +10,10 @@ import {NgohomeComponent} from './components/ngohome/ngohome.component';
 import {SigninPageComponent} from './components/signinpage/signinpage.component';
 import {ProjectDetailsComponent} from './components/projectdetails/projectdetails.component';
 import { UploadProjectComponent } from './components/uploadproject/uploadproject.component';
+import { ChatBoxComponent } from './components/chatbox/chatbox.component';
+
+
+
 
 
 
@@ -28,6 +32,9 @@ const routes: Routes = [
   },
   {
     path: 'uploadproject', component: UploadProjectComponent
+  },
+  {
+    path: 'chatbox', component: ChatBoxComponent
   },
   {
     path: 'home', component: HomeComponent

@@ -13,6 +13,9 @@ import { SignupPageComponent } from './components/signuppage/signuppage.componen
 import { SigninPageComponent } from './components/signinpage/signinpage.component';
 import { ProjectDetailsComponent } from './components/projectdetails/projectdetails.component';
 import { UploadProjectComponent } from './components/uploadproject/uploadproject.component';
+import { ChatBoxComponent } from './components/chatbox/chatbox.component';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
 
@@ -25,7 +28,9 @@ import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-ui
     SignupPageComponent,
     SigninPageComponent,
     ProjectDetailsComponent,
-    UploadProjectComponent
+    UploadProjectComponent,
+    ChatBoxComponent
+
   ],
   imports: [
     BrowserModule,
