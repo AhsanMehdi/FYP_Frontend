@@ -1,8 +1,12 @@
+<div class="container mt-5">
+<br>
+<br>
+<br>
 <mdb-card>
 
-    <mdb-card-header class="info-color white-text text-center py-4">
+    <mdb-card-header class="wheat color green-text text-center py-4">
       <h5>
-        <strong>Contact us</strong>
+        <strong>Personal Information</strong>
       </h5>
     </mdb-card-header>
   
@@ -50,7 +54,6 @@
         >
       </div>
   
-      <span>Subject</span>
       <div class="row">
         <div class="col-md-12 mx-auto">
           <div class="md-form">
@@ -88,37 +91,15 @@
         >
       </div>
   
-      <div class="row">
-        <div class="col-md-6 mx-auto d-flex justify-content-center">
-          <div class="md-form">
-            <mdb-checkbox mdbValidate formControlName="contactFormCopy"
-              >Send me a copy of this message</mdb-checkbox
-            >
-            <mdb-error *ngIf="copy.invalid && (copy.dirty || copy.touched)"
-              >Input invalid</mdb-error
-            >
-            <mdb-success *ngIf="copy.valid && (copy.dirty || copy.touched)"
-              >Input valid</mdb-success
-            >
-          </div>
-        </div>
-      </div>
+   
   
-      <button
-        mdbBtn
-        color="info"
-        outline="true"
-        rounded="true"
-        block="true"
-        class="z-depth-0 my-4 waves-effect"
-        mdbWavesEffect
-        type="submit"
-        [disabled]="disabledSubmitButton"
-      >
-        Send
-      </button>
+      <button mdbBtn type="submit" color="green" rounded="true" mdbWavesEffect>Save </button>
     </form>
   
     </mdb-card-body>
   
   </mdb-card>
+  
+
+</div>
+<hr>

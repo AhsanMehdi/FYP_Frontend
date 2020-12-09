@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-ngoprofile',
   templateUrl: './ngoprofile.component.html',
   styleUrls: ['./ngoprofile.component.scss']
 })
-export class NgoProfileComponent implements OnInit {
+export class NgoProfileComponent {
+  validatingForm: FormGroup;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.validatingForm = new FormGroup({
+      modalFormDarkEmail: new FormControl('', Validators.email),
+      modalFormDarkPassword: new FormControl('', Validators.required)
+    });
   }
 
+  get modalFormDarkEmail() {
+    return this.validatingForm.get('modalFormDarkEmail');
+  }
+
+  get modalFormDarkPassword() {
+    return this.validatingForm.get('modalFormDarkPassword');
+  }
 }

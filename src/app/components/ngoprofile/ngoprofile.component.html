@@ -1,37 +1,93 @@
-<div class="container">
-    <div class="md-form input-group mb-3">
-        <div class="input-group-prepend">
-          <button mdbBtn color="primary" size="md" class="m-0 px-3 py-2" type="button" id="button-addon1"
-            mdbWavesEffect>Button</button>
+<br>
+<br>
+<button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+        (click)="frame.show()" mdbWavesEffect>Launch Modal
+</button>
+
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true" >
+  <div class="modal-dialog form-dark" role="document">
+    <!--Content-->
+    <mdb-card style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg')"
+              class="modal-content">
+      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+        <!--Header-->
+        <div class="modal-header text-center pb-4">
+          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
+            <strong>SIGN</strong>
+            <a class="green-text font-weight-bold">
+              <strong> UP</strong>
+            </a>
+          </h3>
+          <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
-          aria-describedby="button-addon1">
-      </div>
-      
-      <div class="md-form input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-          aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button mdbBtn color="default" size="md" class="m-0 px-3 py-2" type="button" id="button-addon2"
-            mdbWavesEffect>Button</button>
+        <!--Body-->
+        <div class="modal-body">
+          <!--Body-->
+          <div class="md-form mb-5">
+            <input type="email" id="Form-email5" class="form-control white-text" mdbValidate mdbInput
+                   [formControl]="modalFormDarkEmail">
+            <label for="Form-email5">Your email</label>
+            <mdb-error *ngIf="modalFormDarkEmail.invalid && (modalFormDarkEmail.dirty || modalFormDarkEmail.touched)">
+              Input invalid
+            </mdb-error>
+            <mdb-success *ngIf="modalFormDarkEmail.valid && (modalFormDarkEmail.dirty || modalFormDarkEmail.touched)">
+              Input valid
+            </mdb-success>
+          </div>
+
+          <div class="md-form pb-3">
+            <input type="password" id="Form-pass5" class="form-control white-text" mdbValidate mdbInput
+                   [formControl]="modalFormDarkPassword">
+            <label for="Form-pass5">Your password</label>
+            <mdb-error
+              *ngIf="modalFormDarkPassword.invalid && (modalFormDarkPassword.dirty || modalFormDarkPassword.touched)">
+              Input invalid
+            </mdb-error>
+            <mdb-success
+              *ngIf="modalFormDarkPassword.valid && (modalFormDarkPassword.dirty || modalFormDarkPassword.touched)">
+              Input valid
+            </mdb-success>
+            <div class="form-group mt-4">
+              <mdb-checkbox>Accept the
+                <a href="#" class="green-text font-weight-bold"> Terms and Conditions</a></mdb-checkbox>
+              <input class="form-check-input" type="checkbox" id="checkbox624">
+            </div>
+          </div>
+
+          <!--Grid row-->
+          <div class="row d-flex align-items-center mb-4">
+
+            <!--Grid column-->
+            <div class="text-center mb-3 col-md-12">
+              <button type="button" mdbBtn color="success" block="true" rounded="true" class="z-depth-1 waves-light"
+                      mdbWavesEffect>Sign up
+              </button>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-12">
+              <p class="font-small white-text d-flex justify-content-end">Have an account?
+                <a href="#" class="green-text ml-1 font-weight-bold"> Log in</a>
+              </p>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
         </div>
       </div>
-      
-      <div class="md-form input-group mb-3">
-        <div class="input-group-prepend" id="button-addon3">
-          <button mdbBtn color="secondary" size="md" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Button</button>
-          <button mdbBtn color="secondary" size="md" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Button</button>
-        </div>
-        <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons"
-          aria-describedby="button-addon3">
-      </div>
-      
-      <div class="md-form input-group">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons"
-          aria-describedby="button-addon4">
-        <div class="input-group-append" id="button-addon4">
-          <button mdbBtn color="info" size="md" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Button</button>
-          <button mdbBtn color="info" size="md" class="m-0 px-3 py-2" type="button" mdbWavesEffect>Button</button>
-        </div>
-      </div>
-    </div>
+    </mdb-card>
+    <!--/.Content-->
+  </div>
+</div>
