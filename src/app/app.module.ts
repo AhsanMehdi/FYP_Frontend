@@ -15,12 +15,16 @@ import { UploadProjectComponent } from './components/uploadproject/uploadproject
 import { ChatBoxComponent } from './components/chatbox/chatbox.component';
 import { DonorProfileComponent } from './components/donorprofile/donorprofile.component';
 import { NgoProfileComponent } from './components/ngoprofile/ngoprofile.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
+
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import {  NgProgressModule} from "ngx-progressbar";
 
 @NgModule({
   declarations: [
@@ -36,6 +40,7 @@ import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-ui
     DonorProfileComponent,
     NgoProfileComponent
 
+
   ],
   imports: [
     BrowserModule,
@@ -44,6 +49,8 @@ import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-ui
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    HttpModule,
+    BrowserModule, LazyLoadImageModule,
     ToastModule.forRoot(),
     MDBBootstrapModulesPro.forRoot(),
     AgmCoreModule.forRoot({

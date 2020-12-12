@@ -4,7 +4,6 @@ import {HomeComponent} from './components/home/home.component';
 import {SignupPageComponent} from './components/signuppage/signuppage.component';
 import {DonorhomeComponent} from './components/donorhome/donorhome.component';
 import {ProjectComponent} from './components/project/project.component';
-import {ProjecteditComponent} from './components/projectedit/projectedit.component';
 import {NgosignupComponent} from './components/ngosignup/ngosignup.component';
 import {NgohomeComponent} from './components/ngohome/ngohome.component';
 import {SigninPageComponent} from './components/signinpage/signinpage.component';
@@ -62,8 +61,7 @@ const routes: Routes = [
   },
   {
     path: 'project', component: HomeComponent
-  }
-
+  },
 ];
 
 @NgModule({
