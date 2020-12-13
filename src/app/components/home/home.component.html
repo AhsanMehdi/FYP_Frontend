@@ -1,107 +1,166 @@
-
 <div class="view intro" style="background-image: none; z-index: 0; min-height: 700px;">
-  <div class="full-bg-img">
-      <div class="container flex-center">
-          <div class="row mt-5 py-5">
-              <div class="col-md-12 wow fadeIn mb-3" style="animation-name: none; visibility: visible;">
-                  <div class="text-center">
-                      <h1 class="display-2 mb-2 wow white-text fadeInDown" data-wow-delay="0.3s">CharityGo <a class="white-text font-bold"> Charity Based</a></h1>
-                      <h5 class="font-up mb-3 mt-1 white-text font-bold wow fadeInDown" data-wow-delay="0.4s">Social Media collaborative Platform where Donors & NGO's Communicate together</h5>
-                     <a href="/signuppage" mdbBtn color="danger" rounded="true" mdbWavesEffect class="wow fadeInLeft" data-wow-delay="0.3s">Join Us</a>
+    <div class="full-bg-img">
+        <div class="container flex-center">
+            <div class="row mt-5 py-5">
+                <div class="col-md-12 wow fadeIn mb-3" style="animation-name: none; visibility: visible;">
+                    <div class="text-center">
+                        <h1 class="display-2 mb-2 wow white-text fadeInDown" data-wow-delay="0.3s"> <a
+                                class="white-text font-bold"> Charity Based</a></h1>
+                        <h5 class="font-up mb-3 mt-1 white-text font-bold wow fadeInDown" data-wow-delay="0.4s">Social
+                            Media collaborative Platform where Donors & NGO's Communicate together</h5>
+                        <a href="/signuppage" mdbBtn color="danger" rounded="true" mdbWavesEffect class="wow fadeInLeft"
+                            data-wow-delay="0.3s">Join Us</a>
 
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="video-parallax"><video src="/assets/images/video.mp4" frameborder="0" autoplay="true" loop="true"></video>
-  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-parallax"><video src="/assets/images/video.mp4" frameborder="0" autoplay="true"
+            loop="true"></video>
+    </div>
 </div>
 
 <div class="container">
 
-<!--Grid row-->
-<div class="row" >
-  <!--Grid column-->
-  <div class="col-md-12 text-center mb-5">
-    <h1 class="font-bold light-blue-text my-5">Top Rated Projects.</h1>
+    <!--Grid row-->
+    <div class="row">
+        <!--Grid column-->
+        <div class="col-md-12 text-center mb-5">
+            <h1 class="font-bold light-blue-text my-5">Top Rated Projects.</h1>
 
-    <ul class="list-group">
-        <li
-          class="list-group-item"
-          *ngFor="let tutorial of projects; let i = index"
-          [class.active]="i == currentIndex"
-        >
-          {{ tutorial.tittle }}
-        </li>
-      </ul>
+        </div>
+    </div>
+    <!--Grid row-->
 
-  </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center" >
+          <div class="col-lg-4 col-md-12 mb-r wow fadeIn" data-wow-delay="0.2s" *ngFor="let project of projects">
 
-  <!--Grid column-->
-</div>
-<!--Grid row-->
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="view intro blue-slight" style="background-image: url(/assets/images/image1.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
-  <div class="full-bg-img">
-  </div>
-</div>
-
-<div class="view intro hm-purple-slight" style="background-image: url(/assets/images/background1.jpg); background-attachment: fixed; min-height: 700px">
-  <div class="full-bg-img">
-      <div class="container">
-          <div class="d-flex align-items-center d-flex justify-content-center" style="height: 750px">
-              <div class="row mt-5">
-                  <div class="col-md-12 wow fadeIn mb-3">
-                      <div class="intro-info-content text-end">
-                          <community-remarks></community-remarks>
-                      </div>
-                  </div>
-              </div>
+        
+                <div class="col-md-12">
+                  <!--Card-->
+                  <mdb-card cascade="true" wider="true">
+              
+                    <!--Card image-->
+                    <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                      <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg"></mdb-card-img>
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!--/Card image-->
+              
+                    <mdb-card-body cascade="true" class="text-center">
+                      <!--Card content-->
+                      <!--Title-->
+                      <h4 class="card-title">
+                        <strong>{{project.tittle}}</strong>
+                      </h4>
+                      <h5 class="indigo-text">
+                        <strong>Photographer</strong>
+                      </h5>
+              
+                      <mdb-card-text>
+                        Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem
+                        aperiam.
+                      </mdb-card-text>
+              
+                      <!--Linkedin-->
+                      <a class="px-2 icons-sm li-ic">
+                        <mdb-icon fab icon="linkedin-in"> </mdb-icon>
+                      </a>
+                      <!--Twitter-->
+                      <a class="px-2 icons-sm tw-ic">
+                        <mdb-icon fab icon="twitter"> </mdb-icon>
+                      </a>
+                      <!--Dribbble-->
+                      <a class="px-2 icons-sm fb-ic">
+                        <mdb-icon fab icon="facebook-f"> </mdb-icon>
+                      </a>
+              
+                    </mdb-card-body>
+                    <!--/.Card content-->
+              
+                  </mdb-card>
+                  <!--/.Card-->
+                </div>
+                <br>
+                <br>
+              
+             
+         
           </div>
+    
+        </div>
+    
       </div>
-  </div>
-</div>
-<div class="view intro blue-slight" style="background-image: url(/assets/images/image11.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
-  <div class="full-bg-img">
-  </div>
+
 </div>
 
-<div class="view intro hm-purple-slight" style="background-image: url(/assets/images/background4.jpg); background-attachment: fixed; min-height: 700px">
-  <div class="full-bg-img">
-      <div class="container">
-          <div class="d-flex align-items-center d-flex justify-content-center" style="height: 700px">
-              <div class="row mt-5">
-                  <div class="col-md-12 wow fadeIn mb-3">
-                      <div class="intro-info-content text-center">
-                          <h1 class="display-1 white-text mb-2 wow fadeInDown" data-wow-delay="0.3s">In Touch With Future</h1>
-                          <h4 class="mb-3 mt-1 white-text font-bold wow fadeIn" data-wow-delay="0.4s">Ethereum BlockChain</h4>
-                          <a class="btn btn-pink wow fadeIn waves-light" mdbRippleRadius data-wow-delay="0.4s">Read more</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+
+
+
+
+
+
+
+<div class="view intro blue-slight"
+    style="background-image: url(/assets/images/image1.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
+    <div class="full-bg-img">
+    </div>
 </div>
 
-<div class="view intro blue-slight" style="background-image: url(/assets/images/image2.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
-  <div class="full-bg-img">
-  </div>
+<div class="view intro hm-purple-slight"
+    style="background-image: url(/assets/images/background1.jpg); background-attachment: fixed; min-height: 700px">
+    <div class="full-bg-img">
+        <div class="container">
+            <div class="d-flex align-items-center d-flex justify-content-center" style="height: 750px">
+                <div class="row mt-5">
+                    <div class="col-md-12 text-center wow fadeIn mb-3">
+                        <h1 class="font-bold light-white-text my-5 justify-content-center">Up to Minute Campaigns</h1>
+                        <div class="intro-info-content text-end">
+                            <community-remarks></community-remarks>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-  <!-- /.Main -->
+<div class="view intro blue-slight"
+    style="background-image: url(/assets/images/image11.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
+    <div class="full-bg-img">
+    </div>
+</div>
+
+<div class="view intro hm-purple-slight"
+    style="background-image: url(/assets/images/background4.jpg); background-attachment: fixed; min-height: 700px">
+    <div class="full-bg-img">
+        <div class="container">
+            <div class="d-flex align-items-center d-flex justify-content-center" style="height: 700px">
+                <div class="row mt-5">
+                    <div class="col-md-12 wow fadeIn mb-3">
+                        <div class="intro-info-content text-center">
+                            <h1 class="display-1 white-text mb-2 wow fadeInDown" data-wow-delay="0.3s">In Touch With
+                                NGO's</h1>
+                            <h4 class="mb-3 mt-1 white-text font-bold wow fadeIn" data-wow-delay="0.4s"></h4>
+                            <a class="btn btn-pink wow fadeIn waves-light" mdbRippleRadius data-wow-delay="0.4s">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="view intro blue-slight"
+    style="background-image: url(/assets/images/image2.jpg); background-attachment: fixed; background-size: cover; min-height: 700px">
+    <div class="full-bg-img">
+    </div>
+</div>
+<!-- /.Main -->
 
 <!--Main Navigation-->
 
@@ -112,5 +171,3 @@
 
 
 <!--Main Layout-->
-
-
