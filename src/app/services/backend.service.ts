@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-
+import { Observable,of } from 'rxjs';
 import { SignUp, SignIn  } from '../_models';
+import { IProject  } from '../_models';
+import { map,catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -34,5 +36,12 @@ export class BackendService {
     return this.httpClient.post(this.REST_API_SERVER+"/api/auth/signin",  JSON.stringify(signIn), this.options);
   }
 
+  getProjects(): Observable<any> {
+    return  this.httpClient.get(this.REST_API_SERVER+"/api/project",   this.options)
+  }
+
+  // getProjects() {
+  //   return this.httpClient.get(this.REST_API_SERVER+"/api/project",   this.options);
+  // }
 
 }

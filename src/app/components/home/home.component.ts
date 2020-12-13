@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendService } from '../../services/backend.service';
+import { AlertService } from '../../services/alert.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
+import { IProject  } from '../../_models/Iproject';
+import { Router } from '@angular/router'
+
 
 @Component({
   selector: 'app-home',
@@ -6,10 +13,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  projects: any
+  currentTutorial = null;
+  currentIndex = -1;
+  title = '';
+   
+  constructor(  private backendService: BackendService) { }
 
   ngOnInit(): void {
+ 
+    this.backendService.getProjects()
+        .pipe(first())
+        .subscribe(
+          data => {
+            this.projects = data.projects;
+
+          },
+          error => {
+            console.log(error);
+          });
+    
   }
+  
 
 }
