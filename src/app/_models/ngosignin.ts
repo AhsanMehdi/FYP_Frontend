@@ -1,4 +1,6 @@
-﻿export class Donor {
+export class NgoSignIn {
+   
     email: string;
     password: string;
+    
 }
