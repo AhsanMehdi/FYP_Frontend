@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Ngo, Donor } from '../_models';
+import { NgoSignUp, DonorSignUp, NgoSignIn, DonorSignIn  } from '../_models';
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +17,12 @@ export class BackendService {
   }
 
 
-  registerNgo(ngo: Ngo) {
-    return this.httpClient.post(this.REST_API_SERVER+"/ngo-account-controllers", ngo);
+  registerNgo(ngoSignUp:  NgoSignUp) {
+    return this.httpClient.post(this.REST_API_SERVER+"/ngo-account-controllers", ngoSignUp);
   }
 
-  registerDonor(donor: Donor) {
-    return this.httpClient.post(this.REST_API_SERVER+"/donor-account-controllers", donor);
+  registerDonor(donorSignUp: DonorSignUp) {
+    return this.httpClient.post(this.REST_API_SERVER+"/donor-account-controllers", donorSignUp);
   }
 
 }
