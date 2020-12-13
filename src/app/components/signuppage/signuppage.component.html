@@ -21,11 +21,11 @@
                   for Charity Related Activities
             
               </h6>
-              <a href="/signinpage" mdbBtn color="white" outline="true" mdbWavesEffect class="wow fadeInLeft" data-wow-delay="0.3s">Sign in</a>
+             
             </div>
             <!--Grid column-->
             <!--Grid column-->
-            <div class="col-md-6 col-xl-5 mb-4">
+            <div class="col-md-5 col-xl-5 mb-5">
               <!--Form-->
               <mdb-card class="wow fadeInRight" data-wow-delay="0.3s">
                 <mdb-card-body>
@@ -36,23 +36,25 @@
                     <hr class="hr-light">
                   </div>
                   <!--Body-->
+                  <div  *ngIf="signupformshow">
+                  <form [formGroup]="registerUserForm" (ngSubmit)="onSignUpSubmit()">
                   <div class="md-form">
                     <mdb-icon fas icon="user" class="prefix white-text active"></mdb-icon>
-                    <input type="text" id="form3" class="text-white form-control" mdbInput>
-                    <label for="form3" class="text-white">Your name</label>
+                    <input type="text" id="name" formControlName="name" class="text-white form-control" mdbInput>
+                    <label for="name" class="text-white">Your name</label>
                   </div>
                   <div class="md-form">
                     <mdb-icon fas icon="envelope" class="prefix white-text active"></mdb-icon>
-                    <input type="email" id="form2" class="text-white form-control" mdbInput>
-                    <label for="form2" class="text-white">Your email</label>
+                    <input type="email" id="email" formControlName="email" class="text-white form-control" mdbInput>
+                    <label for="email" class="text-white">Your email</label>
                   </div>
                   <div class="md-form">
                     <mdb-icon fas icon="lock" class="prefix text-white active"></mdb-icon>
-                    <input type="password" id="form4" class="text-white form-control" mdbInput>
-                    <label for="form4" class="text-white">Your password</label>
+                    <input type="password" id="password" formControlName="password" class="text-white form-control" mdbInput>
+                    <label for="password" class="text-white">Your password</label>
                   </div>
                   <div class="text-center mt-4">
-                    <button mdbBtn color="indigo" mdbWavesEffect>Sign up</button>
+                    <button type="submit" mdbBtn color="indigo" mdbWavesEffect>Sign up</button>
                     <hr class="hr-light mb-3 mt-4">
                     <div class="inline-ul text-center d-flex justify-content-center">
                       <a class="p-2 m-2 tw-ic">
@@ -66,6 +68,9 @@
                       </a>
                     </div>
                   </div>
+                  <div class="text-center" color="danger">Already have an account? <a href="/signinpage">Login here</a></div>
+                </form>
+              </div>
                 </mdb-card-body>
               </mdb-card>
               <!--/.Form-->

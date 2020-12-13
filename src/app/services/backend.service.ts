@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 
-import { NgoSignUp, DonorSignUp, NgoSignIn, DonorSignIn  } from '../_models';
+import { SignUp, SignIn  } from '../_models';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ import { NgoSignUp, DonorSignUp, NgoSignIn, DonorSignIn  } from '../_models';
 export class BackendService {
 
   private REST_API_SERVER = "http://localhost:3000";
+  private options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,12 +18,21 @@ export class BackendService {
   }
 
 
-  registerNgo(ngoSignUp:  NgoSignUp) {
-    return this.httpClient.post(this.REST_API_SERVER+"/ngo-account-controllers", ngoSignUp);
+  signUp(signUp:  SignUp) {
+
+    
+    signUp.userType="ngo"
+
+    console.log(    JSON.stringify(signUp)
+    )
+    return this.httpClient.post(this.REST_API_SERVER+"/api/auth/signup",  JSON.stringify(signUp), this.options);
+  }
+  signIn(signIn:  SignIn) {
+
+    console.log(    JSON.stringify(signIn)
+    )
+    return this.httpClient.post(this.REST_API_SERVER+"/api/auth/signin",  JSON.stringify(signIn), this.options);
   }
 
-  registerDonor(donorSignUp: DonorSignUp) {
-    return this.httpClient.post(this.REST_API_SERVER+"/donor-account-controllers", donorSignUp);
-  }
 
 }

@@ -16,7 +16,7 @@
                     for Charity Related Activities
               
                 </h6>
-                <a href="/signuppage" mdbBtn color="white" outline="true" mdbWavesEffect class="wow fadeInLeft" data-wow-delay="0.3s">Sign up</a>
+               
               </div>
               <!--Grid column-->
               <!--Grid column-->
@@ -27,19 +27,20 @@
                     <!--Header-->
                   
                     <!--Body-->
-                
+                    <div  *ngIf="signinformshow">
+                      <form [formGroup]="signInForm" (ngSubmit)="onSignInSubmit()">
                     <div class="md-form">
                       <mdb-icon fas icon="envelope" class="prefix white-text active"></mdb-icon>
-                      <input type="email" id="form2" class="text-white form-control" mdbInput>
-                      <label for="form2" class="text-white">Enter Email</label>
+                      <input type="email" id="email" formControlName="email" class="text-white form-control" mdbInput>
+                      <label for="email" class="text-white">Enter Email</label>
                     </div>
                     <div class="md-form">
                       <mdb-icon fas icon="lock" class="prefix text-white active"></mdb-icon>
-                      <input type="password" id="form4" class="text-white form-control" mdbInput>
-                      <label for="form4" class="text-white">Enter Password</label>
+                      <input type="password" id="password" formControlName="password" class="text-white form-control" mdbInput>
+                      <label for="password" class="text-white">Enter Password</label>
                     </div>
                     <div class="text-center mt-4">
-                      <button mdbBtn color="indigo" mdbWavesEffect>Sign in</button>
+                      <button type="submit" mdbBtn color="indigo" mdbWavesEffect>Sign in</button>
                       <hr class="hr-light mb-3 mt-4">
                       <div class="inline-ul text-center d-flex justify-content-center">
                         <a class="p-2 m-2 tw-ic">
@@ -52,6 +53,10 @@
                           <mdb-icon fab icon="instagram" class="white-text"> </mdb-icon>
                         </a>
                       </div>
+                    </div>
+                    <div class="text-center ">New to CharityGo? <a href="/signuppage">Sign Up here</a></div>
+                    
+                    </form>
                     </div>
                   </mdb-card-body>
                 </mdb-card>

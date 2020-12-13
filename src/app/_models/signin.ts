@@ -1,6 +1,6 @@
-export class NgoSignIn {
-   
+export class SignIn {
+    
     email: string;
     password: string;
-    
 }
+
