@@ -44,7 +44,7 @@
               
                     <!--Card image-->
                     <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-                      <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg"></mdb-card-img>
+                      <mdb-card-img src="{{project.imageUrl}}"></mdb-card-img>
                       <a>
                         <div class="mask rgba-white-slight"></div>
                       </a>
@@ -58,12 +58,11 @@
                         <strong>{{project.tittle}}</strong>
                       </h4>
                       <h5 class="indigo-text">
-                        <strong>Photographer</strong>
+                        <strong>{{project.objective}}</strong>
                       </h5>
               
                       <mdb-card-text>
-                        Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam.
+                        {{project.descriptionStory}}
                       </mdb-card-text>
               
                       <!--Linkedin-->
