@@ -14,6 +14,7 @@ import { Router } from '@angular/router'
 })
 export class HomeComponent implements OnInit {
   projects: any
+  campaigns: any
   currentTutorial = null;
   currentIndex = -1;
   title = '';
@@ -27,6 +28,17 @@ export class HomeComponent implements OnInit {
         .subscribe(
           data => {
             this.projects = data.projects;
+
+          },
+          error => {
+            console.log(error);
+          });
+          /* get campaigns */ 
+   this.backendService.getCampaigns()
+        .pipe(first())
+        .subscribe(
+          data => {
+            this.campaigns = data.campaigns;
 
           },
           error => {

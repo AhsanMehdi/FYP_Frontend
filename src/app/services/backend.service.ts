@@ -3,6 +3,7 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable,of } from 'rxjs';
 import { SignUp, SignIn  } from '../_models';
 import { IProject  } from '../_models';
+import { ICampaign  } from '../_models';
 import { map,catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -40,8 +41,10 @@ export class BackendService {
     return  this.httpClient.get(this.REST_API_SERVER+"/api/project",   this.options)
   }
 
-  // getProjects() {
-  //   return this.httpClient.get(this.REST_API_SERVER+"/api/project",   this.options);
-  // }
+  getCampaigns(): Observable<any> {
+    return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign",   this.options)
+  }
+
+ 
 
 }
