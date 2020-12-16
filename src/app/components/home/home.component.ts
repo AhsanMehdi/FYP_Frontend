@@ -20,6 +20,14 @@ export class HomeComponent implements OnInit {
   title = '';
    
   constructor(  private backendService: BackendService) { }
+  slides: any = [[]];
+  chunk(arr, chunkSize) {
+    let R = [];
+    for (let i = 0, len = arr.length; i < len; i += chunkSize) {
+      R.push(arr.slice(i, i + chunkSize));
+    }
+    return R;
+  }
 
   ngOnInit(): void {
  
@@ -39,12 +47,14 @@ export class HomeComponent implements OnInit {
         .subscribe(
           data => {
             this.campaigns = data.campaigns;
+            this.slides = this.chunk(this.campaigns, 2);
 
           },
           error => {
             console.log(error);
           });
-    
+          
+          
   }
   
 
