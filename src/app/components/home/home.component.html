@@ -77,7 +77,11 @@
                       <a class="px-2 icons-sm fb-ic">
                         <mdb-icon fab icon="facebook-f"> </mdb-icon>
                       </a>
-              
+                      <a (click)="showDetials(project)" class="orange-text mt-1 d-flex flex-row-reverse">
+                        <h5 class="waves-effect p-2" mdbWavesEffect>Read more
+                          <mdb-icon fas icon="chevron-right"></mdb-icon>
+                        </h5>
+                      </a>
                     </mdb-card-body>
                     <!--/.Card content-->
               
@@ -118,7 +122,7 @@
                 <mdb-carousel-item *ngFor="let item of slides; let i = index">
                 <div class="col-md-4" *ngFor="let campaign of item; let campaignsIndex = index">
                     <mdb-card class="my-1">
-                    
+                       
                     <mdb-card-body>
                         <mdb-card-title>
                         <h4>{{campaign.nickName}}</h4>

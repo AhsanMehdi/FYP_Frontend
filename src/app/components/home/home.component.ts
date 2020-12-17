@@ -12,6 +12,9 @@ import { Router } from '@angular/router'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
+
+
 export class HomeComponent implements OnInit {
   projects: any
   campaigns: any
@@ -19,7 +22,13 @@ export class HomeComponent implements OnInit {
   currentIndex = -1;
   title = '';
    
-  constructor(  private backendService: BackendService) { }
+
+  constructor( private router:Router, private backendService: BackendService) { }
+  showDetials(project){
+    this.router.navigate(['projectdetails'],{ queryParams: { id: project._id } });
+    
+    
+  }
   slides: any = [[]];
   chunk(arr, chunkSize) {
     let R = [];

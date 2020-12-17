@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div *ngIf="isDataLoaded" class="container mt-5">
     <br>
     <br>
     <div class="row">
@@ -20,17 +20,16 @@
                     <!--Title-->
                     <mdb-card-title>
                         <h4>
-                            <strong>Al Khidmat</strong>
+                            <strong>{{project.tittle}}</strong>
                         </h4>
                     </mdb-card-title>
 
                     <h5 class="indigo-text">
-                        <strong>Pure Water Project</strong>
+                        <strong>{{project.objective}}</strong>
                     </h5>
 
                     <mdb-card-text>
-                        We are trying to provide healthy water by implementing purification plants
-                        in developing areas of Nigeria
+                        {{project.descriptionStory}}
                     </mdb-card-text>
 
                     <!--Linkedin-->

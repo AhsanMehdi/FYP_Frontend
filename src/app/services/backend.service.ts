@@ -45,6 +45,8 @@ export class BackendService {
     return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign",   this.options)
   }
 
- 
+  getProjectById(id:string): Observable<any> {
+    return  this.httpClient.get(this.REST_API_SERVER+"/api/project/"+id,   this.options)
+  }
 
 }

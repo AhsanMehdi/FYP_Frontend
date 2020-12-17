@@ -16,9 +16,6 @@ import { NgoProfileComponent } from './components/ngoprofile/ngoprofile.componen
 
 
 
-
-
-
 const routes: Routes = [
   {
     path: '', component: HomeComponent
@@ -48,7 +45,7 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'donorhome', component: HomeComponent
+    path: 'donorhome', component: DonorhomeComponent
   },
   {
     path: 'ngohome', component: HomeComponent
