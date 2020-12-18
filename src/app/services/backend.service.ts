@@ -52,5 +52,9 @@ export class BackendService {
   getCampaignById(id:string): Observable<any> {
     return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign/"+id,   this.options)
   }
+  getNgoById(id:string): Observable<any> {
+    return  this.httpClient.get(this.REST_API_SERVER+"/api/ngo/"+id,   this.options)
+  }
+
 
 }
