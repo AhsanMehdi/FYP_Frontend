@@ -12,9 +12,7 @@ import { UploadProjectComponent } from './components/uploadproject/uploadproject
 import { ChatBoxComponent } from './components/chatbox/chatbox.component';
 import { DonorProfileComponent } from './components/donorprofile/donorprofile.component';
 import { NgoProfileComponent } from './components/ngoprofile/ngoprofile.component';
-
-
-
+import { CampaignDetailsComponent } from './components/campaigndetails/campaigndetails.component';
 
 const routes: Routes = [
   {
@@ -28,6 +26,9 @@ const routes: Routes = [
   },
   {
     path: 'projectdetails', component: ProjectDetailsComponent
+  },
+  {
+    path: 'campaigndetails', component: CampaignDetailsComponent
   },
   {
     path: 'uploadproject', component: UploadProjectComponent

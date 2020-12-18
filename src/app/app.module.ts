@@ -16,6 +16,7 @@ import { ChatBoxComponent } from './components/chatbox/chatbox.component';
 import { DonorProfileComponent } from './components/donorprofile/donorprofile.component';
 import { NgoProfileComponent } from './components/ngoprofile/ngoprofile.component';
 import { DonorhomeComponent } from './components/donorhome/donorhome.component';
+import { CampaignDetailsComponent } from './components/campaigndetails/campaigndetails.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -40,7 +41,8 @@ import {  NgProgressModule} from "ngx-progressbar";
     ChatBoxComponent,
     DonorProfileComponent,
     NgoProfileComponent,
-    DonorhomeComponent
+    DonorhomeComponent,
+    CampaignDetailsComponent
     
 
 
