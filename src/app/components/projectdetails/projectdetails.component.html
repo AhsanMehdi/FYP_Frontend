@@ -49,31 +49,44 @@
             </mdb-card>
 
         </div>
-
+        
         <div class="col-3">
-            <mdb-card cascade="true"  reverse="true" class="my-4">
+            <mdb-card cascade="true"  reverse="true" class="my-4" style="background-image: url(/assets/images/stat1.jpeg)">
                 <mdb-card-body>
                     <mdb-card-title>
-                        <h5>Total Donations $10626</h5>
-                        <h6 class="text-muted mb-2">Estimated budget $20158</h6>
-                        <h6 class="text-muted mb-2">Participants 11</h6>
-                        <h6 class="text-muted mb-2">Country Nigeria</h6>
-                        <h6 class="text-muted mb-2">Required Time 15 months</h6>
-                        <h6 class="text-muted mb-2">Address Kaduna City Nigeria 11</h6>
-                        <h6 class="text-muted mb-2">Current</h6>
-                        <h6 class="text-muted mb-2">Participants 11</h6>
-                        <h6 class="text-muted mb-2">Participants 11</h6>
-                        <h6 class="text-muted mb-2">Participants 11</h6>
-                        <h6 class="text-muted mb-2">Participants 11</h6>
+                        <h5>Important Figures</h5>
+                       
+                        <ul class="list-group">
+                            <li class="list-group-item">Budget       ${{project.estimatedBudget}}</li>
+                            <li class="list-group-item">Received     ${{project.totalDonation}}</li>
+                            <li class="list-group-item">Assests      ${{project.collectedDonation}}</li>
+                            <li class="list-group-item">Expenses     ${{project.currentExpenses}}</li>
+                            <li class="list-group-item">Donors       ${{project.totalDonors}}</li>
+                          </ul>
+               
                     </mdb-card-title>
-                    <mdb-card-text>
-                        Your little donation enables to complete this project.
-                    </mdb-card-text>
-                    <a mdbBtn color="black" outline="true" mdbWavesEffect class="wow fadeInLeft"
-                        data-wow-delay="0.3s">Donate Now</a>
+             
+                 
+                </mdb-card-body>
+            </mdb-card>
+            <mdb-card cascade="true"  reverse="true" class="my-4" style="background-image: url(/assets/images/stat1.jpeg)">
+                <mdb-card-body>
+                    <mdb-card-title>
+                        <h5>Whereabouts</h5>
+                       
+                        <ul class="list-group">
+                            <li class="list-group-item">{{project.country}}</li>
+                            <li class="list-group-item">{{project.startDate}}</li>
+                            <li class="list-group-item">{{project.expectedEndDate}}</li>
+                          </ul>
+               
+                    </mdb-card-title>
+             
+                 
                 </mdb-card-body>
             </mdb-card>
         </div>
+    
         <!--col-md ends here-->
     </div>
 </div>
