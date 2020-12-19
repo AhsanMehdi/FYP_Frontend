@@ -29,6 +29,8 @@ export class HomeComponent implements OnInit {
     
     
   }
+
+  stars = Array(5);
   slides: any = [[]];
   chunk(arr, chunkSize) {
     let R = [];
@@ -56,7 +58,7 @@ export class HomeComponent implements OnInit {
         .subscribe(
           data => {
             this.campaigns = data.campaigns;
-            this.slides = this.chunk(this.campaigns, 2);
+            this.slides = this.chunk(this.campaigns, 3);
 
           },
           error => {
