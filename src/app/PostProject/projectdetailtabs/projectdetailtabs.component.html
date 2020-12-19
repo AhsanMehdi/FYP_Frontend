@@ -1,0 +1,404 @@
+<web3component></web3component>
+<div class="container">
+  <!--Projects section v.3-->
+  <section class="section extra-margins">
+
+    <!--Section heading-->
+    <h2 class="section-heading h1 mt-5"><strong>Bring Your Creative Ideas to Live</strong></h2>
+    <!--Section description-->
+    <p class="section-description">Get Inspiration & Step-by-Step Instruction. Imagine how incredible you'd feel spending the majority of your time in "the zone", in the powerful space of creative flow.</p>
+
+
+  </section>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {{Tab1state}}
+      <ul class="stepper stepper-horizontal">
+
+        <li class="{{Tab1state}}" (click)="ShowTab1 = true ; ShowTab2 =  false; ShowTab3 = false;Table1state='completed'">
+          <a>
+                    <span class="circle">1</span>
+                    <span class="label">Basic</span>
+
+                </a>
+
+        </li>
+        <li class="{{Tab2state}}" (click)="ShowTab1 = false ; ShowTab2 =  true; ShowTab3 = false;Table2state=notcompleted ">
+          <a>
+                    <span class="circle">2</span>
+                    <span class="label">Reward</span>
+                </a>
+        </li>
+        <li class="{{Tab3state}}" (click)="ShowTab1 = false ; ShowTab2 =  false; ShowTab3 = true">
+          <a>
+                    <span class="circle">3</span>
+                    <span class="label">Story</span>
+                </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+
+  <div class="row justify-content-center" *ngIf="ShowTab1">
+
+    <div class="col-lg-8 col-xl-11 mb-3 ">
+
+
+
+      <section class="section pb-3">
+
+        <!--Section heading-->
+        <h2 class="section-heading h3 pt-4"><strong>Basic</strong></h2>
+
+        <!--Section description-->
+
+        <!--Grid row-->
+        <div class="row justify-content-center">
+
+          <!--Grid column-->
+          <div class="col-lg-12 col-md-12 mb-r">
+
+            <!--Featured image-->
+            <div class="view overlay hm-white-slight z-depth-2 waves-light" mdbRippleRadius>
+
+              <img [src]="imageurl" alt="Sample project image" (load)="handleImageLoad()" [class.loaded]="imageLoaded">
+              <a>
+                <div class="mask"></div>
+              </a>
+            </div>
+
+            <!--Excerpt-->
+            <div class="card-body mt-1">
+
+              <h4>Upload your Image</h4>
+
+              <image-upload [uploadedFiles]="images" (uploadFinished)="imageUpload($event)" [extensions]="['jpeg','mp4']"></image-upload>
+
+            </div>
+
+          </div>
+          <!--Grid column-->
+        </div>
+
+
+
+      </section>
+      <!--/Projects section v.1-->
+      <section class="section pb-3">
+
+        <!--Section heading-->
+
+
+        <!--Section description-->
+
+        <!--Grid row-->
+        <div class="row justify-content-center">
+
+          <!--Grid column-->
+          <div class="col-lg-12 col-md-12">
+
+            <!--Card-->
+            {{modelproject.Title}} {{modelproject.ShortDescription}} {{modelproject.FundingDuration}} {{modelproject.FundingGoal}}
+            <div class="card card-cascade narrower">
+
+              <!--Card image-->
+              <div class="view gradient-card-header cyan lighten-2">
+                <h2 class="h2-responsive">Project Detail</h2>
+
+              </div>
+              <!--/Card image-->
+
+              <!--Card content-->
+
+              <div class="card-body ">
+
+                <div class="row justify-content-center mb-4">
+                  <div class="col-2 align-self-end">
+                    <label class="">Title</label>
+                  </div>
+                  <div class="col-10 ">
+                    <div class="input-group">
+
+                      <input type="text" id="title" #Ptitle="ngModel" mdbActive class="form-control" placeholder="Project Title" class="form-control" [(ngModel)]="modelproject.Title" data-error="wrong Title" data-success="right"  />
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="row justify-content-center">
+                  <div class="col-2 align-self-center">
+                    <label class="">Short blurb</label>
+                  </div>
+                  <div class="col-10 ">
+                    <div class="input-group">
+
+
+
+                      <textarea type="text" class="md-textarea" style="height: 100px" placeholder="Write a short blurb 3-4 lines" class="form-control"
+                        [(ngModel)]="modelproject.ShortDescription" mdbActive></textarea>
+
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row justify-content-center mb-4">
+                  <div class="col-2 align-self-end">
+                    <label class="">Category</label>
+                  </div>
+                  <div class="col-10 ">
+                    <div class="input-group">
+
+                      <input type="text" data-error="wrong category" data-success="right" mdbInputValidate  placeholder="Project Category" class="form-control" />
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row justify-content-center mb-4">
+                  <div class="col-2 align-self-end">
+                    <label class="">Project Loucation</label>
+                  </div>
+                  <div class="col-10 ">
+                    <div class="input-group">
+
+                      <input type="text" placeholder="Project Loucation" class="form-control" data-error="wrong loucation" data-success="right" mdbInputValidate  />
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+              </div>
+
+              <hr>
+
+              <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+
+          </div>
+          <!--Grid column-->
+        </div>
+
+
+
+      </section>
+      <!--/Projects section v.1-->
+
+      <!--/Projects section v.1-->
+      <section class="section pb-3" id="datepicker">
+
+        <!--Section heading-->
+
+
+        <!--Section description-->
+
+        <!--Grid row-->
+        <div class="row justify-content-center">
+
+          <!--Grid column-->
+          <div class="col-lg-12 col-md-12">
+
+            <!--Card-->
+
+            <div class="card card-cascade narrower">
+
+              <!--Card image-->
+              <div class="view gradient-card-header cyan lighten-2">
+                <h2 class="h2-responsive">Funding Details</h2>
+
+              </div>
+              <!--/Card image-->
+
+              <!--Card content-->
+
+              <div class="card-body ">
+                <div class="row justify-content-center mb-4">
+                  <div class="col-2 align-self-end">
+                    <label class="">Funding Goal</label>
+
+                  </div>
+                  <div class="col-10 ">
+                    <div class="input-group">
+                      <input type="text" data-error="wrong goal" data-success="right" mdbInputValidate  placeholder="e.g 1 Eth" class="form-control" [(ngModel)]="modelproject.FundingGoal" />
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="row justify-content-center mb-4" >
+                  <div class="col-2 align-self-end">
+                    <label class="">Ending Date</label>
+                  </div>
+
+                  <div class="col-10 " >
+                       <mdb-date-picker name="mydate"  [placeholder]="'Selected date'" [(ngModel)]="modelproject.FundingDuration" required ></mdb-date-picker>
+
+                  </div>
+
+                </div>
+
+
+
+
+
+              </div>
+
+              <hr>
+
+              <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+
+          </div>
+          <!--Grid column-->
+        </div>
+
+
+
+      </section>
+      <!--/Projects section v.1-->
+
+
+
+
+    </div>
+
+  </div>
+
+  <div class="row justify-content-center" *ngIf="ShowTab2">
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+
+      <a class="btn-floating btn-large red waves-light" mdbRippleRadius (click)="addproject()">
+        <i class="fa fa-plus"></i>
+    </a>
+
+
+
+    </div>
+    <div class="col-lg-10 col-xl-11 mb-3 ">
+
+
+      <section class="section pb-3">
+
+        <!--Section heading-->
+        <h2 class="section-heading h3 pt-4"><strong>Rewards</strong></h2>
+        <div *ngFor="let reward of rewardlist">
+
+
+          <RewardComponent [modelReward]=reward></RewardComponent>
+
+        </div>
+      </section>
+
+
+    </div>
+
+  </div>
+
+  <div class="row justify-content-center" *ngIf="ShowTab3">
+
+    <div class="col-lg-10 col-xl-11 mb-3 ">
+
+
+      <section class="section pb-3">
+
+        <!--Section heading-->
+        <h2 class="section-heading h3 pt-4"><strong>Story</strong></h2>
+        <!--Grid row-->
+        <div class="row justify-content-center">
+
+          <!--Grid column-->
+          <div class="col-lg-12 col-md-12 mb-r">
+
+
+            <video class="library" controls preload="auto" data-config="some-js-object-here" id="myvedioplayer">
+              <source [src]="vediourl" type='video/mp4'>
+            </video>
+            <input type="file" ng2FileSelect [uploader]="uploader" accept="video/mp4" />
+            <button type="button" class="btn btn-default waves-light" (click)="uploadVedio()" [disabled]="!uploader.getNotUploadedItems().length"
+              mdbRippleRadius>Upload</button>
+
+          </div>
+          <!--Grid column-->
+        </div>
+      </section>
+      <section class="section pb-3">
+
+
+
+        <!--Section description-->
+
+        <!--Grid row-->
+        <div class="row justify-content-center">
+
+          <!--Card-->
+        
+          <div class="card card-cascade narrower">
+
+            <!--Card image-->
+            <div class="view gradient-card-header cyan lighten-2">
+              <h2 class="h2-responsive">Story Details</h2>
+
+            </div>
+            <!--/Card image-->
+
+            <!--Card content-->
+
+            <div class="card-body ">
+
+              <div class="row justify-content-center mb-4">
+                <div class="col-2 align-self-end">
+                  <label class="">Description</label>
+                </div>
+                <div class="col-10 ">
+                  <div class="input-group">
+
+                    <textarea type="text" mdbInputValidate name="description" id="description" #desription="ngModel" required class="md-textarea" style="height: 100px" placeholder="Write a discription" class="form-control" [(ngModel)]="modelStory.Description"
+                      mdbActive></textarea>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="row justify-content-center mb-4">
+                <div class="col-2 align-self-end">
+                  <label class="">Risk And Challenges</label>
+                </div>
+                <div class="col-10 ">
+                  <div class="input-group">
+
+                    <textarea type="text" required #risk="ngModel" class="md-textarea" style="height: 100px" placeholder="Write project risks" class="form-control" [(ngModel)]="modelStory.RiskAndChallanges"
+                      mdbActive></textarea>
+                  </div>
+
+                </div>
+                <div *ngIf="risk.invalid && (risk.dirty || risk.touched)"
+                        >
+
+
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end col-10 -->
+    </div>
+
+  </div>
+  <div class="row justify-content-center">
+    <button type="button" (click)="postproject()" class="btn btn-info waves-light" mdbRippleRadius>Publish Project</button>
+  </div>
+
+</div>

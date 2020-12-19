@@ -1,0 +1,130 @@
+<section class="section pb-3">
+
+
+
+  <!--Section description-->
+
+  <!--Grid row-->
+  <div class="row justify-content-center">
+
+    <!--Card-->
+
+    <div class="card card-cascade narrower">
+
+      <!--Card image-->
+      <div class="view gradient-card-header cyan lighten-2">
+        <h2 class="h2-responsive">Reward # {{this.modelReward.id}}</h2>
+
+      </div>
+      <!--/Card image-->
+
+      <!--Card content-->
+
+      <div class="card-body ">
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-2 align-self-end">
+            <label class="">Title</label>
+          </div>
+          <div class="col-10 ">
+            <div class="input-group">
+
+              <input type="text" mdbInputValidate required #Rtitle="ngModel" placeholder="Reward Title" class="form-control" [(ngModel)]="modelReward.Title"
+              />
+            </div>
+
+          </div>
+          <div *ngIf="Rtitle.invalid && (Rtitle.dirty || Rtitle.touched)">
+
+
+
+
+          </div>
+        </div>
+        <br>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-2 align-self-end">
+            <label class="">Pledge Amount</label>
+          </div>
+          <div class="col-10 ">
+            <div class="input-group">
+
+
+
+              <input type="text" mdbInputValidate required #Ramount="ngModel" placeholder="Amount" class="form-control" [(ngModel)]="modelReward.PledgeAmount"
+              />
+
+            </div>
+
+          </div>
+
+
+        </div>
+        <br>
+        <div class="row justify-content-center mb-4">
+          <div class="col-2 align-self-end">
+            <label class="">Description</label>
+          </div>
+          <div class="col-10 ">
+            <div class="input-group">
+
+              <input type="text"  #Rdescription="ngModel" required placeholder="Reward Description" class="form-control"
+                [(ngModel)]="modelReward.Description" />
+            </div>
+
+          </div>
+
+
+        </div>
+        <br>
+        <div class="row justify-content-center mb-4">
+          <div class="col-2 align-self-end">
+            <label class="">Estimated Dilivery</label>
+          </div>
+          <div class="col-10 ">
+
+                <mdb-date-picker name="EstimatedDilivery"  [placeholder]="'Selected date'" [(ngModel)]="modelReward.EstimatedDilivery" required ></mdb-date-picker>
+
+
+
+
+          </div>
+
+        </div>
+        <br>
+        <div class="row justify-content-center mb-4">
+          <div class="col-2 align-self-end">
+            <label class="">Shipping Details</label>
+          </div>
+          <div class="col-10 ">
+            <div class="input-group">
+
+              <input mdbInputValidate type="text" #Rshipping="ngModel" required placeholder="Country" [(ngModel)]="modelReward.ShippingDetails"
+              />
+            </div>
+
+          </div>
+
+        </div>
+        <br>
+        <div class="row justify-content-center ">
+          <a mdbRippleRadius (click)="RemoveReward()">
+                    <i class="fa fa-remove"></i>
+                </a>
+        </div>
+
+      </div>
+
+
+      <hr>
+
+      <!--/.Card content-->
+
+    </div>
+    <!--/.Card-->
+  </div>
+
+
+
+</section>

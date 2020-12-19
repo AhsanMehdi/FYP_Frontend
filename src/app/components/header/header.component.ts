@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   constructor() {
 
 
-    if ((window.location.href != "http://localhost:4200/") && (window.location.href != "http://localhost:4200/signinpage") && (window.location.href != "http://localhost:4200/signuppage") ) {
+    if ((window.location.href != "http://localhost:4200/signuppage") ) {
 
       this.showTrnsaparent=false
     }
