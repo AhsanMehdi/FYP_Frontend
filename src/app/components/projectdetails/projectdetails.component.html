@@ -49,27 +49,52 @@
             </mdb-card>
 
         </div>
+
+
+        
         
         <div class="col-3">
-            <mdb-card cascade="true"  reverse="true" class="my-4" style="background-image: url(/assets/images/stat1.jpeg)">
+
+        <section class="text-center pb-3 my-5">
+            <mdb-card class="pricing-card">
+
+                <!--Content-->
                 <mdb-card-body>
-                    <mdb-card-title>
-                        <h5>Important Figures</h5>
-                       
-                        <ul class="list-group">
-                            <li class="list-group-item">Budget       ${{project.estimatedBudget}}</li>
-                            <li class="list-group-item">Received     ${{project.totalDonation}}</li>
-                            <li class="list-group-item">Assests      ${{project.collectedDonation}}</li>
-                            <li class="list-group-item">Expenses     ${{project.currentExpenses}}</li>
-                            <li class="list-group-item">Donors       ${{project.totalDonors}}</li>
-                          </ul>
-               
-                    </mdb-card-title>
-             
-                 
+                  <mdb-card-title>
+                    <h5 class="mt-0 justify-content-center">
+                      <strong>Funded</strong>
+                    </h5>
+                  </mdb-card-title>
+                  <!--Price-->
+                  <div class="price pt-0">
+                    <h2 class="red-text number">${{project.totalDonation}}</h2>
+                  </div>
+                  <!--Price-->
+                  <ul class="striped">
+                    <li>
+                      <p>
+                        <strong>{{project.totalDonors}}</strong> Donors</p>
+                    </li>
+                    <li>
+                      <p>
+                        <strong>{{project.estimatedBudget}}</strong> Budget</p>
+                    </li>
+                    <li>
+                      <p>
+                        <strong>{{project.collectedDonation}}</strong> Received</p>
+                    </li>
+                    <li>
+                      <p>
+                        <strong>{{project.currentExpenses}}</strong> In use</p>
+                    </li>
+                  </ul>
+                  <a href="/signinpage" mdbBtn color="danger" rounded="true" class="mb-0 waves-light" mdbWavesEffect> Donate Now</a>
                 </mdb-card-body>
-            </mdb-card>
-            <mdb-card cascade="true"  reverse="true" class="my-4" style="background-image: url(/assets/images/stat1.jpeg)">
+              </mdb-card>
+              </section>
+              <!--Card-->
+   
+            <mdb-card cascade="true"  reverse="true" class="my-2" style="background-image: url(/assets/images/stat1.jpeg)">
                 <mdb-card-body>
                     <mdb-card-title>
                         <h5>Whereabouts</h5>
