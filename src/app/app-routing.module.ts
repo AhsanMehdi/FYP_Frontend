@@ -14,6 +14,9 @@ import { DonorProfileComponent } from './components/donorprofile/donorprofile.co
 import { NgoProfileComponent } from './components/ngoprofile/ngoprofile.component';
 import { CampaignDetailsComponent } from './components/campaigndetails/campaigndetails.component';
 import { NgoDetailsComponent } from './components/ngodetails/ngodetails.component';
+import { InitialInformationComponent } from './components/initialinformation/initialinformation.component';
+import { DetailInformationComponent } from './components/detailinformation/detailinformation.component';
+
 
 
 const routes: Routes = [
@@ -41,8 +44,15 @@ const routes: Routes = [
   {
     path: 'chatbox', component: ChatBoxComponent
   },
+ 
   {
     path: 'donorprofile', component: DonorProfileComponent
+  },
+  {
+    path: 'initialinformationcomponent', component:  InitialInformationComponent
+  },
+  {
+    path: 'detailinformation', component:  DetailInformationComponent
   },
   {
     path: 'ngoprofile', component: NgoProfileComponent

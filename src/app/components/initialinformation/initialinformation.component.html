@@ -1,0 +1,162 @@
+<div class="container">
+    <!--Projects section v.3-->
+    <section class="section extra-margins">
+
+        <!--Section heading-->
+        <h2 class="section-heading h1 mt-5"><strong>Bring Your Creative Ideas to Live</strong></h2>
+        <!--Section description-->
+        <p class="section-description">Get Inspiration & Step-by-Step Instruction. Imagine how incredible you'd feel
+            spending the majority of your time in "the zone", in the powerful space of creative flow.</p>
+
+        <!--Grid row-->
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-lg-6 col-xl-5 pr-lg-5 pb-5">
+
+                <!--Image-->
+                <img src="/assets/images/Ethereum8.jpg" alt="Sample project image" class="img-fluid z-depth-2">
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-6 col-xl-7 pl-lg-5 pb-4">
+
+                <!--Grid row-->
+                <div class="row mb-3">
+                    <div class="col-1 mr-1">
+                        <i class="fa fa-bank fa-lg cyan-text"></i>
+                    </div>
+                    <div class="col-10">
+                        <h5 class="feature-title font-bold">Safety</h5>
+                        <p class="grey-text">Ethereum relies on a public blockchain, a system of recording transactions
+                            that allows anyone to read or write transactions.
+                        </p>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row mb-3">
+                    <div class="col-1 mr-1">
+                        <i class="fa fa-code fa-lg red-text"></i>
+                    </div>
+                    <div class="col-10 ">
+                        <h5 class="feature-title font-bold">Technology</h5>
+                        <p class="grey-text">The blockchain is basically a distributed database. Think of a giant,
+                            global spreadsheet that runs on millions and millions of computers.
+                        </p>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Third row-->
+                <div class="row">
+                    <div class="col-1 mr-1">
+                        <i class="fa fa-money fa-lg brown-text"></i>
+                    </div>
+                    <div class="col-10">
+                        <h5 class="feature-title font-bold">Finance</h5>
+                        <p class="grey-text"> Currently one of the top cryptocurrencies in the world, Ethereum continues
+                            to make progress in leaps and bounds.
+                        </p>
+                    </div>
+                </div>
+                <!--/Third row-->
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        <hr>
+
+        <div class="mask flex-center">
+
+
+        </div>
+        <!--Grid row-->
+        <div class="row pt-5 justify-content-center">
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-xl-5 mb-3 ">
+
+
+
+                <div class="row">
+                    <div class="container text-center black-text wow fadeInUp">
+                        <h2>First, let’s get you set up.</h2>
+                        <br>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <mdb-card>
+
+                    <mdb-card-header class="info-color white-text text-center py-4">
+                        <h5>
+                            <strong>Initial information</strong>
+                        </h5>
+
+
+                    </mdb-card-header>
+
+                    <mdb-card-body class="px-lg-5 pt-0">
+
+                        <form #initialform="ngForm" (ngSubmit)="onSubmit()" [formGroup]="validatingForm">
+
+
+                            <div class="md-form">
+                                <i class="fa fa-pencil prefix "></i>
+                                <input mdbInput type="text" id="form1" class="form-control" customRegex="^[a-zA-Z0-9]+$"
+                                    mdbInputValidate mdbActive data-error="Invalid Title" data-success="good" required
+                                    formControlName="title">
+
+                                <label for="title">Project Title</label>
+
+                            </div>
+
+
+
+                            <div class="md-form">
+                                <i class="fa fa-pencil prefix "></i>
+                                <input mdbInput type="text" id="loucation" class="form-control" mdbInputValidate
+                                    mdbActive data-error="Invalid Loucation" data-success="good"
+                                    customRegex="^[a-zA-Z]+$" formControlName="loucation">
+
+                                <label for="loucation">Your Current Location</label>
+
+
+
+
+                            </div>
+
+                            <div class="text-center">
+
+                                <button type="submit" class="btn btn-cyan  waves-light" mdbRippleRadius>Next </button>
+                            </div>
+
+                        </form>
+                    </mdb-card-body>
+                </mdb-card>
+                <!--Card content-->
+
+
+            </div>
+            <!--Grid column-->
+
+
+
+        </div>
+        <!--Grid row-->
+
+    </section>
+
+
+</div>

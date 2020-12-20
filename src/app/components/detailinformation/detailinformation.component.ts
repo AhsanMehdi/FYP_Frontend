@@ -13,12 +13,12 @@ import { IProject } from "../../_models/Iproject";
 import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-uploadproject',
-  templateUrl: './uploadproject.component.html',
-  styleUrls: ['./uploadproject.component.scss']
+  selector: "app-detailinformation",
+  templateUrl: "./detailinformation.component.html",
+  styleUrls: ["./detailinformation.component.scss"],
 })
-export class UploadProjectComponent implements OnInit {
-
+export class DetailInformationComponent implements OnInit {
+  validatingForm: FormGroup;
 
   Title = "";
   Loucation = "";
@@ -32,12 +32,15 @@ export class UploadProjectComponent implements OnInit {
   ) {
     this.Title = this.route.snapshot.queryParams.title;
     this.Loucation = this.route.snapshot.queryParams.loucation;
-    this.Type = this.route.snapshot.queryParams.type;
-
-    console.log(this.Title, this.Loucation, this.Type)
+  }
+  onSubmit(projectType: string) {
+    this.Type = projectType;
+    this.router.navigate(["uploadproject"], {
+      queryParams: { title: this.Title, loucation: this.Loucation, type: this.Type,  },
+    });
+    console.log(projectType);
   }
 
-  ngOnInit(): void {
-  }
 
+  ngOnInit(): void {}
 }

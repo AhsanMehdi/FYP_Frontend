@@ -18,6 +18,8 @@ import { NgoProfileComponent } from './components/ngoprofile/ngoprofile.componen
 import { DonorhomeComponent } from './components/donorhome/donorhome.component';
 import { CampaignDetailsComponent } from './components/campaigndetails/campaigndetails.component';
 import { NgoDetailsComponent } from './components/ngodetails/ngodetails.component';
+import { InitialInformationComponent } from './components/initialinformation/initialinformation.component';
+import { DetailInformationComponent } from './components/detailinformation/detailinformation.component';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -45,7 +47,9 @@ import {  NgProgressModule} from "ngx-progressbar";
     NgoProfileComponent,
     DonorhomeComponent,
     CampaignDetailsComponent,
-    NgoDetailsComponent
+    NgoDetailsComponent,
+    InitialInformationComponent,
+    DetailInformationComponent
     
 
 
