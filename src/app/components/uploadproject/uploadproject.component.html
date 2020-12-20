@@ -1,31 +1,182 @@
-<div class="mask rgba-blue-light flex-center">
+<div class="container">
+    <!--Projects section v.3-->
+    <section class="section extra-margins">
 
-    <div class="container">
-        <div class="row">
-            <div class="container text-center black-text wow fadeInUp">
-                <h2>First, let’s get you set up.</h2>
-                <br>
-                <p>Pick a project category for the specific domain to 
-                    connect with ngo's or charity organizations.</p>
-            </div>
-        </div>
-        <div class="row justify-content-center">
+        <!--Section heading-->
+        <h2 class="section-heading h1 mt-5"><strong>Bring Your Creative Ideas to Live</strong></h2>
+        <!--Section description-->
+        <p class="section-description">Get Inspiration & Step-by-Step Instruction. Imagine how incredible you'd feel
+            spending the majority of your time in "the zone", in the powerful space of creative flow.</p>
 
-            <div class="btn-group" mdbDropdown>
-                <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle waves-light"
-                    mdbWavesEffect>
-                    Select your category
-                </button>
 
-                <div class="dropdown-menu dropdown-primary">
-                    <a class="dropdown-item" href="#">Health</a>
-                    <a class="dropdown-item" href="#">Education</a>
-                    <a class="dropdown-item" href="#">Water</a>
-                    <a class="dropdown-item" href="#">Housing</a>
-                    <a class="dropdown-item" href="#">Clothes</a>
-                    <a class="dropdown-item" href="#">Other</a>
-                </div>
-            </div>
+    </section>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{Tab1state}}
+            <ul class="stepper stepper-horizontal">
+
+                <li class="{{Tab1state}}"
+                    (click)="ShowTab1 = true ; ShowTab2 =  false; ShowTab3 = false;Tab1state='completed'">
+                    <a>
+                        <span class="circle">1</span>
+                        <span class="label">Basic</span>
+
+                    </a>
+
+                </li>
+                <li class="{{Tab2state}}"
+                    (click)="ShowTab1 = false ; ShowTab2 =  true; ShowTab3 = false;Tab2state='notcompleted' ">
+                    <a>
+                        <span class="circle">2</span>
+                        <span class="label">Funding</span>
+                    </a>
+                </li>
+                <li class="{{Tab3state}}" (click)="ShowTab1 = false ; ShowTab2 =  false; ShowTab3 = true">
+                    <a>
+                        <span class="circle">3</span>
+                        <span class="label">Story</span>
+                    </a>
+                </li>
+            </ul>
+
         </div>
     </div>
+
+
+    <div class="row text-center" *ngIf="ShowTab1">
+
+        <div class="col-lg-8 col-xl-11 mb-3">
+
+            <section class="section pb-3">
+
+                <h2 class="section-heading h3 pt-4"><strong>Basic</strong></h2>
+
+            </section>
+            <!--/Projects section v.1-->
+            <section class="section pb-3">
+                <div class="row justify-content-center">
+                    <!--Grid column-->
+                    <div class="col-lg-8 ">
+
+                        <mdb-card style="height: 450px;">
+
+                            <mdb-card-header class="info-color white-text text-center py-4">
+                                <h5>
+                                    <strong>Initial information</strong>
+                                </h5>
+                            </mdb-card-header>
+
+                            <mdb-card-body class="px-lg-8 pt-0">
+
+                                <form #initialform="ngForm" (ngSubmit)="onSubmit()" [formGroup]="validatingForm">
+
+                                    <div class="cotainer">
+
+                                        <div class="row text-left" style="height: 50px;">
+                                            <div class="col-2 pt-5">
+                                                <label class="">Title</label>
+                                            </div>
+                                            <div class="col-8 pt-1 text-left">
+                                                <div class="md-form">
+                                                    <i class="fa fa-pencil prefix "></i>
+                                                    <input mdbInput type="text" id="form1" class="form-control"
+                                                        customRegex="^[a-zA-Z0-9]+$" mdbInputValidate mdbActive
+                                                        data-error="Invalid Title" data-success="good" required
+                                                        formControlName="title">
+
+                                                    <label for="title">Project title</label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+                                        <div class="row text-left" style="height: 50px;">
+                                            <div class="col-2 pt-5">
+                                                <label class="">Objective</label>
+                                            </div>
+                                            <div class="col-8 pt-1 text-left">
+                                                <div class="md-form">
+                                                    <i class="fa fa-pencil prefix "></i>
+                                                    <textarea mdbInput type="text" class="md-textarea"
+                                                        class="form-control" formControlName="objective"
+                                                        mdbActive></textarea>
+
+                                                    <label for="objective">Objective</label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <br>
+                                        <div class="row text-left" style="height: 50px;">
+                                            <div class="col-2 pt-5">
+                                                <label class="">Type</label>
+                                            </div>
+                                            <div class="col-8 pt-1 text-left">
+                                                <div class="md-form">
+                                                    <i class="fa fa-pencil prefix "></i>
+                                                    <input mdbInput type="text" id="form1" class="form-control"
+                                                        customRegex="^[a-zA-Z0-9]+$" mdbInputValidate mdbActive
+                                                        data-error="Invalid Type" data-success="good" required
+                                                        formControlName="type">
+
+                                                    <label for="type">Project type</label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <br>
+                                        <div class="row text-left" style="height: 50px;">
+                                            <div class="col-2 pt-5">
+                                                <label class="">Loucation</label>
+                                            </div>
+                                            <div class="col-8 pt-1 text-left">
+                                                <div class="md-form">
+                                                    <i class="fa fa-pencil prefix "></i>
+                                                    <input mdbInput type="text" id="form1" class="form-control"
+                                                        customRegex="^[a-zA-Z0-9]+$" mdbInputValidate mdbActive
+                                                        data-error="Invalid Type" data-success="good" required
+                                                        formControlName="loucation">
+
+                                                    <label for="loucation">Loucation</label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+                                        <div class="row justify-content-center">
+                                            <button type="button" (click)="onNext('2')" class="btn btn-info waves-light"
+                                                mdbRippleRadius>Next</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </mdb-card-body>
+                        </mdb-card>
+                        <!--Card content-->
+                    </div>
+                    <!--Grid column-->
+
+
+                </div>
+            </section>
+            <!--/Projects section v.1-->
+
+
+        </div>
+
+    </div>
+
+
+
 </div>
