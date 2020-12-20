@@ -24,7 +24,11 @@ export class UploadProjectComponent implements OnInit {
   Title = "";
   Loucation = "";
   Type = "";
-  FundingDuration = "";
+  Objective = "";
+  EstimatedBudget = "";
+  ExpectedEndDate = "";
+  RegisterationNumber = ""
+  Visibility = ""
 
   ShowTab1 = true;
   ShowTab2= false;
@@ -79,7 +83,12 @@ export class UploadProjectComponent implements OnInit {
         Validators.minLength(4),
       ]),
 
-      RegisterationNumber: new FormControl({value:'', disabled: false}, [
+      registerationNumber: new FormControl({value:'', disabled: false}, [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
+
+      visibility: new FormControl({value:'', disabled: false}, [
         Validators.required,
         Validators.minLength(4),
       ]),
@@ -101,10 +110,25 @@ export class UploadProjectComponent implements OnInit {
   }
 
   onSubmit(): void{
+
+    this.Objective =  this.validatingForm.get("objective").value
+    this.EstimatedBudget =  this.validatingForm.get("estimatedBudget").value
+    this.ExpectedEndDate =  this.validatingForm.get("expectedEndDate").value
+    this.RegisterationNumber =  this.validatingForm.get("registerationNumber").value
+    this.Visibility =  this.validatingForm.get("visibility").value
+
+
+    console.log("Objective",  this.Objective)
+    console.log("EstimatedBudget",  this.EstimatedBudget)
+    console.log("ExpectedEndDate",  this.ExpectedEndDate)
+    console.log("RegisterationNumber",  this.RegisterationNumber)
+    console.log("Visibility",  this.Visibility)
     
   }
 
   onNext(section: string): void{
+
+    console.log()
 
     if (section == '2'){
       this.ShowTab1= false
@@ -116,7 +140,6 @@ export class UploadProjectComponent implements OnInit {
       this.ShowTab3 = true
       this.Tab3state="completed"
     }
-  
     
   }
 
