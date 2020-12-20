@@ -282,12 +282,12 @@
                                                     <div class="switch">
                                                         <label>
                                                             Private
-                                                          <input type="checkbox"  formControlName="visibility">
-                                                          <span class="lever"></span> Public
+                                                            <input type="checkbox" formControlName="visibility">
+                                                            <span class="lever"></span> Public
                                                         </label>
-                                                      </div>
+                                                    </div>
 
-                                                    
+
 
                                                 </div>
                                             </div>
@@ -321,6 +321,113 @@
         </div>
 
     </div>
+
+
+    <div class="row text-center" *ngIf="ShowTab3">
+
+        <div class="col-lg-8 col-xl-11 mb-3">
+
+            <section class="section pb-3">
+
+                <h2 class="section-heading h3 pt-4"><strong>Story</strong></h2>
+
+            </section>
+            <!--/Projects section v.1-->
+            <section class="section pb-3">
+                <div class="row justify-content-center">
+                    <!--Grid column-->
+                    <div class="col-lg-8 ">
+
+                        <mdb-card style="height: 450px;">
+
+                            <mdb-card-header class="info-color white-text text-center py-4">
+                                <h5>
+                                    <strong>About Project</strong>
+                                </h5>
+                            </mdb-card-header>
+
+                            <mdb-card-body class="px-lg-8 pt-0">
+
+                                <form #initialform="ngForm" (ngSubmit)="onSubmit()" [formGroup]="validatingForm">
+
+                                    <div class="cotainer">
+
+                                        <br>
+
+                                        <div class="row text-left" style="height: 50px;">
+                                            <div class="col-2 pt-5">
+                                                <label class="">Project Description</label>
+                                            </div>
+                                            <div class="col-8 pt-1 text-left">
+                                                <div class="md-form">
+                                                    <i class="fa fa-pencil prefix "></i>
+                                                    <textarea mdbInput type="text" class="md-textarea"
+                                                    class="form-control" formControlName="description"
+                                                    mdbActive></textarea>
+
+                                                    <label for="description">Project Description</label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+                                        <div class="row text-left" style="height: 50px;">
+                                            <div class="col-2 pt-5">
+                                                <label class="">Project Photos</label>
+                                            </div>
+                                            <div class="col-8 pt-1 text-left">
+                                                <div class="md-form">
+                                                    <div class="file-field md-form">
+                                                        <div mdbBtn floating="true" size="md" color="blue"
+                                                            mdbWavesEffect>
+                                                            <mdb-icon fas icon="cloud-upload-alt" aria-hidden="true">
+                                                            </mdb-icon>
+                                                            <input type="file" mdbFileSelect
+                                                                (change)="onFileChanged($event)"
+                                                                (uploadOutput)="onUploadOutput($event)"
+                                                                [uploadInput]="uploadInput">
+                                                        </div>
+                                                        <div class="file-path-wrapper mt-3">
+                                                            <input class="file-path" type="text"
+                                                                placeholder="Upload your file" [value]="showFiles()">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br>
+                                        <br>
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+
+                                                <button (click)="onSubmit()" type="button"
+                                                    class="btn btn-info waves-light" mdbRippleRadius>Publish</button>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </mdb-card-body>
+                        </mdb-card>
+                        <!--Card content-->
+                    </div>
+                    <!--Grid column-->
+
+
+                </div>
+            </section>
+            <!--/Projects section v.1-->
+
+
+        </div>
+
+    </div>
+
 
 
 

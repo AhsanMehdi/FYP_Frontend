@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
 import { AlertService } from '../../services/alert.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { Router } from '@angular/router'
 
@@ -12,22 +12,31 @@ import { Router } from '@angular/router'
 })
 export class SigninPageComponent implements OnInit {
   signInForm: FormGroup;
-  
   loading = false;
   submitted = false;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private fb: FormBuilder,
     private router: Router,
     private backendService: BackendService,
     private alertService: AlertService
-  ) { }
+  ) {
+
+    this.signInForm = fb.group({
+      useremail: new FormControl({ value: "", disabled: false }, [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
+
+      userpassword: new FormControl({ value: "", disabled: false }, [
+        Validators.required,
+        Validators.minLength(4),
+      ])
+    
+    });
+  }
 
   ngOnInit() {
-    this.signInForm = this.formBuilder.group({  
-      email: ['',Validators.required],
-      password: ['', [Validators.required, Validators.minLength(12)]]
-  });
   }
    // -----ng onint ends 
  signinformshow:boolean=true;
@@ -41,16 +50,26 @@ export class SigninPageComponent implements OnInit {
 
  onSignInSubmit() {
   this.submitted = true;
-  // stop here if form is invalid
-  // if (this.registerUserForm.invalid) {
-  //     return;
-      
-  // }
+
+
+  let email = this.signInForm.get("useremail").value;
+  let password = this.signInForm.get("userpassword").value;
+
+  let signIn = {
+    email: email,
+    password:password
+  }
+
+  console.log(signIn)
   this.loading = true;
-  this.backendService.signIn(this.signInForm.value)
+  this.backendService.signIn(signIn)
       .pipe(first())
       .subscribe(
           data => {
+
+            console.log(data.token)
+
+            localStorage.setItem('token', data.token);
               this.alertService.success('Registration successful', true);
               this.router.navigate(['/']);
               console.log (this.signInForm.value);

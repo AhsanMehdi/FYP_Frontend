@@ -11,9 +11,8 @@
               <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
                 <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Sign in Today! </h1>
                 <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
-                <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">CharityGo is a Social Media Collaborative Platform.
-                     Enables Donors & NGO's to Communicate Together 
-                    for Charity Related Activities
+                <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">Our team has contributed to the welfare of around 100000+ children
+                   get an education and we plan to make this number 1500000+ by 2021
               
                 </h6>
                
@@ -31,13 +30,13 @@
                       <form [formGroup]="signInForm" (ngSubmit)="onSignInSubmit()">
                     <div class="md-form">
                       <mdb-icon fas icon="envelope" class="prefix white-text active"></mdb-icon>
-                      <input type="email" id="email" formControlName="email" class="text-white form-control" mdbInput>
+                      <input type="text" id="email" formControlName="useremail" class="text-white form-control" mdbInput>
                       <label for="email" class="text-white">Enter Email</label>
                     </div>
                     <div class="md-form">
                       <mdb-icon fas icon="lock" class="prefix text-white active"></mdb-icon>
-                      <input type="password" id="password" formControlName="email" class="text-white form-control" mdbInput>
-                      <label for="password" class="text-white">Enter Password</label>
+                      <input type="password" id="userpassword" formControlName="userpassword" class="text-white form-control" mdbInput>
+                      <label for="userpassword" class="text-white">Enter Password</label>
                     </div>
                     <div class="text-center mt-4">
                       <button type="submit" mdbBtn color="indigo" mdbWavesEffect>Sign in</button>

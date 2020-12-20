@@ -20,8 +20,7 @@ import { CampaignDetailsComponent } from './components/campaigndetails/campaignd
 import { NgoDetailsComponent } from './components/ngodetails/ngodetails.component';
 import { InitialInformationComponent } from './components/initialinformation/initialinformation.component';
 import { DetailInformationComponent } from './components/detailinformation/detailinformation.component';
-
-
+import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -49,7 +48,8 @@ import {  NgProgressModule} from "ngx-progressbar";
     CampaignDetailsComponent,
     NgoDetailsComponent,
     InitialInformationComponent,
-    DetailInformationComponent
+    DetailInformationComponent,
+    
     
 
 
@@ -68,7 +68,8 @@ import {  NgProgressModule} from "ngx-progressbar";
     AgmCoreModule.forRoot({
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
       apiKey: 'Your_api_key'
-    })
+    }),
+    ToastrModule.forRoot()
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],

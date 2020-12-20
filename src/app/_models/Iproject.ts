@@ -6,14 +6,13 @@
     collectedDonation: number;
     descriptionStory: string ;
     objective: string ;
-    receivedDonationArea: string;
     currentExpenses: number;
     country: string;
     expectedEndDate: string;
     startDate: string;
     visibility: string;
     RegisterationNumber: string;
-    totalDonors: string;
+    totalDonors: number;
     visibleDonors: string;
-    userId: string;
+    imageUrl: string;
   }
