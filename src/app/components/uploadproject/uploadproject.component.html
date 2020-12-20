@@ -155,8 +155,126 @@
                                         <br>
 
                                         <div class="row justify-content-center">
+
                                             <button type="button" (click)="onNext('2')" class="btn btn-info waves-light"
                                                 mdbRippleRadius>Next</button>
+
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </mdb-card-body>
+                        </mdb-card>
+                        <!--Card content-->
+                    </div>
+                    <!--Grid column-->
+
+
+                </div>
+            </section>
+            <!--/Projects section v.1-->
+
+
+        </div>
+
+    </div>
+
+
+    <div class="row text-center" *ngIf="ShowTab2">
+
+        <div class="col-lg-8 col-xl-11 mb-3">
+
+            <section class="section pb-3">
+
+                <h2 class="section-heading h3 pt-4"><strong>Funding</strong></h2>
+
+            </section>
+            <!--/Projects section v.1-->
+            <section class="section pb-3">
+                <div class="row justify-content-center">
+                    <!--Grid column-->
+                    <div class="col-lg-8 ">
+
+                        <mdb-card style="height: 450px;">
+
+                            <mdb-card-header class="info-color white-text text-center py-4">
+                                <h5>
+                                    <strong>Funding information</strong>
+                                </h5>
+                            </mdb-card-header>
+
+                            <mdb-card-body class="px-lg-8 pt-0">
+
+                                <form #initialform="ngForm" (ngSubmit)="onSubmit()" [formGroup]="validatingForm">
+
+                                    <div class="cotainer">
+
+                                        <div class="row text-left" style="height: 50px;">
+                                            <div class="col-2 pt-5">
+                                                <label class="">Estimated Budject</label>
+                                            </div>
+                                            <div class="col-8 pt-1 text-left">
+                                                <div class="md-form">
+                                                    <i class="fa fa-pencil prefix "></i>
+                                                    <input mdbInput type="text" id="form1" class="form-control"
+                                                        customRegex="^[a-zA-Z0-9]+$" mdbInputValidate mdbActive
+                                                        data-error="Invalid Title" data-success="good" required
+                                                        formControlName="estimatedBudget">
+
+                                                    <label for="estimatedBudget">Project Estimated Budject</label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+
+
+                                        <div class="row text-left" style="height: 50px;">
+                                            <div class="col-2 pt-5">
+                                                <label class="">Registration Number</label>
+                                            </div>
+                                            <div class="col-8 pt-1 text-left">
+                                                <div class="md-form">
+                                                    <i class="fa fa-pencil prefix "></i>
+                                                    <input mdbInput type="text" id="form1" class="form-control"
+                                                        customRegex="^[a-zA-Z0-9]+$" mdbInputValidate mdbActive
+                                                        data-error="Invalid Type" data-success="good" required
+                                                        formControlName="RegisterationNumber">
+
+                                                    <label for="RegisterationNumber">Project Registration Number</label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <br>
+                                        <div class="row text-left" style="height: 50px;">
+                                            <div class="col-2 pt-5">
+                                                <label class="">Loucation</label>
+                                            </div>
+                                            <div class="col-8 pt-1 text-left">
+                                                <div class="md-form pl-4">
+                                                    <i class="fa fa-pencil prefix "></i>
+                                                    <mdb-date-picker name="mydate" [options]="myDatePickerOptions"
+                                                        [placeholder]="'Selected date'"
+                                                        formControlName="expectedEndDate" required></mdb-date-picker>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+                                        <div class="row justify-content-center">
+
+                                            <button (click)="onNext('3')" type="button" class="btn btn-info waves-light"
+                                                mdbRippleRadius>Next</button>
+
+
                                         </div>
                                     </div>
 

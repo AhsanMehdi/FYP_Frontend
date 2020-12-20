@@ -11,6 +11,7 @@ import {
 import { first } from "rxjs/operators";
 import { IProject } from "../../_models/Iproject";
 import { Router, ActivatedRoute } from "@angular/router";
+import { IMyOptions } from 'ng-uikit-pro-standard';
 
 @Component({
   selector: 'app-uploadproject',
@@ -23,6 +24,7 @@ export class UploadProjectComponent implements OnInit {
   Title = "";
   Loucation = "";
   Type = "";
+  FundingDuration = "";
 
   ShowTab1 = true;
   ShowTab2= false;
@@ -66,10 +68,30 @@ export class UploadProjectComponent implements OnInit {
         Validators.minLength(4),
       ]),
 
+      estimatedBudget: new FormControl({value:'', disabled: false}, [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
+
+  
+      expectedEndDate: new FormControl({value:'', disabled: false}, [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
+
+      RegisterationNumber: new FormControl({value:'', disabled: false}, [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
+
     });
 
     console.log(this.Title, this.Loucation, this.Type)
   }
+
+  public myDatePickerOptions: IMyOptions = {
+    dayLabels: {su: 'Sun', mo: 'Mon', tu: 'Tue', we: 'Wed', th: 'Thu', fr: 'Fri', sa: 'Sat'},
+    };
 
   ngOnInit(): void {
   }
@@ -88,6 +110,11 @@ export class UploadProjectComponent implements OnInit {
       this.ShowTab1= false
       this.ShowTab2 = true
       this.Tab2state="completed"
+    }else  if (section == '3'){
+      this.ShowTab1= false
+      this.ShowTab2 = false
+      this.ShowTab3 = true
+      this.Tab3state="completed"
     }
   
     
