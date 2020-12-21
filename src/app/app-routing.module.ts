@@ -17,6 +17,7 @@ import { NgoDetailsComponent } from './components/ngodetails/ngodetails.componen
 import { InitialInformationComponent } from './components/initialinformation/initialinformation.component';
 import { DetailInformationComponent } from './components/detailinformation/detailinformation.component';
 import { HeaderComponent } from './components/header/header.component';
+import {CampaignsComponent} from './components/campaigns/campaigns.component';
 
 
 
@@ -80,6 +81,9 @@ const routes: Routes = [
   },
   {
     path: 'projects', component: ProjectsComponent
+  },
+  {
+    path: 'campaigns', component: CampaignsComponent
   }
 ];
 

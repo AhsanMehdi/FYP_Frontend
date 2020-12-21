@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
     if ((window.location.href != "http://localhost:4200/signuppage") ) {
 
-      this.showTrnsaparent=false
+      this.showTrnsaparent=true
     }
 
     console.log( window.location.href);

@@ -25,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { ProjectsComponent } from './components/projects/projects.component';
+import { CampaignsComponent } from './components/campaigns/campaigns.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -51,7 +52,8 @@ import {  NgProgressModule} from "ngx-progressbar";
     NgoDetailsComponent,
     InitialInformationComponent,
     DetailInformationComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CampaignsComponent
     
     
 
