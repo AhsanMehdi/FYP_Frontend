@@ -3,7 +3,7 @@ import { BackendService } from '../../services/backend.service';
 import { AlertService } from '../../services/alert.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-import { IProject  } from '../../_models/Iproject';
+import { INgoProfile  } from '../../_models/Ingoprofile';
 import { Router } from '@angular/router'
 
 @Component({
@@ -12,9 +12,26 @@ import { Router } from '@angular/router'
   styleUrls: ['./ngos.component.scss']
 })
 export class NgosComponent implements OnInit {
-  constructor() { }
+ 
+  ngos: any
+  currentTutorial = null;
+  currentIndex = -1;
+  title = '';
+
+  constructor(private router:Router, private backendService: BackendService) { }
+
   ngOnInit(): void {
-  
+    this.backendService.getNgos() /*get all projects*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.ngos = data.ngos;
+        console.log(this.ngos)
+
+      },
+      error => {
+        console.log(error);
+      });
   }
 
 }

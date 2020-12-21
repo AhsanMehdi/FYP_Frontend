@@ -4,6 +4,7 @@ import { Observable,of } from 'rxjs';
 import { SignUp, SignIn , ImageUploadData } from '../_models';
 import { IProject  } from '../_models';
 import { ICampaign  } from '../_models';
+import { INgoProfile  } from '../_models';
 import { map,catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -44,6 +45,9 @@ export class BackendService {
 
   getCampaigns(): Observable<any> {
     return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign",   this.options)
+  }
+  getNgos(): Observable<any> {
+    return  this.httpClient.get(this.REST_API_SERVER+"/api/profile/ngo",   this.options)
   }
 
   getProjectById(id:string): Observable<any> {
