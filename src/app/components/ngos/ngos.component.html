@@ -1,0 +1,80 @@
+
+<div class="container mt-5">
+  <br>
+  <!--Grid row-->
+  <div class="row">
+    <!--Grid column-->
+    <div class="col-md-12 text-center mb-5">
+      <h1 class="font-bold light-blue-text my-5">Worldwide Organizations</h1>
+      
+    </div>
+  </div>
+  <!--Grid row-->
+
+  <div class="container-fluid mb-5">
+    <div class="row justify-content-center">
+
+      <div class="col-4" data-wow-delay="0.2s" > <!--*ngFor="let ngo of ngos" please uncomment this--> 
+
+
+
+        <div class="col-md-12">
+
+
+          
+          <mdb-card cascade="true" wider="true">
+
+            <!--Card image-->
+            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+
+      <!--place ngo image here-->          <img src="https://emerj.com/wp-content/uploads/2018/10/ai-for-government-and-ngo-social-good-initiatives-an-interview-with-the-wadhwani-institute.jpg" style="width: 449px; height: 171px;">
+
+            </div>
+            <!--/Card image-->
+
+            <mdb-card-body cascade="true" class="text-center">
+              <!--Card content-->
+              <!--Title-->
+              <h4 class="card-title">
+                <strong> EDHI HOME </strong>  <!--{{project.tittle}}-->
+              </h4>
+              <h5 class="indigo-text">
+                <strong>Objective</strong>  <!--{{project.objective}}-->
+              </h5>
+<!-- 
+              <mdb-card-text>
+               Aim to Provide Place   {{project.descriptionStory}}-->
+              <!--/mdb-card-text> 
+
+              Linkedin-->
+              <!-- <a class="px-2 icons-sm li-ic">
+                <mdb-icon fab icon="linkedin-in"> </mdb-icon>
+              </a>
+              <Twitter-->
+              <!-- <a class="px-2 icons-sm tw-ic">
+                <mdb-icon fab icon="twitter"> </mdb-icon>
+              </a>
+              Dribbble-->
+              <!-- <a class="px-2 icons-sm fb-ic">
+                <mdb-icon fab icon="facebook-f"> </mdb-icon>
+              </a> --> --> -->
+              <!-- <a (click)="showDetials(project)" class="orange-text mt-1 d-flex flex-row-reverse">
+                <h5 class="waves-effect p-2" mdbWavesEffect>Read more
+                  <mdb-icon fas icon="chevron-right"></mdb-icon>
+                </h5>
+              </a> -->
+            </mdb-card-body>
+            <!--/.Card content-->
+
+          </mdb-card>
+          <!--/.Card-->
+        </div>
+        <br>
+        <br>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

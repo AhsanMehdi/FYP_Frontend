@@ -26,6 +26,7 @@ import { HttpModule } from '@angular/http';
 
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CampaignsComponent } from './components/campaigns/campaigns.component';
+import { NgosComponent } from './components/ngos/ngos.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -53,7 +54,8 @@ import {  NgProgressModule} from "ngx-progressbar";
     InitialInformationComponent,
     DetailInformationComponent,
     ProjectsComponent,
-    CampaignsComponent
+    CampaignsComponent,
+    NgosComponent
     
     
 
