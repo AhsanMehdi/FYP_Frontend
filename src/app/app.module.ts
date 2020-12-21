@@ -23,7 +23,7 @@ import { DetailInformationComponent } from './components/detailinformation/detai
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { FilterPipe } from './filter.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
@@ -49,6 +49,7 @@ import {  NgProgressModule} from "ngx-progressbar";
     NgoDetailsComponent,
     InitialInformationComponent,
     DetailInformationComponent,
+    FilterPipe 
     
     
 
