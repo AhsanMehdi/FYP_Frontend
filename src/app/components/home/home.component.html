@@ -118,7 +118,7 @@
 
         <!--Section heading-->
         <h2 class="text-center h1 py-5">
-          <strong>Up to minute compaigns</strong>
+          <strong>Up to minute campaigns</strong>
         </h2>
 
         
@@ -133,7 +133,7 @@
         [animation]="'slide'">
 
         <mdb-carousel-item *ngFor="let item of slides; let i = index">
-          <div class="col-md-4" *ngFor="let compaign of item; let cardIndex = index">
+          <div class="col-md-4" *ngFor="let campaign of item; let cardIndex = index">
             <!--Featured image-->
             <div class="view overlay rounded z-depth-1 waves-light" mdbWavesEffect>
               <img src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" class="img-fluid"
@@ -146,11 +146,11 @@
             <!--Excerpt-->
             <mdb-card-body class="mt-3">
               <h4>
-                <strong>{{compaign.nickName}}</strong>
+                <strong>{{campaign.nickName}}</strong>
               </h4>
-              <p class="black-text">{{compaign.descriptionStory}}
+              <p class="black-text">{{campaign.descriptionStory}}
               </p>
-              <a mdbBtn color="indigo" size="sm" class="waves-light" mdbWavesEffect>
+              <a (click)="showDetialsCampaign(campaign)"mdbBtn color="indigo" size="sm" class="waves-light" mdbWavesEffect>
                 <mdb-icon far icon="clone" class="left"></mdb-icon>Read More
               </a>
             </mdb-card-body>

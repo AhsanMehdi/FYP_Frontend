@@ -4,6 +4,7 @@ import { AlertService } from '../../services/alert.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { IProject  } from '../../_models/Iproject';
+import { ICampaign  } from '../../_models/Icampaign';
 import { Router } from '@angular/router'
 
 
@@ -28,7 +29,13 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['projectdetails'],{ queryParams: { id: project._id } });
     
     
-  }
+  
+}
+showDetialsCampaign(campaign){
+  this.router.navigate(['campaigndetails'],{ queryParams: { id: campaign._id } });
+  
+  
+}
 
   stars = Array(5);
   slides: any = [[]];

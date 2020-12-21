@@ -8,5 +8,4 @@ export interface ICampaign {
     status: string;
     visibility: string;
     dateOfCreation: string;
-    userId: string;
   }
