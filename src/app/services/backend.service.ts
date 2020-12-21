@@ -26,7 +26,6 @@ export class BackendService {
   signUp(signUp:  SignUp) {
 
     
-    signUp.userType="ngo"
 
     console.log(    JSON.stringify(signUp)
     )

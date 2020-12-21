@@ -30,7 +30,8 @@ export class SignupPageComponent implements OnInit {
           //userType: ['', Validators.required],
           name: ['', Validators.required],  
           email: ['',Validators.required],
-          password: ['', [Validators.required, Validators.minLength(12)]]
+          password: ['', [Validators.required, Validators.minLength(12)]],
+          userType: ['', [Validators.required, Validators.minLength(12)]]
       });
       this.loginUserForm = this.formBuilder.group({  
         email: ['',Validators.required],
@@ -50,6 +51,8 @@ export class SignupPageComponent implements OnInit {
 
  // ngOnSubmit Function
  onSignUpSubmit() {
+
+  console.log(this.registerUserForm.value)
   this.submitted = true;
   // stop here if form is invalid
   // if (this.registerUserForm.invalid) {

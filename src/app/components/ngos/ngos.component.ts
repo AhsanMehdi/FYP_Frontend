@@ -25,7 +25,7 @@ export class NgosComponent implements OnInit {
     .pipe(first())
     .subscribe(
       data => {
-        this.ngos = data.ngos;
+        this.ngos = data.ngoProfile;
         console.log(this.ngos)
 
       },

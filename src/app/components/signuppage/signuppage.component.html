@@ -53,6 +53,23 @@
                     <input type="password" id="password" formControlName="password" class="text-white form-control" mdbInput>
                     <label for="password" class="text-white">Your password</label>
                   </div>
+                  <div class="md-form">
+                    <div class="row">
+                      <div class="col-3">
+                        <mdb-icon fas icon="pencil-alt" class="prefix text-white active"></mdb-icon>
+                      </div>
+                      
+                      <div class="col-9">
+                        <select class="browser-default custom-select"  formControlName="userType">
+                          <option selected value="ngo">Ngo</option>
+                          <option value="donor">Donor</option>
+                        </select>
+                      </div>
+                     
+                    </div>
+                    
+                    
+                  </div>
                   <div class="text-center mt-4">
                     <button type="submit" mdbBtn color="indigo" mdbWavesEffect>Sign up</button>
                     <hr class="hr-light mb-3 mt-4">
