@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {SignupPageComponent} from './components/signuppage/signuppage.component';
 import {DonorhomeComponent} from './components/donorhome/donorhome.component';
-import {ProjectComponent} from './components/project/project.component';
+import {ProjectsComponent} from './components/projects/projects.component';
 import {NgosignupComponent} from './components/ngosignup/ngosignup.component';
 import {NgohomeComponent} from './components/ngohome/ngohome.component';
 import {SigninPageComponent} from './components/signinpage/signinpage.component';
@@ -16,6 +16,8 @@ import { CampaignDetailsComponent } from './components/campaigndetails/campaignd
 import { NgoDetailsComponent } from './components/ngodetails/ngodetails.component';
 import { InitialInformationComponent } from './components/initialinformation/initialinformation.component';
 import { DetailInformationComponent } from './components/detailinformation/detailinformation.component';
+import { HeaderComponent } from './components/header/header.component';
+
 
 
 
@@ -23,6 +25,10 @@ const routes: Routes = [
   {
     path: '', component: HomeComponent
   },
+  {
+    path: '', component: HeaderComponent
+  },
+  
   {
     path: 'signuppage', component: SignupPageComponent
   },
@@ -73,7 +79,7 @@ const routes: Routes = [
     path: 'projectedit', component: HomeComponent
   },
   {
-    path: 'project', component: HomeComponent
+    path: 'projects', component: ProjectsComponent
   },
 ];
 
