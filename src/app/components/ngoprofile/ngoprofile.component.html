@@ -1,93 +1,86 @@
-<br>
-<br>
-<button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
-        (click)="frame.show()" mdbWavesEffect>Launch Modal
-</button>
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
 
-<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true" >
-  <div class="modal-dialog form-dark" role="document">
-    <!--Content-->
-    <mdb-card style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg')"
-              class="modal-content">
-      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
-        <!--Header-->
-        <div class="modal-header text-center pb-4">
-          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
-            <strong>SIGN</strong>
-            <a class="green-text font-weight-bold">
-              <strong> UP</strong>
-            </a>
-          </h3>
-          <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
-            <span aria-hidden="true">&times;</span>
-          </button>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#"> <img src="/assets/images/whitelogo.png" style="width:101px;height:52px;"></a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item active waves-light" mdbWavesEffect>
+        <a   routerLink="/" class="nav-link">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a   class="nav-link"  routerLink="/projects" >Projects</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" routerLink="/ngos">NGO</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" routerLink="/campaigns" >Campaigns</a>
+      </li>
+      <li class="nav-item active">
+        
+        <a class="nav-link waves-light" routerLink="/campaigns" mdbWavesEffect><mdb-icon fas icon="fa-plus"></mdb-icon> Post Campaign<span class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          More<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Connect</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Actions</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">latest Donations</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">log history</a>
         </div>
-        <!--Body-->
-        <div class="modal-body">
-          <!--Body-->
-          <div class="md-form mb-5">
-            <input type="email" id="Form-email5" class="form-control white-text" mdbValidate mdbInput
-                   [formControl]="modalFormDarkEmail">
-            <label for="Form-email5">Your email</label>
-            <mdb-error *ngIf="modalFormDarkEmail.invalid && (modalFormDarkEmail.dirty || modalFormDarkEmail.touched)">
-              Input invalid
-            </mdb-error>
-            <mdb-success *ngIf="modalFormDarkEmail.valid && (modalFormDarkEmail.dirty || modalFormDarkEmail.touched)">
-              Input valid
-            </mdb-success>
-          </div>
-
-          <div class="md-form pb-3">
-            <input type="password" id="Form-pass5" class="form-control white-text" mdbValidate mdbInput
-                   [formControl]="modalFormDarkPassword">
-            <label for="Form-pass5">Your password</label>
-            <mdb-error
-              *ngIf="modalFormDarkPassword.invalid && (modalFormDarkPassword.dirty || modalFormDarkPassword.touched)">
-              Input invalid
-            </mdb-error>
-            <mdb-success
-              *ngIf="modalFormDarkPassword.valid && (modalFormDarkPassword.dirty || modalFormDarkPassword.touched)">
-              Input valid
-            </mdb-success>
-            <div class="form-group mt-4">
-              <mdb-checkbox>Accept the
-                <a href="#" class="green-text font-weight-bold"> Terms and Conditions</a></mdb-checkbox>
-              <input class="form-check-input" type="checkbox" id="checkbox624">
-            </div>
-          </div>
-
-          <!--Grid row-->
-          <div class="row d-flex align-items-center mb-4">
-
-            <!--Grid column-->
-            <div class="text-center mb-3 col-md-12">
-              <button type="button" mdbBtn color="success" block="true" rounded="true" class="z-depth-1 waves-light"
-                      mdbWavesEffect>Sign up
-              </button>
-            </div>
-            <!--Grid column-->
-
-          </div>
-          <!--Grid row-->
-
-          <!--Grid row-->
-          <div class="row">
-
-            <!--Grid column-->
-            <div class="col-md-12">
-              <p class="font-small white-text d-flex justify-content-end">Have an account?
-                <a href="#" class="green-text ml-1 font-weight-bold"> Log in</a>
-              </p>
-            </div>
-            <!--Grid column-->
-
-          </div>
-          <!--Grid row-->
-
-        </div>
+      </li> -->
+      <li class="nav-item active">
+        
+        <a class="nav-link waves-light" routerLink="/chatbox"mdbWavesEffect><mdb-icon fas icon="envelope"></mdb-icon> Chatbox<span class="sr-only">(current)</span></a>
+      </li>
+     
+    </ul>
+    <!-- <form class="form-inline">
+      <div class="md-form my-0">
+        <input class="form-control mr-sm-" type="text" placeholder="Search" aria-label="Search">
       </div>
-    </mdb-card>
-    <!--/.Content-->
-  </div>
-</div>
+    </form> -->
+ 
+  </links>
+
+  <links>
+
+    <!-- Links -->
+   
+  
+
+      <!-- Dropdown -->
+
+
+    
+    <!-- Links -->
+   
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+    
+      <a href="/initialinformation" mdbBtn color="blue" rounded="true" mdbWavesEffect>Post Project</a>
+      <li class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#">Edit Profile</a>
+              <a class="dropdown-item" href="#">Security</a>
+              <a class="dropdown-item" href="#">Portfolio</a>
+              <div class="divider dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Log out</a>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->

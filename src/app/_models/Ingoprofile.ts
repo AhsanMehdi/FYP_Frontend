@@ -11,5 +11,6 @@ export interface INgoProfile {
     startDate: string;
     visibility: string;
     registerationNumber: string;
+    imageUrl: string;
     
   }

@@ -12,7 +12,7 @@ export class AppComponent {
   constructor() {
 
     
-    if ((window.location.href == "http://localhost:4200/donorhome") ) {
+    if ((window.location.href == "http://localhost:4200/donorhome") || (window.location.href == "http://localhost:4200/ngoprofile") ) {
 
       this.showHeader=false
     }

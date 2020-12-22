@@ -13,7 +13,7 @@
   <!--Grid row-->
 
   <div class="container-fluid mb-5">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" >
 
       <div class="col-4" data-wow-delay="0.2s" *ngFor="let ngo of ngos">
 
@@ -23,12 +23,12 @@
 
 
           <!--Card-->
-          <mdb-card cascade="true" wider="true">
+          <mdb-card cascade="true" wider="true" >
 
             <!--Card image-->
-            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+            <div class="view view-cascade overlay waves-light" mdbWavesEffect >
 
-              <img src="https://emerj.com/wp-content/uploads/2018/10/ai-for-government-and-ngo-social-good-initiatives-an-interview-with-the-wadhwani-institute.jpg" style="width: 449px; height: 171px;">
+              <img src="{{ngo.imageUrl}} "style="width: 555px; height: 190px;">
 
             </div>
             <!--/Card image-->

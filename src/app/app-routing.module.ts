@@ -57,7 +57,7 @@ const routes: Routes = [
     path: 'donorprofile', component: DonorProfileComponent
   },
   {
-    path: 'initialinformationcomponent', component:  InitialInformationComponent
+    path: 'initialinformation', component:  InitialInformationComponent
   },
   {
     path: 'detailinformation', component:  DetailInformationComponent
