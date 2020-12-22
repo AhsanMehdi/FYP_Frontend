@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-uikit-pro-standard';
+  
+   showHeader = true
+  constructor() {
+
+    
+    if ((window.location.href == "http://localhost:4200/donorhome") ) {
+
+      this.showHeader=false
+    }
+
+
+  }
+
 }
