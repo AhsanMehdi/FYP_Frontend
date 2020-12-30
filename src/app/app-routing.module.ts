@@ -52,7 +52,6 @@ const routes: Routes = [
   {
     path: 'chatbox', component: ChatBoxComponent
   },
- 
   {
     path: 'donorprofile', component: DonorProfileComponent
   },

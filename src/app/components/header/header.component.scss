@@ -1,19 +1,48 @@
-.view {
-    background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-}
 
 .navbar {
-    background-color: transparent;
+    background-color: black;
 }
 
 .top-nav-collapse {
     background-color: #4285F4;
 }
-
-@media only screen and (max-width: 768px) {
-    .navbar {
-        background-color: #4285F4;
-    }
+.nav-link{
+    color: bisque;
 }
+
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Green */
+.sucman {
+    background-color: transparent;
+    border-color: black;
+    color: #ffce00;
+    font-weight: bold;
+}
+.sucmanff {
+    background-color: black;
+    border-color: #ffce00;
+    color: #ffce00;
+}
+.sucman:hover {
+    background-color:#ffce00;
+    color: black;
+
+}
+.succmann {
+    background-color: #ffce00;
+    border-color: #ffce00;
+    color: black;
+}
+.succmann:hover {
+    background-color: #4ab8b8;
+    border-color: black;
+    color: white;
+} 

@@ -35,6 +35,7 @@ import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-ui
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import {  NgProgressModule} from "ngx-progressbar";
 
+
 @NgModule({
   declarations: [
     AppComponent,
