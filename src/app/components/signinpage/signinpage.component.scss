@@ -35,7 +35,21 @@ header,
     background: #3f51b5 !important;
   }
 }
+.succmann {
+  background-color: #ffce00;
+  border-color: #ffce00;
+  color: black;
+  font-weight: bolder;
+  border-radius: 1cm;
 
+}
+.succmann:hover {
+  background-color: #32f88bcc;
+  border-radius: 2cm;
+  border-color: #ffce00;
+  color:black;
+  font-weight: bold;
+} 
 .rgba-gradient {
   background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
   background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%));
@@ -43,7 +57,7 @@ header,
 }
 
 .card {
-  background-color: rgba(126, 123, 215, 0.2);
+  background-color: rgb(0, 0, 0);
 }
 
 .md-form label {
