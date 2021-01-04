@@ -19,6 +19,7 @@ import { DetailInformationComponent } from './components/detailinformation/detai
 import { HeaderComponent } from './components/header/header.component';
 import {CampaignsComponent} from './components/campaigns/campaigns.component';
 import {NgosComponent} from './components/ngos/ngos.component';
+import { UserchoiceComponent } from './components/userchoice/userchoice.component';
 
 
 
@@ -88,6 +89,9 @@ const routes: Routes = [
   ,
   {
     path: 'ngos', component: NgosComponent
+  },
+  {
+    path: 'userchoice', component: UserchoiceComponent
   }
 ];
 
