@@ -289,7 +289,18 @@
   <body>
     <div class="container-fluid">
       <div class="row">
+        <!-- ///////// -->
+        <!-- mehdi bhai below are page divisions namely col2,col8,col2. the cols represent 2-8-2 division
+        of the entire page. the data in 2-2 is static as it will link to other pages. however
+        the data in col8 tag is going to be dynamic. I have added static data here which will help you
+        set width height on your dynamic data commands. So, I will add comments there and specify what 
+        type of data is required. -->
+        <!-- ///////// -->
+
         <div class="col-2" style="background-color:black;">
+          <br>
+          <br>
+          <br>
           <button class="sucman" routerLink="/donortimeline"> Tahir </button>
           <div class="stories"  >
             <h4 class="heading14" style="color: white;">Stories</h4>
@@ -354,6 +365,13 @@
           </div>
         </div>
         <div class="col-8 new-posts" style="background-color: black;" >
+          <br>
+          <br>
+          <br><!-- ///////// -->
+          <!-- this createpost container is for uploading update on charityGO. treat the button as form
+            submission  -->
+          <!-- ///////// -->
+  
           <div class="createpost-container" style="background-color: black;" >
             <div class="createpost-heading">
               <h3 class="text-align-center" style="color: white;">Create Post</h3>
@@ -379,6 +397,16 @@
               </form>
             </div>
           </div>
+          <!-- ///////// -->
+        <!-- now this is main post panel. here i guess you would have to apply max20 items 
+            display unless user scrolls down( i personally think adding a text with link " show more " would
+           be better, but lets say currently we have scroll option) -->
+        <!-- ///////// -->
+
+      <!-- ///////// -->
+        <!-- so each post box would get NGO name, project/campagin title, attatched picture, likes and comments -->
+        <!-- ///////// -->
+
           <div class="post-box">
             <h3 class="title-ngo" style="color: white;">Edhi Foundation</h3>
             <p>
@@ -426,6 +454,10 @@
                 />
               </div>
             </div>
+            <!-- ///////// -->
+        <!-- Now this is the comment section for this post, i think max 2 comments would be enough to display
+          unless user opens the post seperately. This would contain username(who comments) and comment -->
+        <!-- ///////// -->
 
             <div class="comment-section">
               <div class="comment-section-0">
@@ -581,6 +613,9 @@
         <!-- ///////// -->
 
         <div class="col-2" style="background-color:black;">
+          <br>
+          <br>
+          <br>
           <div class="stories">
             <h4 class="heading14" style="color: white;">Liked Organizations</h4>
             <ul>
