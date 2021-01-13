@@ -35,6 +35,7 @@ import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-ui
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import {  NgProgressModule} from "ngx-progressbar";
 import { UserchoiceComponent } from './components/userchoice/userchoice.component';
+import { DonortimelineComponent } from './components/donortimeline/donortimeline.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { UserchoiceComponent } from './components/userchoice/userchoice.componen
     ProjectsComponent,
     CampaignsComponent,
     NgosComponent,
-    UserchoiceComponent
+    UserchoiceComponent,
+    DonortimelineComponent
     
     
 

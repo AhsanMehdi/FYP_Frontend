@@ -20,6 +20,7 @@ import { HeaderComponent } from './components/header/header.component';
 import {CampaignsComponent} from './components/campaigns/campaigns.component';
 import {NgosComponent} from './components/ngos/ngos.component';
 import { UserchoiceComponent } from './components/userchoice/userchoice.component';
+import { DonortimelineComponent } from './components/donortimeline/donortimeline.component';
 
 
 
@@ -92,6 +93,9 @@ const routes: Routes = [
   },
   {
     path: 'userchoice', component: UserchoiceComponent
+  },
+  {
+    path: 'donortimeline', component: DonortimelineComponent
   }
 ];
 
