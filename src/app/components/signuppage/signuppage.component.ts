@@ -65,7 +65,8 @@ export class SignupPageComponent implements OnInit {
       .subscribe(
           data => {
               this.alertService.success('Registration successful', true);
-              this.router.navigate(['/']);
+              if (this.registerUserForm.value.userType == "donor")
+              this.router.navigate(['/signinpage']);
               console.log (this.registerUserForm.value);
           },
           error => {
