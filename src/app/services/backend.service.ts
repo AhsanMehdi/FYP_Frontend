@@ -26,7 +26,7 @@ export class BackendService {
   signUp(signUp:  SignUp) {
 
     
-
+    console.log ("I am going to database")
     console.log(    JSON.stringify(signUp)
     )
     return this.httpClient.post(this.REST_API_SERVER+"/api/auth/signup",  JSON.stringify(signUp), this.options);
