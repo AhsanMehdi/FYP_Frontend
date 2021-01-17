@@ -37,6 +37,7 @@ import {  NgProgressModule} from "ngx-progressbar";
 import { UserchoiceComponent } from './components/userchoice/userchoice.component';
 import { DonortimelineComponent } from './components/donortimeline/donortimeline.component';
 import { EditprofileComponent } from './components/editprofile/editprofile.component';
+import { CampaignaddComponent } from './components/campaignadd/campaignadd.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { EditprofileComponent } from './components/editprofile/editprofile.compo
     NgosComponent,
     UserchoiceComponent,
     DonortimelineComponent,
-    EditprofileComponent
+    EditprofileComponent,
+    CampaignaddComponent
     
     
 
