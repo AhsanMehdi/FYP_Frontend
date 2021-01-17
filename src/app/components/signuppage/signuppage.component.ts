@@ -67,6 +67,8 @@ export class SignupPageComponent implements OnInit {
               this.alertService.success('Registration successful', true);
               if (this.registerUserForm.value.userType == "donor")
               this.router.navigate(['/signinpage']);
+              if (this.registerUserForm.value.userType == "ngo")
+              this.router.navigate(['/signinpage']);
               console.log (this.registerUserForm.value);
           },
           error => {

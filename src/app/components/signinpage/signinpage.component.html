@@ -100,22 +100,23 @@ body {
   <br>
   <br>
 <div class="signup-form">
-	<form [FormGroup]="signInForm" (ngSubmit)="onSignInSubmit()">  
+	<form [formGroup]="signInForm" (ngSubmit)="onSignInSubmit()">
 
       <h1 style="text-align: center; color: black; ">Sign In</h1>
       <p class="hint-text">Sign in to continue exploring CharityGO.</p>
 	<div class="form-group">
-		<input type="email" id="useremail" formControlName="useremail" placeholder="Email" class="text-black form-control" mdbInput>
+		<input type="email" id="email" formControlName="useremail" placeholder="Email" class="text-black form-control">
 	</div>
 	<div class="form-group">
-		<input type="password" id="userpassword" formControlName="userpassword" placeholder="Password" class="text-black form-control" mdbInput>
+		<input type="password" id="password" formControlName="userpassword" placeholder="Password" class="text-black form-control">
 	</div>      
 	
 		<div class="form-group">
             <button type="submit" class="btn btn-success btn-lg btn-block" >Login</button>
 		</div>
-		</form>
+
 	<div class="text-center">Don't have an account? <a href="#">Join Now</a></div>
+</form>
 </div>
 </body>
 
