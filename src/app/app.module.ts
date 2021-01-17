@@ -36,6 +36,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import {  NgProgressModule} from "ngx-progressbar";
 import { UserchoiceComponent } from './components/userchoice/userchoice.component';
 import { DonortimelineComponent } from './components/donortimeline/donortimeline.component';
+import { EditprofileComponent } from './components/editprofile/editprofile.component';
+import { CampaignaddComponent } from './components/campaignadd/campaignadd.component';
 
 
 @NgModule({
@@ -60,7 +62,9 @@ import { DonortimelineComponent } from './components/donortimeline/donortimeline
     CampaignsComponent,
     NgosComponent,
     UserchoiceComponent,
-    DonortimelineComponent
+    DonortimelineComponent,
+    EditprofileComponent,
+    CampaignaddComponent
     
     
 

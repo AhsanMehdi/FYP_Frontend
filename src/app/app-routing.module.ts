@@ -21,6 +21,8 @@ import {CampaignsComponent} from './components/campaigns/campaigns.component';
 import {NgosComponent} from './components/ngos/ngos.component';
 import { UserchoiceComponent } from './components/userchoice/userchoice.component';
 import { DonortimelineComponent } from './components/donortimeline/donortimeline.component';
+import { EditprofileComponent } from './components/editprofile/editprofile.component';
+import { CampaignaddComponent } from './components/campaignadd/campaignadd.component';
 
 
 
@@ -96,7 +98,14 @@ const routes: Routes = [
   },
   {
     path: 'donortimeline', component: DonortimelineComponent
+  },
+  {
+    path: 'editprofile', component: EditprofileComponent
+  },
+  {
+    path: 'campaignadd', component: CampaignaddComponent
   }
+  
 ];
 
 @NgModule({
