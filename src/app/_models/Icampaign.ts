@@ -6,7 +6,6 @@ export interface ICampaign {
     objective: string;
     country: string;
     status: string;
-    visibility: string;
     dateOfCreation: string;
     imageUrl: string;
   }

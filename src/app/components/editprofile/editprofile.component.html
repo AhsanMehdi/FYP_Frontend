@@ -83,30 +83,30 @@ label {
 <br>
 <br>
 <div class="container">
-<form>
+<form [formGroup]="editProfileForm" (ngSubmit)="onEditProfileSubmit()">
     <div class="form-row">
       <div class="form-group col-md-3">
         <label for="First Name">First Name</label>
-        <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+        <input type="text" class="form-control" id="inputFirstName" formControlName="firstName" placeholder="First Name" mdbInput>
       </div>
       <div class="form-group col-md-3">
         <label for="Middle Name">Middle Name</label>
-        <input type="text" class="form-control" id="inputMiddleName" placeholder="Middle Name">
+        <input type="text" class="form-control" id="inputMiddleName" formControlName="middleName" placeholder="Middle Name" mdbInput>
       </div>
       <div class="form-group col-md-3">
         <label for="Last Name">Last Name</label>
-        <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+        <input type="text" class="form-control" id="inputLastName" formControlName="lastName" placeholder="Last Name" mdbInput>
       </div>  
     </div>
     <div class="form-group">
     <label for="start">Date of Birth:</label>
-      <input type="date" id="start" name="trip-start"
+      <input type="date" id="start" formControlName="dob" name="trip-start"
        value="2018-07-22"
        min="1950-1-1" max="2020-12-31">
     </div>
     <div class="form-group">
       <label for="telNo">Phone number:</label>
-  <input id="telNo" name="telNo" type="tel">
+  <input id="telNo" formControlName="cellNumber" name="telNo" type="tel">
     </div>
     <div class="form-group">
     <p class="hint-text">Select the Project/Campaign types you want to follow. </p>
@@ -114,38 +114,38 @@ label {
       <div class="col-md-12">
     
       <label class="PillList-item">
-      <input type="checkbox" name="feature" value="1">
+      <input type="checkbox" name="Health" value="Health" formControlName="interestedDomain">
       <span class="PillList-label">Health
       <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
       </span>
     </label>
         <label class="PillList-item">
-      <input type="checkbox" name="feature" value="2">
+      <input type="checkbox" name="feature" value="Health">
       <span class="PillList-label">Education
       <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
     
       </span>
     </label>
      <label class="PillList-item">
-      <input type="checkbox" name="feature" value="3">
+      <input type="checkbox" name="feature" value="Health">
       <span class="PillList-label">Orphanage
       <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
       </span>
     </label>
     <label class="PillList-item">
-      <input type="checkbox" name="feature" value="4">
+      <input type="checkbox" name="feature" value="Health">
       <span class="PillList-label">Environment
       <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
       </span>
     </label>
     <label class="PillList-item">
-      <input type="checkbox" name="feature" value="5">
+      <input type="checkbox" name="feature" value="Health">
       <span class="PillList-label">Social Welfare
       <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
       </span>
     </label>
     <label class="PillList-item">
-      <input type="checkbox" name="feature" value="5">
+      <input type="checkbox" name="feature" value="Health">
       <span class="PillList-label">Other
       <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
       </span>
@@ -156,12 +156,12 @@ label {
     </div>
     <div class="form-group">
       <label for="telNo">CNIC:</label>
-  <input id="telNo" name="telNo" type="tel">
+  <input id="telNo" formControlName="cnic" name="telNo" type="tel">
     </div>
     <div class="form-group">
       <label for="country">Country</label>      
         
-            <select id="country" name="country" class="form-control">
+            <select id="country" formControlName="country" name="country" class="form-control">
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
@@ -412,13 +412,14 @@ label {
       <label>Visibility</label>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+
+      <input class="form-check-input" type="radio" name="visibility" value="public" id="flexRadioDefault1" formControlName="visibility">
       <label class="form-check-label" for="flexRadioDefault1" style="color: black;">
         Public
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+      <input class="form-check-input" type="radio" name="visibility" value="private" id="flexRadioDefault2" formControlName="visibility">
       <label class="form-check-label" for="flexRadioDefault2" style="color: rgb(0, 0, 0);">
         Private
       </label>
@@ -426,7 +427,7 @@ label {
   </div>
   <div class="form-group">
     <label for="telNo">Occupation:</label>
-<input id="text" name="text" type="text">
+<input id="text" formControlName="occupation" name="text" type="text">
   </div>
     <button type="submit" class="btn btn-primary">Apply</button>
   </form>
