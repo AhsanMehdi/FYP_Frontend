@@ -99,37 +99,38 @@ body {
   <br>
   <br>
   <br>
-<div class="signup-form">
-    <form action="/examples/actions/confirmation.php" method="post">
-      <h1 style="text-align: center; color: black; ">Register</h1>
+
+  <div  class="signup-form">
+
+	<form [formGroup]="registerUserForm" (ngSubmit)="onSignUpSubmit()">  
+		<h1 style="text-align: center; color: black; ">Register</h1>
       <p class="hint-text">Create your account. It's free and only takes a minute.</p>
         <div class="form-group">
 			<div class="row">
-				<div class="col"><input type="text" class="form-control" name="Username" placeholder="Username" required="required"></div>
+				<div class="col"><input type="text" placeholder="Name" id="name" formControlName="name" class="text-black form-control" mdbInput>    
 			</div>        	
-        </div>
+		</div>
+		</div>
         <div class="form-group">
-        	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
-        </div>
+			<input type="email" id="email" formControlName="email" placeholder="Email" class="text-black form-control" mdbInput>
+		</div>
 		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-        </div>      
+			<input type="password" id="password" formControlName="password" placeholder="Password" class="text-black form-control" mdbInput>
+		</div>      
         <p class="hint-text">Select your account type.</p>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1" style="color: black;">
-            Donor
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-          <label class="form-check-label" for="flexRadioDefault2" style="color: rgb(0, 0, 0);">
-            NGO
-          </label>
-        </div>
-        
+		<div class="row">
+			
+			<div class='col-12'>
+			  <select class="browser-default custom-select text-black" formControlName="userType" id = "userType">
+				<option selected value="ngo">Ngo</option>
+				<option value="donor">Donor</option>
+			  </select>
+			</div>
+		   
+		  </div>
+		  <br>		  
 		<div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block" routerLink="/userchoice">Register Now</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block" >Register Now</button>
         </div>
     </form>
 	<div class="text-center">Already have an account? <a href="#">Sign in</a></div>

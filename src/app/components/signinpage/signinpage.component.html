@@ -100,24 +100,23 @@ body {
   <br>
   <br>
 <div class="signup-form">
-    <form action="/examples/actions/confirmation.php" method="post">
+	<form [formGroup]="signInForm" (ngSubmit)="onSignInSubmit()">
+
       <h1 style="text-align: center; color: black; ">Sign In</h1>
       <p class="hint-text">Sign in to continue exploring CharityGO.</p>
-        <div class="form-group">
-			<div class="row">
-				<div class="col"><input type="text" class="form-control" name="Username" placeholder="Username" required="required"></div>
-			</div>        	
-        </div>
-        
+	<div class="form-group">
+		<input type="email" id="email" formControlName="useremail" placeholder="Email" class="text-black form-control">
+	</div>
+	<div class="form-group">
+		<input type="password" id="password" formControlName="userpassword" placeholder="Password" class="text-black form-control">
+	</div>      
+	
 		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-        </div>      
-        
-		<div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block" routerLink="/donorhome">Login</button>
-        </div>
-    </form>
+            <button type="submit" class="btn btn-success btn-lg btn-block" >Login</button>
+		</div>
+
 	<div class="text-center">Don't have an account? <a href="#">Join Now</a></div>
+</form>
 </div>
 </body>
 

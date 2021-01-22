@@ -6,6 +6,7 @@ import { IProject  } from '../_models';
 import { ICampaign  } from '../_models';
 import { INgoProfile  } from '../_models';
 import { map,catchError } from 'rxjs/operators';
+import { IDonorProfile  } from '../_models';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class BackendService {
   signUp(signUp:  SignUp) {
 
     
-
+    console.log ("I am going to database")
     console.log(    JSON.stringify(signUp)
     )
     return this.httpClient.post(this.REST_API_SERVER+"/api/auth/signup",  JSON.stringify(signUp), this.options);
@@ -89,6 +90,31 @@ export class BackendService {
 
     return this.httpClient.post(this.REST_API_SERVER+"/api/photos/upload",formData );
   }
+  /* a function to edit donor profile by calling api of post donor profile*/
+  donorProfile(donorProfile:  IDonorProfile) {
 
+    
+    console.log ("I am going to database")
+    console.log(    JSON.stringify(donorProfile)
+    )
+    return this.httpClient.post(this.REST_API_SERVER+"/api/profile/donor",  JSON.stringify(donorProfile), this.options);
+  }
+  /* a function to upload the campaign */
+  createCampaign(campaign:  ICampaign) {
+    console.log(    JSON.stringify(campaign))
 
+  
+    let token = localStorage.getItem('token') /* user cannot upload a campaign until they signed in means enter to system */
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization:"Token "+token
+      })
+    };
+    console.log("token",token)
+    console.log("authoptions",httpOptions)
+
+    return this.httpClient.post(this.REST_API_SERVER+"/api/campaign",  JSON.stringify(campaign), httpOptions);
+  }
 }

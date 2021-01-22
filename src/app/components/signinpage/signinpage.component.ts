@@ -71,7 +71,7 @@ export class SigninPageComponent implements OnInit {
 
             localStorage.setItem('token', data.token);
               this.alertService.success('Registration successful', true);
-              this.router.navigate(['/']);
+              this.router.navigate(['/donorhome']);
               console.log (this.signInForm.value);
           },
           error => {

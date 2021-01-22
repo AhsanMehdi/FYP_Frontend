@@ -33,10 +33,10 @@ export class SignupPageComponent implements OnInit {
           password: ['', [Validators.required, Validators.minLength(12)]],
           userType: ['', [Validators.required, Validators.minLength(12)]]
       });
-      this.loginUserForm = this.formBuilder.group({  
-        email: ['',Validators.required],
-        password: ['', [Validators.required, Validators.minLength(12)]]
-    });
+    //   this.loginUserForm = this.formBuilder.group({  
+    //     email: ['',Validators.required],
+    //     password: ['', [Validators.required, Validators.minLength(12)]]
+    // });
 
 
   }
@@ -65,7 +65,10 @@ export class SignupPageComponent implements OnInit {
       .subscribe(
           data => {
               this.alertService.success('Registration successful', true);
-              this.router.navigate(['/']);
+              if (this.registerUserForm.value.userType == "donor")
+              this.router.navigate(['/signinpage']);
+              if (this.registerUserForm.value.userType == "ngo")
+              this.router.navigate(['/signinpage']);
               console.log (this.registerUserForm.value);
           },
           error => {
