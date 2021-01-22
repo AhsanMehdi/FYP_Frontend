@@ -36,7 +36,13 @@ export class EditprofileComponent implements OnInit {
       cnic: ['', Validators.required],
       country: ['', Validators.required],
       visibility: ['', Validators.required],
-      occupation: ['', Validators.required]
+      occupation: ['', Validators.required],
+      domainHealth:  ['', Validators.required],
+      domainEducation:  ['', Validators.required],
+      domainOrphanage:  ['', Validators.required],
+      domainEnvironment:  ['', Validators.required],
+      domainSocialWelfare:  ['', Validators.required],
+      domainOther:  ['', Validators.required]
   });
 
   }
