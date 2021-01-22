@@ -1,80 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<div class="container mt-5">
-    <br>
-    <!--Grid row-->
-    <div class="row">
-      <!--Grid column-->
-      <div class="col-md-12 text-center mb-5">
-        <h1 class="font-bold light-blue-text my-5">CAMPAIGNS</h1>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <style>
+   
+
+     
+  .media{
+border-bottom:1px solid grey;
+border-left: 1px solid grey;
+border-right: 1px solid grey;
+border-top: 1px solid grey;
+padding:10px;
+display: flex;
+flex-direction: row;
+
+  }
+  
+  .sucman {
+        background-color: lightgreen;
+        border-color:lightgreen;
+        color: black;
+        height:fit-content;
+        width:fit-content;
+        font-size: 25px;
+    }
+  .sucman:hover {
+      background-color: rgb(2, 168, 71);
+      color: #ffffff;
+  }
+  .succ {
+    background-color: lightcoral;
+        border-color:lightcoral;
+        color: black;
+        height:fit-content;
+        width:fit-content;
+        font-size: 25px;
+
+  }
+  .succ:hover {
+    background-color: rgb(211, 59, 48);
+        color:rgb(255, 255, 255);
         
-      </div>
-    </div>
-    <!--Grid row-->
-  
-    <div class="container-fluid mb-5">
-      <div class="row justify-content-center">
-  
-        <div class="col-4" data-wow-delay="0.2s" *ngFor="let campaign of campaigns">
-  
-  
-  
-          <div class="col-md-12">
-  
-  
-            <!--Card-->
-            <mdb-card cascade="true" wider="true">
-  
-              <!--Card image-->
-              <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-  
-                <img src="{{campaign.imageUrl}}" style="width: 449px; height: 171px;">
+  }
+  </style>
+  <body>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1 style="text-align: center;">Campaigns</h1>
+    <section>
+      <div class="container-fluid mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            
+            <ul class="timeline">
+              <div class="media">
+                <img class="mr-3" src="/assets/123.jpg" height="150" width="200" alt="Generic placeholder image" />
                 
+                <div class="media-body">
+                  <div class="media-body" style="text-decoration: underline;" >
+                    <h6 routerLink="/signuppage">Social</h6> 
+                  </div>
+                  
+                  <h5 class="mt-0">Blood Donation</h5>
+                  Need urgent blood of type A+.
+                  <br>
+                  <br>
+                  
+                  <div class="media-body">
+                    
+                    <button class="sucman" routerLink="/signinpage">Details</button>
+                    <button class="succ" style="margin-left: 5px;" routerLink="/signinpage">Donate</button>
+                  </div>
+
+                </div>
+                <div class="media-body" style="align-items:flex-end; text-decoration: underline;">
+                  
+
+                  <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i> Islamabad,Pakistan</h6>
+ 
+                </div>
               </div>
-              <!--/Card image-->
-  
-              <mdb-card-body cascade="true" class="text-center">
-                <!--Card content-->
-                <!--Title-->
-                <h4 class="card-title">
-                  <strong>{{campaign.nickName}}</strong>
-                </h4>
-                <h5 class="indigo-text">
-                  <strong>{{campaign.objective}}</strong>
-                </h5>
-  
-                <mdb-card-text>
-                  {{campaign.descriptionStory}}
-                </mdb-card-text>
-  
-                <!--Linkedin-->
-                <a class="px-2 icons-sm li-ic">
-                  <mdb-icon fab icon="linkedin-in"> </mdb-icon>
-                </a>
-                <!--Twitter-->
-                <a class="px-2 icons-sm tw-ic">
-                  <mdb-icon fab icon="twitter"> </mdb-icon>
-                </a>
-                <!--Dribbble-->
-                <a class="px-2 icons-sm fb-ic">
-                  <mdb-icon fab icon="facebook-f"> </mdb-icon>
-                </a>
-                <a (click)="showDetials(campaign)" class="orange-text mt-1 d-flex flex-row-reverse">
-                  <h5 class="waves-effect p-2" mdbWavesEffect>Read more
-                    <mdb-icon fas icon="chevron-right"></mdb-icon>
-                  </h5>
-                </a>
-              </mdb-card-body>
-              <!--/.Card content-->
-  
-            </mdb-card>
-            <!--/.Card-->
+              <div class="media">
+                <img class="mr-3" src="/assets/123.jpg" height="150" width="200" alt="Generic placeholder image" />
+                
+                <div class="media-body">
+                  <div class="media-body" style="text-decoration: underline;" >
+                    <h6 routerLink="/signuppage">Social</h6> 
+                  </div>
+                  
+                  <h5 class="mt-0">Blood Donation</h5>
+                  Need urgent blood of type A+.
+                  <br>
+                  <br>
+                  
+                  <div class="media-body">
+                    
+                    <button class="sucman" routerLink="/signinpage">Details</button>
+                    <button class="succ" style="margin-left: 5px;" routerLink="/signinpage">Donate</button>
+                  </div>
+
+                </div>
+                <div class="media-body" style="align-items:flex-end; text-decoration: underline;">
+                  
+
+                  <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i> Islamabad,Pakistan</h6>
+ 
+                </div>
+              </div>
+
+              
+            </ul>
           </div>
-          <br>
-          <br>
         </div>
-  
-  
       </div>
-    </div>
-  
-  </div>
+    </section>
+  </body>
+</html>

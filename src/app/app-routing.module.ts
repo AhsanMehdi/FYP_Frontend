@@ -88,8 +88,7 @@ const routes: Routes = [
   },
   {
     path: 'campaigns', component: CampaignsComponent
-  }
-  ,
+  },
   {
     path: 'ngos', component: NgosComponent
   },
