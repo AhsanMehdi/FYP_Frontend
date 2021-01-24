@@ -1,123 +1,71 @@
-<div *ngIf="isDataLoaded" class="container mt-5">
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-9">
+<style>
+.div1 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+    padding: 50px;
+  }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.sucman {
+        background-color: lightgreen;
+        border-color:lightgreen;
+        color: black;
+        height: 50px;
+        width:200px;
+        font-size: 25px;
+    }
+  .sucman:hover {
+      background-color: rgb(2, 168, 71);
+      color: #ffffff;
+  }
+  .btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
 
-            <mdb-card cascade="true" wider="true" reverse="true" class="my-4">
-                <!--Card image-->
-                <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-                    <mdb-card-img src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"></mdb-card-img>
-                    <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-                <!--/Card image-->
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
 
-                <!-- Card content -->
-                <mdb-card-body cascade="true" class="text-center">
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                    <!--Title-->
-                    <mdb-card-title>
-                        <h4>
-                            <strong>{{campaign.nickName}}</strong>
-                        </h4>
-                    </mdb-card-title>
-
-                    <h5 class="indigo-text">
-                        <strong>{{campaign.objective}}</strong>
-                    </h5>
-
-                    <mdb-card-text>
-                        {{campaign.descriptionStory}}
-                    </mdb-card-text>
-
-                    <!--Linkedin-->
-                    <a class="px-2 icons-sm li-ic">
-                        <mdb-icon fab icon="linkedin-in"> </mdb-icon>
-                    </a>
-                    <!--Twitter-->
-                    <a class="px-2 icons-sm tw-ic">
-                        <mdb-icon fab icon="twitter"> </mdb-icon>
-                    </a>
-                    <!--Dribbble-->
-                    <a class="px-2 icons-sm fb-ic">
-                        <mdb-icon fab icon="facebook-f"> </mdb-icon>
-                    </a>
-                </mdb-card-body>
-
-            </mdb-card>
-
-        </div>
-
-
-        
-        
-        <div class="col-3">
-
-        <section class="text-center pb-3 my-5">
-            <mdb-card class="pricing-card">
-
-                <!--Content-->
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <h5 class="mt-4 justify-content-center">
-                      <strong>About</strong>
-                    </h5>
-                  </mdb-card-title>
-                  <!--Price-->
-                  <div class="price pt-2">
-                    <h2 class="red-text number">{{campaign.subject}}</h2>
-                  </div>
-                  <!--Price-->
-                  <ul class="striped">
-                 
-                      <p>
-                        <strong>{{campaign.country}}</strong> Location</p>
-                 
-                 
-                      <p>
-                       
-                        <strong>{{campaign.status}}</strong> Status</p>
-                    
-                  
-                      <p>
-                        <strong>{{campaign.dateOfCreation}}</strong> </p>
-                  
-                      <p>
-                 
-                  </ul>
-                  <a href="/signinpage" mdbBtn color="danger" rounded="true" class="mb-0 waves-light" mdbWavesEffect> Participate</a>
-                </mdb-card-body>
-              </mdb-card>
-              </section>
-              <!--Card-->
-   
-
-        </div>
-    
-        <!--col-md ends here-->
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="jumbotron">
-                <h1 class="display-4">{{campaign.nickName}}!</h1>
-                <p class="lead">Mehdi Schools is a project about to build a high school in the rural areas of
-                    India where people unable to get edcate their children. The High Schools will have all 
-                    facilities that a student need to accomplish the basic education. Mehdi Schools is a project 
-                    about to build a high school in the rural areas of India where people unable to get edcate 
-                    their children. The High Schools will have all facilities that a student need to accomplish
-                     the basic education. </p>
-                <hr class="my-4">
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-              
-              </div>
-        </div>
-    </div>
-    <hr>
-   
-   
-  
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-superpowers" style="font-size:20px; align-items: flex-end; color: darkseagreen;"></i> Social</h6>
+    <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-map-marker" style="font-size:24px; align-items: flex-end; color: cornflowerblue;"></i> Islamabad,Pakistan</h6>
+    <h1 style="text-align: center;">Blood Donation</h1>
+    <h5 style="float:inline-end; padding-right: 10px; text-align: center;">by</h5>
+    <h4 style="float:inline-start; text-align: center;"><b> Edhi Foundation</b></h4>
+</div> 
+<hr />
+<div class="row">
+<div class="col-9" style=" align-content: center;">
+    <img src="/assets/orphans.jpg" alt="Campaign Pic" class="center">
 
 </div>
-<!--container ends here-->
+<div class="col-3">
+    <button class="sucman">Donate</button>
+    <button class="sucman">Follow</button>
+    <button class="sucman">Share</button>
+</div>
+
+</div>
