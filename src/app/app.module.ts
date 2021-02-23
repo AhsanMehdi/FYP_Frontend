@@ -39,6 +39,7 @@ import { DonortimelineComponent } from './components/donortimeline/donortimeline
 import { EditprofileComponent } from './components/editprofile/editprofile.component';
 import { CampaignaddComponent } from './components/campaignadd/campaignadd.component';
 import { ProjectuploadComponent } from './components/projectupload/projectupload.component';
+import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprofile.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { ProjectuploadComponent } from './components/projectupload/projectupload
     DonortimelineComponent,
     EditprofileComponent,
     CampaignaddComponent,
-    ProjectuploadComponent
+    ProjectuploadComponent,
+    NgoeditprofileComponent
     
     
 

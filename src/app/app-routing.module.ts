@@ -23,6 +23,7 @@ import { UserchoiceComponent } from './components/userchoice/userchoice.componen
 import { DonortimelineComponent } from './components/donortimeline/donortimeline.component';
 import { EditprofileComponent } from './components/editprofile/editprofile.component';
 import { CampaignaddComponent } from './components/campaignadd/campaignadd.component';
+import { ProjectuploadComponent } from './components/projectupload/projectupload.component';
 
 
 
@@ -103,6 +104,9 @@ const routes: Routes = [
   },
   {
     path: 'campaignadd', component: CampaignaddComponent
+  },
+  {
+    path: 'projectupload', component: ProjectuploadComponent
   }
   
 ];
