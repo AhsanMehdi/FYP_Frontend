@@ -24,6 +24,7 @@ import { DonortimelineComponent } from './components/donortimeline/donortimeline
 import { EditprofileComponent } from './components/editprofile/editprofile.component';
 import { CampaignaddComponent } from './components/campaignadd/campaignadd.component';
 import { ProjectuploadComponent } from './components/projectupload/projectupload.component';
+import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprofile.component';
 
 
 
@@ -107,6 +108,9 @@ const routes: Routes = [
   },
   {
     path: 'projectupload', component: ProjectuploadComponent
+  },
+  {
+    path: 'ngoeditprofile', component: NgoeditprofileComponent
   }
   
 ];
