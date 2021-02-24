@@ -23,6 +23,8 @@ import { UserchoiceComponent } from './components/userchoice/userchoice.componen
 import { DonortimelineComponent } from './components/donortimeline/donortimeline.component';
 import { EditprofileComponent } from './components/editprofile/editprofile.component';
 import { CampaignaddComponent } from './components/campaignadd/campaignadd.component';
+import { ProjectuploadComponent } from './components/projectupload/projectupload.component';
+import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprofile.component';
 
 
 
@@ -103,12 +105,18 @@ const routes: Routes = [
   },
   {
     path: 'campaignadd', component: CampaignaddComponent
+  },
+  {
+    path: 'projectupload', component: ProjectuploadComponent
+  },
+  {
+    path: 'ngoeditprofile', component: NgoeditprofileComponent
   }
   
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
