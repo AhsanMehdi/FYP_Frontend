@@ -40,6 +40,7 @@ import { EditprofileComponent } from './components/editprofile/editprofile.compo
 import { CampaignaddComponent } from './components/campaignadd/campaignadd.component';
 import { ProjectuploadComponent } from './components/projectupload/projectupload.component';
 import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprofile.component';
+import { ProjecteditComponent } from './components/projectedit/projectedit.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprof
     EditprofileComponent,
     CampaignaddComponent,
     ProjectuploadComponent,
-    NgoeditprofileComponent
+    NgoeditprofileComponent,
+    ProjecteditComponent
     
     
 
