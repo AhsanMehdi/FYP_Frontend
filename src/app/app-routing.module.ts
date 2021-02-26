@@ -77,7 +77,7 @@ const routes: Routes = [
     path: 'donorhome', component: DonorhomeComponent
   },
   {
-    path: 'ngohome', component: HomeComponent
+    path: 'ngohome', component: NgohomeComponent
   },
   {
     path: 'ngosignup', component: HomeComponent

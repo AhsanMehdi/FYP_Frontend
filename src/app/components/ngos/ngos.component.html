@@ -1,78 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<div class="container mt-5">
-  <br>
-  <br>
-  <!--Grid row-->
-  <div class="row">
-    <!--Grid column-->
-    <div class="col-md-12 text-center mb-5">
-      <h1 class="font-bold light-blue-text my-5">NON-PROFIT ORGANIZATIONS</h1>
-      
-    </div>
-  </div>
-  <!--Grid row-->
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <div class="container-fluid mb-5">
-    <div class="row justify-content-center" >
+    <title>Document</title>
+  </head>
+  <style>
+   
 
-      <div class="col-4" data-wow-delay="0.2s" *ngFor="let ngo of ngos">
+     
+  .media{
+border-bottom:1px solid grey;
+border-left: 1px solid grey;
+border-right: 1px solid grey;
+border-top: 1px solid grey;
+padding:10px;
+display: flex;
+flex-direction: row;
 
+  }
+  
+  .sucman {
+        background-color: lightgreen;
+        border-color:lightgreen;
+        color: black;
+        height:fit-content;
+        width:fit-content;
+        font-size: 25px;
+    }
+  .sucman:hover {
+      background-color: rgb(2, 168, 71);
+      color: #ffffff;
+  }
+  .succ {
+    background-color: lightcoral;
+        border-color:lightcoral;
+        color: black;
+        height:fit-content;
+        width:fit-content;
+        font-size: 25px;
 
-
-        <div class="col-md-12">
-
-
-          <!--Card-->
-          <mdb-card cascade="true" wider="true" >
-
-            <!--Card image-->
-            <div class="view view-cascade overlay waves-light" mdbWavesEffect >
-
-
-              <img src="{{ngo.imageUrl}}"style="width: 555px; height: 190px;">
-
-            </div>
-            <!--/Card image-->
-
-            <mdb-card-body cascade="true" class="text-center">
-              <!--Card content-->
-              <!--Title-->
-              <h4 class="card-title">
-                <strong>{{ngo.nickName}}</strong>
-              </h4>
-              <h5 class="indigo-text">
-                <strong>{{ngo.objective}}</strong>
-              </h5>
-
-              <mdb-card-text>
-                {{ngo.registerationNumber}}
-              </mdb-card-text>
-
-              <!--Linkedin-->
-              <a class="px-2 icons-sm li-ic">
-                <mdb-icon fab icon="linkedin-in"> </mdb-icon>
-              </a>
-              <!--Twitter-->
-              <a class="px-2 icons-sm tw-ic">
-                <mdb-icon fab icon="twitter"> </mdb-icon>
-              </a>
-              <!--Dribbble-->
-              <a class="px-2 icons-sm fb-ic">
-                <mdb-icon fab icon="facebook-f"> </mdb-icon>
-              </a>
+  }
+  .succ:hover {
+    background-color: rgb(211, 59, 48);
+        color:rgb(255, 255, 255);
+        
+  }
+  </style>
+  <body>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1 style="text-align: center;">NGOs</h1>
+    <section>
+      <div class="container-fluid mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
             
-            </mdb-card-body>
-            <!--/.Card content-->
+            <ul class="timeline">
+              <div class="media">
+                <img class="mr-3" src="/assets/123.jpg" height="150" width="200" alt="Generic placeholder image" />
+                
+                <div class="media-body">
+                  <div class="media-body" style="text-decoration: underline;" >
+                    <h6 routerLink="/signuppage">Rating</h6> 
+                  </div>
+                  
+                  <h5 class="mt-0">Edhi</h5>
+                  <div class="row" style="padding-left: 10px;">
+                    <h4>Completed Projects: </h4>
+                    <h4>100</h4>
+                  </div>
+                  <div class="row" style="padding-left: 10px;">
+                    <h4>Ongoing Activities: </h4>
+                    <h4>50</h4>
+                  </div>   
+                  
+                  <div class="media-body">
+                    
+                    <button class="sucman" routerLink="/signinpage">Details</button>
+                    <button class="succ" style="margin-left: 5px;" routerLink="/signinpage">Donate</button>
+                  </div>
 
-          </mdb-card>
-          <!--/.Card-->
+                </div>
+                <div class="media-body" style="align-items:flex-end; text-decoration: underline;">
+                  
+
+                  <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i> Islamabad,Pakistan</h6>
+ 
+                </div>
+              </div>
+              <div class="media">
+                <img class="mr-3" src="/assets/123.jpg" height="150" width="200" alt="Generic placeholder image" />
+                
+                <div class="media-body">
+                  <div class="media-body" style="text-decoration: underline;" >
+                    <h6 routerLink="/signuppage">Rating</h6> 
+                  </div>
+                  
+                  <h5 class="mt-0">Edhi</h5>
+                  <div class="row" style="padding-left: 10px;">
+                    <h4>Completed Projects: </h4>
+                    <h4>100</h4>
+                  </div>
+                  <div class="row" style="padding-left: 10px;">
+                    <h4>Ongoing Activities: </h4>
+                    <h4>50</h4>
+                  </div>   
+                  
+                  <div class="media-body">
+                    
+                    <button class="sucman" routerLink="/signinpage">Details</button>
+                    <button class="succ" style="margin-left: 5px;" routerLink="/signinpage">Donate</button>
+                  </div>
+
+                </div>
+                <div class="media-body" style="align-items:flex-end; text-decoration: underline;">
+                  
+
+                  <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i> Islamabad,Pakistan</h6>
+ 
+                </div>
+              </div>
+
+              
+            </ul>
+          </div>
         </div>
-        <br>
-        <br>
       </div>
-
-
-    </div>
-  </div>
-
-</div>
+    </section>
+  </body>
+</html>
