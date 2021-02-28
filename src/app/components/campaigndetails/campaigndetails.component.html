@@ -77,7 +77,7 @@ padding: 20px;
 <br>
 <br>
 <br>
-<div class="container">
+<div *ngIf="isDataLoaded" class="container">
     <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-superpowers" style="font-size:20px; align-items: flex-end; color: darkseagreen;"></i> Social</h6>
     <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-map-marker" style="font-size:24px; align-items: flex-end; color: cornflowerblue;"></i> Islamabad,Pakistan</h6>
     <h1 style="text-align: center;">Blood Donation</h1>
@@ -87,7 +87,7 @@ padding: 20px;
 <hr />
 <div class="row">
 <div class="col-9" style=" align-content: center; padding-bottom: 10px;">
-    <img src="/assets/orphans.jpg" alt="Campaign Pic" class="center">
+    <img src="{{campaign.imageUrl}}" alt="Campaign Pic" class="center">
 
 </div>
 <div class="col-3">
@@ -98,13 +98,13 @@ padding: 20px;
 <div class="col-4 borderclass" >
 <h2>Summary</h2>
 <div>
-  <p style="text-align: center;"> Description story haahsha dhash ahdh asdha hdash dhasdhashd ashdhas dha hsdh asdh sahdhasdj sajdkas kdas kdksa. </p>
+  <p style="text-align: center;"> {{campaign.descriptionStory}} </p>
 </div>
 </div>
 <div class="col-4 borderclass">
   <h2>Objective</h2>
   <div>
-    <p style="text-align: center;">Objective haahsha dhash ahdh asdha hdash dhasdhashd ashdhas dha hsdh asdh sahdhasdj sajdkas kdas kdksa. </p>
+    <p style="text-align: center;">{{campaign.objective}} </p>
   </div>
   </div>
   <div class="col-4" style="padding:20px">
@@ -114,7 +114,7 @@ padding: 20px;
         <h4><i class="fa fa-globe" aria-hidden="true" style="color: cornflowerblue; padding: 5px;"></i>Country:</h4>
       </div>
       <div class="col-6">
-        <h4>Pakistan</h4>
+        <h4>{{campaign.country}}</h4>
       </div>
     </div>
     <div class="row">
@@ -122,15 +122,15 @@ padding: 20px;
         <h4><i class="fa fa-clock-o" aria-hidden="true" style="color:lightgreen; padding: 5px;"></i>Status:</h4>
       </div>
       <div class="col-6">
-        <h4>Pakistan</h4>
+        <h4>{{campaign.status}}</h4>
       </div>
     </div>
     <div class="row">
       <div class="col-6">
-        <h4><i class="fa fa-calendar-plus-o" aria-hidden="true" style="color: lightsalmon; padding: 5px;"></i>Country:</h4>
+        <h4><i class="fa fa-calendar-plus-o" aria-hidden="true" style="color: lightsalmon; padding: 5px;"></i>Start Date:</h4>
       </div>
       <div class="col-6">
-        <h4>Pakistan</h4>
+        <h4>{{campaign.dateOfCreation}}</h4>
       </div>
     </div>
     </div>

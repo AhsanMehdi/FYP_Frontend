@@ -21,7 +21,7 @@ export class NgosComponent implements OnInit {
   constructor(private router:Router, private backendService: BackendService) { }
 
   ngOnInit(): void {
-    this.backendService.getNgos() /*get all projects*/
+    this.backendService.getNgos() /*get all ngos*/
     .pipe(first())
     .subscribe(
       data => {
