@@ -1,0 +1,140 @@
+<style>
+    .div1 {
+        width: 300px;
+        height: 100px;
+        border: 1px solid blue;
+        padding: 50px;
+      }
+      .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    .sucman {
+            background-color: lightgreen;
+            border-color:lightgreen;
+            color: black;
+            height: 50px;
+            width:200px;
+            font-size: 25px;
+            display: block;
+        }
+      .sucman:hover {
+          background-color: darkgreen;
+          color: #ffffff;
+      }
+      .sucmann {
+            background-color: lightcoral;
+            border-color:lightcoral;
+            color: black;
+            height: 50px;
+            width:200px;
+            font-size: 25px;
+            display: block;
+        }
+      .sucmann:hover {
+          background-color:coral;
+          color: #ffffff;
+      }
+      .sucmannn {
+            background-color: lightskyblue;
+            border-color:lightskyblue;
+            color: black;
+            height: 50px;
+            width:200px;
+            font-size: 25px;
+            display: block;
+        }
+      .sucmannn:hover {
+          background-color: blue;
+          color: #ffffff;
+      }
+      body {
+          position: relative; 
+      }
+      .current-section {
+        background-color: cornflowerblue
+      }
+      .current-section::after { 
+        content: "\039e";
+        background-color: yellow; 
+        color: red;
+      
+      }
+      .borderclass{
+    border-right: 1px solid grey;
+    padding: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div *ngIf="isDataLoaded" class="container">
+        <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-superpowers" style="font-size:20px; align-items: flex-end; color: darkseagreen;"></i> Social</h6>
+        <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-map-marker" style="font-size:24px; align-items: flex-end; color: cornflowerblue;"></i> Islamabad,Pakistan</h6>
+        <h1 style="text-align: center;">Blood Donation</h1>
+        <h5 style="float:inline-end; padding-right: 10px; text-align: center;">by</h5>
+        <h4 style="float:inline-start; text-align: center;"><b> Edhi Foundation</b></h4>
+    </div> 
+    <hr />
+    <div class="row">
+    <div class="col-9" style=" align-content: center; padding-bottom: 10px;">
+        <img src="{{campaign.imageUrl}}" alt="Campaign Pic" class="center">
+    
+    </div>
+    <div class="col-3">
+        <button class="sucman">Donate</button>
+        <button class="sucmann">Follow</button>
+        <button class="sucmannn">Share</button>
+    </div>
+    <div class="col-4 borderclass" >
+    <h2>Summary</h2>
+    <div>
+      <p style="text-align: center;"> {{campaign.descriptionStory}} </p>
+    </div>
+    </div>
+    <div class="col-4 borderclass">
+      <h2>Objective</h2>
+      <div>
+        <p style="text-align: center;">{{campaign.objective}} </p>
+      </div>
+      </div>
+      <div class="col-4" style="padding:20px">
+        <h2>Details</h2>
+        <div class="row">
+          <div class="col-6">
+            <h4><i class="fa fa-globe" aria-hidden="true" style="color: cornflowerblue; padding: 5px;"></i>Country:</h4>
+          </div>
+          <div class="col-6">
+            <h4>{{campaign.country}}</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h4><i class="fa fa-clock-o" aria-hidden="true" style="color:lightgreen; padding: 5px;"></i>Status:</h4>
+          </div>
+          <div class="col-6">
+            <h4>{{campaign.status}}</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h4><i class="fa fa-calendar-plus-o" aria-hidden="true" style="color: lightsalmon; padding: 5px;"></i>Start Date:</h4>
+          </div>
+          <div class="col-6">
+            <h4>{{campaign.dateOfCreation}}</h4>
+          </div>
+        </div>
+        </div>
+    <br>
+    
+    </div>
+    

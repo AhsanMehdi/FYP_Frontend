@@ -111,6 +111,9 @@ const routes: Routes = [
   },
   {
     path: 'ngoeditprofile', component: NgoeditprofileComponent
+  },
+  {
+    path: 'ngodetails', component: NgoDetailsComponent
   }
   
 ];
