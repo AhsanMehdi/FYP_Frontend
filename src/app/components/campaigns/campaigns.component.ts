@@ -23,7 +23,7 @@ export class CampaignsComponent implements OnInit {
     
   }
   ngOnInit(): void {
-    this.backendService.getCampaigns() /*get all projects*/
+    this.backendService.getCampaigns() /*get all campaigns*/
     .pipe(first())
     .subscribe(
       data => {

@@ -19,10 +19,12 @@ export class CampaignDetailsComponent implements OnInit {
   constructor(   private route: ActivatedRoute,
     private router: Router, private backendService: BackendService,  private alertService: AlertService) {
       this.campaignId = this.route.snapshot.queryParams.id;
+      console.log (this.campaignId)
   
       
      }
      loading = false;
+
 
   ngOnInit(): void {
     this.backendService.getCampaignById(this.campaignId)
@@ -31,6 +33,7 @@ export class CampaignDetailsComponent implements OnInit {
         data => {
          this.campaign = data.campaign[0]
          console.log(this.campaign)
+         console.log("I am in getting campaign data")
         this.isDataLoaded=true
 
          
