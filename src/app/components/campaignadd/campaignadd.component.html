@@ -83,6 +83,7 @@
   <br>
   <br>
   <div class="container">
+    <div  *ngIf="signupformshow">
   <form [formGroup]="createCampaignForm" (ngSubmit)="onCreateCampaignSubmit()">
 
       <div class="form-group">
@@ -375,6 +376,11 @@
          value="2018-07-22"
          min="1950-1-1" max="2020-12-31">
       </div>
+      <div class="form-group">
+        <label for="Last Name">Image</label>
+        <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl" placeholder="imageUrl">
+      </div>
+      
       <div class="for-group">
         <form action="/action_page.php">
             <input type="file" id="myFile" name="filename" multiple>
@@ -383,4 +389,5 @@
       <button type="submit" class="btn btn-primary">Submit</button>
 
     </form>
+  </div>
   </div>

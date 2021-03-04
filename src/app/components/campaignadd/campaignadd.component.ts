@@ -28,7 +28,7 @@ export class CampaignaddComponent implements OnInit {
   humanizeBytes: Function;
   dragOver: boolean;
   
-  createCampaignForm ; 
+  createCampaignForm:  FormGroup; 
   validatingForm: FormGroup; /*for validations*/
  
   loading = false;
@@ -55,7 +55,11 @@ export class CampaignaddComponent implements OnInit {
       imageUrl: ['', Validators.required]
   });
   }/* ngoninint ends*/
-
+  signupformshow:boolean=true;
+  userSingup(){
+   this.signupformshow=true;
+ 
+ }
   onCreateCampaignSubmit() {
 
     console.log(this.createCampaignForm.value)
@@ -66,6 +70,7 @@ export class CampaignaddComponent implements OnInit {
         
     // }
     this.loading = true;
+    console.log ("I am going to display vslues ")
     this.backendService.createCampaign(this.createCampaignForm.value)
         .pipe(first())
         .subscribe(

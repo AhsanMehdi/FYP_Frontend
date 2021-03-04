@@ -105,8 +105,9 @@ export class BackendService {
   /* a function to upload the campaign */
   createCampaign(campaign:  ICampaign) {
     console.log(    JSON.stringify(campaign))
-
-  
+   console.log ("i am going to db with value ")
+   console.log (campaign.country)
+   
     let token = localStorage.getItem('token') /* user cannot upload a campaign until they signed in means enter to system */
 
     const httpOptions = {
