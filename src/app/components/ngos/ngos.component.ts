@@ -19,7 +19,9 @@ export class NgosComponent implements OnInit {
   title = '';
 
   constructor(private router:Router, private backendService: BackendService) { }
-
+  showDetials(ngo){  /*when a user click on readmore button then it works*/
+    this.router.navigate(['ngodetails'],{ queryParams: { id: ngo._id } });
+  }
   ngOnInit(): void {
     this.backendService.getNgos() /*get all ngos*/
     .pipe(first())

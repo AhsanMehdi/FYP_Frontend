@@ -78,9 +78,9 @@ padding: 20px;
 <br>
 <br>
 <div *ngIf="isDataLoaded" class="container">
-    <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-superpowers" style="font-size:20px; align-items: flex-end; color: darkseagreen;"></i> Social</h6>
-    <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-map-marker" style="font-size:24px; align-items: flex-end; color: cornflowerblue;"></i> Islamabad,Pakistan</h6>
-    <h1 style="text-align: center;">Blood Donation</h1>
+    <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-superpowers" style="font-size:20px; align-items: flex-end; color: darkseagreen;"></i> {{campaign.subject}}</h6>
+    <h6 routerLink="/signuppage" style="margin-left: 850px;"> <i class="fa fa-map-marker" style="font-size:24px; align-items: flex-end; color: cornflowerblue;"></i> {{campaign.country}}</h6>
+    <h1 style="text-align: center;">{{campaign.nickName}}</h1>
     <h5 style="float:inline-end; padding-right: 10px; text-align: center;">by</h5>
     <h4 style="float:inline-start; text-align: center;"><b> Edhi Foundation</b></h4>
 </div> 
