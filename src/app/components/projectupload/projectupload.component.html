@@ -86,12 +86,16 @@
   <form [formGroup]="createProjectForm" (ngSubmit)="onCreateProjectSubmit()">
 
       <div class="form-group">
-        <label for="Nickname">Nickname</label>
-        <input type="text" class="form-control" id="nickName" formControlName="nickName" placeholder="NickName">
+        <label for="Nickname">Tittle</label>
+        <input type="text" class="form-control" id="tittle" formControlName="tittle" placeholder="Tittle">
       </div>
       <div class="form-group">
-        <label for="Subject">Subject</label>
-        <input type="text" class="form-control" id="subject" formControlName="subject" placeholder="Subject">
+        <label for="Subject">Project Type</label>
+        <input type="text" class="form-control" id="projectType" formControlName="projectType" placeholder="Project Type">
+      </div>
+      <div class="form-group">
+        <label for="Subject">Estimated Budget</label>
+        <input type="text" class="form-control" id="estimatedBudget" formControlName="estimatedBudget" placeholder="Estimated Budget">
       </div>
       <div class="form-group">
         <label for="Last Name">Description Story</label>
@@ -352,29 +356,16 @@
                   <option value="Zimbabwe">Zimbabwe</option>
               </select>
       </div>
-        <div class="form-group">
-        <label>Status</label>
-  
-      <div class="form-check">
-  
-        <input class="form-check-input" type="radio" name="status" value="
-        " id="flexRadioDefault1" formControlName="status">
-        <label class="form-check-label" for="flexRadioDefault1" style="color: black;">
-          Urgent
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" value="urgent" id="flexRadioDefault2" formControlName="status">
-        <label class="form-check-label" for="flexRadioDefault2" style="color: rgb(0, 0, 0);">
-          Normal
-        </label>
-      </div>
-    </div>
+ 
     <div class="form-group">
       <label for="start">Date of Creation:</label>
-        <input type="date" id="dateOfCreation" formControlName="dateOfCreation" name="trip-start"
+        <input type="date" id="startDate" formControlName="startDate" name="trip-start"
          value="2018-07-22"
          min="1950-1-1" max="2020-12-31">
+      </div>
+      <div class="form-group">
+        <label for="Last Name">Registeration Number</label>
+        <input type="text" class="form-control" id="registerationNumber" formControlName="registerationNumber" placeholder="Registeration Number">
       </div>
       <div class="for-group">
         <form action="/action_page.php">
