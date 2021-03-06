@@ -28,7 +28,7 @@ export class ProjectuploadComponent implements OnInit {
   humanizeBytes: Function;
   dragOver: boolean;
   
-  createProjectForm ; 
+  createProjectForm: FormGroup  ; 
   validatingForm: FormGroup; /*for validations*/
  
   loading = false;
@@ -45,13 +45,14 @@ export class ProjectuploadComponent implements OnInit {
   ngOnInit() {
     this.createProjectForm = this.formBuilder.group({
    
-      nickName: ['', Validators.required],  
-      subject: ['',Validators.required],
+      tittle: ['', Validators.required],  
+      projectType: ['',Validators.required],
+      estimatedBudget: ['', Validators.required],
       descriptionStory: ['', [Validators.required, Validators.minLength(12)]],
       objective: ['', [Validators.required, Validators.minLength(12)]],
       country: ['', Validators.required],
-      status: ['', Validators.required],
-      dateOfCreation: ['', Validators.required],
+      startDate: ['', Validators.required],
+      registerationNumber:['', Validators.required],
       imageUrl: ['', Validators.required]
   });
   }/* ngoninint ends*/
@@ -73,7 +74,7 @@ export class ProjectuploadComponent implements OnInit {
         .pipe(first())
         .subscribe(
             data => {
-                this.alertService.success('Campaign Created Successfully', true);
+                this.alertService.success('project Created Successfully', true);
                 this.router.navigate(['/donorhome']);
               
             },

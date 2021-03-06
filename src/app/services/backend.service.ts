@@ -100,7 +100,19 @@ export class BackendService {
     console.log ("I am going to database")
     console.log(    JSON.stringify(donorProfile)
     )
-    return this.httpClient.post(this.REST_API_SERVER+"/api/profile/donor",  JSON.stringify(donorProfile), this.options);
+    let token = localStorage.getItem('token')
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization:"Token "+token
+      })
+    };
+   
+
+    console.log("token",token)
+    console.log("authoptions",httpOptions)
+    return this.httpClient.post(this.REST_API_SERVER+"/api/profile/donor",  JSON.stringify(donorProfile), httpOptions);
   }
   /* a function to upload the campaign */
   createCampaign(campaign:  ICampaign) {
