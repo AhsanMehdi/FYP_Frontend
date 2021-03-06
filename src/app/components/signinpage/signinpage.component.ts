@@ -71,9 +71,9 @@ export class SigninPageComponent implements OnInit {
 
             localStorage.setItem('token', data.token);
               this.alertService.success('Registration successful', true);
-            if (data.userType == "donor") // it select who is login currently
+            if (data.userType = "donor") // it select who is login currently
               this.router.navigate(['/donorhome']);
-            if (data.userType == "ngo") // it select who is signup
+            if (data.userType = "ngo") // it select who is signup
               this.router.navigate(['/ngohome']);
               console.log (this.signInForm.value);
           },

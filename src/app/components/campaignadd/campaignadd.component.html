@@ -83,24 +83,24 @@
   <br>
   <br>
   <div class="container">
-    <div  *ngIf="signupformshow">
+ 
   <form [formGroup]="createCampaignForm" (ngSubmit)="onCreateCampaignSubmit()">
 
       <div class="form-group">
-        <label for="Nickname">Nickname</label>
-        <input type="text" class="form-control" id="NickName" formControlName="nickName" placeholder="NickName">
+        <label for="nickName">Nickname</label>
+        <input type="text" class="form-control" id="nickName" formControlName="nickName" placeholder="NickName">
       </div>
       <div class="form-group">
-        <label for="Subject">Subject</label>
-        <input type="text" class="form-control" id="Subject" formControlName="subject" placeholder="Subject">
+        <label for="subject">Subject</label>
+        <input type="text" class="form-control" id="subject" formControlName="subject" placeholder="Subject">
       </div>
       <div class="form-group">
-        <label for="Last Name">Description Story</label>
-        <input type="text" class="form-control" id="Description" formControlName="descriptionStory" placeholder="Description">
+        <label for="descriptionStory">Description Story</label>
+        <input type="text" class="form-control" id="descriptionStory" formControlName="descriptionStory" placeholder="Description">
       </div>
       <div class="form-group">
-        <label for="Last Name">Objective</label>
-        <input type="text" class="form-control" id="Objective" formControlName="objective" placeholder="Objective">
+        <label for="ojective">Objective</label>
+        <input type="text" class="form-control" id="objective" formControlName="objective" placeholder="Objective">
       </div>
 
       <div class="form-group">
@@ -358,26 +358,26 @@
   
       <div class="form-check">
   
-        <input class="form-check-input" type="radio" name="status" value="public" id="flexRadioDefault1" formControlName="status">
+        <input class="form-check-input" type="radio" name="status" value="urgent" id="flexRadioDefault1" formControlName="status">
         <label class="form-check-label" for="flexRadioDefault1" style="color: black;">
           Urgent
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" value="private" id="flexRadioDefault2" formControlName="status">
+        <input class="form-check-input" type="radio" name="status" value="normal" id="flexRadioDefault2" formControlName="status">
         <label class="form-check-label" for="flexRadioDefault2" style="color: rgb(0, 0, 0);">
           Normal
         </label>
       </div>
     </div>
     <div class="form-group">
-      <label for="start">Date of Creation:</label>
-        <input type="date" id="start" formControlName="dateOfCreation" name="trip-start"
+      <label for="dateOfCreation">Date of Creation:</label>
+        <input type="date" id="dateOfCreation" formControlName="dateOfCreation" name="trip-start"
          value="2018-07-22"
          min="1950-1-1" max="2020-12-31">
       </div>
       <div class="form-group">
-        <label for="Last Name">Image</label>
+        <label for="imageUrl">Image</label>
         <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl" placeholder="imageUrl">
       </div>
       
@@ -389,5 +389,5 @@
       <button type="submit" class="btn btn-primary">Submit</button>
 
     </form>
-  </div>
+
   </div>
