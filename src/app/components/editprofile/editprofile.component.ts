@@ -34,7 +34,6 @@ export class EditprofileComponent implements OnInit {
       lastName: ['', [Validators.required, Validators.minLength(12)]],
       dob: ['', [Validators.required, Validators.minLength(12)]],
       cellNumber: ['', Validators.required],
-      interestedDomain: ['', Validators.required],
       cnic: ['', Validators.required],
       country: ['', Validators.required],
       visibility: ['', Validators.required],

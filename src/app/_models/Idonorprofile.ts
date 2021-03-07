@@ -4,7 +4,6 @@ export interface IDonorProfile {
     middleName: string;
     lastName:string;
     dob: string;
-    interestedDomain: string;
     cellNumber: string;
     cnic: string;
     country: string;
