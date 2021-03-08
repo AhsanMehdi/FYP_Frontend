@@ -28,24 +28,21 @@ export class NgoeditprofileComponent implements OnInit {
   ngOnInit()  {
     this.NgoeditProfileForm = this.formBuilder.group({
    
-      firstName: ['', Validators.required],  
-      middleName: ['',Validators.required],
-      lastName: ['', [Validators.required, Validators.minLength(12)]],
-      dob: ['', [Validators.required, Validators.minLength(12)]],
-      cellNumber: ['', Validators.required],
-      interestedDomain: ['', Validators.required],
-      cnic: ['', Validators.required],
+   
+    
+      nickName: ['', Validators.required],
+      completedProjects: ['', Validators.required],
+      contactNumber: ['', Validators.required],
       country: ['', Validators.required],
-      visibility: ['', Validators.required],
-      occupation: ['', Validators.required],
       domainHealth:  ['', Validators.required],
       domainEducation:  ['', Validators.required],
       domainOrphanage:  ['', Validators.required],
       domainEnvironment:  ['', Validators.required],
       domainSocialWelfare:  ['', Validators.required],
-      domainOther:  ['', Validators.required]
+      domainOther:  ['', Validators.required],
+      imageUrl: ['', Validators.required]
   });
-
+  
   }
 
   /* this function should be used in html file to get data*/ 
