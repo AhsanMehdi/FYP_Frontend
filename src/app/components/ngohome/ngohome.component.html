@@ -1,0 +1,690 @@
+<head>
+  <br>
+  <br>
+  <br>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+<style>
+  body {
+    
+    background-color: #202020;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+        /* create post section */
+        .createpost-container {
+    color: white;
+    display: flex;
+    height: 50vh;
+    
+
+    flex-direction: column;
+    
+  }
+  .createpost-heading {
+    text-align: center;
+    padding: 10px;
+  }
+  .createpost-ngo-profile {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .createpost-input {
+    width: 100% !important;
+    margin-bottom:10px;
+    
+  }
+  .createpost-inputbox {
+    width: 100% !important;
+    height: 14vh;
+    background-color: #fff9f9;
+    color: white;
+    border: none;
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+
+  .createpost-add {
+    border: 1px solid rgb(65, 64, 64);
+    width: 90%;
+    margin-left: 45px;
+    height: 8vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .headingadd {
+    width: 50%;
+  }
+  .createpost-button{
+      text-align: center;
+      margin-top: 10px;;
+  }
+ .btn-createpost{
+     width:90%;
+     padding:10px;
+
+     margin-top: 10px;
+ }
+ /* createpost section end */
+
+  .stories {
+    box-shadow: cornflowerblue;
+    height: auto;
+    width: 100%;
+    padding-left: -80px;
+  }
+  .btn1 {
+    box-shadow: cornflowerblue;
+
+    background-color: #202020;
+    border: none;
+    text-align: left;
+    padding-left: 10px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+  ul {
+    margin-left: -30px;
+  }
+  .list-item {
+    list-style-type: none;
+
+    width: 100%;
+      box-shadow: cornflowerblue;
+    height: 40px;
+  }
+
+  .list-item.active {
+    border-left: 1px white;
+  }
+  .list-item:hover {
+    border-left: 1px white;
+
+    border-right: 2px white;
+  }
+  /* Top left and top right section style start */
+  
+  /* NGO POST SECTON START */
+  .post-box {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19),
+      0 6px 20px 0 rgba(0, 0, 0, 0.5);
+
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .like-comment {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: rgb(20, 44, 88);
+
+  }
+  .button-like {
+    border: none;
+    text-align: center;
+    background-color: rgb(20, 44, 88);
+    color: white;
+  }
+
+
+  /* Green */
+  .sucman {
+      background-color: black;
+      border-color: #ffce00;
+      color: #ffce00;
+  }
+  .sucman:hover {
+      background-color: black;
+      color: #ffce00;
+
+  }
+  .succmann {
+      background-color: #ffce00;
+      border-color: #ffce00;
+      color: black;
+  }
+  .succmann:hover {
+      background-color: #4ab8b8;
+      border-color: black;
+      color: white;
+  } 
+  .button-des:hover {
+    border: 1px solid #ffce00;
+  }
+  .icon-history {
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  .count-like {
+    border-bottom: 1px solid grey;
+
+    padding: 13px;
+    margin-bottom: 10px;
+  }
+  .title-ngo {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+  }
+
+  .button-des {
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
+      0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
+    padding: 10px;
+    width: 32%;
+  }
+  .new-posts {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .heading14 {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  /* comment section styling */
+  .comment-box {
+    display: flex;
+
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
+      0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    flex-direction: row;
+  }
+  .comment-section {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
+      0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  .comment-section-0 {
+    display: flex;
+    flex-direction: row;
+  }
+  .comment-section-divide {
+    width: 80%;
+  }
+  .comment-like {
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 20px;
+  }
+  .comment-like-icon {
+    color: #e04a4a;
+  }
+  .comment-share-icon {
+    color: #686edd;
+  }
+  .comment-body {
+    padding: 20px;
+    background-color: #3f3d3d;
+    color: white;
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 10px;
+  }
+  .comment-title {
+    font-weight: bolder;
+  }
+  .comment-description {
+  }
+  .add-comment {
+    width: 10%;
+  }
+  .comment-input {
+    width: 90%;
+  }
+  .add-comment-bottun {
+    background-color: #ffce00;
+    color: black;
+    border: none;
+    height: 50px;
+  }
+  .comment-box-input {
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: #202020;
+  }
+  .myDiv {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+  }
+  .heart{
+    color: tomato;
+  }
+  /* Comment box styling end */
+  /* NGO post  section end */
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- ///////// -->
+      <!-- mehdi bhai below are page divisions namely col2,col8,col2. the cols represent 2-8-2 division
+      of the entire page. the data in 2-2 is static as it will link to other pages. however
+      the data in col8 tag is going to be dynamic. I have added static data here which will help you
+      set width height on your dynamic data commands. So, I will add comments there and specify what 
+      type of data is required. -->
+      <!-- ///////// -->
+
+      <div class="col-2" style="background-color:black;">
+        <br>
+        <br>
+        <br>
+        <br>
+      <!-- ///////// -->
+      <!-- The following button is for going to timeline of user. this name is displaying "tahir" at the
+      moment but we would have to get this from backend -->
+      <!-- ///////// -->
+
+        <button class="sucman" routerLink="/ngoprofile"> Dashboard </button>
+     
+
+        <div class="stories"  >
+          <h4 class="heading14" style="color: white;">Activities</h4>
+          <ul >
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Post Project</button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
+                  Post Campaign
+                </button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
+                  Edit Projects
+                </button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
+                  Edit Campaigns
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="stories">
+          <h4 class="heading14" style="color: white;">Options</h4>
+          <ul>
+            <li class="list-item ">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Change Password</button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Security Options</button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">New Policies</button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Customer Service</button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Help Center</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-8 new-posts" style="background-color: black;" >
+        <br>
+        <br>
+        <br><!-- ///////// -->
+        <!-- this createpost container is for uploading update on charityGO. treat the button as form
+          submission  -->
+        <!-- ///////// -->
+
+        <div class="createpost-container" style="background-color: black;" >
+          <div class="createpost-heading">
+            <h3 class="text-align-center" style="color: white;">Create Post</h3>
+          </div>
+          <div class="createpost-input col-11 container-fluid">
+            <input
+              class="createpost-inputbox"
+              type="text"
+              placeholder="What's on your mind"
+            />
+          </div>
+          <div class="col-2 container-fluid">
+            <i class="fa fa-camera fa-2x pl-4" style="color: violet;"></i>
+            <i class="fa fa-heart heart fa-2x pl-4" ></i>
+            
+           
+          </div>      
+          <div class="createpost-button">
+            <form action="">
+              <button  class="btn-createpost btn-primary">
+                  ADD POST
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- ///////// -->
+      <!-- now this is main post panel. here i guess you would have to apply max20 items 
+          display unless user scrolls down( i personally think adding a text with link " show more " would
+         be better, but lets say currently we have scroll option) -->
+      <!-- ///////// -->
+
+    <!-- ///////// -->
+      <!-- so each post box would get NGO name, project/campagin title, attatched picture, likes and comments -->
+      <!-- ///////// -->
+
+        <div class="post-box">
+          <h3 class="title-ngo" style="color: white;">Edhi Foundation</h3>
+          <p>
+            Helping poor children get food. 
+          </p>
+          <div class="container-fluid col-12">
+            <img src="/assets/orphans.jpg" height="400px">
+          </div>
+          <div class="count-like">
+            <i
+              class="fa fa-heart text-danger fa-1x ml-4 pl-4"
+              style="margin-right: 10px"
+            ></i
+            ><span class="mr-4 pr-4">24</span>
+          </div>
+          <div class="like-comment">
+            <div class="button-des">
+              <i class="fa fa-heart"></i>
+              <input
+                type="button"
+                class="button-like"
+                id="fname"
+                name="LIKE"
+                value="Like"
+              />
+            </div>
+            <div class="button-des">
+              <i class="fa fa-comment"></i>
+              <input
+                type="button"
+                class="button-like"
+                id="fname"
+                name="LIKE"
+                value="Comment"
+              />
+            </div>
+            <div class="button-des">
+              <i class="fa fa-share"></i>
+              <input
+                type="button"
+                class="button-like"
+                id="fname"
+                name="Share"
+                value="Share"
+              />
+            </div>
+          </div>
+          <!-- ///////// -->
+      <!-- Now this is the comment section for this post, i think max 2 comments would be enough to display
+        unless user opens the post seperately. This would contain username(who comments) and comment -->
+      <!-- ///////// -->
+
+          <div class="comment-section">
+            <div class="comment-section-0">
+              <div class="comment-section-divide">
+                <div class="comment-body">
+                  <div class="comment-title">Asif Ali</div>
+                  <div class="comment-description">
+                    This is the one of the best ngo in the upcoming year in
+                    history of pakistan
+                  </div>
+                </div>
+              </div>
+              <div class="comment-like">
+                <i class="fa fa-heart comment-like-icon"></i>Like
+                <i class="fa fa-share comment-share-icon"></i>Reply
+              </div>
+            </div>
+            <div class="comment-section-0">
+              <div class="comment-section-divide">
+                <div class="comment-body">
+                  <div class="comment-title">Amir Rehman</div>
+                  <div class="comment-description">
+                    This is the one of the best ngo in the upcoming year in
+                    history of pakistan
+                  </div>
+                </div>
+              </div>
+              <div class="comment-like">
+                <i class="fa fa-heart comment-like-icon"></i>Like
+                <i class="fa fa-share comment-share-icon"></i>Reply
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-box">
+            <div class="comment-input">
+              <input
+                class="comment-box-input"
+                type="text"
+                placeholder="Write a Comment "
+              />
+            </div>
+            <div class="add-comment">
+              <button class="add-comment-bottun">COMMENT</button>
+            </div>
+          </div>
+        </div>
+        <div class="post-box">
+          <h3 class="title-ngo" style="color: white;">Edhi Foundation</h3>
+          <p>
+            Helping poor children get food. 
+          </p>
+          <div class="container-fluid col-12">
+            <img src="/assets/orphans.jpg" height="400px">
+          </div>
+          <div class="count-like">
+            <i
+              class="fa fa-heart text-danger fa-1x ml-4 pl-4"
+              style="margin-right: 10px"
+            ></i
+            ><span class="mr-4 pr-4">24</span>
+          </div>
+          <div class="like-comment">
+            <div class="button-des">
+              <i class="fa fa-heart"></i>
+              <input
+                type="button"
+                class="button-like"
+                id="fname"
+                name="LIKE"
+                value="Like"
+              />
+            </div>
+            <div class="button-des">
+              <i class="fa fa-comment"></i>
+              <input
+                type="button"
+                class="button-like"
+                id="fname"
+                name="LIKE"
+                value="Comment"
+              />
+            </div>
+            <div class="button-des">
+              <i class="fa fa-share"></i>
+              <input
+                type="button"
+                class="button-like"
+                id="fname"
+                name="Share"
+                value="Share"
+              />
+            </div>
+          </div>
+
+          <div class="comment-section">
+            <div class="comment-section-0">
+              <div class="comment-section-divide">
+                <div class="comment-body">
+                  <div class="comment-title">Asif Ali</div>
+                  <div class="comment-description">
+                    This is the one of the best ngo in the upcoming year in
+                    history of pakistan
+                  </div>
+                </div>
+              </div>
+              <div class="comment-like">
+                <i class="fa fa-heart comment-like-icon"></i>Like
+                <i class="fa fa-share comment-share-icon"></i>Reply
+              </div>
+            </div>
+            <div class="comment-section-0">
+              <div class="comment-section-divide">
+                <div class="comment-body">
+                  <div class="comment-title">Amir Rehman</div>
+                  <div class="comment-description">
+                    This is the one of the best ngo in the upcoming year in
+                    history of pakistan
+                  </div>
+                </div>
+              </div>
+              <div class="comment-like">
+                <i class="fa fa-heart comment-like-icon"></i>Like
+                <i class="fa fa-share comment-share-icon"></i>Reply
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-box">
+            <div class="comment-input">
+              <input
+                class="comment-box-input"
+                type="text"
+                placeholder="Write a Comment "
+              />
+            </div>
+            <div class="add-comment">
+              <button class="add-comment-bottun">COMMENT</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- ///////// -->
+      <!-- end panel -->
+      <!-- ///////// -->
+
+      <div class="col-2" style="background-color:black;">
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <button class="sucman" routerLink="/Chatbox"> Chatbox </button>
+        <button class="sucman" routerLink="/Home"> Logout </button>
+        
+        <div class="stories">
+          <h4 class="heading14" style="color: white;">Liked Organizations</h4>
+          <ul>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Little Flowers</button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Street Helper</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="stories mt-4 pt-1">
+          <h4 class="heading14" style="color: white;">Near Campaigns</h4>
+          <ul>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
+                  Advisory to Children
+                </button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Needy Need</button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Sleepless Nights</button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
+                  Implenting New Rules
+                </button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">First Startup</button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
+                  Your Home Our Responsibilty
+                </button>
+              </form>
+            </li>
+            <li class="list-item">
+              <form action="page6.html">
+                <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Defined Astray</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
