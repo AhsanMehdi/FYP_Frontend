@@ -59,6 +59,9 @@ export class NgoeditprofileComponent implements OnInit {
         
     // }
     this.loading = true;
+    if (this.NgoeditProfileForm.value.imageUrl== ""){
+      this.NgoeditProfileForm.value.imageUrl = "n/a"
+    }
     this.backendService.donorProfile(this.NgoeditProfileForm.value)
         .pipe(first())
         .subscribe(
