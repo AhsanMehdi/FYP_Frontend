@@ -1,7 +1,6 @@
 export interface INgoProfile {
 
     nickName: string;
-    completedProjects: number;
     contactNumber: string;
     country: string;
     domainHealth: string;

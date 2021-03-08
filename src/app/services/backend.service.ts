@@ -114,6 +114,27 @@ export class BackendService {
     console.log("authoptions",httpOptions)
     return this.httpClient.post(this.REST_API_SERVER+"/api/profile/donor",  JSON.stringify(donorProfile), httpOptions);
   }
+  /* function to edit profile of an ngo */
+  ngoProfile(ngoProfile:  INgoProfile) {
+
+    
+    console.log ("I am going to database")
+    console.log(    JSON.stringify(ngoProfile)
+    )
+    let token = localStorage.getItem('token')
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization:"Token "+token
+      })
+    };
+   
+
+    console.log("token",token)
+    console.log("authoptions",httpOptions)
+    return this.httpClient.post(this.REST_API_SERVER+"/api/profile/ngo",  JSON.stringify(ngoProfile), httpOptions);
+  }
   /* a function to upload the campaign */
   createCampaign(campaign:  ICampaign) {
     console.log(    JSON.stringify(campaign))

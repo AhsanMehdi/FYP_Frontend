@@ -31,7 +31,6 @@ export class NgoeditprofileComponent implements OnInit {
    
     
       nickName: ['', Validators.required],
-      completedProjects: ['', Validators.required],
       contactNumber: ['', Validators.required],
       country: ['', Validators.required],
       domainHealth:  ['', Validators.required],
@@ -48,6 +47,7 @@ export class NgoeditprofileComponent implements OnInit {
   /* this function should be used in html file to get data*/ 
   onNgoEditProfileSubmit() {
 
+   
     console.log(this.NgoeditProfileForm.value)
     this.submitted = true;
     // stop here if form is invalid
@@ -59,7 +59,7 @@ export class NgoeditprofileComponent implements OnInit {
     if (this.NgoeditProfileForm.value.imageUrl== ""){
       this.NgoeditProfileForm.value.imageUrl = "n/a"
     }
-    this.backendService.donorProfile(this.NgoeditProfileForm.value)
+    this.backendService.ngoProfile(this.NgoeditProfileForm.value)
         .pipe(first())
         .subscribe(
             data => {
