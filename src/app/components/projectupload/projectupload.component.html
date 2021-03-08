@@ -86,20 +86,24 @@
   <form [formGroup]="createProjectForm" (ngSubmit)="onCreateProjectSubmit()">
 
       <div class="form-group">
-        <label for="Nickname">Nickname</label>
-        <input type="text" class="form-control" id="NickName" formControlName="nickName" placeholder="NickName">
+        <label for="tittle">Tittle</label>
+        <input type="text" class="form-control" id="tittle" formControlName="tittle" placeholder="Tittle">
       </div>
       <div class="form-group">
-        <label for="Subject">Subject</label>
-        <input type="text" class="form-control" id="Subject" formControlName="subject" placeholder="Subject">
+        <label for="projectType">Project Type</label>
+        <input type="text" class="form-control" id="projectType" formControlName="projectType" placeholder="Project Type">
       </div>
       <div class="form-group">
-        <label for="Last Name">Description Story</label>
-        <input type="text" class="form-control" id="Description" formControlName="descriptionStory" placeholder="Description">
+        <label for="estimatedBudget">Estimated Budget</label>
+        <input type="text" class="form-control" id="estimatedBudget" formControlName="estimatedBudget" placeholder="Estimated Budget">
       </div>
       <div class="form-group">
-        <label for="Last Name">Objective</label>
-        <input type="text" class="form-control" id="Objective" formControlName="objective" placeholder="Objective">
+        <label for="descriptionStory">Description Story</label>
+        <input type="text" class="form-control" id="descriptionStory" formControlName="descriptionStory" placeholder="Description">
+      </div>
+      <div class="form-group">
+        <label for="objective">Objective</label>
+        <input type="text" class="form-control" id="objective" formControlName="objective" placeholder="Objective">
       </div>
 
       <div class="form-group">
@@ -352,28 +356,16 @@
                   <option value="Zimbabwe">Zimbabwe</option>
               </select>
       </div>
-        <div class="form-group">
-        <label>Status</label>
-  
-      <div class="form-check">
-  
-        <input class="form-check-input" type="radio" name="status" value="public" id="flexRadioDefault1" formControlName="status">
-        <label class="form-check-label" for="flexRadioDefault1" style="color: black;">
-          Urgent
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" value="private" id="flexRadioDefault2" formControlName="status">
-        <label class="form-check-label" for="flexRadioDefault2" style="color: rgb(0, 0, 0);">
-          Normal
-        </label>
-      </div>
-    </div>
+ 
     <div class="form-group">
-      <label for="start">Date of Creation:</label>
-        <input type="date" id="start" formControlName="dateOfCreation" name="trip-start"
+      <label for="startDate">Date of Creation:</label>
+        <input type="date" id="startDate" formControlName="startDate" name="trip-start"
          value="2018-07-22"
          min="1950-1-1" max="2020-12-31">
+      </div>
+      <div class="form-group">
+        <label for="registerationNumber">Registeration Number</label>
+        <input type="text" class="form-control" id="registerationNumber" formControlName="registerationNumber" placeholder="Registeration Number">
       </div>
       <div class="for-group">
         <form action="/action_page.php">

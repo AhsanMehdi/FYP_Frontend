@@ -11,6 +11,7 @@ import {
 } from "@angular/forms";
 import { first } from "rxjs/operators";
 import { IProject } from "../../_models/Iproject";
+import { ICampaign } from "../../_models/Icampaign";
 import { Router, ActivatedRoute } from "@angular/router";
 import { UploadFile, UploadInput, UploadOutput } from "ng-uikit-pro-standard";
 import { IMyOptions, humanizeBytes } from "ng-uikit-pro-standard";
@@ -28,7 +29,7 @@ export class CampaignaddComponent implements OnInit {
   humanizeBytes: Function;
   dragOver: boolean;
   
-  createCampaignForm ; 
+  createCampaignForm:  FormGroup; 
   validatingForm: FormGroup; /*for validations*/
  
   loading = false;
@@ -41,7 +42,7 @@ export class CampaignaddComponent implements OnInit {
     private formBuilder: FormBuilder,
     private toastr: ToastrService
   ) { }
-
+  
   ngOnInit() {
     this.createCampaignForm = this.formBuilder.group({
    
@@ -55,10 +56,14 @@ export class CampaignaddComponent implements OnInit {
       imageUrl: ['', Validators.required]
   });
   }/* ngoninint ends*/
-
+  signupformshow:boolean=true;
+  userSingup(){
+   this.signupformshow=true;
+ 
+ }
   onCreateCampaignSubmit() {
-
-    console.log(this.createCampaignForm.value)
+  
+    console.log(this.createCampaignForm)
     this.submitted = true;
     // stop here if form is invalid
     // if (this.registerUserForm.invalid) {
@@ -66,6 +71,11 @@ export class CampaignaddComponent implements OnInit {
         
     // }
     this.loading = true;
+    console.log ("I am going to display vslues ")
+    if (this.createCampaignForm.value.imageUrl== ""){
+      this.createCampaignForm.value.imageUrl = "n/a"
+    }
+    
     this.backendService.createCampaign(this.createCampaignForm.value)
         .pipe(first())
         .subscribe(

@@ -3,7 +3,8 @@ import { BackendService } from '../../services/backend.service';
 import { AlertService } from '../../services/alert.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { INgoProfile } from "../../_models/Ingoprofile";
 
 @Component({
   selector: 'app-ngoeditprofile',
@@ -13,7 +14,7 @@ import { Router } from '@angular/router'
 export class NgoeditprofileComponent implements OnInit {
 
   NgoeditProfileForm: FormGroup;
-
+  validatingForm: FormGroup; /*for validations*/
   
   loading = false;
   submitted = false;
