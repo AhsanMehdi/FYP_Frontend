@@ -25,6 +25,8 @@ import { EditprofileComponent } from './components/editprofile/editprofile.compo
 import { CampaignaddComponent } from './components/campaignadd/campaignadd.component';
 import { ProjectuploadComponent } from './components/projectupload/projectupload.component';
 import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprofile.component';
+import { DomseacompComponent } from './components/domseacomp/domseacomp.component';
+import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage.component';
 
 
 
@@ -114,6 +116,12 @@ const routes: Routes = [
   },
   {
     path: 'ngodetails', component: NgoDetailsComponent
+  },
+  {
+    path: 'domseacomp', component: DomseacompComponent
+  },
+  {
+    path: 'ngodetailpage', component: NgodetailpageComponent
   }
   
 ];

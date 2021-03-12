@@ -41,6 +41,8 @@ import { CampaignaddComponent } from './components/campaignadd/campaignadd.compo
 import { ProjectuploadComponent } from './components/projectupload/projectupload.component';
 import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprofile.component';
 import { ProjecteditComponent } from './components/projectedit/projectedit.component';
+import { DomseacompComponent } from './components/domseacomp/domseacomp.component';
+import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage.component';
 
 
 @NgModule({
@@ -70,7 +72,9 @@ import { ProjecteditComponent } from './components/projectedit/projectedit.compo
     CampaignaddComponent,
     ProjectuploadComponent,
     NgoeditprofileComponent,
-    ProjecteditComponent
+    ProjecteditComponent,
+    DomseacompComponent,
+    NgodetailpageComponent
     
     
 

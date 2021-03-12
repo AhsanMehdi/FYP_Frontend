@@ -60,10 +60,10 @@ export class BackendService {
     return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign/"+id,   this.options)
   }
   /* get a campaign by domain*/
-  getCampaignByDomain(domain:string): Observable<any> {
+  getCampaignByDomain(subject:string): Observable<any> {
     console.log ("i m in database")
     
-    return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign/subject/"+domain,   this.options)
+    return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign/subject/"+subject,   this.options)
   }
 
     /* get a campaign by country*/

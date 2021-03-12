@@ -68,9 +68,9 @@ flex-direction: row;
       <div class="row" style="padding-left: 20px;">
       
         <div class="form-group">
-          <label for="domain">Interest</label>      
+          <label for="subject">Interest</label>      
             
-                <select id="domain" formControlName="domain" name="domain" class="form-control">
+                <select id="domain" formControlName="subject" name="subject" class="form-control">
                     <option value="Health">Health</option>
                     <option value="Education">Education</option>
                     <option value="Environment">Environment</option>
@@ -340,7 +340,9 @@ flex-direction: row;
     <section>
       <div class="container-fluid mt-5 mb-5">
         <div class="row">
-          <div class="col-md-6 offset-md-3" *ngFor="let campaign of campaigns">
+          <div class="col-md-6 offset-md-3" *ngFor="let campaign of campaigns ">
+             <div *ngIf="campaign.subject == subject >
+
             
             <ul class="timeline">
               <div class="media">
@@ -367,14 +369,12 @@ flex-direction: row;
                   
 
                   <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i>  {{campaign.country}}</h6>
- 
+                   
                 </div>
               </div>
 
             </ul>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-  </body>
-</html>
+       
+          

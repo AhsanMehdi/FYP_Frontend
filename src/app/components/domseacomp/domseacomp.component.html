@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <style>
+   
+
+     
+  .media{
+border-bottom:1px solid grey;
+border-left: 1px solid grey;
+border-right: 1px solid grey;
+border-top: 1px solid grey;
+padding:10px;
+display: flex;
+flex-direction: row;
+
+  }
+  
+  .sucman {
+        background-color: lightgreen;
+        border-color:lightgreen;
+        color: black;
+        height:fit-content;
+        width:fit-content;
+        font-size: 25px;
+    }
+  .sucman:hover {
+      background-color: rgb(2, 168, 71);
+      color: #ffffff;
+  }
+  .succ {
+    background-color: lightcoral;
+        border-color:lightcoral;
+        color: black;
+        height:fit-content;
+        width:fit-content;
+        font-size: 25px;
+
+  }
+  .succ:hover {
+    background-color: rgb(211, 59, 48);
+        color:rgb(255, 255, 255);
+        
+  }
+  </style>
+  <body>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1 style="text-align: center;">Campaigns</h1>
+
+
+      <div class="row" style="padding-left: 20px;">
+	<form [formGroup]="choiceForm" (ngSubmit)="onDomainSelection()">  
+      
+        <div class="form-group">
+          <label for="subject">Interest</label>      
+            
+                <select id="subject" formControlName="subject" name="subject" class="form-control">
+                    <option value="Health">Health</option>
+                    <option value="Education">Education</option>
+                    <option value="Environment">Environment</option>
+                    <option value="Orphanage">Orphanage</option>
+                    <option value="Social Welfare">Social Welfare</option>
+                    <option value="Other">Other</option>
+                   
+                </select>
+        </div>
+
+      <button type="submit" class="sucman" style="margin: 27px;">Search</button>
+      </form>
+    </div>
+
+
+
+
+    <section ng-repeat>
+      <div class="container-fluid mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-6 offset-md-3" *ngFor="let campaign of campaigns">
+            
+            <ul class="timeline">
+              <div class="media">
+                <img class="mr-3" src="{{campaign.imageUrl}}" height="150" width="200" alt="Generic placeholder image" />
+                
+                <div class="media-body">
+                  <div class="media-body" style="text-decoration: underline;" >
+                    <h6 routerLink="/signuppage">{{campaign.subject}}</h6> 
+                  </div>
+                  
+                  <h5 class="mt-0">{{campaign.nickName}}</h5>
+                  {{campaign.objective}}
+                  <br>
+                  <br>
+                  
+                  <div class="media-body">
+                    
+                    <button (click)="showDetials(campaign)" class="sucman" routerLink="/campaigndetails">Details</button>
+                    <button class="succ" style="margin-left: 5px;" routerLink="/signinpage">Donate</button>
+                  </div>
+
+                </div>
+                <div class="media-body" style="align-items:flex-end; text-decoration: underline;">
+                  
+
+                  <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i>  {{campaign.country}}</h6>
+ 
+                </div>
+              </div>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

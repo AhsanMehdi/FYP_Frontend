@@ -16,6 +16,8 @@ export class CampaignsComponent implements OnInit {
   currentTutorial = null;
   currentIndex = -1;
   title = '';
+  showDomain: string ;
+  
   constructor(private router:Router, private backendService: BackendService) { }
   showDetials(campaign){  /*when a user click on readmore button then it works*/
     this.router.navigate(['campaigndetails'],{ queryParams: { id: campaign._id } });

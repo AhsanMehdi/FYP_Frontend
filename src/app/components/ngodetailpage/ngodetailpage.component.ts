@@ -7,11 +7,11 @@ import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-ngodetails',
-  templateUrl: './ngodetails.component.html',
-  styleUrls: ['./ngodetails.component.scss']
+  selector: 'app-ngodetailpage',
+  templateUrl: './ngodetailpage.component.html',
+  styleUrls: ['./ngodetailpage.component.scss']
 })
-export class NgoDetailsComponent implements OnInit {
+export class NgodetailpageComponent implements OnInit {
 
   ngoId: string
   ngo:any
