@@ -100,13 +100,47 @@ export class BackendService {
     console.log ("I am going to database")
     console.log(    JSON.stringify(donorProfile)
     )
-    return this.httpClient.post(this.REST_API_SERVER+"/api/profile/donor",  JSON.stringify(donorProfile), this.options);
+    let token = localStorage.getItem('token')
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization:"Token "+token
+      })
+    };
+   
+
+    console.log("token",token)
+    console.log("authoptions",httpOptions)
+    return this.httpClient.post(this.REST_API_SERVER+"/api/profile/donor",  JSON.stringify(donorProfile), httpOptions);
+  }
+  /* function to edit profile of an ngo */
+  ngoProfile(ngoProfile:  INgoProfile) {
+
+    
+    console.log ("I am going to database")
+    console.log(    JSON.stringify(ngoProfile)
+    )
+    let token = localStorage.getItem('token')
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization:"Token "+token
+      })
+    };
+   
+
+    console.log("token",token)
+    console.log("authoptions",httpOptions)
+    return this.httpClient.post(this.REST_API_SERVER+"/api/profile/ngo",  JSON.stringify(ngoProfile), httpOptions);
   }
   /* a function to upload the campaign */
   createCampaign(campaign:  ICampaign) {
     console.log(    JSON.stringify(campaign))
-
-  
+   console.log ("i am going to db with value ")
+   console.log (campaign.country)
+   
     let token = localStorage.getItem('token') /* user cannot upload a campaign until they signed in means enter to system */
 
     const httpOptions = {

@@ -3,7 +3,8 @@ import { BackendService } from '../../services/backend.service';
 import { AlertService } from '../../services/alert.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { INgoProfile } from "../../_models/Ingoprofile";
 
 @Component({
   selector: 'app-ngoeditprofile',
@@ -13,7 +14,7 @@ import { Router } from '@angular/router'
 export class NgoeditprofileComponent implements OnInit {
 
   NgoeditProfileForm: FormGroup;
-
+  validatingForm: FormGroup; /*for validations*/
   
   loading = false;
   submitted = false;
@@ -27,29 +28,26 @@ export class NgoeditprofileComponent implements OnInit {
   ngOnInit()  {
     this.NgoeditProfileForm = this.formBuilder.group({
    
-      firstName: ['', Validators.required],  
-      middleName: ['',Validators.required],
-      lastName: ['', [Validators.required, Validators.minLength(12)]],
-      dob: ['', [Validators.required, Validators.minLength(12)]],
-      cellNumber: ['', Validators.required],
-      interestedDomain: ['', Validators.required],
-      cnic: ['', Validators.required],
+   
+    
+      nickName: ['', Validators.required],
+      contactNumber: ['', Validators.required],
       country: ['', Validators.required],
-      visibility: ['', Validators.required],
-      occupation: ['', Validators.required],
       domainHealth:  ['', Validators.required],
       domainEducation:  ['', Validators.required],
       domainOrphanage:  ['', Validators.required],
       domainEnvironment:  ['', Validators.required],
       domainSocialWelfare:  ['', Validators.required],
-      domainOther:  ['', Validators.required]
+      domainOther:  ['', Validators.required],
+      imageUrl: ['', Validators.required]
   });
-
+  
   }
 
   /* this function should be used in html file to get data*/ 
   onNgoEditProfileSubmit() {
 
+   
     console.log(this.NgoeditProfileForm.value)
     this.submitted = true;
     // stop here if form is invalid
@@ -58,7 +56,10 @@ export class NgoeditprofileComponent implements OnInit {
         
     // }
     this.loading = true;
-    this.backendService.donorProfile(this.NgoeditProfileForm.value)
+    if (this.NgoeditProfileForm.value.imageUrl== ""){
+      this.NgoeditProfileForm.value.imageUrl = "n/a"
+    }
+    this.backendService.ngoProfile(this.NgoeditProfileForm.value)
         .pipe(first())
         .subscribe(
             data => {

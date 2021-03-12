@@ -4,6 +4,7 @@ import { AlertService } from '../../services/alert.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { Router } from '@angular/router'
+import { IDonorProfile } from "../../_models/Idonorprofile";
 
 @Component({
   selector: 'app-editprofile',
@@ -13,6 +14,7 @@ import { Router } from '@angular/router'
 export class EditprofileComponent implements OnInit {
 
   editProfileForm: FormGroup;
+  validatingForm: FormGroup; /*for validations*/
 
   
   loading = false;
@@ -32,7 +34,6 @@ export class EditprofileComponent implements OnInit {
       lastName: ['', [Validators.required, Validators.minLength(12)]],
       dob: ['', [Validators.required, Validators.minLength(12)]],
       cellNumber: ['', Validators.required],
-      interestedDomain: ['', Validators.required],
       cnic: ['', Validators.required],
       country: ['', Validators.required],
       visibility: ['', Validators.required],
@@ -58,6 +59,7 @@ export class EditprofileComponent implements OnInit {
         
     // }
     this.loading = true;
+  
     this.backendService.donorProfile(this.editProfileForm.value)
         .pipe(first())
         .subscribe(
