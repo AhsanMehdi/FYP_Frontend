@@ -24,6 +24,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
+// search module
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CampaignsComponent } from './components/campaigns/campaigns.component';
 import { NgosComponent } from './components/ngos/ngos.component';
@@ -91,6 +95,7 @@ import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage
     BrowserModule, LazyLoadImageModule,
     ToastModule.forRoot(),
     MDBBootstrapModulesPro.forRoot(),
+    Ng2SearchPipeModule,
     AgmCoreModule.forRoot({
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
       apiKey: 'Your_api_key'
