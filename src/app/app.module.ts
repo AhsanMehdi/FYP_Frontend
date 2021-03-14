@@ -94,8 +94,8 @@ import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage
     HttpModule,
     BrowserModule, LazyLoadImageModule,
     ToastModule.forRoot(),
-    MDBBootstrapModulesPro.forRoot(),
     Ng2SearchPipeModule,
+    MDBBootstrapModulesPro.forRoot(),
     AgmCoreModule.forRoot({
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
       apiKey: 'Your_api_key'

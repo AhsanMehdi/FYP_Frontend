@@ -17,6 +17,7 @@ export class CampaignsComponent implements OnInit {
   currentIndex = -1;
   title = '';
   showDomain: string ;
+  searchText;
   
   constructor(private router:Router, private backendService: BackendService) { }
   showDetials(campaign){  /*when a user click on readmore button then it works*/

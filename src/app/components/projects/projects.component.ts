@@ -16,6 +16,7 @@ export class ProjectsComponent implements OnInit {
   currentTutorial = null;
   currentIndex = -1;
   title = '';
+  searchText;
   constructor(private router:Router, private backendService: BackendService) { }
   showDetials(project){  /*when a user click on readmore button then it works*/
     this.router.navigate(['projectdetails'],{ queryParams: { id: project._id } });

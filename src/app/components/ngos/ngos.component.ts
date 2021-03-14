@@ -17,6 +17,7 @@ export class NgosComponent implements OnInit {
   currentTutorial = null;
   currentIndex = -1;
   title = '';
+  searchText;
 
   constructor(private router:Router, private backendService: BackendService) { }
   showDetials(ngo){  /*when a user click on readmore button then it works*/
