@@ -47,6 +47,7 @@ import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprof
 import { ProjecteditComponent } from './components/projectedit/projectedit.component';
 import { DomseacompComponent } from './components/domseacomp/domseacomp.component';
 import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage
     NgoeditprofileComponent,
     ProjecteditComponent,
     DomseacompComponent,
-    NgodetailpageComponent
+    NgodetailpageComponent,
+    AboutComponent
     
     
 

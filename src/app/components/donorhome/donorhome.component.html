@@ -2,8 +2,7 @@
     <br>
     <br>
     <br>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,14 +17,14 @@
   <style>
     body {
       
-      background-color: #202020;
-      color: white;
+      background-color: white;
+      color: black;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
           /* create post section */
           .createpost-container {
-      color: white;
+      
       display: flex;
       height: 50vh;
       
@@ -91,7 +90,7 @@
     .btn1 {
       box-shadow: cornflowerblue;
 
-      background-color: #202020;
+      background-color: white;
       border: none;
       text-align: left;
       padding-left: 10px;
@@ -99,6 +98,9 @@
       width: 100%;
       height: 100%;
       padding: 5px;
+    }
+    .btn1:hover{
+      background: white;
     }
     ul {
       margin-left: -30px;
@@ -158,6 +160,23 @@
         background-color: black;
         color: #ffce00;
 
+    }
+    .newbt {
+      background-color: darkcyan;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .newbt:hover{
+      background-color: darkcyan;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:bolder;
     }
     .succmann {
         background-color: #ffce00;
@@ -253,8 +272,7 @@
     .comment-title {
       font-weight: bolder;
     }
-    .comment-description {
-    }
+    
     .add-comment {
       width: 10%;
     }
@@ -297,7 +315,7 @@
         type of data is required. -->
         <!-- ///////// -->
 
-        <div class="col-2" style="background-color:black;">
+        <div class="col-2">
           <br>
           <br>
           <br>
@@ -306,104 +324,85 @@
         moment but we would have to get this from backend -->
         <!-- ///////// -->
 
-          <button class="sucman" routerLink="/donortimeline"> Tahir </button>
-          <button class="sucman" routerLink="/campaignadd"> Post Campaign </button>
-          <button class="sucman" routerLink="/Chatbox"> Chatbox </button>
+          <button class="newbt" routerLink="/donortimeline"> Timeline </button>
+          <br>
+          <button class="newbt" routerLink="/editprofile"> Edit Profile </button>
+          <br>
+          <button class="newbt" routerLink="/campaignadd"> Post Campaign </button>
+          <br>
+          <button class="newbt" routerLink="/projectupload"> Post Project </button>
+          <br>
+          <button class="newbt" routerLink="/Chatbox"> Chatbox </button>
           <div class="stories"  >
-            <h4 class="heading14" style="color: white;">Stories</h4>
+            <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Campaigns</h4>
             <ul >
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Covid 19</button>
+                  <button class="newbt">Campaign1</button>
                 </form>
               </li>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Upcoming year of 2020
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
+                    Campaign2
                   </button>
                 </form>
               </li>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Why we need new Ngo's
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
+                    Campaign3
                   </button>
                 </form>
               </li>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Ngo vs Local Government
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
+                    Campaign4
                   </button>
                 </form>
               </li>
             </ul>
           </div>
-          <div class="stories">
-            <h4 class="heading14" style="color: white;">Options</h4>
-            <ul>
-              <li class="list-item ">
+          <div class="stories"  >
+            <h4 class="heading14" routerLink="/projects" style="color: black; text-align: start;">Projects</h4>
+            <ul >
+              <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Change Password</button>
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Project1</button>
                 </form>
               </li>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Security Options</button>
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
+                    Project2
+                  </button>
                 </form>
               </li>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">New Policies</button>
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
+                    Project3
+                  </button>
                 </form>
               </li>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Customer Service</button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Help Center</button>
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
+                    Project4
+                  </button>
                 </form>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-8 new-posts" style="background-color: black;" >
+        <div class="col-8 new-posts" >
           <br>
           <br>
           <br><!-- ///////// -->
           <!-- this createpost container is for uploading update on charityGO. treat the button as form
             submission  -->
           <!-- ///////// -->
-  
-          <div class="createpost-container" style="background-color: black;" >
-            <div class="createpost-heading">
-              <h3 class="text-align-center" style="color: white;">Create Post</h3>
-            </div>
-            <div class="createpost-input col-11 container-fluid">
-              <input
-                class="createpost-inputbox"
-                type="text"
-                placeholder="What's on your mind"
-              />
-            </div>
-            <div class="col-2 container-fluid">
-              <i class="fa fa-camera fa-2x pl-4" style="color: violet;"></i>
-              <i class="fa fa-heart heart fa-2x pl-4" ></i>
-              
-             
-            </div>      
-            <div class="createpost-button">
-              <form action="">
-                <button  class="btn-createpost btn-primary">
-                    ADD POST
-                </button>
-              </form>
-            </div>
-          </div>
           <!-- ///////// -->
         <!-- now this is main post panel. here i guess you would have to apply max20 items 
             display unless user scrolls down( i personally think adding a text with link " show more " would
@@ -613,67 +612,48 @@
         <!-- end panel -->
         <!-- ///////// -->
 
-        <div class="col-2" style="background-color:black;">
+        <div class="col-2">
           <br>
           <br>
           <br>
           <div class="stories">
-            <h4 class="heading14" style="color: white;">Liked Organizations</h4>
+            <h4 class="heading14" routerLink="ngos" style="color: black; text-align: start;">Organizations</h4>
             <ul>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Little Flowers</button>
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Little Flowers</button>
                 </form>
               </li>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Street Helper</button>
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Street Helper</button>
+                </form>
+              </li>
+              <li class="list-item">
+                <form action="page6.html">
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Stredsadasdet Helper</button>
                 </form>
               </li>
             </ul>
           </div>
           <div class="stories mt-4 pt-1">
-            <h4 class="heading14" style="color: white;">Near Campaigns</h4>
+            <h4 class="heading14" routerLink="campaigns" style="color: black; text-align: start;">Nearby Campaigns</h4>
             <ul>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
                     Advisory to Children
                   </button>
                 </form>
               </li>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Needy Need</button>
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Needy Need</button>
                 </form>
               </li>
               <li class="list-item">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Sleepless Nights</button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Implenting New Rules
-                  </button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">First Startup</button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Your Home Our Responsibilty
-                  </button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Defined Astray</button>
+                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Sleepless Nights</button>
                 </form>
               </li>
             </ul>

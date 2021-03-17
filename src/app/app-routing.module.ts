@@ -27,6 +27,7 @@ import { ProjectuploadComponent } from './components/projectupload/projectupload
 import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprofile.component';
 import { DomseacompComponent } from './components/domseacomp/domseacomp.component';
 import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 
@@ -122,6 +123,9 @@ const routes: Routes = [
   },
   {
     path: 'ngodetailpage', component: NgodetailpageComponent
+  },
+  {
+    path: 'about', component: AboutComponent
   }
   
 ];
