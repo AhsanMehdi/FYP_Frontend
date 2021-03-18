@@ -28,6 +28,8 @@ import { NgoeditprofileComponent } from './components/ngoeditprofile/ngoeditprof
 import { DomseacompComponent } from './components/domseacomp/domseacomp.component';
 import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage.component';
 import { AboutComponent } from './components/about/about.component';
+import { SettingspageComponent } from './component/settingspage/settingspage.component';
+import { SettingComponent } from './components/setting/setting.component';
 
 
 
@@ -126,6 +128,12 @@ const routes: Routes = [
   },
   {
     path: 'about', component: AboutComponent
+  },
+  {
+    path: 'settingspage', component: SettingspageComponent
+  },
+  {
+    path: 'setting', component: SettingComponent
   }
   
 ];

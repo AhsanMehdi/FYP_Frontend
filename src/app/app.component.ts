@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'ng-uikit-pro-standard';
   
    showHeader = true
+   
   constructor() {
-
+    
     
     if ((window.location.href == "http://localhost:4200/donorhome") || (window.location.href == "http://localhost:4200/ngoprofile") ) {
 
@@ -20,5 +23,5 @@ export class AppComponent {
 
   }
 
-
 }
+

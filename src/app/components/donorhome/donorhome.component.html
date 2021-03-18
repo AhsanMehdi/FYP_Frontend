@@ -82,8 +82,9 @@
    /* createpost section end */
 
     .stories {
-      box-shadow: cornflowerblue;
+      background-color: whitesmoke;
       height: auto;
+      border-radius: 10px;
       width: 100%;
       padding-left: -80px;
     }
@@ -130,7 +131,7 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19),
         0 6px 20px 0 rgba(0, 0, 0, 0.5);
 
-      color: white;
+      color: black;
       padding: 10px;
       margin-top: 20px;
     }
@@ -178,6 +179,43 @@
       border-color: darkcyan;
       font-weight:bolder;
     }
+    .redbt{
+      background-color:indianred;
+      color: white;
+      border-radius: 10px;
+      border-color: indianred;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100px;
+    }
+    .redbt:hover{
+      background-color: indianred;
+      color: white;
+      border-radius: 10px;
+      border-color: indianred;
+      font-weight:bolder;
+    }
+    .tnewbt {
+      background:transparent;
+      color: black;
+      font-weight:normal;
+      border:none;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .tnewbt:hover{
+      background-color: transparent;
+      color: black;
+      border: thin;
+      border-radius: 10px;
+      border-top-style: solid;
+      border-bottom-style: solid ;
+      border-color: teal;
+      font-weight:bolder;
+    }
+    
     .succmann {
         background-color: #ffce00;
         border-color: #ffce00;
@@ -219,6 +257,7 @@
       display: flex;
       flex-direction: column;
       overflow: auto;
+      flex: 1 1 auto;
     }
 
     .heading14 {
@@ -307,14 +346,6 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <!-- ///////// -->
-        <!-- mehdi bhai below are page divisions namely col2,col8,col2. the cols represent 2-8-2 division
-        of the entire page. the data in 2-2 is static as it will link to other pages. however
-        the data in col8 tag is going to be dynamic. I have added static data here which will help you
-        set width height on your dynamic data commands. So, I will add comments there and specify what 
-        type of data is required. -->
-        <!-- ///////// -->
-
         <div class="col-2">
           <br>
           <br>
@@ -333,88 +364,78 @@
           <button class="newbt" routerLink="/projectupload"> Post Project </button>
           <br>
           <button class="newbt" routerLink="/Chatbox"> Chatbox </button>
+          <hr>
           <div class="stories"  >
             <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Campaigns</h4>
             <ul >
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="newbt">Campaign1</button>
+                  <button class="tnewbt">Campaign1</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
-                    Campaign2
-                  </button>
+                  <button class="tnewbt">Campaign2</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
-                    Campaign3
-                  </button>
+                  <button class="tnewbt">Campaign3</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
-                    Campaign4
-                  </button>
+                  <button class="tnewbt">Campaign4</button>
                 </form>
               </li>
-            </ul>
+              <li class="list-item" style="text-align: center;">
+                <a href="/campaigns" style="color:dodgerblue; font-size: small;">View more</a>
+              </li>
+              
+              </ul>
           </div>
+          <hr>
           <div class="stories"  >
             <h4 class="heading14" routerLink="/projects" style="color: black; text-align: start;">Projects</h4>
             <ul >
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Project1</button>
+                  <button class="tnewbt">Project1</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
-                    Project2
-                  </button>
+                  <button class="tnewbt">Project2</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
-                    Project3
-                  </button>
+                  <button class="tnewbt">Project3</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
-                    Project4
-                  </button>
+                  <button class="tnewbt">Project4</button>
                 </form>
               </li>
-            </ul>
-          </div>
+              <li class="list-item" style="text-align: center;">
+                <a href="/projects" style="color:dodgerblue; font-size: small;">View more</a>
+              </li>
+              
+              </ul>
+        
+            </div>
+            <hr>
         </div>
-        <div class="col-8 new-posts" >
+        
+        <div class="col-8 new-posts" style="align-items: center; display: flex; flex-direction: column;" >
           <br>
           <br>
           <br><!-- ///////// -->
-          <!-- this createpost container is for uploading update on charityGO. treat the button as form
-            submission  -->
-          <!-- ///////// -->
-          <!-- ///////// -->
-        <!-- now this is main post panel. here i guess you would have to apply max20 items 
-            display unless user scrolls down( i personally think adding a text with link " show more " would
-           be better, but lets say currently we have scroll option) -->
-        <!-- ///////// -->
-
-      <!-- ///////// -->
-        <!-- so each post box would get NGO name, project/campagin title, attatched picture, likes and comments -->
-        <!-- ///////// -->
+          
 
           <div class="post-box">
-            <h3 class="title-ngo" style="color: white;">Edhi Foundation</h3>
+            <h3 class="title-ngo" style="color: black;">Edhi Foundation</h3>
             <p>
               Helping poor children get food. 
             </p>
@@ -607,57 +628,63 @@
           </div>
           
         </div>
-
-        <!-- ///////// -->
-        <!-- end panel -->
-        <!-- ///////// -->
-
         <div class="col-2">
           <br>
           <br>
           <br>
-          <div class="stories">
-            <h4 class="heading14" routerLink="ngos" style="color: black; text-align: start;">Organizations</h4>
-            <ul>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Little Flowers</button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Street Helper</button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Stredsadasdet Helper</button>
-                </form>
-              </li>
-            </ul>
+          <div class="container" style="text-align: end;">
+          <button class="redbt" routerLink="/home"> Logout </button><a style="padding-left: 10px; color:steelblue; text-decoration: none;" routerLink='/setting' class="fa fa-cog" aria-hidden="true"></a>
           </div>
-          <div class="stories mt-4 pt-1">
-            <h4 class="heading14" routerLink="campaigns" style="color: black; text-align: start;">Nearby Campaigns</h4>
-            <ul>
-              <li class="list-item">
+          <br>
+          <div class="stories"  >
+            <h4 class="heading14" routerLink="/ngos" style="color: black; text-align: start;">Organizations</h4>
+            <ul >
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">
-                    Advisory to Children
-                  </button>
+                  <button class="tnewbt">Org1</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Needy Need</button>
+                  <button class="tnewbt">Org2</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" style="background-color: rgb(20, 44, 88);">Sleepless Nights</button>
+                  <button class="tnewbt">Org3</button>
                 </form>
               </li>
-            </ul>
+              <li class="list-item" style="text-align: center;">
+                <a href="/ngos" style="color:dodgerblue; font-size: small;">View more</a>
+              </li>
+              </ul>
           </div>
+          <hr>
+          <div class="stories"  >
+            <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Nearby Campaigns</h4>
+            <ul >
+              <li class="list-item" style="text-align: center;">
+                <form action="page6.html">
+                  <button class="tnewbt">Campaign1</button>
+                </form>
+              </li>
+              <li class="list-item" style="text-align: center;">
+                <form action="page6.html">
+                  <button class="tnewbt">Campaign2</button>
+                </form>
+              </li>
+              <li class="list-item" style="text-align: center;">
+                <form action="page6.html">
+                  <button class="tnewbt">Campaign3</button>
+                </form>
+              </li>
+              <li class="list-item" style="text-align: center;">
+                <a href="/campaigns" style="color:dodgerblue; font-size: small;">View more</a>
+              </li>
+              
+              </ul>
+          </div>
+          <hr>
         </div>
       </div>
     </div>

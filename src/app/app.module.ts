@@ -48,6 +48,8 @@ import { ProjecteditComponent } from './components/projectedit/projectedit.compo
 import { DomseacompComponent } from './components/domseacomp/domseacomp.component';
 import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage.component';
 import { AboutComponent } from './components/about/about.component';
+import { SettingspageComponent } from './component/settingspage/settingspage.component';
+import { SettingComponent } from './components/setting/setting.component';
 
 
 @NgModule({
@@ -80,7 +82,9 @@ import { AboutComponent } from './components/about/about.component';
     ProjecteditComponent,
     DomseacompComponent,
     NgodetailpageComponent,
-    AboutComponent
+    AboutComponent,
+    SettingspageComponent,
+    SettingComponent
     
     
 

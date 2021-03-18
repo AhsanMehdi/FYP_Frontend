@@ -17,10 +17,15 @@ body {
 
 footer {
   width: 100%;
-  display: inline-block;
+  display:flex;
+  align-content: flex-end;
   margin: 2em 0;
   height: 70px;
   background-color: #999;
+  position:sticky bottom;
+  left:0;
+  bottom: 0;
+
 }
 footer .copyright {
   width: 50%;
@@ -99,15 +104,18 @@ footer .social a:hover {
 }
 
 </style>
-<footer style="padding-bottom:20px ;">
-  <div class="copyright">
-    <p>CharityGO- a Project of FAST NUCES</p>
-    
-  </div>
-  <div class="social">
-    <a href="#" class="support" routerLink="/about">About Us</a>
-    <a href="#" class="face">f</a>
-    <a href="#" class="tweet">t</a>
-    <a href="#" class="linked">in</a>
-  </div>
-</footer>
+
+<div *ngIf="router.url !== '/donorhome' or router.url !== '/donortimeline'">
+  <footer style="padding-bottom:20px ;">
+    <div class="copyright">
+      <p>CharityGO- a Project of FAST NUCES</p>
+      
+    </div>
+    <div class="social">
+      <a href="#" class="support" routerLink="/about">About Us</a>
+      <a href="#" class="face">f</a>
+      <a href="#" class="tweet">t</a>
+      <a href="#" class="linked">in</a>
+    </div>
+  </footer>
+</div>
