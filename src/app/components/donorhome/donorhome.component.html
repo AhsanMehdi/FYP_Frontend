@@ -252,6 +252,24 @@
       border-color: indianred;
       font-weight:bolder;
     }
+    .postcampbtn{
+      background-color:cornflowerblue;
+      color: white;
+      border-radius: 10px;
+      border-color: blue;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100px;
+      
+    }
+    .postcampbtn:hover{
+      background-color: cornflowerblue;
+      color: white;
+      border-radius: 10px;
+      border-color: blue;
+      font-weight:bolder;
+    }
     .tnewbt {
       background:transparent;
       color: black;
@@ -325,21 +343,20 @@
       display: flex;
 
       padding: 20px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
-        0 6px 20px 0 rgba(0, 0, 0, 0.3);
+      
       flex-direction: row;
     }
     .comment-section {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
-        0 6px 20px 0 rgba(0, 0, 0, 0.3);
-      margin-top: 20px;
+      
+      margin-top: 10px;
       display: flex;
       flex-direction: column;
-      padding: 30px;
+      padding: 5px;
     }
     .comment-section-0 {
       display: flex;
       flex-direction: row;
+      
     }
     .comment-section-divide {
       width: 80%;
@@ -357,8 +374,8 @@
     }
     .comment-body {
       padding: 20px;
-      background-color: #3f3d3d;
-      color: white;
+      background-color: whitesmoke;
+      color: black;
       width: 100%;
       border-radius: 30px;
       margin-top: 10px;
@@ -382,8 +399,8 @@
     .comment-box-input {
       width: 100%;
       height: 50px;
-      color: white;
-      background-color: #202020;
+      color: black;
+      background-color: whitesmoke;
     }
     .myDiv {
       width: 100%;
@@ -489,13 +506,13 @@
           <br><!-- ///////// -->
           
 
-          <div class="post-box" style="border-radius: 5px; text-align: center;">
-            <h3 class="title-ngo" style="color: black; padding-bottom: 0px;">Edhi Foundation</h3>
+          <div class="post-box" style="border-radius: 5px; text-align: center;" >
+            <h3 class="title-ngo" style="color: black; padding-bottom: 0px;" routerLink="/ngodetails">Edhi Foundation</h3>
             <h9 style="font-weight: lighter; padding-top: 0px;">12-March-2020</h9>
-            <p>
+            <p routerLink="/projectdetails">
               Helping poor children get food. 
             </p>
-            <div class="container-fluid" style="text-align: center;" >
+            <div class="container-fluid" style="text-align: center;" routerLink="/projectdetails">
               <img src="/assets/orphans.jpg" style="border: black solid 1px; padding: 2px;;" height="400px">
             </div>
             <div class="count-like" style="border-bottom: none;">
@@ -526,147 +543,142 @@
           unless user opens the post seperately. This would contain username(who comments) and comment -->
         <!-- ///////// -->
 
-            <div class="comment-section">
-              <div class="comment-section-0">
-                <div class="comment-section-divide">
-                  <div class="comment-body">
-                    <div class="comment-title">Asif Ali</div>
-                    <div class="comment-description">
-                      This is the one of the best ngo in the upcoming year in
-                      history of pakistan
-                    </div>
-                  </div>
+        <div class="comment-section">
+
+          <div class="comment-section-0">
+            <div class="comment-section-divide">
+              <div class="comment-body">
+                <div class="comment-title" style="text-align: start;">Amir Rehman</div>
+                <div class="comment-description">
+                  This is the one of the best ngo in the upcoming year in
+                  history of pakistan
                 </div>
-                <div class="comment-like">
-                  <i class="fa fa-heart comment-like-icon"></i>Like
-                  <i class="fa fa-share comment-share-icon"></i>Reply
-                </div>
-              </div>
-              <div class="comment-section-0">
-                <div class="comment-section-divide">
-                  <div class="comment-body">
-                    <div class="comment-title">Amir Rehman</div>
-                    <div class="comment-description">
-                      This is the one of the best ngo in the upcoming year in
-                      history of pakistan
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-like">
-                  <i class="fa fa-heart comment-like-icon"></i>Like
-                  <i class="fa fa-share comment-share-icon"></i>Reply
+                <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
+                  12-March-2020
                 </div>
               </div>
             </div>
+            
+          </div>
+              <div class="comment-section-0">
+                <div class="comment-section-divide">
+                  <div class="comment-body">
+                    <div class="comment-title" style="text-align: start;">Amir Rehman</div>
+                    <div class="comment-description">
+                      This is the one of the best ngo in the upcoming year in
+                      history of pakistan
+                    </div>
+                    <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
+                      12-March-2020
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
 
             <div class="comment-box">
-              <div class="comment-input">
+              <div class="comment-input" >
                 <input
                   class="comment-box-input"
                   type="text"
                   placeholder="Write a Comment "
                 />
               </div>
-              <div class="add-comment">
-                <button class="add-comment-bottun">COMMENT</button>
+              <div class="add-comment" >
+                <button class="postcampbtn" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
+
               </div>
             </div>
           </div>
-          <div class="post-box">
-            <h3 class="title-ngo" style="color: white;">Edhi Foundation</h3>
-            <p>
+
+
+          <div class="post-box" style="border-radius: 5px; text-align: center;" >
+            <h3 class="title-ngo" style="color: black; padding-bottom: 0px;" routerLink="/ngodetails">Edhi Foundation</h3>
+            <h9 style="font-weight: lighter; padding-top: 0px;">12-March-2020</h9>
+            <p routerLink="/projectdetails">
               Helping poor children get food. 
             </p>
-            <div class="container-fluid col-12">
-              <img src="/assets/orphans.jpg" height="400px">
+            <div class="container-fluid" style="text-align: center;" routerLink="/projectdetails">
+              <img src="/assets/orphans.jpg" style="border: black solid 1px; padding: 2px;;" height="400px">
             </div>
-            <div class="count-like">
-              <i
-                class="fa fa-heart text-danger fa-1x ml-4 pl-4"
-                style="margin-right: 10px"
-              ></i
-              ><span class="mr-4 pr-4">24</span>
+            <div class="count-like" style="border-bottom: none;">
+              <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: royalblue;"></i>
+              <span class="mr-4 pr-4">24</span>
+              <i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color:salmon;"></i>
+              <span class="mr-4 pr-4">24</span>
+              
             </div>
-            <div class="like-comment">
-              <div class="button-des">
-                <i class="fa fa-heart"></i>
-                <input
-                  type="button"
-                  class="button-like"
-                  id="fname"
-                  name="LIKE"
-                  value="Like"
-                />
-              </div>
-              <div class="button-des">
-                <i class="fa fa-comment"></i>
-                <input
-                  type="button"
-                  class="button-like"
-                  id="fname"
-                  name="LIKE"
-                  value="Comment"
-                />
-              </div>
-              <div class="button-des">
-                <i class="fa fa-share"></i>
-                <input
-                  type="button"
-                  class="button-like"
-                  id="fname"
-                  name="Share"
-                  value="Share"
-                />
-              </div>
-            </div>
+            <div class="row">
+              <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
 
-            <div class="comment-section">
-              <div class="comment-section-0">
-                <div class="comment-section-divide">
-                  <div class="comment-body">
-                    <div class="comment-title">Asif Ali</div>
-                    <div class="comment-description">
-                      This is the one of the best ngo in the upcoming year in
-                      history of pakistan
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-like">
-                  <i class="fa fa-heart comment-like-icon"></i>Like
-                  <i class="fa fa-share comment-share-icon"></i>Reply
-                </div>
+                <button class="likenewbt" routerLink="/donortimeline">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
               </div>
-              <div class="comment-section-0">
-                <div class="comment-section-divide">
-                  <div class="comment-body">
-                    <div class="comment-title">Amir Rehman</div>
-                    <div class="comment-description">
-                      This is the one of the best ngo in the upcoming year in
-                      history of pakistan
-                    </div>
-                  </div>
+              <div class="col-4" style="border-right: solid darkslategrey 1px;">
+
+                <button class="sharenewbt"  routerLink="/donortimeline"> <i class="fa fa-share" aria-hidden="true" style="padding:1px; color: white;"></i>Share </button>
+              </div>
+              <div class="col-4" style="text-align: start;">
+
+                <button class="dislikenewbt" routerLink="/donortimeline"><i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color: white;"></i> Dislike </button>
+              </div>
+
+            </div>
+            <hr>
+            <!-- ///////// -->
+        <!-- Now this is the comment section for this post, i think max 2 comments would be enough to display
+          unless user opens the post seperately. This would contain username(who comments) and comment -->
+        <!-- ///////// -->
+
+        <div class="comment-section">
+
+          <div class="comment-section-0">
+            <div class="comment-section-divide">
+              <div class="comment-body">
+                <div class="comment-title" style="text-align: start;">Amir Rehman</div>
+                <div class="comment-description">
+                  This is the one of the best ngo in the upcoming year in
+                  history of pakistan
                 </div>
-                <div class="comment-like">
-                  <i class="fa fa-heart comment-like-icon"></i>Like
-                  <i class="fa fa-share comment-share-icon"></i>Reply
+                <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
+                  12-March-2020
                 </div>
               </div>
             </div>
+            
+          </div>
+              <div class="comment-section-0">
+                <div class="comment-section-divide">
+                  <div class="comment-body">
+                    <div class="comment-title" style="text-align: start;">Amir Rehman</div>
+                    <div class="comment-description">
+                      This is the one of the best ngo in the upcoming year in
+                      history of pakistan
+                    </div>
+                    <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
+                      12-March-2020
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
 
             <div class="comment-box">
-              <div class="comment-input">
+              <div class="comment-input" >
                 <input
                   class="comment-box-input"
                   type="text"
                   placeholder="Write a Comment "
                 />
               </div>
-              <div class="add-comment">
-                <button class="add-comment-bottun">COMMENT</button>
+              <div class="add-comment" >
+                <button class="postcampbtn" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
+
               </div>
             </div>
           </div>
-          
+
         </div>
         <div class="col-2">
           <br>
