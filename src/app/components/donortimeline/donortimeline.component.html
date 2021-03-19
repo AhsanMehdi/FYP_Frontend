@@ -16,49 +16,31 @@
     <title>Document</title>
   </head>
   <style>
-    body {
-      background-color: #202020;
-      color: white;
+   body {
+      
+      background-color: white;
+      color: black;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
    
-    .cover {
-      height: 30vh;
-      background: url("/assets/123.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      margin-bottom: 15vh;
-
-    }
-    .title {
-      margin-top: 30vh;
-      color: white;
-      font-weight: 100;
-    }
     .profile-page {
       display: flex;
 
       flex-direction: row;
     }
-    .profile-photo > img {
-      margin-top: 15vh;
-      margin-left: 3vw;
-      border: 8px solid white;
-    }
+    
              /* create post section */
-             .createpost-container {
-      color: white;
+    .createpost-container {
+      
       display: flex;
       height: 50vh;
       
 
       flex-direction: column;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
-        0 6px 20px 0 rgba(0, 0, 0, 0.3);
+      
     }
     .createpost-heading {
-      border-bottom: 1px solid rgb(65, 64, 64);
       text-align: center;
       padding: 10px;
     }
@@ -71,28 +53,18 @@
     .createpost-input {
       width: 100% !important;
       margin-bottom:10px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3),
-        0 6px 20px 0 rgba(0, 0, 0, 0.1);
+      
     }
     .createpost-inputbox {
       width: 100% !important;
       height: 14vh;
-      background-color: #202020;
+      background-color: #fff9f9;
       color: white;
       border: none;
       padding: 10px;
       padding-bottom: 40px;
     }
-    .sucman {
-        background-color: black;
-        border-color: #ffce00;
-        color: #ffce00;
-    }
-    .sucman:hover {
-        background-color: black;
-        color: #ffce00;
 
-    }
     .createpost-add {
       border: 1px solid rgb(65, 64, 64);
       width: 90%;
@@ -116,16 +88,18 @@
        margin-top: 10px;
    }
    /* createpost section end */
-     /* Top left and top right section style start */
-     .stories {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3),
-        0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
+    .stories {
+      background-color: whitesmoke;
       height: auto;
+      border-radius: 10px;
       width: 100%;
       padding-left: -80px;
     }
     .btn1 {
-      background-color: #202020;
+      box-shadow: cornflowerblue;
+
+      background-color: white;
       border: none;
       text-align: left;
       padding-left: 10px;
@@ -134,6 +108,9 @@
       height: 100%;
       padding: 5px;
     }
+    .btn1:hover{
+      background: white;
+    }
     ul {
       margin-left: -30px;
     }
@@ -141,28 +118,28 @@
       list-style-type: none;
 
       width: 100%;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19),
-        0 6px 20px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: cornflowerblue;
       height: 40px;
     }
 
     .list-item.active {
-      border-left: 1px solid #ffce00;
+      border-left: 1px white;
     }
     .list-item:hover {
-      border-left: 1px solid #ffce00;
+      border-left: 1px white;
 
-      border-right: 2px solid #ffce00;
+      border-right: 2px white;
     }
-    /* Top left and top right section style end */
-       /* NGO POST SECTON START */
-       .post-box {
+    /* Top left and top right section style start */
+    
+    /* NGO POST SECTON START */
+    .post-box {
       display: flex;
       flex-direction: column;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19),
         0 6px 20px 0 rgba(0, 0, 0, 0.5);
 
-      color: white;
+      color: black;
       padding: 10px;
       margin-top: 20px;
     }
@@ -170,7 +147,7 @@
     .like-comment {
       display: flex;
       flex-direction: row;
-      width: 80%;
+      width: auto;
       background-color: rgb(20, 44, 88);
 
     }
@@ -180,6 +157,157 @@
       background-color: rgb(20, 44, 88);
       color: white;
     }
+
+
+    /* Green */
+    .sucman {
+        background-color: black;
+        border-color: #ffce00;
+        color: #ffce00;
+    }
+    .sucman:hover {
+        background-color: black;
+        color: #ffce00;
+
+    }
+    .newbt {
+      background-color: darkcyan;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .newbt:hover{
+      background-color: darkcyan;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:bolder;
+    }
+    .likenewbt {
+      background-color:lightskyblue;
+      color: lightskyblue;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .likenewbt:hover{
+      background-color: blue;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:bolder;
+      transform: scale(1.1);
+    }
+    .sharenewbt {
+      background-color:lightgreen;
+      color: lightgreen;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .sharenewbt:hover{
+      background-color: green;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:bolder;
+      transform: scale(1.1);
+    }
+    .dislikenewbt {
+      background-color:lightsalmon;
+      color: lightsalmon;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .dislikenewbt:hover{
+      background-color: salmon;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:bolder;
+      transform: scale(1.1);
+    }
+    
+    
+    .redbt{
+      background-color:indianred;
+      color: white;
+      border-radius: 10px;
+      border-color: indianred;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100px;
+    }
+    .redbt:hover{
+      background-color: indianred;
+      color: white;
+      border-radius: 10px;
+      border-color: indianred;
+      font-weight:bolder;
+    }
+    .postcampbtn{
+      background-color:cornflowerblue;
+      color: white;
+      border-radius: 10px;
+      border-color: blue;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100px;
+      
+    }
+    .postcampbtn:hover{
+      background-color: cornflowerblue;
+      color: white;
+      border-radius: 10px;
+      border-color: blue;
+      font-weight:bolder;
+    }
+    .tnewbt {
+      background:transparent;
+      color: black;
+      font-weight:normal;
+      border:none;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .tnewbt:hover{
+      background-color: transparent;
+      color: black;
+      border: thin;
+      border-radius: 10px;
+      border-top-style: solid;
+      border-bottom-style: solid ;
+      border-color: teal;
+      font-weight:bolder;
+    }
+    
+    .succmann {
+        background-color: #ffce00;
+        border-color: #ffce00;
+        color: black;
+    }
+    .succmann:hover {
+        background-color: #4ab8b8;
+        border-color: black;
+        color: white;
+    } 
     .button-des:hover {
       border: 1px solid #ffce00;
     }
@@ -195,7 +323,6 @@
       margin-bottom: 10px;
     }
     .title-ngo {
-      border-bottom: 1px solid grey;
       padding-bottom: 10px;
     }
 
@@ -211,6 +338,7 @@
       display: flex;
       flex-direction: column;
       overflow: auto;
+      flex: 1 1 auto;
     }
 
     .heading14 {
@@ -223,21 +351,20 @@
       display: flex;
 
       padding: 20px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
-        0 6px 20px 0 rgba(0, 0, 0, 0.3);
+      
       flex-direction: row;
     }
     .comment-section {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
-        0 6px 20px 0 rgba(0, 0, 0, 0.3);
-      margin-top: 20px;
+      
+      margin-top: 10px;
       display: flex;
       flex-direction: column;
-      padding: 30px;
+      padding: 5px;
     }
     .comment-section-0 {
       display: flex;
       flex-direction: row;
+      
     }
     .comment-section-divide {
       width: 80%;
@@ -255,8 +382,8 @@
     }
     .comment-body {
       padding: 20px;
-      background-color: #3f3d3d;
-      color: white;
+      background-color: whitesmoke;
+      color: black;
       width: 100%;
       border-radius: 30px;
       margin-top: 10px;
@@ -264,8 +391,7 @@
     .comment-title {
       font-weight: bolder;
     }
-    .comment-description {
-    }
+    
     .add-comment {
       width: 10%;
     }
@@ -281,8 +407,8 @@
     .comment-box-input {
       width: 100%;
       height: 50px;
-      color: white;
-      background-color: #202020;
+      color: black;
+      background-color: whitesmoke;
     }
     .myDiv {
       width: 100%;
@@ -291,264 +417,351 @@
       background-color: lightblue;
       margin-top: 20px;
     }
-    /* Comment box styling end */
+    .heart{
+      color: tomato;
+    }
+     /* Comment box styling end */
     /* NGO post  section end */
     
   </style>
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-2" style="background-color:black;">
+        <div class="col-2">
           <br>
           <br>
           <br>
-          <button class="sucman" routerLink="/editprofile"> Edit Profile </button>
+        <!-- ///////// -->
+        <!-- The following button is for going to timeline of user. this name is displaying "tahir" at the
+        moment but we would have to get this from backend -->
+        <!-- ///////// -->
+
+          <button class="newbt" routerLink="/donortimeline"> Timeline </button>
+          <br>
+          <button class="newbt" routerLink="/editprofile"> Edit Profile </button>
+          <br>
+          <button class="newbt" routerLink="/campaignadd"> Post Campaign </button>
+          <br>
+          <button class="newbt" routerLink="/projectupload"> Post Project </button>
+          <br>
+          <button class="newbt" routerLink="/Chatbox"> Chatbox </button>
+          <hr>
           <div class="stories"  >
-            <h4 class="heading14" style="color: white;">Stories</h4>
+            <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Campaigns</h4>
             <ul >
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Covid 19</button>
+                  <button class="tnewbt">Campaign1</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Upcoming year of 2020
-                  </button>
+                  <button class="tnewbt">Campaign2</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Why we need new Ngo's
-                  </button>
+                  <button class="tnewbt">Campaign3</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Ngo vs Local Government
-                  </button>
+                  <button class="tnewbt">Campaign4</button>
                 </form>
               </li>
-            </ul>
+              <li class="list-item" style="text-align: center;">
+                <a href="/campaigns" style="color:dodgerblue; font-size: small;">View more</a>
+              </li>
+              
+              </ul>
           </div>
-          <div class="stories">
-            <h4 class="heading14" style="color: white;">Options</h4>
-            <ul>
-              <li class="list-item ">
+          <hr>
+          <div class="stories"  >
+            <h4 class="heading14" routerLink="/projects" style="color: black; text-align: start;">Projects</h4>
+            <ul >
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Change Password</button>
+                  <button class="tnewbt">Project1</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Security Options</button>
+                  <button class="tnewbt">Project2</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">New Policies</button>
+                  <button class="tnewbt">Project3</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Customer Service</button>
+                  <button class="tnewbt">Project4</button>
                 </form>
               </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Help Center</button>
-                </form>
+              <li class="list-item" style="text-align: center;">
+                <a href="/projects" style="color:dodgerblue; font-size: small;">View more</a>
               </li>
-            </ul>
-          </div>
+              
+              </ul>
+        
+            </div>
+            <hr>
         </div>
-          <div class="col-8 new-posts" style="background-color: black;">
+        
+          <div class="col-8 new-posts">
             <br>
             <br>
             <br>
             <br>
-            <div class="cover">
             <div class="profile-page">
               <div class="profile-photo">
+
                 <img
                   src="/assets/123.jpg"
                   class="rounded-circle"
                   width="220"
                   height="210"
-                  alt=""
-                />
+                  alt=""/>
+                  <h1 style="color: black;">Tahir Sagri</h1>
               </div>
-              <div class="title"><h1 style="color: white;">Tahir Sagri</h1></div>
             </div>
-          </div>
 
-          <div class="post-box">
-            <h3 class="title-ngo" style="color: white;">Edhi Foundation</h3>
-            <p>
+          <div class="post-box" style="border-radius: 5px; text-align: center;" >
+            <h3 class="title-ngo" style="color: black; padding-bottom: 0px;" routerLink="/ngodetails">Edhi Foundation</h3>
+            <h9 style="font-weight: lighter; padding-top: 0px;">12-March-2020</h9>
+            <p routerLink="/projectdetails">
               Helping poor children get food. 
             </p>
-            <div class="container-fluid col-12">
-              <img src="/assets/orphans.jpg" height="400px">
+            <div class="container-fluid" style="text-align: center;" routerLink="/projectdetails">
+              <img src="/assets/orphans.jpg" style="border: black solid 1px; padding: 2px;;" height="400px">
             </div>
-            <div class="count-like">
-              <i
-                class="fa fa-heart text-danger fa-1x ml-4 pl-4"
-                style="margin-right: 10px"
-              ></i
-              ><span class="mr-4 pr-4">24</span>
+            <div class="count-like" style="border-bottom: none;">
+              <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: royalblue;"></i>
+              <span class="mr-4 pr-4">24</span>
+              <i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color:salmon;"></i>
+              <span class="mr-4 pr-4">24</span>
+              
             </div>
-            <div class="like-comment">
-              <div class="button-des">
-                <i class="fa fa-heart"></i>
-                <input
-                  type="button"
-                  class="button-like"
-                  id="fname"
-                  name="LIKE"
-                  value="Like"
-                />
-              </div>
-              <div class="button-des">
-                <i class="fa fa-comment"></i>
-                <input
-                  type="button"
-                  class="button-like"
-                  id="fname"
-                  name="LIKE"
-                  value="Comment"
-                />
-              </div>
-              <div class="button-des">
-                <i class="fa fa-share"></i>
-                <input
-                  type="button"
-                  class="button-like"
-                  id="fname"
-                  name="Share"
-                  value="Share"
-                />
-              </div>
-            </div>
+            <div class="row">
+              <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
 
-            <div class="comment-section">
-              <div class="comment-section-0">
-                <div class="comment-section-divide">
-                  <div class="comment-body">
-                    <div class="comment-title">Asif Ali</div>
-                    <div class="comment-description">
-                      This is the one of the best ngo in the upcoming year in
-                      history of pakistan
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-like">
-                  <i class="fa fa-heart comment-like-icon"></i>Like
-                  <i class="fa fa-share comment-share-icon"></i>Reply
-                </div>
+                <button class="likenewbt" routerLink="/donortimeline">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
               </div>
-              <div class="comment-section-0">
-                <div class="comment-section-divide">
-                  <div class="comment-body">
-                    <div class="comment-title">Amir Rehman</div>
-                    <div class="comment-description">
-                      This is the one of the best ngo in the upcoming year in
-                      history of pakistan
-                    </div>
-                  </div>
+              <div class="col-4" style="border-right: solid darkslategrey 1px;">
+
+                <button class="sharenewbt"  routerLink="/donortimeline"> <i class="fa fa-share" aria-hidden="true" style="padding:1px; color: white;"></i>Share </button>
+              </div>
+              <div class="col-4" style="text-align: start;">
+
+                <button class="dislikenewbt" routerLink="/donortimeline"><i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color: white;"></i> Dislike </button>
+              </div>
+
+            </div>
+            <hr>
+            <!-- ///////// -->
+        <!-- Now this is the comment section for this post, i think max 2 comments would be enough to display
+          unless user opens the post seperately. This would contain username(who comments) and comment -->
+        <!-- ///////// -->
+
+        <div class="comment-section">
+
+          <div class="comment-section-0">
+            <div class="comment-section-divide">
+              <div class="comment-body">
+                <div class="comment-title" style="text-align: start;">Amir Rehman</div>
+                <div class="comment-description">
+                  This is the one of the best ngo in the upcoming year in
+                  history of pakistan
                 </div>
-                <div class="comment-like">
-                  <i class="fa fa-heart comment-like-icon"></i>Like
-                  <i class="fa fa-share comment-share-icon"></i>Reply
+                <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
+                  12-March-2020
                 </div>
               </div>
             </div>
+            
+          </div>
+              <div class="comment-section-0">
+                <div class="comment-section-divide">
+                  <div class="comment-body">
+                    <div class="comment-title" style="text-align: start;">Amir Rehman</div>
+                    <div class="comment-description">
+                      This is the one of the best ngo in the upcoming year in
+                      history of pakistan
+                    </div>
+                    <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
+                      12-March-2020
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
 
             <div class="comment-box">
-              <div class="comment-input">
+              <div class="comment-input" >
                 <input
                   class="comment-box-input"
                   type="text"
                   placeholder="Write a Comment "
                 />
               </div>
-              <div class="add-comment">
-                <button class="add-comment-bottun">COMMENT</button>
+              <div class="add-comment" >
+                <button class="postcampbtn" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
+
               </div>
             </div>
           </div>
+
+
+          <div class="post-box" style="border-radius: 5px; text-align: center;" >
+            <h3 class="title-ngo" style="color: black; padding-bottom: 0px;" routerLink="/ngodetails">Edhi Foundation</h3>
+            <h9 style="font-weight: lighter; padding-top: 0px;">12-March-2020</h9>
+            <p routerLink="/projectdetails">
+              Helping poor children get food. 
+            </p>
+            <div class="container-fluid" style="text-align: center;" routerLink="/projectdetails">
+              <img src="/assets/orphans.jpg" style="border: black solid 1px; padding: 2px;;" height="400px">
+            </div>
+            <div class="count-like" style="border-bottom: none;">
+              <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: royalblue;"></i>
+              <span class="mr-4 pr-4">24</span>
+              <i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color:salmon;"></i>
+              <span class="mr-4 pr-4">24</span>
+              
+            </div>
+            <div class="row">
+              <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
+
+                <button class="likenewbt" routerLink="/donortimeline">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
+              </div>
+              <div class="col-4" style="border-right: solid darkslategrey 1px;">
+
+                <button class="sharenewbt"  routerLink="/donortimeline"> <i class="fa fa-share" aria-hidden="true" style="padding:1px; color: white;"></i>Share </button>
+              </div>
+              <div class="col-4" style="text-align: start;">
+
+                <button class="dislikenewbt" routerLink="/donortimeline"><i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color: white;"></i> Dislike </button>
+              </div>
+
+            </div>
+            <hr>
+            <!-- ///////// -->
+        <!-- Now this is the comment section for this post, i think max 2 comments would be enough to display
+          unless user opens the post seperately. This would contain username(who comments) and comment -->
+        <!-- ///////// -->
+
+        <div class="comment-section">
+
+          <div class="comment-section-0">
+            <div class="comment-section-divide">
+              <div class="comment-body">
+                <div class="comment-title" style="text-align: start;">Amir Rehman</div>
+                <div class="comment-description">
+                  This is the one of the best ngo in the upcoming year in
+                  history of pakistan
+                </div>
+                <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
+                  12-March-2020
+                </div>
+              </div>
+            </div>
+            
+          </div>
+              <div class="comment-section-0">
+                <div class="comment-section-divide">
+                  <div class="comment-body">
+                    <div class="comment-title" style="text-align: start;">Amir Rehman</div>
+                    <div class="comment-description">
+                      This is the one of the best ngo in the upcoming year in
+                      history of pakistan
+                    </div>
+                    <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
+                      12-March-2020
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
+
+            <div class="comment-box">
+              <div class="comment-input" >
+                <input
+                  class="comment-box-input"
+                  type="text"
+                  placeholder="Write a Comment "
+                />
+              </div>
+              <div class="add-comment" >
+                <button class="postcampbtn" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
+
+              </div>
+            </div>
+          </div>
+
         </div>
         <!-- ///////// -->
         <!-- end panel -->
         <!-- ///////// -->
 
-        <div class="col-2" style="background-color:black;">
+        <div class="col-2">
           <br>
           <br>
           <br>
-          <div class="stories">
-            <h4 class="heading14" style="color: white;">Liked Organizations</h4>
-            <ul>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Little Flowers</button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Street Helper</button>
-                </form>
-              </li>
-            </ul>
+          <div class="container" style="text-align: end;">
+          <button class="redbt" routerLink="/home"> Logout </button><a style="padding-left: 10px; color:steelblue; text-decoration: none;" routerLink='/setting' class="fa fa-cog" aria-hidden="true"></a>
           </div>
-          <div class="stories mt-4 pt-1">
-            <h4 class="heading14" style="color: white;">Near Campaigns</h4>
-            <ul>
-              <li class="list-item">
+          <br>
+          <div class="stories"  >
+            <h4 class="heading14" routerLink="/ngos" style="color: black; text-align: start;">Organizations</h4>
+            <ul >
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Advisory to Children
-                  </button>
+                  <button class="tnewbt">Org1</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Needy Need</button>
+                  <button class="tnewbt">Org2</button>
                 </form>
               </li>
-              <li class="list-item">
+              <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Sleepless Nights</button>
+                  <button class="tnewbt">Org3</button>
                 </form>
               </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Implenting New Rules
-                  </button>
-                </form>
+              <li class="list-item" style="text-align: center;">
+                <a href="/ngos" style="color:dodgerblue; font-size: small;">View more</a>
               </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">First Startup</button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">
-                    Your Home Our Responsibilty
-                  </button>
-                </form>
-              </li>
-              <li class="list-item">
-                <form action="page6.html">
-                  <button class="btn1" type="submit" style="background-color: rgb(20, 44, 88);">Defined Astray</button>
-                </form>
-              </li>
-            </ul>
+              </ul>
           </div>
+          <hr>
+          <div class="stories"  >
+            <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Nearby Campaigns</h4>
+            <ul >
+              <li class="list-item" style="text-align: center;">
+                <form action="page6.html">
+                  <button class="tnewbt">Campaign1</button>
+                </form>
+              </li>
+              <li class="list-item" style="text-align: center;">
+                <form action="page6.html">
+                  <button class="tnewbt">Campaign2</button>
+                </form>
+              </li>
+              <li class="list-item" style="text-align: center;">
+                <form action="page6.html">
+                  <button class="tnewbt">Campaign3</button>
+                </form>
+              </li>
+              <li class="list-item" style="text-align: center;">
+                <a href="/campaigns" style="color:dodgerblue; font-size: small;">View more</a>
+              </li>
+              
+              </ul>
+          </div>
+          <hr>
         </div>
       </div>
     </div>
