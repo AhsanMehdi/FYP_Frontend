@@ -20,14 +20,9 @@
 
      
   .media{
-border-bottom:1px solid grey;
-border-left: 1px solid grey;
-border-right: 1px solid grey;
-border-top: 1px solid grey;
-padding:10px;
-display: flex;
-flex-direction: row;
-
+       
+        display: flex;
+        flex-direction: row;
   }
   
   .sucman {
@@ -56,6 +51,55 @@ flex-direction: row;
         color:rgb(255, 255, 255);
         
   }
+  
+  .newbt {
+      background-color: darkcyan;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .newbt:hover{
+      background-color: darkcyan;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:bolder;
+    }
+    .nnewbt {
+      background-color: darkslategrey;
+      color: white;
+      border-radius: 10px;
+      border-color: darkslategrey;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .nnewbt:hover{
+      background-color: darkslategrey;
+      color: white;
+      border-radius: 10px;
+      border-color: darkslategrey;
+      font-weight:bolder;
+    }
+    
+    .stories {
+      background-color: whitesmoke;
+      height: auto;
+      border-radius: 10px;
+      width: 100%;
+      padding-left: -80px;
+    }
+    .new-posts {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      flex: 1 1 auto;
+    }
   </style>
   <body>
       <br>
@@ -63,63 +107,127 @@ flex-direction: row;
       <br>
       <br>
       <h1 style="text-align: center;">Projects</h1>
-      <div class="row" style="padding-left: 500px;">
       
-    
-
-        <div class="search-hero">
-          <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search here">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <br>
+          <br>
+          <br>
+        <!-- ///////// -->
+        <!-- The following button is for going to timeline of user. this name is displaying "tahir" at the
+        moment but we would have to get this from backend -->
+        <!-- ///////// -->
+        
+          <h3>Categories</h3>
+        <div class="stories" style="text-align: center;" >
+          <br>
+          <button class="newbt" routerLink="/projects"> Featured Projects </button>
+          <br>
+          <button class="newbt" routerLink="/projects"> Top Trending </button>
+          <br>
+          <button class="newbt" routerLink="/projects"> Nearby Projects </button>
+          <br>
+          <br>
         </div>
-    </div>
+        <hr>
+        <h3>Search by Domain</h3>
+        <div class="stories" style="text-align: center;" >
+          <br>
+          <button class="nnewbt" routerLink="/projects"> Education </button>
+          <br>
+          <button class="nnewbt" routerLink="/projects"> Environment </button>
+          <br>
+          <button class="nnewbt" routerLink="/projects"> Health </button>
+          <br>
+          <button class="nnewbt" routerLink="/projects"> Orphanage </button>
+          <br>
+          <button class="nnewbt" routerLink="/projects"> Social Welfare </button>
+          <br>
 
-    <section>
-      <div class="container-fluid mt-5 mb-5">
-        <div class="row">
-          <div class="col-md-6 offset-md-3" *ngFor="let project of projects | filter:searchText">
+          <br>
+        </div>
+        <hr>
+
+
+        </div>
+        <div class="col-8">
+          
+          <div class="container" style="padding-bottom: 20px;">
             
-            <ul class="timeline">
-              <div class="media">
-                <img class="mr-3" src="{{project.imageUrl}}" height="150" width="200" alt="Generic placeholder image" />
+            <div class="search-hero">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search for Projects">
+          </div> 
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <img src="/assets/img/nonprofits.png" height="150" width="200" alt="Generic placeholder image" />
+            </div>
+            <div class="col-7">
+              <h6 routerLink="/signuppage">Project Title</h6> 
+              <h6 routerLink="/signuppage">Project Objective</h6>
+              <div class="row" style="padding-left: 10px;">
+                <h4>Goal: </h4>
+                <h4 style="padding-left: 20px;">Rs.</h4>
+                <h4>100</h4>
+              </div>
+              <div class="row" style="padding-left: 10px;">
+                <h4>Raised: </h4>
+                <h4 style="padding-left: 20px;">Rs.</h4>
+                <h4>100</h4>
+              </div>
+            </div>
+            <div class="col-2">
+              <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i> Country</h6>
+              <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i> Country</h6>
+            </div>
+          </div> 
+            
+        </div>
+          <ul class="timeline" style="background-color: whitesmoke;">
+            <div class="media">
+              <img class="mr-3" src="/assets/img/nonprofits.png" height="150" width="200" alt="Generic placeholder image" />
+              
+              <div class="media-body">
+                <div class="media-body" style="text-decoration: underline;" >
+                  <h6 routerLink="/signuppage">Project Title</h6> 
+                </div>
+                
+                <h5 class="mt-0">Project type</h5>
+                Project objective
+                <div class="row" style="padding-left: 10px;">
+                  <h4>Goal: </h4>
+                  <h4 style="padding-left: 20px;">Rs.</h4>
+                  <h4>100</h4>
+                </div>
+                <div class="row" style="padding-left: 10px;">
+                  <h4>Raised: </h4>
+                  <h4 style="padding-left: 20px;">Rs.</h4>
+                  <h4>100</h4>
+                </div>   
                 
                 <div class="media-body">
-                  <div class="media-body" style="text-decoration: underline;" >
-                    <h6 routerLink="/signuppage">{{project.tittle}}</h6> 
-                  </div>
                   
-                  <h5 class="mt-0">{{project.projectType}}</h5>
-                  {{project.objective}}
-                  <div class="row" style="padding-left: 10px;">
-                    <h4>Goal: </h4>
-                    <h4 style="padding-left: 20px;">Rs.</h4>
-                    <h4>{{project.estimatedBudget}}</h4>
-                  </div>
-                  <div class="row" style="padding-left: 10px;">
-                    <h4>Raised: </h4>
-                    <h4 style="padding-left: 20px;">Rs.</h4>
-                    <h4>{{project.collectedDonation}}</h4>
-                  </div>   
-                  
-                  <div class="media-body">
-                    
-                    <button class="sucman" routerLink="/projectdetails">Details</button>
-                    <button class="succ" style="margin-left: 5px;" routerLink="/signinpage">Donate</button>
-                  </div>
-
+                  <button class="sucman" routerLink="/projectdetails">Details</button>
+                  <button class="succ" style="margin-left: 5px;" routerLink="/signinpage">Donate</button>
                 </div>
-                <div class="media-body" style="align-items:flex-end; text-decoration: underline;">
-                  
 
-                  <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i> {{project.country}}</h6>
- 
-                </div>
               </div>
-        
+              <div class="media-body" style="align-items:flex-end; text-decoration: underline;">
+                
 
-              
-            </ul>
-          </div>
+                <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i> Country</h6>
+
+              </div>
+            </div> 
+          </ul>
+        
         </div>
-      </div>
-    </section>
+        
+      </div>      
+    </div>  
+
+
   </body>
 </html>
