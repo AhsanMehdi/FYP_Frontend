@@ -20,14 +20,9 @@
 
      
   .media{
-border-bottom:1px solid grey;
-border-left: 1px solid grey;
-border-right: 1px solid grey;
-border-top: 1px solid grey;
-padding:10px;
-display: flex;
-flex-direction: row;
-
+       
+        display: flex;
+        flex-direction: row;
   }
   
   .sucman {
@@ -56,65 +51,195 @@ flex-direction: row;
         color:rgb(255, 255, 255);
         
   }
+  
+  .newbt {
+      background-color: darkcyan;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .newbt:hover{
+      background-color: darkcyan;
+      color: white;
+      border-radius: 10px;
+      border-color: darkcyan;
+      font-weight:bolder;
+    }
+    .nnewbt {
+      background-color: darkslategrey;
+      color: white;
+      border-radius: 10px;
+      border-color: darkslategrey;
+      font-weight:normal;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .nnewbt:hover{
+      background-color: darkslategrey;
+      color: white;
+      border-radius: 10px;
+      border-color: darkslategrey;
+      font-weight:bolder;
+    }
+    
+    .stories {
+      background-color: whitesmoke;
+      height: auto;
+      border-radius: 10px;
+      width: 100%;
+      padding-left: -80px;
+    }
+    .new-posts {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      flex: 1 1 auto;
+    }
+    .tnewbt {
+      background:transparent;
+      color: seagreen;
+      font-weight:normal;
+      border:thin;
+      border-left-style: solid ;
+      border-right-style: solid ;
+      border-color: seagreen;
+      border-radius: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .tnewbt:hover{
+      background-color: transparent;
+      color: black;
+      border: thin;
+      border-radius: 10px;
+      border-top-style: solid;
+      border-bottom-style: solid ;
+      border-color: seagreen;
+      font-weight:bolder;
+    }
+    .bnewbt {
+      background:transparent;
+      color:royalblue;
+      font-weight:normal;
+      border:thin;
+      border-left-style: solid ;
+      border-right-style: solid ;
+      border-color: royalblue;
+      border-radius: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 200px;
+    }
+    .bnewbt:hover{
+      background-color: transparent;
+      color: black;
+      border: thin;
+      border-radius: 10px;
+      border-top-style: solid;
+      border-bottom-style: solid ;
+      border-color: royalblue;
+      font-weight:bolder;
+    }
+    
+    
   </style>
   <body>
       <br>
       <br>
       <br>
       <br>
-      <h1 style="text-align: center;">Campaigns</h1>
-
-
-      <div class="row" style="padding-left: 500px;">
+      <h1 style="text-align: center; font-weight: lighter;">Campagins</h1>
       
-    
-
-        <div class="search-hero">
-          <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search here">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <br>
+          <br>
+          <br>
+        <!-- ///////// -->
+        <!-- The following button is for going to timeline of user. this name is displaying "tahir" at the
+        moment but we would have to get this from backend -->
+        <!-- ///////// -->
+        
+          <h3>Categories</h3>
+        <div class="stories" style="text-align: center;" >
+          <br>
+          <button class="newbt" routerLink="/campaigns"> Urgent Campaigns </button>
+          <br>
+          <button class="newbt" routerLink="/campaigns"> Top Trending </button>
+          <br>
+          <button class="newbt" routerLink="/campaigns"> Nearby Campaigns </button>
+          <br>
+          <br>
         </div>
-    </div>
+        <hr>
+        <h3>Search by Domain</h3>
+        <div class="stories" style="text-align: center;" >
+          <br>
+          <button class="nnewbt" routerLink="/campaigns"> Education </button>
+          <br>
+          <button class="nnewbt" routerLink="/campaigns"> Environment </button>
+          <br>
+          <button class="nnewbt" routerLink="/campaigns"> Health </button>
+          <br>
+          <button class="nnewbt" routerLink="/campaigns"> Orphanage </button>
+          <br>
+          <button class="nnewbt" routerLink="/campaigns"> Social Welfare </button>
+          <br>
+
+          <br>
+        </div>
+        <hr>
 
 
-
-
-    <section>
-      <div class="container-fluid mt-5 mb-5">
-        <div class="row">
-          <div class="col-md-6 offset-md-3" *ngFor="let campaign of campaigns | filter:searchText" >
-             
-
+        </div>
+        <div class="col-8">
+          
+          <div class="container" style="padding-bottom: 20px ;">
             
-            <ul class="timeline">
-              <div class="media">
-                <img class="mr-3" src="{{campaign.imageUrl}}" height="150" width="200" alt="Generic placeholder image" />
-                
-                <div class="media-body">
-                  <div class="media-body" style="text-decoration: underline;" >
-                    <h6 routerLink="/signuppage">{{campaign.subject}}</h6> 
-                  </div>
-                  
-                  <h5 class="mt-0">{{campaign.nickName}}</h5>
-                  {{campaign.objective}}
-                  <br>
-                  <br>
-                  
-                  <div class="media-body">
-                    
-                    <button (click)="showDetials(campaign)" class="sucman" routerLink="/campaigndetails">Details</button>
-                    <button class="succ" style="margin-left: 5px;" routerLink="/signinpage">Donate</button>
-                  </div>
-
-                </div>
-                <div class="media-body" style="align-items:flex-end; text-decoration: underline;">
-                  
-
-                  <h6 routerLink="/signuppage"> <i class="fa fa-map-marker" style="font-size:24px"></i>  {{campaign.country}}</h6>
-                   
-                </div>
+            <div class="search-hero">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search for Campaigns">
+          </div> 
+        </div>
+        <div class="container" *ngFor="let campaign of campaigns | filter:searchText">
+          <div class="container" style="padding-bottom: 10px;">
+            <div class="row"   style="background-color: whitesmoke; border-radius: 15px;">
+              <div class="col-3" style="padding-top: 15px;">
+                <img src="{{campaign.imageUrl}}" height="150" width="200" alt="Generic placeholder image" />
               </div>
+              <div class="col-7">
+                <h4 routerLink="/campaigndetails" style="text-decoration: underline;">{{campaign.nickName}}</h4> 
+                <h7 routerLink="/campaigndetails">{{campaign.objective}}</h7>
+                
+              </div>
+              <div class="col-2">
+                <h6 routerLink="/campaigndetails"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;"></i> {{campaign.country}}</h6>
+                <h6 routerLink="/campaigndetails"> <i class="fa fa-superpowers" style="font-size:20px; color: darkseagreen;"></i> {{campaign.subject}}</h6>
 
-            </ul>
+              </div>
+              <div class="col-6" style="text-align: end;">
+                <button class="tnewbt" routerLink="/campaigndetails">Details</button>
+                          </div>
+              <div class="col-6">
+                <button class="bnewbt" routerLink="/chatbox">Donate</button>
+              </div>
+            </div> 
             
           </div>
-       
-          
+        </div>
+         
+        
+        </div>
+        
+      </div>      
+    </div>  
+
+
+  </body>
+</html>
