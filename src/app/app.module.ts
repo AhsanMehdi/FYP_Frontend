@@ -50,6 +50,8 @@ import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage
 import { AboutComponent } from './components/about/about.component';
 import { SettingspageComponent } from './component/settingspage/settingspage.component';
 import { SettingComponent } from './components/setting/setting.component';
+import { NghomeComponent } from './components/nghome/nghome.component';
+import { NgtimelineComponent } from './components/ngtimeline/ngtimeline.component';
 
 
 @NgModule({
@@ -84,7 +86,9 @@ import { SettingComponent } from './components/setting/setting.component';
     NgodetailpageComponent,
     AboutComponent,
     SettingspageComponent,
-    SettingComponent
+    SettingComponent,
+    NghomeComponent,
+    NgtimelineComponent
     
     
 

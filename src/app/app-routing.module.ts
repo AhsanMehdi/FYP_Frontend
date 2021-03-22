@@ -30,6 +30,8 @@ import { NgodetailpageComponent } from './components/ngodetailpage/ngodetailpage
 import { AboutComponent } from './components/about/about.component';
 import { SettingspageComponent } from './component/settingspage/settingspage.component';
 import { SettingComponent } from './components/setting/setting.component';
+import { NghomeComponent } from './components/nghome/nghome.component';
+import { NgtimelineComponent } from './components/ngtimeline/ngtimeline.component';
 
 
 
@@ -134,6 +136,12 @@ const routes: Routes = [
   },
   {
     path: 'setting', component: SettingComponent
+  },
+  {
+    path: 'nghome', component: NghomeComponent
+  },
+  {
+    path: 'ngtimeline', component: NgtimelineComponent
   }
   
 ];
