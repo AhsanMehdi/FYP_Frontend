@@ -52,7 +52,7 @@ import { SettingspageComponent } from './component/settingspage/settingspage.com
 import { SettingComponent } from './components/setting/setting.component';
 import { NghomeComponent } from './components/nghome/nghome.component';
 import { NgtimelineComponent } from './components/ngtimeline/ngtimeline.component';
-
+import { NgChatModule } from 'ng-chat';
 
 @NgModule({
   declarations: [
@@ -110,7 +110,8 @@ import { NgtimelineComponent } from './components/ngtimeline/ngtimeline.componen
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
       apiKey: 'Your_api_key'
     }),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgChatModule
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],

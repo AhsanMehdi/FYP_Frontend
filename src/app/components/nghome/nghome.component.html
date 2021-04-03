@@ -435,7 +435,7 @@
           <br>
           <button class="newbt" routerLink="/projectupload"> Post Project </button>
           <br>
-          <button class="newbt" routerLink="/Chatbox"> Chatbox </button>
+          <button class="newbt" (click)="openChatBox()"> Chatbox </button>
           <hr>
           <div class="stories"  >
             <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Campaigns</h4>
@@ -685,7 +685,7 @@
           <br>
           <br>
           <div class="container" style="text-align: end;">
-          <button class="redbt" routerLink="/home"> Logout </button><a style="padding-left: 10px; color:steelblue; text-decoration: none;" routerLink='/setting' class="fa fa-cog" aria-hidden="true"></a>
+          <button class="redbt" (ngSubmit)="logout()" routerLink="/home"> Logout </button><a style="padding-left: 10px; color:steelblue; text-decoration: none;" routerLink='/setting' class="fa fa-cog" aria-hidden="true"></a>
           </div>
           <br>
           <div class="stories"  >
@@ -741,3 +741,9 @@
       </div>
     </div>
   </body>
+
+  <div *ngIf="showChatbox">
+    <ng-chat [adapter]="adapter" [userId]="userId"></ng-chat>
+  </div>
+  
+
