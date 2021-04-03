@@ -74,7 +74,7 @@ export class SigninPageComponent implements OnInit {
             if (data.userType = "donor") // it select who is login currently
               this.router.navigate(['/donorhome']);
             if (data.userType = "ngo") // it select who is signup
-              this.router.navigate(['/ngohome']);
+              this.router.navigate(['/nghome']);
               console.log (this.signInForm.value);
           },
           error => {
