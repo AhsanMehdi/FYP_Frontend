@@ -7,6 +7,7 @@ import { ICampaign  } from '../_models';
 import { INgoProfile  } from '../_models';
 import { map,catchError } from 'rxjs/operators';
 import { IDonorProfile  } from '../_models';
+import { updatePassword } from '../_models/Iupdatepassword';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,14 @@ export class BackendService {
     )
     return this.httpClient.post(this.REST_API_SERVER+"/api/auth/signup",  JSON.stringify(signUp), this.options);
   }
+
+  updatePassword(updatePass:  updatePassword) {
+    console.log ("I am going to database")
+    console.log(    JSON.stringify(updatePass)
+    )
+    return this.httpClient.put(this.REST_API_SERVER+"/api/auth/updatepass",  JSON.stringify(updatePass), this.options);
+  }
+
   signIn(signIn:  SignIn): Observable<any> {
 
     console.log(    JSON.stringify(signIn)
