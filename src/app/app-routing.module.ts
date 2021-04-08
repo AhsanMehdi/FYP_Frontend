@@ -32,6 +32,8 @@ import { SettingspageComponent } from './component/settingspage/settingspage.com
 import { SettingComponent } from './components/setting/setting.component';
 import { NghomeComponent } from './components/nghome/nghome.component';
 import { NgtimelineComponent } from './components/ngtimeline/ngtimeline.component';
+import { EditprojectComponent } from './components/editproject/editproject.component';
+import { EditcampaignComponent } from './components/editcampaign/editcampaign.component';
 
 
 
@@ -142,6 +144,12 @@ const routes: Routes = [
   },
   {
     path: 'ngtimeline', component: NgtimelineComponent
+  },
+  {
+    path: 'editproject', component: EditprojectComponent
+  },
+  {
+    path: 'editcampaign', component: EditcampaignComponent
   }
   
 ];
