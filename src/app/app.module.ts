@@ -54,6 +54,8 @@ import { NghomeComponent } from './components/nghome/nghome.component';
 import { NgtimelineComponent } from './components/ngtimeline/ngtimeline.component';
 import { EditprojectComponent } from './components/editproject/editproject.component';
 import { EditcampaignComponent } from './components/editcampaign/editcampaign.component';
+import { CreatedprojectsComponent } from './components/createdprojects/createdprojects.component';
+import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
 
 
 @NgModule({
@@ -92,7 +94,9 @@ import { EditcampaignComponent } from './components/editcampaign/editcampaign.co
     NghomeComponent,
     NgtimelineComponent,
     EditprojectComponent,
-    EditcampaignComponent
+    EditcampaignComponent,
+    CreatedprojectsComponent,
+    CreatedcampaignsComponent
     
     
 
