@@ -38,12 +38,12 @@ export class EditprofileComponent implements OnInit {
       country: ['', Validators.required],
       visibility: ['', Validators.required],
       occupation: ['', Validators.required],
-      domainHealth:  ['', Validators.required],
-      domainEducation:  ['', Validators.required],
-      domainOrphanage:  ['', Validators.required],
-      domainEnvironment:  ['', Validators.required],
-      domainSocialWelfare:  ['', Validators.required],
-      domainOther:  ['', Validators.required]
+      domainHealth:  [''],
+      domainEducation:  [''],
+      domainOrphanage:  [''],
+      domainEnvironment:  [''],
+      domainSocialWelfare:  [''],
+      domainOther:  ['']
   });
 
   }
@@ -64,8 +64,8 @@ export class EditprofileComponent implements OnInit {
         .pipe(first())
         .subscribe(
             data => {
-                this.alertService.success('Registration successful', true);
-                this.router.navigate(['/donorhome']);
+                this.alertService.success('Information Updated', true);
+                this.router.navigate(['/editprofile']);
               
             },
             error => {

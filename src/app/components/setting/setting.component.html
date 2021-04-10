@@ -113,16 +113,16 @@
 <div class="row">
   <div class="col-2" style="padding-top: 20px;">
     <button class="ttnewbt" style="background-color: whitesmoke; margin-left: 20px; margin-bottom: 10px;" routerLink="/editprofile">Personal</button>
-    <button class="tnewbt" style="background-color: whitesmoke; margin-left: 20px; margin-bottom: 10px;">Security</button>
+    <button class="tnewbt" style="background-color: whitesmoke; margin-left: 20px; margin-bottom: 10px;" disabled>Security</button>
     
   </div>
   <div class="col-10" style="border-left: 1px solid black">
     <div class="container-fluid" style="padding-bottom: 500px;">
-      <form>
+      <form [formGroup]="editProfileForm" (ngSubmit)="onEditProfileSubmit()">
           <div class="col">
             <div class="row">
               <label for="Name">Username</label>
-              <input type="text" class="form-control" id="inputName" formControlName="Name" placeholder="Username" mdbInput>
+              <input type="text" class="form-control" id="inputName" formControlName="userName" placeholder="Username" mdbInput>
             </div>
             <div class="row">
               <label for="Password">Password</label>
