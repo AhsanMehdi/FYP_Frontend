@@ -23,6 +23,7 @@ import { DetailInformationComponent } from './components/detailinformation/detai
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
 
 
 // search module
@@ -56,6 +57,7 @@ import { EditprojectComponent } from './components/editproject/editproject.compo
 import { EditcampaignComponent } from './components/editcampaign/editcampaign.component';
 import { CreatedprojectsComponent } from './components/createdprojects/createdprojects.component';
 import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
+import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
 
 
 @NgModule({
@@ -96,7 +98,8 @@ import { CreatedcampaignsComponent } from './components/createdcampaigns/created
     EditprojectComponent,
     EditcampaignComponent,
     CreatedprojectsComponent,
-    CreatedcampaignsComponent
+    CreatedcampaignsComponent,
+    TempyyyComponent
     
     
 
@@ -112,6 +115,8 @@ import { CreatedcampaignsComponent } from './components/createdcampaigns/created
     HttpModule,
     BrowserModule, LazyLoadImageModule,
     ToastModule.forRoot(),
+    NgBootstrapFormValidationModule.forRoot(),
+
     Ng2SearchPipeModule,
     MDBBootstrapModulesPro.forRoot(),
     AgmCoreModule.forRoot({

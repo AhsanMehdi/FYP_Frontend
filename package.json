@@ -26,6 +26,7 @@
     "chart.js": "^2.5.0",
     "easy-pie-chart": "2.1.x",
     "hammerjs": "^2.0.8",
+    "ng-bootstrap-form-validation": "^9.0.1",
     "ng-lazyload-image": "^9.1.0",
     "ng-uikit-pro-standard": "file:ng-uikit-pro-standard-10.1.1.tgz",
     "ng2-file-upload": "^1.4.0",

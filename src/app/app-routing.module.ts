@@ -36,7 +36,7 @@ import { EditprojectComponent } from './components/editproject/editproject.compo
 import { EditcampaignComponent } from './components/editcampaign/editcampaign.component';
 import { CreatedprojectsComponent } from './components/createdprojects/createdprojects.component';
 import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
-
+import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
 
 
 
@@ -158,6 +158,9 @@ const routes: Routes = [
   },
   {
     path: 'createdcampaigns', component: CreatedcampaignsComponent
+  },
+  {
+    path: 'tempyyy', component: TempyyyComponent
   }
   
 ];
