@@ -25,12 +25,12 @@ export class SigninPageComponent implements OnInit {
     this.signInForm = fb.group({
       useremail: new FormControl({ value: "", disabled: false }, [
         Validators.required,
-        Validators.minLength(4),
+        Validators.email,
       ]),
 
       userpassword: new FormControl({ value: "", disabled: false }, [
         Validators.required,
-        Validators.minLength(4),
+        Validators.minLength(8),
       ])
     
     });

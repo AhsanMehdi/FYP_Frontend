@@ -29,7 +29,7 @@ export class SignupPageComponent implements OnInit {
     this.registerUserForm = this.formBuilder.group({
           //userType: ['', Validators.required],
           name: ['', Validators.required],  
-          email: ['',Validators.required],
+          email: ['',Validators.email],
           password: ['', [Validators.required, Validators.minLength(12)]],
           userType: ['', [Validators.required, Validators.minLength(12)]]
       });

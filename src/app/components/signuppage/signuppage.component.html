@@ -126,16 +126,16 @@ body {
 		</div>
 		</div>
         <div class="form-group">
-			<input type="email" id="email" formControlName="email" style="border-color: teal;" placeholder="Email" class="text-black form-control" mdbInput>
+			<input type="email" id="email" formControlName="email" style="border-color: teal;" placeholder="Email" class="text-black form-control" required mdbInput>
 		</div>
 		<div class="form-group">
 			<input type="password" id="password" style="border-color: teal;" formControlName="password" placeholder="Password" class="text-black form-control" mdbInput>
 		</div>      
-        <p class="hint-text">Sign up as</p>
+        <Label for="userType">Sign up as</Label>
 		<div class="row">
 			
 			<div class='col-12'>
-			  <select class="browser-default custom-select text-black" style="border-color:cadetblue;" formControlName="userType" id = "userType">
+			  <select class="browser-default custom-select text-black" style="border-color:cadetblue;" formControlName="userType" id = "userType" required>
 				<option selected value="ngo">Organization</option>
 				<option value="donor">Individual</option>
 			  </select>
