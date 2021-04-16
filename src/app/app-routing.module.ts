@@ -37,6 +37,7 @@ import { EditcampaignComponent } from './components/editcampaign/editcampaign.co
 import { CreatedprojectsComponent } from './components/createdprojects/createdprojects.component';
 import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
 import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
+import { NsettingComponent } from './components/nsetting/nsetting.component';
 
 
 
@@ -161,6 +162,9 @@ const routes: Routes = [
   },
   {
     path: 'tempyyy', component: TempyyyComponent
+  },
+  {
+    path: 'nsetting', component: NsettingComponent 
   }
   
 ];
