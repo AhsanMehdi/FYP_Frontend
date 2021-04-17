@@ -20,8 +20,7 @@ export class ProjectDetailsComponent implements OnInit {
   constructor(   private route: ActivatedRoute,
     private router: Router, private backendService: BackendService,  private alertService: AlertService) {
       this.projectId = this.route.snapshot.queryParams.id;
-  
-      
+        
      }
      loading = false;
 
@@ -33,14 +32,11 @@ export class ProjectDetailsComponent implements OnInit {
          this.project = data.project[0]
          console.log(this.project)
         this.isDataLoaded=true
-
-         
+      
         },
         error => {
             this.alertService.error(error);
             this.loading = false;
         })
   }
-
-
 }

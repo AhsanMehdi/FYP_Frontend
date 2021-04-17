@@ -15,7 +15,7 @@ export class EditprofileComponent implements OnInit {
 
   editProfileForm: FormGroup;
   validatingForm: FormGroup; /*for validations*/
-
+  
   
   loading = false;
   submitted = false;
@@ -29,15 +29,14 @@ export class EditprofileComponent implements OnInit {
   ngOnInit()  {
     this.editProfileForm = this.formBuilder.group({
    
-      firstName: ['', Validators.required],  
-      middleName: ['',Validators.required],
-      lastName: ['', [Validators.required, Validators.minLength(12)]],
-      dob: ['', [Validators.required, Validators.minLength(12)]],
-      cellNumber: ['', Validators.required],
-      cnic: ['', Validators.required],
+     
+      nickName: ['', [Validators.required, Validators.minLength(12)]],
+      //dob: ['', [Validators.required, Validators.minLength(12)]],
+      contactNumber: ['', Validators.required],
+     // cnic: ['', Validators.required],
       country: ['', Validators.required],
-      visibility: ['', Validators.required],
-      occupation: ['', Validators.required],
+      //visibility: ['', Validators.required],
+      //occupation: ['', Validators.required],
       domainHealth:  [''],
       domainEducation:  [''],
       domainOrphanage:  [''],

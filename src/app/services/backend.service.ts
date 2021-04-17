@@ -140,7 +140,7 @@ export class BackendService {
     return this.httpClient.post(this.REST_API_SERVER+"/api/profile/donor",  JSON.stringify(donorProfile), httpOptions);
   }
   /* function to edit profile of an ngo */
-  ngoProfile(ngoProfile:  INgoProfile) {
+  ngoProfileUpdate(ngoProfile:  INgoProfile) {
 
     
     console.log ("I am going to database")
