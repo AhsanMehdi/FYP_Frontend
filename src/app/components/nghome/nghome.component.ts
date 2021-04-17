@@ -34,7 +34,7 @@ export class NghomeComponent implements OnInit {
    }
    ngoeditprofile(){
      
-    this.backendService.ngoProfileUpdate() ;
+    //this.backendService.ngoProfileUpdate() ;
 
    }
 }
