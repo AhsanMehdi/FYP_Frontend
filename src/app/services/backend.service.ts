@@ -100,7 +100,26 @@ getProjectOwnerId(id:string): Observable<any> {
   return  this.httpClient.get(this.REST_API_SERVER+"/api/project/id/"+id,   this.options)
 }
 /* api of comment on a project */
+commentProject(projectreview:  IProjectReview, id:string) {
+  console.log(    JSON.stringify(projectreview))
 
+
+  let token = localStorage.getItem('token')
+
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      Authorization:"Token "+token
+    })
+  };
+ 
+
+  console.log("token",token)
+  console.log("authoptions",httpOptions)
+
+  return this.httpClient.post(this.REST_API_SERVER+"/api/feedback/"+id,  JSON.stringify(projectreview), httpOptions);
+}
+/* api to create project */
 createProject(project:  IProject) {
     console.log(    JSON.stringify(project))
 
