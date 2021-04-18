@@ -7,6 +7,7 @@ import { ICampaign  } from '../_models';
 import { INgoProfile  } from '../_models';
 import { map,catchError } from 'rxjs/operators';
 import { IDonorProfile  } from '../_models';
+import { IProjectReview  } from '../_models';
 
 @Injectable({
   providedIn: 'root'
@@ -88,8 +89,19 @@ export class BackendService {
     console.log(id)
     return  this.httpClient.get(this.REST_API_SERVER+"/api/ngo/"+id,   this.options)
   }
+/* api which return all the projects of a specific owner*/
+getProjectsSpecificUser(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/project/userId/"+id,   this.options)
+}
+/* api which return user/owner id of a specific user*/
+getProjectOwnerId(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/project/id/"+id,   this.options)
+}
+/* api of comment on a project */
 
-  createProject(project:  IProject) {
+createProject(project:  IProject) {
     console.log(    JSON.stringify(project))
 
   
