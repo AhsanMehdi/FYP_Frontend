@@ -566,10 +566,10 @@
             <span class="mr-4 pr-4">24</span>
             
           </div>
-          <div class="row">
+          <div class="row" *ngIf = "!isUser">
             <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
 
-              <button class="likenewbt" routerLink="/projectdetails">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
+              <button class="likenewbt" (click) = "PostLike()">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
             </div>
           </div>
           <hr>
@@ -619,16 +619,17 @@
             </div>
       </div>
 
-          <div class="comment-box">
-            <div class="comment-input" >
-              <input
-                class="comment-box-input"
+          <div class="comment-box" *ngIf = "!isUser">
+            <div class="comment-input"  >
+              <input 
+                class="comment-box-input" 
                 type="text"
                 placeholder="Write a Comment "
-              />
+                [(ngModel)] = "comment"
+              >
             </div>
             <div class="add-comment" >
-              <button class="postcampbtn" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
+              <button class="postcampbtn" (click) = "PostComment()" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
 
             </div>
           </div>

@@ -25,6 +25,7 @@ export class NghomeComponent implements OnInit {
    }
    logout(){
      localStorage.removeItem("token");
+      localStorage.removeItem("userid")
      this.router.navigate(['/home']);
    }
    getToken(){
