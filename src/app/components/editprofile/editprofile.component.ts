@@ -84,7 +84,7 @@ export class EditprofileComponent implements OnInit {
                 }
 
               // this.editProfileForm.controls['_id'].setValue(data['ngoProfile']['_id'])
-                this.backendService.ngoProfileUpdate(req)
+                this.backendService.ngoProfileUpdate(this.editProfileForm.value)
                 .pipe(first())
                 .subscribe(
                   response =>
