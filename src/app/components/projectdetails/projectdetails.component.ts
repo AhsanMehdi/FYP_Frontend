@@ -17,7 +17,7 @@ export class ProjectDetailsComponent implements OnInit {
   public user_id = localStorage.getItem("userid")
   public isUser;
 
-  commentProjectForm: FormGroup;
+  
   /*declaring variables for the comment of project*/
   comment: string
   like: string
@@ -39,21 +39,23 @@ export class ProjectDetailsComponent implements OnInit {
         
       }
      loading = false;
+     commentProjectForm = this.formBuilder.group({
+      comment: ['', [Validators.required, Validators.minLength(12)]],
+      like: ['', Validators.required],
+      dislike: ['', Validators.required],
+      noOfLikes: ['', Validators.required],
+      noOfDisLikes: ['', Validators.required]
+ 
+  });
 // declaring some variables for commenting on project 
 
 
   ngOnInit(): void {
-  //   this.commentProjectForm = this.formBuilder.group({
-  //     comment: ['', [Validators.required, Validators.minLength(12)]],
-  //     like: ['', Validators.required],
-  //     dislike: ['', Validators.required],
-  //     noOfLikes: ['', Validators.required],
-  //     noOfDisLikes: ['', Validators.required]
- 
-  // });
+
   this.getSpecificProject() ; // calling function to get specific project
   
   }
+  
   /* get project by id */
   getSpecificProject()
   {
@@ -90,7 +92,11 @@ export class ProjectDetailsComponent implements OnInit {
     // this.commentProjectForm.value.noOfLikes += 1;
     // if (this.commentProjectForm.value.dislike == "dislike")
     // this.commentProjectForm.value.noOfDisLikes += 1;
-    
+    this.commentProjectForm.value.comment = this. comment ;
+    this.commentProjectForm.value.like = "like";
+    this.commentProjectForm.value.dislike = "dislike";
+    this.commentProjectForm.value.noOfLikes = 1 ;
+    this.commentProjectForm.value.noOfDisLikes = 1 ;
 
     this.backendService.commentProject(this.commentProjectForm.value ,this.projectId)
     .pipe(first())
@@ -105,8 +111,28 @@ export class ProjectDetailsComponent implements OnInit {
             this.loading = false;
         })
   }
+
   PostComment(){
   console.log(this.comment);
+  this.commentProjectForm.value.comment = this. comment ;
+    this.commentProjectForm.value.like = "like";
+    this.commentProjectForm.value.dislike = "dislike";
+    this.commentProjectForm.value.noOfLikes = 1 ;
+    this.commentProjectForm.value.noOfDisLikes = 1 ;
+
+    this.backendService.commentProject(this.commentProjectForm.value ,this.projectId)
+    .pipe(first())
+    .subscribe(
+        data => {
+        
+         console.log(this.project)
+      
+        },
+        error => {
+            this.alertService.error(error);
+            this.loading = false;
+        })
+
   }
   PostLike()
   {

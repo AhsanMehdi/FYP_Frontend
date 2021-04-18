@@ -100,6 +100,11 @@ getProjectOwnerId(id:string): Observable<any> {
   return  this.httpClient.get(this.REST_API_SERVER+"/api/project/id/"+id,   this.options)
 }
 /* api of comment on a project */
+getCommentsOnSpecificProject(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/feedback/"+id,   this.options)
+}
+
 commentProject(projectreview:  IProjectReview, id:string) {
   console.log(    JSON.stringify(projectreview))
 
@@ -112,6 +117,7 @@ commentProject(projectreview:  IProjectReview, id:string) {
       Authorization:"Token "+token
     })
   };
+  /* api to get all comments on a specific projects*/
  
 
   console.log("token",token)
