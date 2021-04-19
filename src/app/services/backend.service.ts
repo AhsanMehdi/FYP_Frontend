@@ -7,6 +7,7 @@ import { ICampaign  } from '../_models';
 import { INgoProfile  } from '../_models';
 import { map,catchError } from 'rxjs/operators';
 import { IDonorProfile  } from '../_models';
+import { IProjectReview  } from '../_models';
 
 @Injectable({
   providedIn: 'root'
@@ -88,8 +89,44 @@ export class BackendService {
     console.log(id)
     return  this.httpClient.get(this.REST_API_SERVER+"/api/ngo/"+id,   this.options)
   }
+/* api which return all the projects of a specific owner*/
+getProjectsSpecificUser(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/project/userId/"+id,   this.options)
+}
+/* api which return user/owner id of a specific user*/
+getProjectOwnerId(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/project/id/"+id,   this.options)
+}
+/* api of comment on a project */
+getCommentsOnSpecificProject(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/feedback/"+id,   this.options)
+}
 
-  createProject(project:  IProject) {
+commentProject(projectreview:  IProjectReview, id:string) {
+  console.log(    JSON.stringify(projectreview))
+
+
+  let token = localStorage.getItem('token')
+
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      Authorization:"Token "+token
+    })
+  };
+  /* api to get all comments on a specific projects*/
+ 
+
+  console.log("token",token)
+  console.log("authoptions",httpOptions)
+
+  return this.httpClient.post(this.REST_API_SERVER+"/api/feedback/"+id,  JSON.stringify(projectreview), httpOptions);
+}
+/* api to create project */
+createProject(project:  IProject) {
     console.log(    JSON.stringify(project))
 
   
@@ -140,7 +177,7 @@ export class BackendService {
     return this.httpClient.post(this.REST_API_SERVER+"/api/profile/donor",  JSON.stringify(donorProfile), httpOptions);
   }
   /* function to edit profile of an ngo */
-  ngoProfile(ngoProfile:  INgoProfile) {
+  ngoProfileUpdate(ngoProfile:  INgoProfile) {
 
     
     console.log ("I am going to database")
@@ -158,8 +195,29 @@ export class BackendService {
 
     console.log("token",token)
     console.log("authoptions",httpOptions)
-    return this.httpClient.post(this.REST_API_SERVER+"/api/profile/ngo",  JSON.stringify(ngoProfile), httpOptions);
+    return this.httpClient.put(this.REST_API_SERVER+"/api/profile/ngo",  JSON.stringify(ngoProfile), httpOptions);
   }
+    /* function to edit profile of an ngo */
+    ngoProfile(ngoProfile:  INgoProfile) {
+
+    
+      console.log ("I am going to database")
+      console.log(    JSON.stringify(ngoProfile)
+      )
+      let token = localStorage.getItem('token')
+  
+      const httpOptions = {
+        headers: new HttpHeaders({
+          'Content-Type':  'application/json',
+          Authorization:"Token "+token
+        })
+      };
+     
+  
+      console.log("token",token)
+      console.log("authoptions",httpOptions)
+      return this.httpClient.post(this.REST_API_SERVER+"/api/profile/ngo",  JSON.stringify(ngoProfile), httpOptions);
+    }
   /* a function to upload the campaign */
   createCampaign(campaign:  ICampaign) {
     console.log(    JSON.stringify(campaign))

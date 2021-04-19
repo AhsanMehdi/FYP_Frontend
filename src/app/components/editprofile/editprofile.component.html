@@ -121,30 +121,19 @@ label {
       <form [formGroup]="editProfileForm" (ngSubmit)="onEditProfileSubmit()">
           <div class="form-row">
             <div class="form-group col-md-3">
-              <label for="First Name">First Name</label>
-              <input type="text" class="form-control" id="inputFirstName" formControlName="firstName" placeholder="First Name" mdbInput>
+              <label for="First Name">Name</label>
+              <input type="text" class="form-control" id="inputnickName" formControlName="nickName" placeholder="Organization Name" mdbInput>
             </div>
-            <div class="form-group col-md-3">
-              <label for="Middle Name">Middle Name</label>
-              <input type="text" class="form-control" id="inputMiddleName" formControlName="middleName" placeholder="Middle Name" mdbInput>
-            </div>
-            <div class="form-group col-md-3">
-              <label for="Last Name">Last Name</label>
-              <input type="text" class="form-control" id="inputLastName" formControlName="lastName" placeholder="Last Name" mdbInput>
-            </div>  
+            
+      
           </div>
-          <div class="form-group">
-          <label for="start">Date of Birth:</label>
-            <input type="date" id="start" formControlName="dob" name="trip-start"
-             value="2018-07-22"
-             min="1950-1-1" max="2020-12-31">
-          </div>
+       
           <div class="form-group">
             <label for="telNo">Phone number:</label>
-        <input id="telNo" formControlName="cellNumber" name="telNo" type="tel">
+        <input id="contactNumber" formControlName="contactNumber" name="contactNumber" type="tel">
           </div>
           <div class="form-group">
-          <p class="hint-text">Select the Project/Campaign types you want to follow. </p>
+          <p class="hint-text">Select the Project/Campaign types you want to Create. </p>
           <div class="row">
             <div class="col-md-12">
           
@@ -188,10 +177,6 @@ label {
         </div>
           
             </div>
-          </div>
-          <div class="form-group">
-            <label for="telNo">CNIC:</label>
-        <input id="telNo" formControlName="cnic" name="telNo" type="tel">
           </div>
           <div class="form-group">
             <label for="country">Country</label>      
@@ -443,32 +428,8 @@ label {
                       <option value="Zimbabwe">Zimbabwe</option>
                   </select>
           </div>
-          <div class="form-group">
-            <label>Visibility</label>
-      
-          <div class="form-check">
-      
-            <input class="form-check-input" type="radio" name="visibility" value="public" id="flexRadioDefault1" formControlName="visibility">
-            <label class="form-check-label" for="flexRadioDefault1" style="color: black;">
-              Public
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="visibility" value="private" id="flexRadioDefault2" formControlName="visibility">
-            <label class="form-check-label" for="flexRadioDefault2" style="color: rgb(0, 0, 0);">
-              Private
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="telNo">Occupation:</label>
-      <input id="text" formControlName="occupation" name="text" type="text">
-        </div>
           <button type="submit" class="btn btn-primary">Apply</button>
         </form>
       </div>
   </div>
 </div>
-
-
-
