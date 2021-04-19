@@ -20,7 +20,7 @@ export class ProjectDetailsComponent implements OnInit {
   
   /*declaring variables for the comment of project*/
   comment: string
-  like: string
+  like = false
   dislike: string
   noOfLikes: number
   noOfDisLikes: number
@@ -48,7 +48,9 @@ export class ProjectDetailsComponent implements OnInit {
  
   });
 // declaring some variables for commenting on project 
-
+  likePressed(){
+    this.like = true;
+  }
 
   ngOnInit(): void {
 
@@ -134,20 +136,35 @@ export class ProjectDetailsComponent implements OnInit {
         })
 
   }
-  PostLike()
-  {
-     if (this.interestValue === "like")
-    {
-       this.like = this.interestValue;
-       this.noOfLikes += 1  ;
-    }
-    if (this.interestValue === "dislike")
-    {
-       this.noOfDisLikes = this.noOfDisLikes +=1 ;
-    }
-    console.log(this.interestValue);
-  }
+  // PostLike()
+  // {
+  //    if (this.interestValue === "like")
+  //   {
+  //      this.like = this.interestValue;
+  //      this.noOfLikes += 1  ;
+  //   }
+  //   if (this.interestValue === "dislike")
+  //   {
+  //      this.noOfDisLikes = this.noOfDisLikes +=1 ;
+  //   }
+  //   console.log(this.interestValue);
+  // }
   PostDislike(){
     console.log(this.interestValue)
   }
+  GetCommentsOfSpecificProject(){
+    this.backendService.getCommentsOnSpecificProject(this.projectId)
+    .pipe(first())
+    .subscribe(
+        data => {
+        
+         console.log(this.project)
+      
+        },
+        error => {
+            this.alertService.error(error);
+            this.loading = false;
+        })
+  }
+  
 }

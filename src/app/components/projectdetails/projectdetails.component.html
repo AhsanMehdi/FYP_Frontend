@@ -569,7 +569,7 @@
           <div class="row" *ngIf = "!isUser">
             <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
 
-              <button class="likenewbt" (click) = "PostLike()">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
+              <button class="likenewbt" (click) = "likePressed()" [disabled] = "like">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
             </div>
           </div>
           <hr>
@@ -589,7 +589,8 @@
 
         <div class="comment-section-0">
           <div class="comment-section-divide">
-            <div class="comment-body">
+            <div class="comment-body" >
+              <!-- *ngFor="let Reviewproject of projects" -->
               <div class="comment-title" style="text-align: start;">Amir Rehman</div>
               <div class="comment-description">
                 This is the one of the best ngo in the upcoming year in
