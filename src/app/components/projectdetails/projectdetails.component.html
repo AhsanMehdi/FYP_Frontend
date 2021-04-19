@@ -566,7 +566,7 @@
             <span class="mr-4 pr-4">24</span>
             
           </div>
-          <div class="row" *ngIf = "!isUser">
+          <div class="row" *ngIf = "isUser">
             <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
 
               <button class="likenewbt" (click) = "likePressed()" [disabled] = "like">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
@@ -620,7 +620,7 @@
             </div>
       </div>
 
-          <div class="comment-box" *ngIf = "!isUser">
+          <div class="comment-box" *ngIf = "isUser">
             <div class="comment-input"  >
               <input 
                 class="comment-box-input" 
