@@ -73,7 +73,7 @@ export class CampaignaddComponent implements OnInit {
     this.loading = true;
     console.log ("I am going to display vslues ")
     if (this.createCampaignForm.value.imageUrl== ""){
-      this.createCampaignForm.value.imageUrl = "n/a"
+      this.createCampaignForm.value.imageUrl = "xyz"
     }
     
     this.backendService.createCampaign(this.createCampaignForm.value)
@@ -81,7 +81,7 @@ export class CampaignaddComponent implements OnInit {
         .subscribe(
             data => {
                 this.alertService.success('Campaign Created Successfully', true);
-                this.router.navigate(['/donorhome']);
+                this.router.navigate(['/campaigns']);
               
             },
             error => {
