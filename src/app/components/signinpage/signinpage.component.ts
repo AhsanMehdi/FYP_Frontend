@@ -85,7 +85,9 @@ export class SigninPageComponent implements OnInit {
               console.log (this.signInForm.value);
           },
           error => {
+      
               this.alertService.error(error);
+              console.log ("invalid email or password")
               this.loading = false;
           });
 }
