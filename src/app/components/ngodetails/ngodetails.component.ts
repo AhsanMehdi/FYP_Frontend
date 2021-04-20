@@ -29,9 +29,11 @@ export class NgoDetailsComponent implements OnInit {
   ngOnInit(): void {
     console.log (" in ngonint")
     this.backendService.getNgoById(this.ngoId)
+   
     .pipe(first())
     .subscribe(
         data => {
+          console.log(data.ngo[0])
          this.ngo = data.ngo[0]
          console.log(this.ngo)
          console.log("I am in getting ngo data")

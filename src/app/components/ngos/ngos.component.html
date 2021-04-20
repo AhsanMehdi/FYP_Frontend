@@ -221,7 +221,7 @@
                 <h6 routerLink="/ngodetails"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;"></i> {{ngo.country}}</h6>
               </div>
               <div class="col-6" style="text-align: end;">
-                <button class="tnewbt" routerLink="/ngodetails">Details</button>
+                <button class="tnewbt" (click)="showDetials(ngo)">Details</button>
                           </div>
               <div class="col-6">
                 <button class="bnewbt" routerLink="/chatbox">Donate</button>
