@@ -521,7 +521,7 @@
     /* NGO post  section end */
     
   </style>
-  {{ngo.contactNumber}}
+ 
   <body>
     <div class="container-fluid">
       <div class="row">
@@ -637,7 +637,7 @@
                   width="220"
                   height="210"
                   alt=""/>
-                  <h1 style="color: black;">NGO Name</h1>
+                  <h1 style="color: black;">{{ngo.nickName}}</h1>
               </div>
             </div>
             <div class="row">
@@ -700,12 +700,12 @@
             <ul >
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <h6 routerLink="/projectdetails" style="font-weight:normal;"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;;"></i> {{ngo.contactNumber}}</h6>
+                  <h6 routerLink="/ngodetails" style="font-weight:normal;"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;;"></i> {{ngo.country}}</h6>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <h6 routerLink="/projectdetails"> <i class="fa fa-phone" style="font-size:20px; color: darkseagreen;"></i> {{ngo.contactNumber}}</h6>
+                  <h6 routerLink="/ngodetails"> <i class="fa fa-phone" style="font-size:20px; color: darkseagreen;"></i> {{ngo.contactNumber}}</h6>
                 </form>
               </li>
              
