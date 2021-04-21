@@ -66,6 +66,14 @@ export class BackendService {
     
     return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign/subject/"+subject,   this.options)
   }
+    /* get a project by domain*/
+    getProjectByDomain(subject:string): Observable<any> {
+      console.log ("i m in database given domian is" +subject)
+      
+      return  this.httpClient.get(this.REST_API_SERVER+"/api/project/projectType/"+subject,   this.options)
+    }
+
+
 
     /* get a campaign by country*/
   getCampaignByCountry(state:string): Observable<any> {

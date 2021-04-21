@@ -46,6 +46,16 @@ export class NgoDetailsComponent implements OnInit {
             this.loading = false;
         })
   }
+  logout(){
+    localStorage.removeItem("token");
+     localStorage.removeItem("userid")
+    this.router.navigate(['/home']);
+  }
+  getToken(){
+    if(localStorage.getItem("token") === null || localStorage.getItem("token") === undefined){
+      this.router.navigate(['/home']);
+    }
+  }
 
 
 }

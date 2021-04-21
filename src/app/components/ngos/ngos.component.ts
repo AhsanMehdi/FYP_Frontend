@@ -37,5 +37,15 @@ export class NgosComponent implements OnInit {
         console.log(error);
       });
   }
+  logout(){
+    localStorage.removeItem("token");
+     localStorage.removeItem("userid")
+    this.router.navigate(['/home']);
+  }
+  getToken(){
+    if(localStorage.getItem("token") === null || localStorage.getItem("token") === undefined){
+      this.router.navigate(['/home']);
+    }
+  }
 
 }

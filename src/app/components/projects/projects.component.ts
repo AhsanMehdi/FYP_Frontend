@@ -35,5 +35,32 @@ export class ProjectsComponent implements OnInit {
         console.log(error);
       });
   }
+  logout(){
+    localStorage.removeItem("token");
+     localStorage.removeItem("userid")
+    this.router.navigate(['/home']);
+  }
+  getToken(){
+    if(localStorage.getItem("token") === null || localStorage.getItem("token") === undefined){
+      this.router.navigate(['/home']);
+    }
+  }
+  getProjectByDomain(domain:string){
+    console.log("given domain is :"+ domain)
+    this.backendService.getProjectByDomain(domain) /*get all projects*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        console.log(data)
+
+        this.projects = data.project;
+        console.log ("showing projects"+ this.projects.projectType)
+
+      },
+      error => {
+        console.log(error);
+      });
+
+  }
 
 }
