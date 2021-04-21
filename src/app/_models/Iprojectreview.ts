@@ -1,8 +1,5 @@
-﻿export interface IProjectReview {
+﻿export interface IReviewProject {
     comment: string;
     like: string;
-    dislike: string ;
-    noOfLikes: number;
-    noOfDisLikes: number;
-  
+    createdAt:string;
   }

@@ -71,6 +71,7 @@ export class SigninPageComponent implements OnInit {
 
             localStorage.setItem('token', data.token);
             localStorage.setItem('userid',data.user._id)
+            localStorage.setItem('userType',data.user.userType)
               this.alertService.success('Registration successful', true);
             if (data.user.userType === "donor") // it select who is login currently
             {

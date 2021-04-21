@@ -451,9 +451,9 @@
   /* NGO post  section end */
 </style>
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-2">
+  <div class="container-fluid" >
+    <div class="row" >
+      <div class="col-2" >
         <br>
 
         
@@ -561,12 +561,11 @@
           </div>
           <div class="count-like" style="border-bottom: none;">
             <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: royalblue;"></i>
-            <span class="mr-4 pr-4">24</span>
-            <i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color:salmon;"></i>
-            <span class="mr-4 pr-4">24</span>
+            <span class="mr-4 pr-4">{{totalLikes}}</span>
+        
             
           </div>
-          <div class="row" *ngIf = "isUser">
+          <div class="row" *ngIf = "!isUser">
             <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
 
               <button class="likenewbt" (click) = "likePressed()" [disabled] = "like">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
@@ -584,43 +583,28 @@
         </p>
       </div>
       <hr>
+    
+      <div class="comment-section" >
 
-      <div class="comment-section">
-
-        <div class="comment-section-0">
+        <div class="comment-section-0" *ngFor = "let reviewproject of reviewProjects">
           <div class="comment-section-divide">
             <div class="comment-body" >
               <!-- *ngFor="let Reviewproject of projects" -->
-              <div class="comment-title" style="text-align: start;">Amir Rehman</div>
+              <div class="comment-title" style="text-align: start;">anonymous</div>
               <div class="comment-description">
-                This is the one of the best ngo in the upcoming year in
-                history of pakistan
+               {{reviewproject.comment}}
               </div>
               <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                12-March-2020
+                {{reviewproject.createdAt.substring(0,10)}}
               </div>
             </div>
           </div>
           
         </div>
-            <div class="comment-section-0">
-              <div class="comment-section-divide">
-                <div class="comment-body">
-                  <div class="comment-title" style="text-align: start;">Amir Rehman</div>
-                  <div class="comment-description">
-                    This is the one of the best ngo in the upcoming year in
-                    history of pakistan
-                  </div>
-                  <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                    12-March-2020
-                  </div>
-                </div>
-              </div>
-              
-            </div>
+          
       </div>
-
-          <div class="comment-box" *ngIf = "isUser">
+     
+          <div class="comment-box" *ngIf = "!isUser">
             <div class="comment-input"  >
               <input 
                 class="comment-box-input" 
@@ -629,8 +613,8 @@
                 [(ngModel)] = "comment"
               >
             </div>
-            <div class="add-comment" >
-              <button class="postcampbtn" (click) = "PostComment()" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
+            <div class="add-comment" *ngIf ="!isPost" >
+              <button class="postcampbtn" (click) = "PostComment()"  style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
 
             </div>
           </div>

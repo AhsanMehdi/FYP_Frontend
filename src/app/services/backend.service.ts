@@ -7,7 +7,7 @@ import { ICampaign  } from '../_models';
 import { INgoProfile  } from '../_models';
 import { map,catchError } from 'rxjs/operators';
 import { IDonorProfile  } from '../_models';
-import { IProjectReview  } from '../_models';
+import { IReviewProject  } from '../_models';
 
 @Injectable({
   providedIn: 'root'
@@ -102,12 +102,12 @@ getProjectOwnerId(id:string): Observable<any> {
 }
 /* api of comment on a project */
 getCommentsOnSpecificProject(id:string): Observable<any> {
-  console.log(id)
+  console.log("calling review api "+ id)
   return  this.httpClient.get(this.REST_API_SERVER+"/api/feedback/"+id,   this.options)
 }
 
-commentProject(projectreview:  IProjectReview, id:string) {
-  console.log(    JSON.stringify(projectreview))
+commentProject(reviewProject:  IReviewProject, id:string) {
+  console.log(    JSON.stringify(reviewProject))
 
 
   let token = localStorage.getItem('token')
@@ -124,7 +124,7 @@ commentProject(projectreview:  IProjectReview, id:string) {
   console.log("token",token)
   console.log("authoptions",httpOptions)
 
-  return this.httpClient.post(this.REST_API_SERVER+"/api/feedback/"+id,  JSON.stringify(projectreview), httpOptions);
+  return this.httpClient.post(this.REST_API_SERVER+"/api/feedback/"+id,  JSON.stringify(reviewProject), httpOptions);
 }
 /* api to create project */
 createProject(project:  IProject) {
