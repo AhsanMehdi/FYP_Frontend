@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- this is for donor -->
+<head>
+    <br>
+    <br>
+    <br>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,24 +15,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Document</title>
   </head>
   <style>
-   body {
+    body {
       
       background-color: white;
       color: black;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
-   
-    .profile-page {
-      display: flex;
-
-      flex-direction: row;
-    }
-    
-             /* create post section */
+          /* create post section */
     .createpost-container {
       
       display: flex;
@@ -187,68 +181,6 @@
       border-color: darkcyan;
       font-weight:bolder;
     }
-    .zewbt {
-      background-color: palegreen;
-      color: black;
-      font-weight:normal;
-      border-radius: 10px;
-      border-color: palegreen;
-      padding-left: 10px;
-      padding-right: 10px;
-      width: 200px;
-    }
-    .zewbt:hover{
-      background-color: palegreen;
-      color: black;
-      border: thin;
-      border-radius: 10px;
-      border-top-style: solid;
-      border-bottom-style: solid ;
-      border-color: palegreen;
-      font-weight:bolder;
-    }
-    .zzewbt {
-      background-color: paleturquoise;
-      color: black;
-      font-weight:normal;
-      border-radius: 10px;
-      border-color: paleturquoise;
-      padding-left: 10px;
-      padding-right: 10px;
-      width: 200px;
-    }
-    .zzewbt:hover{
-      background-color: paleturquoise;
-      color: black;
-      border: thin;
-      border-radius: 10px;
-      border-top-style: solid;
-      border-bottom-style: solid ;
-      border-color: paleturquoise;
-      font-weight:bolder;
-    }
-    .zzzewbt {
-      background-color:palegoldenrod;
-      color: black;
-      font-weight:normal;
-      border-radius: 10px;
-      border-color: palegoldenrod;
-      padding-left: 10px;
-      padding-right: 10px;
-      width: 200px;
-    }
-    .zzzewbt:hover{
-      background-color: palegoldenrod;
-      color: black;
-      border: thin;
-      border-radius: 10px;
-      border-top-style: solid;
-      border-bottom-style: solid ;
-      border-color: palegoldenrod;
-      font-weight:bolder;
-    }
-    
-    
     .likenewbt {
       background-color:lightskyblue;
       color: lightskyblue;
@@ -482,9 +414,8 @@
     .heart{
       color: tomato;
     }
-     /* Comment box styling end */
+    /* Comment box styling end */
     /* NGO post  section end */
-    
   </style>
   <body>
     <div class="container-fluid">
@@ -498,13 +429,11 @@
         moment but we would have to get this from backend -->
         <!-- ///////// -->
 
-          <button class="newbt" routerLink="/nghome"> Newsfeed </button>
+          <button class="newbt" routerLink="/donortimeline"> Timeline </button>
           <br>
           <button class="newbt" routerLink="/editprofile"> Edit Profile </button>
           <br>
           <button class="newbt" routerLink="/campaignadd"> Post Campaign </button>
-          <br>
-          <button class="newbt" routerLink="/projectupload"> Post Project </button>
           <br>
           <button class="newbt" routerLink="/Chatbox"> Chatbox </button>
           <hr>
@@ -571,211 +500,40 @@
             <hr>
         </div>
         
-          <div class="col-8 new-posts">
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="profile-page">
-              <div class="profile-photo">
-
-                <img
-                  src="/assets/123.jpg"
-                  class="rounded-circle"
-                  width="220"
-                  height="210"
-                  alt=""/>
-                  <h1 style="color: black;">Tahir Sagri</h1>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <!--<button class="zewbt" routerLink="/ngos">Following <h6>5</h6></button> -->
-                <button class="zzewbt" routerLink="/createdcampaigns">Created Campaigns<h6>5</h6></button>
-                <button class="zzzewbt" routerLink="/createdprojects">Created Projects<h6>5</h6></button>
-              </div>
-              
-            </div>
+        <div class="col-8 new-posts" >
+          <br>
+          <br>
+          <br><!-- ///////// -->
           
 
-          <div class="post-box" style="border-radius: 5px; text-align: center;" >
+          <div class="post-box" style="border-radius: 5px; text-align: center; padding-top: 50px; padding-bottom: 50px;" >
             <h3 class="title-ngo" style="color: black; padding-bottom: 0px;" routerLink="/ngodetails">Edhi Foundation</h3>
-            <h9 style="font-weight: lighter; padding-top: 0px;">12-March-2020</h9>
-            <p routerLink="/projectdetails">
-              Helping poor children get food. 
+            <h9 style="font-weight: lighter; padding-top: 0px;">03145555</h9>
+            <p>
+              Pakistan 
             </p>
-            <div class="container-fluid" style="text-align: center;" routerLink="/projectdetails">
-              <img src="/assets/orphans.jpg" style="border: black solid 1px; padding: 2px;;" height="400px">
-            </div>
-            <div class="count-like" style="border-bottom: none;">
-              <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: royalblue;"></i>
-              <span class="mr-4 pr-4">24</span>
-              <i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color:salmon;"></i>
-              <span class="mr-4 pr-4">24</span>
+            
+            <div class="row">
+              <div class="col-4" style="text-align: end">
+
+              <!--  <button class="likenewbt" routerLink="/donortimeline">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button> -->
               
             </div>
-            <div class="row">
-              <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
-
-                <button class="likenewbt" routerLink="/donortimeline">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
-              </div>
-              <div class="col-4" style="border-right: solid darkslategrey 1px;">
-
-                <button class="sharenewbt"  routerLink="/donortimeline"> <i class="fa fa-share" aria-hidden="true" style="padding:1px; color: white;"></i>Share </button>
-              </div>
-              <div class="col-4" style="text-align: start;">
-
-                <button class="dislikenewbt" routerLink="/donortimeline"><i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color: white;"></i> Dislike </button>
-              </div>
+              
 
             </div>
-            <hr>
+            
             <!-- ///////// -->
         <!-- Now this is the comment section for this post, i think max 2 comments would be enough to display
           unless user opens the post seperately. This would contain username(who comments) and comment -->
         <!-- ///////// -->
 
-        <div class="comment-section">
-
-          <div class="comment-section-0">
-            <div class="comment-section-divide">
-              <div class="comment-body">
-                <div class="comment-title" style="text-align: start;">Amir Rehman</div>
-                <div class="comment-description">
-                  This is the one of the best ngo in the upcoming year in
-                  history of pakistan
-                </div>
-                <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                  12-March-2020
-                </div>
-              </div>
-            </div>
-            
+        
           </div>
-              <div class="comment-section-0">
-                <div class="comment-section-divide">
-                  <div class="comment-body">
-                    <div class="comment-title" style="text-align: start;">Amir Rehman</div>
-                    <div class="comment-description">
-                      This is the one of the best ngo in the upcoming year in
-                      history of pakistan
-                    </div>
-                    <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                      12-March-2020
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
+
+
+         
         </div>
-
-            <div class="comment-box">
-              <div class="comment-input" >
-                <input
-                  class="comment-box-input"
-                  type="text"
-                  placeholder="Write a Comment "
-                />
-              </div>
-              <div class="add-comment" >
-                <button class="postcampbtn" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
-
-              </div>
-            </div>
-          </div>
-
-
-          <div class="post-box" style="border-radius: 5px; text-align: center;" >
-            <h3 class="title-ngo" style="color: black; padding-bottom: 0px;" routerLink="/ngodetails">Edhi Foundation</h3>
-            <h9 style="font-weight: lighter; padding-top: 0px;">12-March-2020</h9>
-            <p routerLink="/projectdetails">
-              Helping poor children get food. 
-            </p>
-            <div class="container-fluid" style="text-align: center;" routerLink="/projectdetails">
-              <img src="/assets/orphans.jpg" style="border: black solid 1px; padding: 2px;;" height="400px">
-            </div>
-            <div class="count-like" style="border-bottom: none;">
-              <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: royalblue;"></i>
-              <span class="mr-4 pr-4">24</span>
-              <i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color:salmon;"></i>
-              <span class="mr-4 pr-4">24</span>
-              
-            </div>
-            <div class="row">
-              <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
-
-                <button class="likenewbt" routerLink="/donortimeline">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
-              </div>
-              <div class="col-4" style="border-right: solid darkslategrey 1px;">
-
-                <button class="sharenewbt"  routerLink="/donortimeline"> <i class="fa fa-share" aria-hidden="true" style="padding:1px; color: white;"></i>Share </button>
-              </div>
-              <div class="col-4" style="text-align: start;">
-
-                <button class="dislikenewbt" routerLink="/donortimeline"><i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color: white;"></i> Dislike </button>
-              </div>
-
-            </div>
-            <hr>
-            <!-- ///////// -->
-        <!-- Now this is the comment section for this post, i think max 2 comments would be enough to display
-          unless user opens the post seperately. This would contain username(who comments) and comment -->
-        <!-- ///////// -->
-
-        <div class="comment-section">
-
-          <div class="comment-section-0">
-            <div class="comment-section-divide">
-              <div class="comment-body">
-                <div class="comment-title" style="text-align: start;">Amir Rehman</div>
-                <div class="comment-description">
-                  This is the one of the best ngo in the upcoming year in
-                  history of pakistan
-                </div>
-                <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                  12-March-2020
-                </div>
-              </div>
-            </div>
-            
-          </div>
-              <div class="comment-section-0">
-                <div class="comment-section-divide">
-                  <div class="comment-body">
-                    <div class="comment-title" style="text-align: start;">Amir Rehman</div>
-                    <div class="comment-description">
-                      This is the one of the best ngo in the upcoming year in
-                      history of pakistan
-                    </div>
-                    <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                      12-March-2020
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-        </div>
-
-            <div class="comment-box">
-              <div class="comment-input" >
-                <input
-                  class="comment-box-input"
-                  type="text"
-                  placeholder="Write a Comment "
-                />
-              </div>
-              <div class="add-comment" >
-                <button class="postcampbtn" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- ///////// -->
-        <!-- end panel -->
-        <!-- ///////// -->
-
         <div class="col-2">
           <br>
           <br>
@@ -837,4 +595,3 @@
       </div>
     </div>
   </body>
-</html>

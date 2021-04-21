@@ -21,6 +21,9 @@ import { CampaignDetailsComponent } from './components/campaigndetails/campaignd
 import { NgoDetailsComponent } from './components/ngodetails/ngodetails.component';
 import { InitialInformationComponent } from './components/initialinformation/initialinformation.component';
 import { DetailInformationComponent } from './components/detailinformation/detailinformation.component';
+
+
+
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -59,6 +62,9 @@ import { EditcampaignComponent } from './components/editcampaign/editcampaign.co
 import { CreatedprojectsComponent } from './components/createdprojects/createdprojects.component';
 import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
 import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
+import { DonatenowComponent } from './components/donatenow/donatenow.component';
+
+
 
 
 @NgModule({
@@ -100,7 +106,8 @@ import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
     EditcampaignComponent,
     CreatedprojectsComponent,
     CreatedcampaignsComponent,
-    TempyyyComponent
+    TempyyyComponent,
+    DonatenowComponent
     
     
 

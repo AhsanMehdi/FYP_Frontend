@@ -37,6 +37,8 @@ import { EditcampaignComponent } from './components/editcampaign/editcampaign.co
 import { CreatedprojectsComponent } from './components/createdprojects/createdprojects.component';
 import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
 import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
+import { DonatenowComponent } from './components/donatenow/donatenow.component';
+
 
 
 
@@ -50,6 +52,9 @@ const routes: Routes = [
   
   {
     path: 'signuppage', component: SignupPageComponent
+  },
+  {
+    path: 'donatenow', component: DonatenowComponent
   },
   {
     path: 'signinpage', component: SigninPageComponent
