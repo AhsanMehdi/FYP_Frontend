@@ -59,6 +59,8 @@ import { CreatedprojectsComponent } from './components/createdprojects/createdpr
 import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
 import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
 import { NsettingComponent } from './components/nsetting/nsetting.component';
+import { DonatecompComponent } from './components/donatecomp/donatecomp.component';
+import { DonatecomppComponent } from './components/donatecompp/donatecompp.component';
 
 
 @NgModule({
@@ -101,7 +103,9 @@ import { NsettingComponent } from './components/nsetting/nsetting.component';
     CreatedprojectsComponent,
     CreatedcampaignsComponent,
     TempyyyComponent,
-    NsettingComponent
+    NsettingComponent,
+    DonatecompComponent,
+    DonatecomppComponent
     
     
 

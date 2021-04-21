@@ -38,6 +38,8 @@ import { CreatedprojectsComponent } from './components/createdprojects/createdpr
 import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
 import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
 import { NsettingComponent } from './components/nsetting/nsetting.component';
+import { DonatecompComponent } from './components/donatecomp/donatecomp.component';
+import { DonatecomppComponent } from './components/donatecompp/donatecompp.component';
 
 
 
@@ -165,6 +167,12 @@ const routes: Routes = [
   },
   {
     path: 'nsetting', component: NsettingComponent 
+  },
+  {
+    path: 'donatecomp', component: DonatecompComponent
+  },
+  {
+    path: 'donatecompp', component: DonatecomppComponent
   }
   
 ];
