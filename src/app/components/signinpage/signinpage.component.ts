@@ -30,7 +30,6 @@ export class SigninPageComponent implements OnInit {
 
       userpassword: new FormControl({ value: "", disabled: false }, [
         Validators.required,
-        Validators.minLength(8),
       ])
     
     });

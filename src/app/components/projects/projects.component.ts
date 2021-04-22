@@ -13,6 +13,7 @@ import { Router } from '@angular/router'
 })
 export class ProjectsComponent implements OnInit {
   projects: any /* array of projects*/
+  project:any
   currentTutorial = null;
   currentIndex = -1;
   title = '';
@@ -61,6 +62,31 @@ export class ProjectsComponent implements OnInit {
         console.log(error);
       });
 
+  }
+  mostLiked(){ /*projects having highest number of likes*/
+
+  }
+  topFunded(){ /*projects received higest funds*/
+  debugger
+    this.backendService.getProjects() /*get all projects*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        console.log(data)
+        for (let i =0 ; i < data.projects.length ; i++ ){
+        
+           if (data.projects[i].estimatedBudget > 100000 ){
+             
+           this.project[i] = data.projects[i]; 
+           console.log(this.project[i].estimatedBudget)
+          }
+         }
+    
+
+      },
+      error => {
+        console.log(error);
+      });
   }
 
 }
