@@ -14,6 +14,7 @@ export class SigninPageComponent implements OnInit {
   signInForm: FormGroup;
   loading = false;
   submitted = false;
+  showInputError: string = "";
 
   constructor(
     private fb: FormBuilder,
@@ -87,7 +88,8 @@ export class SigninPageComponent implements OnInit {
           error => {
       
               this.alertService.error(error);
-              console.log ("invalid email or password")
+              this.showInputError = error.error ;
+              console.error(this.showInputError)
               this.loading = false;
           });
 }

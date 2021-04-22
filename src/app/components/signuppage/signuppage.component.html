@@ -131,7 +131,7 @@ body {
 		<div class="form-group">
 			<input type="password" id="password" style="border-color: teal;" formControlName="password" placeholder="Password" class="text-black form-control" mdbInput>
 		</div>      
-        <Label for="userType">Sign up as</Label>
+        <Label for="userType" >Sign up as</Label>
 		<div class="row">
 			
 			<div class='col-12'>
@@ -144,8 +144,9 @@ body {
 		  </div>
 		  <br>		  
 		<div class="form-group" style="text-align: center;">
-            <button type="submit" class="btn sucman" >Register Now</button>
+            <button type="submit" class="btn sucman"  >Register Now</button>
         </div>
+		<p style=" text-align: center;color: red;">{{showInputError}}</p>
     </form>
 	<div class="text-center">Already have an account? <a href="/signinpage" style="color: teal;">Sign in</a></div>
 </div>

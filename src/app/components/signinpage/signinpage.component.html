@@ -126,11 +126,14 @@ body {
 	</div>      
 	
 	<div class="form-group" style="text-align: center;">
-		<button type="submit" class="btn sucman" >Login</button>
+		<button type="submit"  [disabled]="!signInForm.valid" class="btn sucman" >Login</button>
 	</div>
+
+	<p style=" text-align: center;color: red;">{{showInputError}}</p>
 
 </form>
 <div class="text-center">Don't have an account? <a href="/signuppage" style="color: teal;">Join Now</a></div>
+
 
 </div>
 </body>

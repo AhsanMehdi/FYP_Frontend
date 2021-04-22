@@ -47,7 +47,7 @@ export class DemoAdapter extends ChatAdapter implements IChatGroupAdapter
         }));
     }
 
-    
+    debugger
     getMessageHistory(destinataryId: any): Observable<Message[]> {
 
        return this.backendService.getMessages(destinataryId)

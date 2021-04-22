@@ -17,7 +17,7 @@ export class SignupPageComponent implements OnInit {
   
   loading = false;
   submitted = false;
-
+  showInputError : string = "" ;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -73,6 +73,9 @@ export class SignupPageComponent implements OnInit {
           },
           error => {
               this.alertService.error(error);
+              this.showInputError = "user already exists choose another email";
+              console.log(this.showInputError)
+              
               this.loading = false;
           });
 }
