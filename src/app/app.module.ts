@@ -63,6 +63,7 @@ import { CreatedprojectsComponent } from './components/createdprojects/createdpr
 import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
 import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
 import { DonatenowComponent } from './components/donatenow/donatenow.component';
+import { ParticipatenowComponent } from './components/participatenow/participatenow.component';
 
 
 
@@ -107,7 +108,9 @@ import { DonatenowComponent } from './components/donatenow/donatenow.component';
     CreatedprojectsComponent,
     CreatedcampaignsComponent,
     TempyyyComponent,
-    DonatenowComponent
+    DonatenowComponent,
+    ParticipatenowComponent
+    
     
     
 

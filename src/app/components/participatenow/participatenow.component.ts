@@ -11,13 +11,13 @@ import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-donatenow',
-  templateUrl: './donatenow.component.html',
-  styleUrls: ['./donatenow.component.scss']
+  selector: 'app-participatenow',
+  templateUrl: './participatenow.component.html',
+  styleUrls: ['./participatenow.component.scss']
 })
-export class DonatenowComponent implements OnInit {
+export class ParticipatenowComponent implements OnInit {
 
-  projectId: any
+
   campaignId:any  /*when click on participate now*/
   ownerId:any
   profiles:any /*variable to get the profile of a user*/
@@ -31,46 +31,58 @@ export class DonatenowComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router, private backendService: BackendService,
       private alertService: AlertService) {
-    this.projectId = this.route.snapshot.queryParams.id;
-  
-    console.log("the id of project is "+this.projectId)
-
+ 
+    this.campaignId = this.route.snapshot.queryParams.id;
+   
+    console.log("id of campaign is: "+ this.campaignId)
    }
 
 
   ngOnInit(): void {
-   
-    this.getProjectOwnerId() ; // when project
-    console.log ("is project id is null  ::"+ this.projectId)
-    
 
+    this.getCampaignOwnerId(); // when campaign
+    console.log ("is campaign id is null  ::"+ this.campaignId)
+    
  
     // if (this.callProfileFunction == true)
     // this.getUserProfiles() ;
   }
-  
-  getProjectOwnerId(){ /*function to get the user id of whom who created the project*/
-    console.log("function getting owner id")
-    this.backendService.getProjectOwnerId(this.projectId) /* to check is the user is owner of project*/
+
+
+  getCampaignOwnerId(){ /* it will work if user want to participate in a specific campaign*/
+    console.log ("oh this is campaign here ::")
+    this.backendService.getCampaignOwnerId(this.campaignId) /* to check is the user is owner of campaign*/
     .pipe(first())
     .subscribe(
-      data => {  
-        console.log(" project owner id :" + data.userId)
+        data => {
         this.ownerId = data.userId ;
-        this.callProfileFunction = true ;
-        console.log("receiving from owner is id " + this.ownerId)
-        this.getNgoProfiles() ;
-        this.backendService.getUserTypeByUserId(this.ownerId) /* to check is the user is owner of campaign*/
+        /*now it need to check if the user is donor or ngo*/
+        console.log("now going to check  user type::" + this.ownerId)
+        this.checkUserType() ;
+      
+        },
+        error => {
+            this.alertService.error(error);
+       
+        })
+  }
+
+  checkUserType(){ /*function to check user type*/
+    this.backendService.getUserTypeByUserId(this.ownerId) /* to check is the user is owner of campaign*/
     .pipe(first())
     .subscribe(
         data => {
           console.log("value of data is : "+ data)
           console.log(data.user[0].userType)
           
-       
+        this.userType = data.user[0].userType ;
         this.ownerEmail = data.user[0].email;
         console.log ("user is : "+ this.userType+ " and email is ::"+ this.ownerEmail)
-  
+        /*now it need to check if the user is donor or ngo then call respective functions*/
+        if (this.userType == "ngo")
+        this.getNgoProfiles();
+        else if (this.userType == "donor")
+        this.getDonorProfiles();
         
        // debugger
         },
@@ -78,14 +90,30 @@ export class DonatenowComponent implements OnInit {
             this.alertService.error(error);
        
         })
-
-      },
+  }
+  getDonorProfiles(){ /* this function will return the profile data of specific user*/
+    console.log("function getting donor profiles")
+    console.log("calling backend service with id is "+this.ownerId )
+    this.backendService.getDonorByUserId(this.ownerId)
+    .pipe(first())
+    .subscribe(
+        data => {
+       this.profiles = data.donor[0] ;
+       this.ownerName = this.profiles.firstName;
+       this.ownerLocation = this.profiles.country;
+       this.ownerContact = this.profiles.cellNumber;
+       console.log ("user data : " + this.ownerName +this.ownerLocation  + this.ownerContact + this.ownerEmail)
+       console.log(data)
+       console.log("profile info is "+ this.profiles)
+       console.log("other info is "+ data.donor[0]) 
+      
+        },
         error => {
             this.alertService.error(error);
-           
+       
         })
-  }
 
+  }
   getNgoProfiles(){ /* this function will return the profile data of specific user*/
     console.log("function getting profiles")
     console.log("calling backend service with id is "+this.ownerId )
@@ -97,7 +125,7 @@ export class DonatenowComponent implements OnInit {
        this.ownerName = this.profiles.nickName;
        this.ownerLocation = this.profiles.country;
        this.ownerContact = this.profiles.contactNumber;
-       console.log ("user data : " + this.ownerName +this.ownerLocation  + this.ownerContact)
+       console.log ("user data : " + this.ownerName +this.ownerLocation  + this.ownerContact+ this.ownerEmail)
        console.log(data)
        console.log("profile info is "+ this.profiles)
        console.log("other info is "+ data.ngo[0]) 
@@ -109,10 +137,6 @@ export class DonatenowComponent implements OnInit {
         })
 
   }
-
-  
- 
- 
 
 
 }

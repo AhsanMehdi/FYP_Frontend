@@ -38,6 +38,7 @@ import { CreatedprojectsComponent } from './components/createdprojects/createdpr
 import { CreatedcampaignsComponent } from './components/createdcampaigns/createdcampaigns.component';
 import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
 import { DonatenowComponent } from './components/donatenow/donatenow.component';
+import { ParticipatenowComponent } from './components/participatenow/participatenow.component';
 
 
 
@@ -55,6 +56,9 @@ const routes: Routes = [
   },
   {
     path: 'donatenow', component: DonatenowComponent
+  },
+  {
+    path: 'participatenow', component: ParticipatenowComponent
   },
   {
     path: 'signinpage', component: SigninPageComponent

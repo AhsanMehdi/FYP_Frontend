@@ -27,7 +27,7 @@ export class CampaignDetailsComponent implements OnInit {
      loading = false;
 
      showDetials(campaign){  /*when a user click on readmore button then it works*/
-      this.router.navigate(['donatenow'],{ queryParams: { id: campaign._id } });
+      this.router.navigate(['participatenow'],{ queryParams: { id: campaign._id } });
     }
   ngOnInit(): void {
     this.backendService.getCampaignById(this.campaignId)
