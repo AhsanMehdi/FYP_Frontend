@@ -29,6 +29,7 @@
     "hammerjs": "^2.0.8",
     "is-empty": "^1.2.0",
     "ng-bootstrap-form-validation": "^9.0.1",
+    "ng-chat": "^3.0.3",
     "ng-lazyload-image": "^9.1.0",
     "ng-uikit-pro-standard": "file:ng-uikit-pro-standard-10.1.1.tgz",
     "ng2-file-upload": "^1.4.0",

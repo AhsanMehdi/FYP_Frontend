@@ -8,6 +8,8 @@ import { INgoProfile  } from '../_models';
 import { map,catchError } from 'rxjs/operators';
 import { IDonorProfile  } from '../_models';
 import { IReviewProject  } from '../_models';
+import { IChatBox,IChatBoxMessage  } from '../_models';
+import { ChatAdapter, IChatGroupAdapter, Group, Message, ChatParticipantStatus, ParticipantResponse, ChatParticipantType, IChatParticipant, MessageType } from 'ng-chat';
 
 @Injectable({
   providedIn: 'root'
@@ -140,6 +142,49 @@ getUserTypeByUserId(id:string): Observable<any> {
 getCommentsOnSpecificProject(id:string): Observable<any> {
   console.log("calling review api "+ id)
   return  this.httpClient.get(this.REST_API_SERVER+"/api/feedback/"+id,   this.options)
+}
+
+/* api of comment on a project */
+getMessages(id:string): Observable<Message[]> {
+
+  let token = localStorage.getItem('token')
+
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      Authorization:"Token "+token
+    })
+  };
+  /* api to get all comments on a specific projects*/
+ 
+
+  console.log("token",token)
+  console.log("authoptions",httpOptions)
+
+  console.log("calling review api "+ id)
+  return  this.httpClient.get<Message[]>(this.REST_API_SERVER+"/api/message/from/"+id,  httpOptions)
+}
+
+
+sendMessage(message:  IChatBox) {
+  console.log(    JSON.stringify(message))
+
+
+  let token = localStorage.getItem('token')
+
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      Authorization:"Token "+token
+    })
+  };
+  /* api to get all comments on a specific projects*/
+ 
+
+  console.log("token",token)
+  console.log("authoptions",httpOptions)
+
+  return this.httpClient.post(this.REST_API_SERVER+"/api/message/",  JSON.stringify(message), httpOptions);
 }
 
 commentProject(reviewProject:  IReviewProject, id:string) {

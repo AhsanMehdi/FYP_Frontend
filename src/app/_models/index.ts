@@ -6,3 +6,4 @@ export * from './Idonorprofile';
 export * from './Ingoprofile';
 export * from './IuploadImguar';
 export * from './Iprojectreview';
+export * from './Ichatbox';

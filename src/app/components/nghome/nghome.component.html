@@ -435,7 +435,7 @@
         <br>
         <button class="newbt" routerLink="/projectupload"> Post Project </button>
         <br>
-        <button class="newbt" routerLink="/Chatbox"> Chatbox </button>
+        <button class="newbt" (click)="openChatBox()"> Chatbox </button>
         <hr>
         <div class="stories"  >
           <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Campaigns</h4>
@@ -736,4 +736,10 @@
       </div>
     </div>
   </div>
+
 </body>
+<div *ngIf="showChatbox">
+  <ng-chat [adapter]="adapter" [userId]="userId"></ng-chat>
+</div>
+  
+

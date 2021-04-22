@@ -65,7 +65,7 @@ import { TempyyyComponent } from './components/tempyyy/tempyyy.component';
 import { DonatenowComponent } from './components/donatenow/donatenow.component';
 import { ParticipatenowComponent } from './components/participatenow/participatenow.component';
 
-
+import {NgChatModule} from 'ng-chat'
 
 
 @NgModule({
@@ -135,7 +135,8 @@ import { ParticipatenowComponent } from './components/participatenow/participate
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
       apiKey: 'Your_api_key'
     }),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgChatModule
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],

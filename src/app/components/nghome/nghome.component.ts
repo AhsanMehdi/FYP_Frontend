@@ -4,6 +4,9 @@ import { AlertService } from '../../services/alert.service';
 import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { Router } from '@angular/router'
+import { ChatAdapter } from 'ng-chat';
+import { DemoAdapter } from './my-adapter';
+
 
 @Component({
   selector: 'app-nghome',
@@ -11,6 +14,13 @@ import { Router } from '@angular/router'
   styleUrls: ['./nghome.component.scss']
 })
 export class NghomeComponent implements OnInit {
+
+  title = 'ng-uikit-pro-standard';
+  userId = 1;
+  ngos = []
+  showChatbox = true;
+
+  public adapter: ChatAdapter;
 
   constructor(
     private fb: FormBuilder,
@@ -21,8 +31,28 @@ export class NghomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.showChatbox = false;
+    this.initChatBox()
     this.getToken();
+  }
+   initChatBox() {
+    this.backendService.getNgos() /*get all ngos*/
+    .subscribe(
+      data => {
+     
+
+        this.adapter =   new DemoAdapter(data.ngoProfile,this.backendService);
+
+        console.log(this.adapter)
+      
+
+      },
+      error => {
+        console.log(error);
+      });
    }
+  
+
    logout(){
      localStorage.removeItem("token");
       localStorage.removeItem("userid")
@@ -33,6 +63,11 @@ export class NghomeComponent implements OnInit {
        this.router.navigate(['/home']);
      }
    }
+
+   openChatBox(){
+
+    this.showChatbox = true;
+  }
    ngoeditprofile(){
      
     //this.backendService.ngoProfileUpdate() ;
