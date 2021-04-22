@@ -79,12 +79,12 @@ export class ParticipatenowComponent implements OnInit {
         this.ownerEmail = data.user[0].email;
         console.log ("user is : "+ this.userType+ " and email is ::"+ this.ownerEmail)
         /*now it need to check if the user is donor or ngo then call respective functions*/
-        if (this.userType == "ngo")
+        if (this.userType === "ngo")
         this.getNgoProfiles();
-        else if (this.userType == "donor")
+        else if (this.userType === "donor")
         this.getDonorProfiles();
         
-       // debugger
+        debugger
         },
         error => {
             this.alertService.error(error);
