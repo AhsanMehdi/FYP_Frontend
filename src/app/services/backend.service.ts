@@ -98,10 +98,16 @@ export class BackendService {
     return  this.httpClient.get(this.REST_API_SERVER+"/api/profile/ngo/"+id,   this.options)
     console.log(this.REST_API_SERVER+"/api/ngo/"+id)
   }
-  /*api will return the profile data of a specific user*/
+  /*api will return the profile data of a specific ngo*/
   getNgoByUserId(id:string): Observable<any> {
     console.log("sending id to backend service"+id)
     return  this.httpClient.get(this.REST_API_SERVER+"/api/profile/ngo/userId/"+id,   this.options)
+  
+  }
+    /*api will return the profile data of a specific donor*/
+  getDonorByUserId(id:string): Observable<any> {
+    console.log("sending id to backend service"+id)
+    return  this.httpClient.get(this.REST_API_SERVER+"/api/profile/donor/userId/"+id,   this.options)
   
   }
 /* api which return all the projects of a specific owner*/
@@ -113,8 +119,13 @@ getCampaignsSpecificUser(id:string): Observable<any> {
   console.log(id)
   return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign/userId/"+id,   this.options)
 }
-/* api which return user/owner id of a specific user*/
+/* api which return user/owner id of a specific Project*/
 getProjectOwnerId(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/project/id/"+id,   this.options)
+}
+/* api which return user/owner id of a specific campaign*/
+getCampaignOwnerId(id:string): Observable<any> {
   console.log(id)
   return  this.httpClient.get(this.REST_API_SERVER+"/api/project/id/"+id,   this.options)
 }
