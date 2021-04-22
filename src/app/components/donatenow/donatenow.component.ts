@@ -18,6 +18,7 @@ import {map} from 'rxjs/operators';
 export class DonatenowComponent implements OnInit {
 
   projectId: any
+  campaignId:any  /*when click on participate now*/
   ownerId:any
   profiles:any /*variable to get the profile of a user*/
   callProfileFunction: boolean = false ;
@@ -29,12 +30,18 @@ export class DonatenowComponent implements OnInit {
     private router: Router, private backendService: BackendService,
       private alertService: AlertService) {
     this.projectId = this.route.snapshot.queryParams.id;
+    this.campaignId = this.route.snapshot.queryParams.id;
     console.log("the id of project is "+this.projectId)
+    console.log("id of campaign is: "+ this.campaignId)
    }
 
 
   ngOnInit(): void {
-    this.getProjectOwnerId() ; 
+    if (this.projectId != null)
+    this.getProjectOwnerId() ; // when project
+    else if (this.campaignId != null)
+    this.getCampaignOwnerId(); // when campaign
+ 
     // if (this.callProfileFunction == true)
     // this.getUserProfiles() ;
   }
@@ -79,6 +86,10 @@ export class DonatenowComponent implements OnInit {
             this.alertService.error(error);
        
         })
+
+  }
+
+  getCampaignOwnerId(){ /* it will work if user want to participate in a specific campaign*/
 
   }
 

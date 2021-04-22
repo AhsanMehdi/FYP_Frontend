@@ -115,6 +115,8 @@ getProjectsSpecificUser(id:string): Observable<any> {
   console.log(id)
   return  this.httpClient.get(this.REST_API_SERVER+"/api/project/userId/"+id,   this.options)
 }
+/* api which return all the campaigns
+ of a specific owner*/
 getCampaignsSpecificUser(id:string): Observable<any> {
   console.log(id)
   return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign/userId/"+id,   this.options)
@@ -128,6 +130,11 @@ getProjectOwnerId(id:string): Observable<any> {
 getCampaignOwnerId(id:string): Observable<any> {
   console.log(id)
   return  this.httpClient.get(this.REST_API_SERVER+"/api/project/id/"+id,   this.options)
+}
+/* api which return user type of a specific user*/
+getUserTypeByUserId(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/auth/id/"+id,   this.options)
 }
 /* api of comment on a project */
 getCommentsOnSpecificProject(id:string): Observable<any> {

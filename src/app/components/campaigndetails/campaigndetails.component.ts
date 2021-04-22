@@ -16,6 +16,7 @@ export class CampaignDetailsComponent implements OnInit {
   campaignId: string
   campaign:any
   isDataLoaded=false
+  userType:string
   constructor(   private route: ActivatedRoute,
     private router: Router, private backendService: BackendService,  private alertService: AlertService) {
       this.campaignId = this.route.snapshot.queryParams.id;
@@ -25,7 +26,9 @@ export class CampaignDetailsComponent implements OnInit {
      }
      loading = false;
 
-
+     showDetials(campaign){  /*when a user click on readmore button then it works*/
+      this.router.navigate(['donatenow'],{ queryParams: { id: campaign._id } });
+    }
   ngOnInit(): void {
     this.backendService.getCampaignById(this.campaignId)
     .pipe(first())
@@ -43,16 +46,9 @@ export class CampaignDetailsComponent implements OnInit {
             this.loading = false;
         })
   }
-  logout(){
-    localStorage.removeItem("token");
-     localStorage.removeItem("userid")
-    this.router.navigate(['/home']);
-  }
-  getToken(){
-    if(localStorage.getItem("token") === null || localStorage.getItem("token") === undefined){
-      this.router.navigate(['/home']);
-    }
-  }
+
+  
+
 
 
 }
