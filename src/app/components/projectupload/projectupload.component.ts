@@ -68,7 +68,7 @@ export class ProjectuploadComponent implements OnInit {
     // }
     this.loading = true;
     if (this.createProjectForm.value.imageUrl== ""){
-      this.createProjectForm.value.imageUrl = "n/a"
+      this.createProjectForm.value.imageUrl = "https://i.dawn.com/primary/2018/11/5be9572e29788.png"
     }
     this.backendService.createProject(this.createProjectForm.value)
         .pipe(first())

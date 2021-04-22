@@ -551,7 +551,7 @@
         
 
         <div class="post-box" style="border-radius: 5px; text-align: center;" >
-          <h3 class="title-ngo" style="color: black; padding-bottom: 0px;">{{project.title}}</h3>
+          <h2 class="title-ngo" style="color: black; padding-bottom: 0px;">{{project.title}}</h2>
           <h9 style="font-weight: lighter; padding-top: 0px;">{{project.startDate}}</h9>
           <p routerLink="/projectdetails">
             {{project.objective}} 
@@ -566,9 +566,14 @@
             
           </div>
           <div class="row" *ngIf = "!isUser">
-            <div class="col-4" style="text-align: end; border-right: solid darkslategrey 1px;">
+            <div class="col-4" style="text-align: end;">
+            </div>
+            <div class="col-4" style="text-align: center; ">
 
               <button class="likenewbt" (click) = "likePressed()" [disabled] = "like">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
+            </div>
+            <div class="col-4" style="text-align: end;">
+
             </div>
           </div>
           <hr>

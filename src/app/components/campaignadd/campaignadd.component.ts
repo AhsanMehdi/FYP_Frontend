@@ -73,7 +73,7 @@ export class CampaignaddComponent implements OnInit {
     this.loading = true;
     console.log ("I am going to display vslues ")
     if (this.createCampaignForm.value.imageUrl== ""){
-      this.createCampaignForm.value.imageUrl = "xyz"
+      this.createCampaignForm.value.imageUrl = "https://cdn.searchenginejournal.com/wp-content/uploads/2020/09/outstanding-social-media-campaigns-5f60d3e4bb13b-1280x720.png"
     }
     
     this.backendService.createCampaign(this.createCampaignForm.value)
