@@ -75,7 +75,7 @@ export class ProjectuploadComponent implements OnInit {
         .subscribe(
             data => {
                 this.alertService.success('project Created Successfully', true);
-                this.router.navigate(['/projects']);
+                this.router.navigate(['/createdprojects']);
               
             },
             error => {

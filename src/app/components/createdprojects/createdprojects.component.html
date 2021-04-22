@@ -207,19 +207,19 @@
             <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search for Projects">
           </div> 
         </div>
-        <div class="container">
+        <div class="container" *ngFor="let project of projects | filter:searchText">
           <div class="container" style="padding-bottom: 10px;">
             <div class="row"   style="background-color: whitesmoke; border-radius: 15px;">
               <div class="col-3" style="padding-top: 15px;">
                 <img src="assets/123.jpg" height="150" width="200" alt="Generic placeholder image" />
               </div>
               <div class="col-7">
-                <h4 routerLink="/projectdetails" style="text-decoration: underline;">Title</h4> 
-                <h7 routerLink="/projectdetails">Objective</h7>
+                <h4 routerLink="/projectdetails" style="text-decoration: underline;">{{project.tittle}}</h4> 
+                <h7 routerLink="/projectdetails">{{project.objective}}</h7>
                 <div class="row" style="padding-left: 10px;">
                   <h4>Goal: </h4>
                   <h4 style="padding-left: 20px;">Rs.</h4>
-                  <h4>Estimate Budget</h4>
+                  <h4>{{project.estimatedBudget}}</h4>
                 </div>
                 <div class="row" style="padding-left: 10px;">
                   <h4>Raised: </h4>
@@ -228,8 +228,8 @@
                 </div>
               </div>
               <div class="col-2">
-                <h6 routerLink="/projectdetails"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;"></i> Country</h6>
-                <h6 routerLink="/projectdetails"> <i class="fa fa-superpowers" style="font-size:20px; color: darkseagreen;"></i> Project Type</h6>
+                <h6 routerLink="/projectdetails"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;"></i> {{project.country}}</h6>
+                <h6 routerLink="/projectdetails"> <i class="fa fa-superpowers" style="font-size:20px; color: darkseagreen;"></i> {{project.projectType}}</h6>
 
               </div>
               <div class="col-6" style="text-align: end;">

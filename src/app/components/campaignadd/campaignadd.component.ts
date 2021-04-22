@@ -81,7 +81,7 @@ export class CampaignaddComponent implements OnInit {
         .subscribe(
             data => {
                 this.alertService.success('Campaign Created Successfully', true);
-                this.router.navigate(['/campaigns']);
+                this.router.navigate(['/createdcampaigns']);
               
             },
             error => {

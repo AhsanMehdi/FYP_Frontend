@@ -103,6 +103,10 @@ getProjectsSpecificUser(id:string): Observable<any> {
   console.log(id)
   return  this.httpClient.get(this.REST_API_SERVER+"/api/project/userId/"+id,   this.options)
 }
+getCampaignsSpecificUser(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/campaign/userId/"+id,   this.options)
+}
 /* api which return user/owner id of a specific user*/
 getProjectOwnerId(id:string): Observable<any> {
   console.log(id)
