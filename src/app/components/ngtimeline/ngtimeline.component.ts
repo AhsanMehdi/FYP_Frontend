@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendService } from '../../services/backend.service';
+import { AlertService } from '../../services/alert.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
+import { IProject  } from '../../_models/Iproject';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-ngtimeline',
@@ -6,10 +12,56 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ngtimeline.component.scss']
 })
 export class NgtimelineComponent implements OnInit {
-
-  constructor() { }
+  campaigns: any /* array of projects*/
+  projects:any
+  currentTutorial = null;
+  currentIndex = -1;
+  title = '';
+  showDomain: string ;
+  searchText;
+  totalCampaigns: number = 0;
+  totalProjects: number = 0;
+  
+  currentUserId: string ;
+  constructor(private router:Router, private backendService: BackendService) { }
 
   ngOnInit(): void {
+    this.totalCampaign();
+    this.totalProject();
+  }
+  totalCampaign(){
+    this.currentUserId = localStorage.getItem("userid") ;
+    this.backendService.getCampaignsSpecificUser( this.currentUserId) /*get all campaigns*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.campaigns = data.campaign;
+        console.log("user created campaigns:"+data.campaign)
+        for (let i =0 ; i < data.campaign.length ; i++ ){
+           this.totalCampaigns ++ ;
+         }
+
+      },
+      error => {
+        console.log(error);
+      });
+  }
+  totalProject(){
+    this.currentUserId = localStorage.getItem("userid") ;
+    this.backendService.getProjectsSpecificUser( this.currentUserId) /*get all campaigns*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.projects = data.project;
+        console.log("user created projects:"+data.project)
+        for (let i =0 ; i < data.project.length ; i++ ){
+           this.totalProjects ++ ;
+         }
+
+      },
+      error => {
+        console.log(error);
+      });
   }
 
 }
