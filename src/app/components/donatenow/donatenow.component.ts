@@ -20,6 +20,10 @@ export class DonatenowComponent implements OnInit {
   projectId: any
   ownerId:any
   profiles:any /*variable to get the profile of a user*/
+  callProfileFunction: boolean = false ;
+  ownerName:string
+  ownerLocation:string
+  ownerContact:string
   constructor(private route: ActivatedRoute,
     private formBuilder: FormBuilder,
     private router: Router, private backendService: BackendService,
@@ -31,7 +35,8 @@ export class DonatenowComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProjectOwnerId() ; 
-    this.getUserProfiles() ;
+    // if (this.callProfileFunction == true)
+    // this.getUserProfiles() ;
   }
   
   getProjectOwnerId(){ /*function to get the user id of whom who created the project*/
@@ -42,6 +47,10 @@ export class DonatenowComponent implements OnInit {
       data => {  
         console.log(" project owner id :" + data.userId)
         this.ownerId = data.userId ;
+        this.callProfileFunction = true ;
+        console.log("receiving from owner is id " + this.ownerId)
+        this.getUserProfiles() ;
+
       },
         error => {
             this.alertService.error(error);
@@ -51,14 +60,19 @@ export class DonatenowComponent implements OnInit {
 
   getUserProfiles(){ /* this function will return the profile data of specific user*/
     console.log("function getting profiles")
+    console.log("calling backend service with id is "+this.ownerId )
     this.backendService.getNgoByUserId(this.ownerId)
     .pipe(first())
     .subscribe(
         data => {
-       this.profiles = data.ngoprofile ;
+       this.profiles = data.ngo[0] ;
+       this.ownerName = this.profiles.nickName;
+       this.ownerLocation = this.profiles.country;
+       this.ownerContact = this.profiles.contactNumber;
+       console.log ("user data : " + this.ownerName +this.ownerLocation  + this.ownerContact)
        console.log(data)
        console.log("profile info is "+ this.profiles)
-       console.log("other info is "+ data.ngoprofile) 
+       console.log("other info is "+ data.ngo[0]) 
       
         },
         error => {
