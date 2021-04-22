@@ -53,6 +53,9 @@ export class ProjectDetailsComponent implements OnInit {
       like: ['', Validators.required]
  
   });
+  showDetials(project){  /*when a user click on readmore button then it works*/
+    this.router.navigate(['donatenow'],{ queryParams: { id: project._id } });
+  }
 // declaring some variables for commenting on project 
   likePressed(){
     this.islike = true;
@@ -84,7 +87,7 @@ export class ProjectDetailsComponent implements OnInit {
         .subscribe(
           response => {
             
-            console.log(" project owner id :" + response.userid)
+            console.log(" project owner id :" + response.userId)
             console.log(" current user id :" + this.user_id)
             if (response.userId === this.user_id){
               this.isUser = true

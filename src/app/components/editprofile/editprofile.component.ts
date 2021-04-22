@@ -64,35 +64,36 @@ export class EditprofileComponent implements OnInit {
         .pipe(first())
         .subscribe(
             data => {
-                this.alertService.success('Information Updated', true);
-                // this.router.navigate(['/editprofile']);
-               var  req = {
-                  nickName: this.editProfileForm.controls['nickName'].value,
-                  //dob: ['', [Validators.required, Validators.minLength(12)]],
-                  contactNumber:this.editProfileForm.controls['contactNumber'].value,
-                 // cnic: ['', Validators.required],
-                  country: this.editProfileForm.controls['country'].value,
-                  //visibility: ['', Validators.required],
-                  //occupation: ['', Validators.required],
-                  domainHealth:   this.editProfileForm.controls['domainHealth'].value,
-                  domainEducation: this.editProfileForm.controls['domainEducation'].value,
-                  domainOrphanage: this.editProfileForm.controls['domainOrphanage'].value,
-                  domainEnvironment:  this.editProfileForm.controls['domainEnvironment'].value,
-                  domainSocialWelfare:  this.editProfileForm.controls['domainSocialWelfare'].value,
-                  domainOther:  this.editProfileForm.controls['domainOther'].value,
-                  _id : data['ngoProfile']['_id']
-                }
+              this.router.navigate(['/nghome']);
+              //   this.alertService.success('Information Updated', true);
+              //   // this.router.navigate(['/editprofile']);
+              //  var  req = {
+              //     nickName: this.editProfileForm.controls['nickName'].value,
+              //     //dob: ['', [Validators.required, Validators.minLength(12)]],
+              //     contactNumber:this.editProfileForm.controls['contactNumber'].value,
+              //    // cnic: ['', Validators.required],
+              //     country: this.editProfileForm.controls['country'].value,
+              //     //visibility: ['', Validators.required],
+              //     //occupation: ['', Validators.required],
+              //     domainHealth:   this.editProfileForm.controls['domainHealth'].value,
+              //     domainEducation: this.editProfileForm.controls['domainEducation'].value,
+              //     domainOrphanage: this.editProfileForm.controls['domainOrphanage'].value,
+              //     domainEnvironment:  this.editProfileForm.controls['domainEnvironment'].value,
+              //     domainSocialWelfare:  this.editProfileForm.controls['domainSocialWelfare'].value,
+              //     domainOther:  this.editProfileForm.controls['domainOther'].value,
+              //     _id : data['ngoProfile']['_id']
+              //   }
 
               // this.editProfileForm.controls['_id'].setValue(data['ngoProfile']['_id'])
-                this.backendService.ngoProfileUpdate(this.editProfileForm.value)
-                .pipe(first())
-                .subscribe(
-                  response =>
-                  {
-                    this.toastr.success('Success!', 'Profile updated successfully!');
-                    // this.router.navigate(['/editprofile']);
-                  }
-                )
+                // this.backendService.ngoProfileUpdate(this.editProfileForm.value)
+                // .pipe(first())
+                // .subscribe(
+                //   response =>
+                //   {
+                //     this.toastr.success('Success!', 'Profile updated successfully!');
+                //     this.router.navigate(['/nghome']);
+                //   }
+                // )
               
             },
             error => {

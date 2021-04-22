@@ -98,6 +98,12 @@ export class BackendService {
     return  this.httpClient.get(this.REST_API_SERVER+"/api/profile/ngo/"+id,   this.options)
     console.log(this.REST_API_SERVER+"/api/ngo/"+id)
   }
+  /*api will return the profile data of a specific user*/
+  getNgoByUserId(id:string): Observable<any> {
+    console.log(id)
+    return  this.httpClient.get(this.REST_API_SERVER+"/api/profile/ngo/userId/"+id,   this.options)
+    console.log(this.REST_API_SERVER+"/api/ngo/"+id)
+  }
 /* api which return all the projects of a specific owner*/
 getProjectsSpecificUser(id:string): Observable<any> {
   console.log(id)
