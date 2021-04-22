@@ -64,5 +64,18 @@ export class CampaignsComponent implements OnInit {
       });
 
   }
+  urgentCampaigns(status: string){ /*function call when click on urgent campaigns*/
+    this.backendService.getCampaignByStatus(status) /*get all campaigns*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.campaigns = data.campaign;
+
+      },
+      error => {
+        console.log(error);
+      });
+
+  }
 
 }
