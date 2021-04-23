@@ -559,10 +559,10 @@
         <div class="post-box" style="border-radius: 5px; text-align: center;" >
           <h3 class="title-ngo" style="color: black; padding-bottom: 0px;">{{campaign.nickName}}</h3>
           <h9 style="font-weight: lighter; padding-top: 0px;">{{campaign.dateOfCreation}}</h9>
-          <p routerLink="/projectdetails">
+          <p >
             {{campaign.objective}} 
           </p>
-          <div class="container-fluid" style="text-align: center;" routerLink="/projectdetails">
+          <div class="container-fluid" style="text-align: center;" >
             <img src="{{campaign.imageUrl}}" style="border: black solid 1px; padding: 2px;;" height="400px">
           </div>
    
@@ -574,7 +574,7 @@
       <!-- ///////// -->
       <div class="container" style="border-radius: 5px; text-align: center;" >
         <h3 class="title-ngo" style="color: black; padding-bottom: 0px;">Description</h3>
-        <p routerLink="/projectdetails">
+        <p >
           {{campaign.descriptionStory}}
         </p>
       </div>
@@ -601,7 +601,7 @@
             <br>
             <li class="list-item" style="text-align: center;">
               <form action="page6.html">
-                <h6 routerLink="/projectdetails" style="font-weight:normal;"> <i class="fa fa-money" style="font-size:24px; color: seagreen;;"></i> Rs. 100</h6>
+                <h6  style="font-weight:normal;"> <i class="fa fa-money" style="font-size:24px; color: seagreen;;"></i> Rs. 100</h6>
               </form>
             </li>
             <li class="list-item" style="text-align: center;">
@@ -621,17 +621,17 @@
           <ul >
             <li class="list-item" style="text-align: center;">
               <form action="page6.html">
-                <h6 routerLink="/projectdetails" style="font-weight:normal;"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;;"></i> {{campaign.country}}</h6>
+                <h6  style="font-weight:normal;"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;;"></i> {{campaign.country}}</h6>
               </form>
             </li>
             <li class="list-item" style="text-align: center;">
               <form action="page6.html">
-                <h6 routerLink="/projectdetails"> <i class="fa fa-superpowers" style="font-size:20px; color: darkseagreen;"></i> {{campaign.subject}}</h6>
+                <h6 > <i class="fa fa-superpowers" style="font-size:20px; color: darkseagreen;"></i> {{campaign.subject}}</h6>
               </form>
             </li>
             <li class="list-item" style="text-align: center;">
               <form action="page6.html">
-                <h6 routerLink="/projectdetails"> <i class="fa fa-ravelry" style="font-size:20px; color: goldenrod;"></i>{{campaign.status}}</h6>
+                <h6 > <i class="fa fa-ravelry" style="font-size:20px; color: goldenrod;"></i>{{campaign.status}}</h6>
               </form>
             </li>
             

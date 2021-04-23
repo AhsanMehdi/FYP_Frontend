@@ -587,8 +587,9 @@
           {{project.descriptionStory}}
         </p>
       </div>
+      
       <hr>
-    
+      <p  *ngIf = "isUser" style=" text-align: center;color: red;">{{showError}}</p>
       <div class="comment-section" >
 
         <div class="comment-section-0" *ngFor = "let reviewproject of reviewProjects">
@@ -610,7 +611,7 @@
       </div>
      
           <div class="comment-box" *ngIf = "!isUser">
-            <div class="comment-input"  >
+            <div class="comment-input"   >
               <input 
                 class="comment-box-input" 
                 type="text"
@@ -641,7 +642,7 @@
             <br>
             <li class="list-item" style="text-align: center;">
               <form action="page6.html">
-                <h6 routerLink="/projectdetails" style="font-weight:normal;"> <i class="fa fa-money" style="font-size:24px; color: seagreen;;"></i> Rs. {{project.estimatedBudget}}</h6>
+                <h6  style="font-weight:normal;"> <i class="fa fa-money" style="font-size:24px; color: seagreen;;"></i> Rs. {{project.estimatedBudget}}</h6>
               </form>
             </li>
             <li class="list-item" style="text-align: center;">

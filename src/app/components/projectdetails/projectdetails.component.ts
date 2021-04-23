@@ -25,6 +25,9 @@ export class ProjectDetailsComponent implements OnInit {
   public showComment;
   public totalLikes: number = 0 ;  /* it contains the total likes*/
   public isPost;
+  public commentAgain;
+  showError: string = ""
+
 
   
   /*declaring variables for the comment of project*/
@@ -86,14 +89,20 @@ export class ProjectDetailsComponent implements OnInit {
         .pipe(first())
         .subscribe(
           response => {
-            
+           // debugger
             console.log(" project owner id :" + response.userId)
             console.log(" current user id :" + this.user_id)
             if (response.userId === this.user_id){
               this.isUser = true
+              this.showError = "Oops! I'm sorry; you cannot comment on your own project"
+            }
+            else if (localStorage.getItem("token") === null || localStorage.getItem("token") === undefined){
+              this.isUser = true
+              this.showError = "Please login or Sign up First for your feedback"
             }
             else{
               this.isUser = false
+              
             }
           }
         )
@@ -106,6 +115,7 @@ export class ProjectDetailsComponent implements OnInit {
 
 /* function used to comment on project*/
   PostComment(){
+    
     this.isPost = true;
   console.log(this.comment);
   this.commentProjectForm.value.comment = this. comment ;
@@ -113,12 +123,18 @@ export class ProjectDetailsComponent implements OnInit {
        this.commentProjectForm.value.like = "dislike"
     else
     this.commentProjectForm.value.like = this.like;
-
+   
     this.backendService.commentProject(this.commentProjectForm.value ,this.projectId)
     .pipe(first())
     .subscribe(
         data => {
+        
+          localStorage.setItem("againComment","notshow")
         this.showComment = true ;
+        if(localStorage.getItem("againComment") === "notshow" )
+        this.commentAgain = false ;
+        this.showError = "WARNING: You can comment only once";
+       // localStorage.setItem("againComment","notshow")
          console.log(this.project)
       
         },
