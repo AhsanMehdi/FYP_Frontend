@@ -15,6 +15,12 @@ export class NgoDetailsComponent implements OnInit {
 
   ngoId: string
   ngo:any
+  ngos:any
+  campaigns:any
+  projects:any
+  userid:string
+  public showDonate;
+  inprogressProjects: number = 0 ;
   isDataLoaded=false
   constructor(   private route: ActivatedRoute,
     private router: Router, private backendService: BackendService,  private alertService: AlertService) {
@@ -38,6 +44,37 @@ export class NgoDetailsComponent implements OnInit {
          console.log(this.ngo)
          console.log("I am in getting ngo data")
         this.isDataLoaded=true
+        this.backendService.getCampaigns() /*get all campaigns*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.campaigns = data.campaigns;
+        this.backendService.getNgos() /*get all ngos*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.ngos = data.ngoProfile;
+        console.log(this.ngos)
+        this.backendService.getProjects() /*get all projects*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.projects = data.projects;
+
+      },
+      error => {
+        console.log(error);
+      });
+
+      },
+      error => {
+        console.log(error);
+      });
+
+      },
+      error => {
+        console.log(error);
+      });
 
          
         },
@@ -56,6 +93,29 @@ export class NgoDetailsComponent implements OnInit {
       this.router.navigate(['/home']);
     }
   }
+  userProjects(){
+    this.backendService.getProjectsSpecificUser( this.ngoId) /*get all projects of current user*/
+    .pipe(first())
+    .subscribe(
+      data => {
+       
+        this.projects = data.project;
+        console.log("user projects: "+ data.project)
+        for (let i =0 ; i < data.project.length ; i++ ){
+         
+           this.inprogressProjects ++ ;
+         }
+        console.log ("total projects :"+ this.inprogressProjects)
+      },
+      error => {
+        console.log(error);
+      });
+  }
+  pressDonate(){
+    this.userid = localStorage.getItem("userid")
+    if (this.userid === this.ngoId)
+    this.showDonate = false
 
+  }
 
 }

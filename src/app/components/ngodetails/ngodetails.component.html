@@ -540,22 +540,22 @@
             <ul >
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Campaign1</button>
+                  <button class="tnewbt">{{campaigns[0].nickName}}</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Campaign2</button>
+                  <button class="tnewbt">{{campaigns[1].nickName}}</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Campaign3</button>
+                  <button class="tnewbt">{{campaigns[2].nickName}}</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Campaign4</button>
+                  <button class="tnewbt">{{campaigns[3].nickName}}</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
@@ -570,22 +570,22 @@
             <ul >
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Project1</button>
+                  <button class="tnewbt">{{projects[0].tittle}}</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Project2</button>
+                  <button class="tnewbt">{{projects[1].tittle}}</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Project3</button>
+                  <button class="tnewbt">{{projects[2].tittle}}</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Project4</button>
+                  <button class="tnewbt">{{projects[3].tittle}}</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
@@ -601,17 +601,17 @@
               <ul >
                 <li class="list-item" style="text-align: center;">
                   <form action="page6.html">
-                    <button class="tnewbt">Org1</button>
+                    <button class="tnewbt">{{ngos[0].nickName}}</button>
                   </form>
                 </li>
                 <li class="list-item" style="text-align: center;">
                   <form action="page6.html">
-                    <button class="tnewbt">Org2</button>
+                    <button class="tnewbt">{{ngos[1].nickName}}</button>
                   </form>
                 </li>
                 <li class="list-item" style="text-align: center;">
                   <form action="page6.html">
-                    <button class="tnewbt">Org3</button>
+                    <button class="tnewbt">{{ngos[2].nickName}}</button>
                   </form>
                 </li>
                 <li class="list-item" style="text-align: center;">
@@ -643,8 +643,8 @@
             <div class="row">
               <div class="col">
              
-                <button class="zzewbt" routerLink="/campaigns">Projects Completed<h6>5</h6></button>
-                <button class="zzzewbt" routerLink="/projects">Projects Inprogress<h6>5</h6></button>
+                <button class="zzewbt" >Projects Completed<h6>0</h6></button>
+                <button class="zzzewbt" (click)="userProjects()">Projects Inprogress<h6>{{inprogressProjects}}</h6></button>
               </div>
               
             </div>
@@ -669,12 +669,12 @@
               <br>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <h6 routerLink="/projectdetails"> <i class="fa fa-star" style="font-size:20px; color: deeppink;"></i> Rating</h6>
+                  <h6 > <i class="fa fa-star" style="font-size:20px; color: deeppink;"></i> Rating</h6>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="yredbt" routerLink="/home"> Donate </button>
+                  <button class="yredbt" *ngIf = "!showDonate" routerLink="/home"> Donate </button>
                 </form>
               </li>
          
@@ -686,16 +686,16 @@
           </div>
           <hr>
           <div class="stories"  >
-            <h4 class="heading14" routerLink="/projects" style="color: black; text-align: center;">Details</h4>
+            <h4 class="heading14"  style="color: black; text-align: center;">Details</h4>
             <ul >
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <h6 routerLink="/ngodetails" style="font-weight:normal;"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;;"></i> {{ngo.country}}</h6>
+                  <h6  style="font-weight:normal;"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;;"></i> {{ngo.country}}</h6>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <h6 routerLink="/ngodetails"> <i class="fa fa-phone" style="font-size:20px; color: darkseagreen;"></i> {{ngo.contactNumber}}</h6>
+                  <h6 > <i class="fa fa-phone" style="font-size:20px; color: darkseagreen;"></i> {{ngo.contactNumber}}</h6>
                 </form>
               </li>
              

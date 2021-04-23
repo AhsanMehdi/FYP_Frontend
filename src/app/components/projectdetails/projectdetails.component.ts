@@ -100,8 +100,14 @@ export class ProjectDetailsComponent implements OnInit {
               this.isUser = true
               this.showError = "Please login or Sign up First for your feedback"
             }
+          
             else{
               this.isUser = false
+              if (localStorage.getItem("againComment") === "notShow" ){
+                
+                this.commentAgain = false
+                this.showError = "WARNING: you can comment only once"
+              }
               
             }
           }
@@ -132,7 +138,7 @@ export class ProjectDetailsComponent implements OnInit {
           localStorage.setItem("againComment","notshow")
         this.showComment = true ;
         if(localStorage.getItem("againComment") === "notshow" )
-        this.commentAgain = false ;
+        this.commentAgain = true ;
         this.showError = "WARNING: You can comment only once";
        // localStorage.setItem("againComment","notshow")
          console.log(this.project)

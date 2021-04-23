@@ -19,6 +19,8 @@ export class NghomeComponent implements OnInit {
   userId = 1;
   ngos = []
   showChatbox = true;
+  projects: any /* array of projects*/
+  ngoss:any
 
   public adapter: ChatAdapter;
 
@@ -31,6 +33,27 @@ export class NghomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.backendService.getProjects() /*get all projects*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.projects = data.projects;
+        this.backendService.getNgos() /*get all ngos*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.ngos = data.ngoProfile;
+        console.log(this.ngos)
+
+      },
+      error => {
+        console.log(error);
+      });
+
+      },
+      error => {
+        console.log(error);
+      });
     this.showChatbox = false;
     this.initChatBox()
     this.getToken();
