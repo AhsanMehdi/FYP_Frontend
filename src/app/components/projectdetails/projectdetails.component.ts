@@ -142,13 +142,13 @@ export class ProjectDetailsComponent implements OnInit {
         this.showError = "WARNING: You can comment only once";
        // localStorage.setItem("againComment","notshow")
          console.log(this.project)
-      
+         this.GetCommentsOfProject(); /*showing comment*/
         },
         error => {
             this.alertService.error(error);
             this.loading = false;
         })
-
+  
   }
 
 /*function to get comment on specific project*/
