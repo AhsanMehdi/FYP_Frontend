@@ -437,6 +437,9 @@
     color: black;
     background-color: whitesmoke;
   }
+  .checked {
+  color: orange;
+}
   .myDiv {
     width: 100%;
     padding: 50px 0;
@@ -574,6 +577,14 @@
         <hr>
         <div class="stories"  >
           <h4 class="heading14" routerLink="/projects" style="color: black; text-align: center;">Details</h4>
+          <span *ngFor='let in of counter(rating) ;let i = index'>
+            <span class="fa fa-star checked"></span>
+          </span>
+
+          <span *ngFor='let in of counter(runrated) ;let i = index'>
+            <span class="fa fa-star"></span>
+          </span>
+
           <ul >
             <li class="list-item" style="text-align: center;">
               <form action="page6.html">

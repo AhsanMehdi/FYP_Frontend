@@ -27,7 +27,8 @@ export class ProjectDetailsComponent implements OnInit {
   public isPost;
   public commentAgain;
   showError: string = ""
-
+  public rating = 0 ; // setting rating
+  public runrated = 10
 
   
   /*declaring variables for the comment of project*/
@@ -67,13 +68,19 @@ export class ProjectDetailsComponent implements OnInit {
       
   }
 
+  counter(i: number) {
+    return new Array(i);
+}
+
   ngOnInit(): void {
 
+  
   this.getSpecificProject() ; // calling function to get specific project
   this.GetCommentsOfProject() ;// calling a function to get comments on a specific project
-  
+  this.getProjectRating();
+  // http://127.0.0.1:5000/get_rating //python API
   }
-  
+
   /* get project by id */
   getSpecificProject()
   {
@@ -119,6 +126,18 @@ export class ProjectDetailsComponent implements OnInit {
         })
   }
 
+  getProjectRating(){
+    this.backendService.getProjectRatingById(this.projectId)
+    .pipe(first())
+    .subscribe(
+        data => {
+
+          this.rating = data.rating
+          this.runrated = 10 - data.rating
+          console.log("rating ",data.rating)
+        })
+  }
+
 /* function used to comment on project*/
   PostComment(){
     
@@ -157,7 +176,7 @@ export class ProjectDetailsComponent implements OnInit {
     .pipe(first())
     .subscribe(
         data => {
-      
+      console.log(data.reviewProject.value)
          this.reviewProjects = data.reviewProject;
            
          console.log(" comments data "+this.reviewProjects)
