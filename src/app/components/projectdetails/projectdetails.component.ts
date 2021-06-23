@@ -162,6 +162,7 @@ export class ProjectDetailsComponent implements OnInit {
        // localStorage.setItem("againComment","notshow")
          console.log(this.project)
          this.GetCommentsOfProject(); /*showing comment*/
+         this.getProjectRating(); /* call rating automatically */
         },
         error => {
             this.alertService.error(error);
