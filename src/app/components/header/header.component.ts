@@ -13,7 +13,7 @@ import { stringify } from '@angular/compiler/src/util';
 })
 export class HeaderComponent implements OnInit {
   showTrnsaparent = true
-  public showLogout;
+   showLogout = false;
   token: string
   constructor(  private fb: FormBuilder,
     private router: Router,
@@ -31,10 +31,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   
-   
+  this.showLogout=this.backendService.getisloggedin();
     this.token = localStorage.getItem("token")
-    if (this.token != null)
-    this.showLogout = true;
+    if (this.token != null){
+      this.showLogout = true;
+    }
    // location.reload();
     console.log (" showlogout" + this.showLogout)
     console.log("is token "+ localStorage.getItem("token"))

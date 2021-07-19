@@ -61,11 +61,16 @@ export class ProjectDetailsComponent implements OnInit {
     this.router.navigate(['donatenow'],{ queryParams: { id: project._id } });
   }
 // declaring some variables for commenting on project 
-  likePressed(){
-    this.islike = true;
-       this.like = "like"
-
-      
+  likePressed(){ 
+    this.islike = !this.islike;
+    if(this.islike){
+      this.like = "like";
+      this.totalLikes++ ;
+    }
+    else{
+      this.like="dislike";
+      this.totalLikes--;
+    }   
   }
 
   counter(i: number) {
@@ -161,6 +166,7 @@ export class ProjectDetailsComponent implements OnInit {
         this.showError = "WARNING: You can comment only once";
        // localStorage.setItem("againComment","notshow")
          console.log(this.project)
+         this.comment = "";
          this.GetCommentsOfProject(); /*showing comment*/
          this.getProjectRating(); /* call rating automatically */
         },
@@ -173,6 +179,7 @@ export class ProjectDetailsComponent implements OnInit {
 
 /*function to get comment on specific project*/
   GetCommentsOfProject(){
+    this.totalLikes = 0;
     this.backendService.getCommentsOnSpecificProject(this.projectId)
     .pipe(first())
     .subscribe(

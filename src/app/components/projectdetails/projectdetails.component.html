@@ -489,7 +489,7 @@
             </div>
             <div class="col-4" style="text-align: center; ">
 
-              <button class="likenewbt" (click) = "likePressed()" [disabled] = "like">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
+              <button class="likenewbt" (click) = "likePressed()" >               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
             </div>
             <div class="col-4" style="text-align: end;">
 
@@ -529,7 +529,7 @@
           
       </div>
      
-          <div class="comment-box" *ngIf = "!isUser && !commentAgain">
+          <div class="comment-box" *ngIf = "!isUser">
             <div class="comment-input"  >
               <input 
                 class="comment-box-input" 
@@ -538,7 +538,7 @@
                 [(ngModel)] = "comment"
               >
             </div>
-            <div class="add-comment" *ngIf ="!isPost" >
+            <div class="add-comment"  >
               <button class="postcampbtn" (click) = "PostComment()"  style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
 
             </div>

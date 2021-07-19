@@ -19,9 +19,14 @@ export class BackendService {
   private REST_API_SERVER = "http://localhost:3000";
   private REST_API_IMGUAR_SERVER = "https://api.imgur.com";
   private options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
-
+  private  isloggedin 
   constructor(private httpClient: HttpClient) { }
-
+  public  getisloggedin():boolean{
+    return this.isloggedin;
+  }
+  public setisloggedin(isloggedin){
+     this.isloggedin = isloggedin;
+  }
   public sendGetRequest(){
     return this.httpClient.get(this.REST_API_SERVER);
   }
@@ -39,6 +44,7 @@ export class BackendService {
 
     console.log(    JSON.stringify(signIn)
     )
+    this.setisloggedin(true);
     return this.httpClient.post(this.REST_API_SERVER+"/api/auth/signin",  JSON.stringify(signIn), this.options);
   }
 
