@@ -3,7 +3,7 @@ import { BackendService } from '../../services/backend.service';
 import { AlertService } from '../../services/alert.service';
 import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
 import { first } from 'rxjs/operators';
-import { Router } from '@angular/router'
+import { ActivatedRoute, Params, Router } from '@angular/router'
 import { stringify } from '@angular/compiler/src/util';
 
 @Component({
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   showTrnsaparent = true
    showLogout = false;
   token: string
-  constructor(  private fb: FormBuilder,
+  constructor(  private fb: FormBuilder, private route: ActivatedRoute,
     private router: Router,
     private backendService: BackendService,
     private alertService: AlertService) {
@@ -30,7 +30,9 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit(): void {
-  
+ this.route.queryParams.subscribe((params: Params) =>{
+   console.log(params)
+ })
   this.showLogout=this.backendService.getisloggedin();
     this.token = localStorage.getItem("token")
     if (this.token != null){

@@ -16,6 +16,9 @@ export class NgoDetailsComponent implements OnInit {
   ngoId: string
   ngo:any
   ngos:any
+  nickName:string
+  country:string
+  contactNumber:string
   campaigns:any
   projects:any
   userid:string
@@ -41,6 +44,9 @@ export class NgoDetailsComponent implements OnInit {
         data => {
           console.log(data.ngo[0])
          this.ngo = data.ngo[0]
+         this.nickName = this.ngo.nickName
+         this.country = this.ngo.country
+         this.contactNumber=this.ngo.contactNumber
          console.log(this.ngo)
          console.log("I am in getting ngo data")
         this.isDataLoaded=true
