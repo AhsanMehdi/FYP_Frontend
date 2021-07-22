@@ -1,4 +1,17 @@
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    rel="stylesheet"
+    id="bootstrap-css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <title>Document</title>
   <br>
   <br>
   <br>
@@ -15,6 +28,136 @@
   />
 </head>
 <style>
+  
+
+     
+  .media{
+       
+       display: flex;
+       flex-direction: row;
+ }
+ 
+ .sucman {
+       background-color: lightgreen;
+       border-color:lightgreen;
+       color: black;
+       height:fit-content;
+       width:fit-content;
+       font-size: 25px;
+   }
+ .sucman:hover {
+     background-color: rgb(2, 168, 71);
+     color: #ffffff;
+ }
+ .succ {
+   background-color: lightcoral;
+       border-color:lightcoral;
+       color: black;
+       height:fit-content;
+       width:fit-content;
+       font-size: 25px;
+
+ }
+ .succ:hover {
+   background-color: rgb(211, 59, 48);
+       color:rgb(255, 255, 255);
+       
+ }
+ 
+ .newbt {
+     background-color: darkcyan;
+     color: white;
+     border-radius: 10px;
+     border-color: darkcyan;
+     font-weight:normal;
+     padding-left: 10px;
+     padding-right: 10px;
+     width: 200px;
+   }
+   .newbt:hover{
+     background-color: darkcyan;
+     color: white;
+     border-radius: 10px;
+     border-color: darkcyan;
+     font-weight:bolder;
+   }
+   .nnewbt {
+     background-color: darkslategrey;
+     color: white;
+     border-radius: 10px;
+     border-color: darkslategrey;
+     font-weight:normal;
+     padding-left: 10px;
+     padding-right: 10px;
+     width: 200px;
+   }
+   .nnewbt:hover{
+     background-color: darkslategrey;
+     color: white;
+     border-radius: 10px;
+     border-color: darkslategrey;
+     font-weight:bolder;
+   }
+   
+   .stories {
+     background-color: whitesmoke;
+     height: auto;
+     border-radius: 10px;
+     width: 100%;
+     padding-left: -80px;
+   }
+   .new-posts {
+     display: flex;
+     flex-direction: column;
+     overflow: auto;
+     flex: 1 1 auto;
+   }
+   .tnewbt {
+     background:transparent;
+     color: seagreen;
+     font-weight:normal;
+     border:thin;
+     border-left-style: solid ;
+     border-right-style: solid ;
+     border-color: seagreen;
+     border-radius: 10px;
+     padding-left: 10px;
+     padding-right: 10px;
+     width: 200px;
+   }
+   .tnewbt:hover{
+     background-color: transparent;
+     color: black;
+     border: thin;
+     border-radius: 10px;
+     border-top-style: solid;
+     border-bottom-style: solid ;
+     border-color: seagreen;
+     font-weight:bolder;
+   }
+   .bnewbt {
+     background:transparent;
+     color:royalblue;
+     font-weight:normal;
+     border:thin;
+     border-left-style: solid ;
+     border-right-style: solid ;
+     border-color: royalblue;
+     border-radius: 10px;
+     padding-left: 10px;
+     padding-right: 10px;
+     width: 200px;
+   }
+   .bnewbt:hover{
+     background-color: transparent;
+     color: black;
+     border: thin;
+     border-radius: 10px;
+     border-top-style: solid;
+     border-bottom-style: solid ;
+     border-color: royalblue;
+     font-weight:bolder;
+   }
   body {
     
     background-color: white;
@@ -470,26 +613,12 @@
         <div class="stories"  >
           <h4 class="heading14" routerLink="/projects" style="color: black; text-align: start;">Projects</h4>
           <ul >
-            <li class="list-item" style="text-align: center;">
+            <li class="list-item" style="text-align: center;" *ngFor= "let project of projects">
               <form action="page6.html">
-                <button class="tnewbt">{{projects[0].tittle}}</button>
+                <button class="tnewbt">{{project.tittle}}</button>
               </form>
             </li>
-            <li class="list-item" style="text-align: center;">
-              <form action="page6.html">
-                <button class="tnewbt">{{projects[0].tittle}}</button>
-              </form>
-            </li>
-            <li class="list-item" style="text-align: center;">
-              <form action="page6.html">
-                <button class="tnewbt">{{projects[0].tittle}}</button>
-              </form>
-            </li>
-            <li class="list-item" style="text-align: center;">
-              <form action="page6.html">
-                <button class="tnewbt">{{projects[0].tittle}}</button>
-              </form>
-            </li>
+ 
             <li class="list-item" style="text-align: center;">
               <a href="/projects" style="color:dodgerblue; font-size: small;">View more</a>
             </li>
@@ -501,180 +630,44 @@
       </div>
       
       <div class="col-8 new-posts" >
-        <br>
-        <br>
-        <br><!-- ///////// -->
-        
-
-        <div class="post-box" style="border-radius: 5px; text-align: center;" >
-          <h3 class="title-ngo" style="color: black; padding-bottom: 0px;" routerLink="/ngodetails">Edhi Foundation</h3>
-          <h9 style="font-weight: lighter; padding-top: 0px;">12-March-2020</h9>
-          <p >
-            Helping poor children get food. 
-          </p>
-          <div class="container-fluid" style="text-align: center;" >
-            <img src="/assets/orphans.jpg" style="border: black solid 1px; padding: 2px;;" height="400px">
-          </div>
-          
-          <div class="row">
-            <div class="col-4" style="text-align: end">
-
-            <!--  <button class="likenewbt" routerLink="/donortimeline">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button> -->
-            
-          </div>
-            <div class="col-4">
-              <div class="count-like" style="border-bottom: none;">
-                <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: royalblue;"></i>
-                <span class="mr-4 pr-4">24</span>
+<br>
+<br>
+<br>
+<br>
+<br>
+        <div class="container" *ngFor="let project of projects ">
+          <div class="container" style="padding-bottom: 10px;">
+            <div class="row"   style="background-color: whitesmoke; border-radius: 15px;">
+              <div class="col-3" style="padding-top: 15px;">
+                <img src="{{project.imageUrl}}" height="150" width="200" alt="Generic placeholder image" />
               </div>
-            <button class="likenewbt" routerLink="/donortimeline"><i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
-            </div>
-            <div class="col-4" style="text-align: start;">
-
-             <!-- <button class="dislikenewbt" routerLink="/donortimeline"><i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color: white;"></i> Dislike </button> -->
-            </div>
-
-          </div>
-          <hr>
-          <!-- ///////// -->
-      <!-- Now this is the comment section for this post, i think max 2 comments would be enough to display
-        unless user opens the post seperately. This would contain username(who comments) and comment -->
-      <!-- ///////// -->
-
-      <div class="comment-section">
-
-        <div class="comment-section-0">
-          <div class="comment-section-divide">
-            <div class="comment-body">
-              <div class="comment-title" style="text-align: start;">Amir Rehman</div>
-              <div class="comment-description">
-                This is the one of the best ngo in the upcoming year in
-                history of pakistan
-              </div>
-              <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                12-March-2020
-              </div>
-            </div>
-          </div>
-          
-        </div>
-            <div class="comment-section-0">
-              <div class="comment-section-divide">
-                <div class="comment-body">
-                  <div class="comment-title" style="text-align: start;">Amir Rehman</div>
-                  <div class="comment-description">
-                    This is the one of the best ngo in the upcoming year in
-                    history of pakistan
-                  </div>
-                  <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                    12-March-2020
-                  </div>
+              <div class="col-7">
+                <h4 routerLink="/projectdetails" style="text-decoration: underline;">{{project.tittle}}</h4> 
+                <h7 routerLink="/projectdetails">{{project.objective}}</h7>
+                <div class="row" style="padding-left: 10px;">
+                  <h4>Goal: </h4>
+                  <h4 style="padding-left: 20px;">Rs.</h4>
+                  <h4>{{project.estimatedBudget}}</h4>
+                </div>
+                <div class="row" style="padding-left: 10px;">
+              
                 </div>
               </div>
-              
-            </div>
-      </div>
+              <div class="col-2">
+                <h6 routerLink="/projectdetails"> <i class="fa fa-map-marker" style="font-size:24px; color: royalblue;"></i> {{project.country}}</h6>
+                <h6 routerLink="/projectdetails"> <i class="fa fa-superpowers" style="font-size:20px; color: darkseagreen;"></i> {{project.projectType}}</h6>
 
-          <div class="comment-box">
-            <div class="comment-input" >
-              <input
-                class="comment-box-input"
-                type="text"
-                placeholder="Write a Comment "
-              />
-            </div>
-            <div class="add-comment" >
-              <button class="postcampbtn" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
-
-            </div>
-          </div>
-        </div>
-
-
-        <div class="post-box" style="border-radius: 5px; text-align: center;" >
-          <h3 class="title-ngo" style="color: black; padding-bottom: 0px;" >Edhi Foundation</h3>
-          <h9 style="font-weight: lighter; padding-top: 0px;">12-March-2020</h9>
-          <p >
-            Helping poor children get food. 
-          </p>
-          <div class="container-fluid" style="text-align: center;" >
-            <img src="/assets/orphans.jpg" style="border: black solid 1px; padding: 2px;;" height="400px">
-          </div>
-          
-          <div class="row">
-            <div class="col-4" style="text-align: end">
-
-            <!--  <button class="likenewbt" routerLink="/donortimeline">               <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button> -->
+              </div>
+              <div class="col-6" style="text-align: end;">
+                <button class="tnewbt" (click)="showDetials(project)">Details</button>
+                          </div>
+              <div class="col-6">
+                <button class="bnewbt" (click)="showDetials(project)">Donate</button>
+              </div>
+            </div> 
             
-          </div>
-            <div class="col-4">
-              <div class="count-like" style="border-bottom: none;">
-                <i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: royalblue;"></i>
-                <span class="mr-4 pr-4">24</span>
-              </div>
-            <button class="likenewbt" routerLink="/donortimeline"><i class="fa fa-thumbs-up" aria-hidden="true" style="padding:1px; color: white;"></i> Like </button>
-            </div>
-            <div class="col-4" style="text-align: start;">
-
-             <!-- <button class="dislikenewbt" routerLink="/donortimeline"><i class="fa fa-thumbs-down" aria-hidden="true" style="padding:1px; color: white;"></i> Dislike </button> -->
-            </div>
-
-          </div>
-          <hr>
-          <!-- ///////// -->
-      <!-- Now this is the comment section for this post, i think max 2 comments would be enough to display
-        unless user opens the post seperately. This would contain username(who comments) and comment -->
-      <!-- ///////// -->
-
-      <div class="comment-section">
-
-        <div class="comment-section-0">
-          <div class="comment-section-divide">
-            <div class="comment-body">
-              <div class="comment-title" style="text-align: start;">Amir Rehman</div>
-              <div class="comment-description">
-                This is the one of the best ngo in the upcoming year in
-                history of pakistan
-              </div>
-              <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                12-March-2020
-              </div>
-            </div>
-          </div>
-          
+          </div> 
         </div>
-            <div class="comment-section-0">
-              <div class="comment-section-divide">
-                <div class="comment-body">
-                  <div class="comment-title" style="text-align: start;">Amir Rehman</div>
-                  <div class="comment-description">
-                    This is the one of the best ngo in the upcoming year in
-                    history of pakistan
-                  </div>
-                  <div class="comment-description" style="text-align: end; font-weight: lighter; font-size: 11px;">
-                    12-March-2020
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-      </div>
-
-          <div class="comment-box">
-            <div class="comment-input" >
-              <input
-                class="comment-box-input"
-                type="text"
-                placeholder="Write a Comment "
-              />
-            </div>
-            <div class="add-comment" >
-              <button class="postcampbtn" style="margin-top: 10px; margin-left: 5px;" type="submit"> Post </button>
-
-            </div>
-          </div>
-        </div>
-
       </div>
       <div class="col-2">
         <br>
@@ -687,21 +680,12 @@
         <div class="stories"  >
           <h4 class="heading14" routerLink="/ngos" style="color: black; text-align: start;">Organizations</h4>
           <ul >
-            <li class="list-item" style="text-align: center;">
+            <li class="list-item" style="text-align: center;" *ngFor="let ngo of ngos">
               <form action="page6.html">
-                <button class="tnewbt">{{ngos[0].nickName}}</button>
+                <button class="tnewbt">{{ngo.nickName}}</button>
               </form>
             </li>
-            <li class="list-item" style="text-align: center;">
-              <form action="page6.html">
-                <button class="tnewbt">{{ngos[1].nickName}}</button>
-              </form>
-            </li>
-            <li class="list-item" style="text-align: center;">
-              <form action="page6.html">
-                <button class="tnewbt">{{ngos[2].nickName}}</button>
-              </form>
-            </li>
+    
             <li class="list-item" style="text-align: center;">
               <a href="/ngos" style="color:dodgerblue; font-size: small;">View more</a>
             </li>

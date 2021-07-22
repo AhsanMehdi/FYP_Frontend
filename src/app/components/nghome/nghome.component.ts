@@ -21,6 +21,7 @@ export class NghomeComponent implements OnInit {
   showChatbox = true;
   projects: any /* array of projects*/
   ngoss:any
+  campaigns:any
 
   public adapter: ChatAdapter;
 
@@ -30,15 +31,21 @@ export class NghomeComponent implements OnInit {
     private backendService: BackendService,
     private alertService: AlertService
   ) { }
-
+  showDetials(project){  /*when a user click on readmore button then it works*/
+    this.router.navigate(['projectdetails'],{ queryParams: { id: project._id } });
+     
+  }
 
   ngOnInit(): void {
+    
     this.backendService.getProjects() /*get all projects*/
     .pipe(first())
     .subscribe(
       data => {
         this.projects = data.projects;
+        
         this.backendService.getNgos() /*get all ngos*/
+        
     .pipe(first())
     .subscribe(
       data => {

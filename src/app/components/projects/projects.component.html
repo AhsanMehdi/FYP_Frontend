@@ -221,9 +221,7 @@
                   <h4>{{project.estimatedBudget}}</h4>
                 </div>
                 <div class="row" style="padding-left: 10px;">
-                  <h4>Raised: </h4>
-                  <h4 style="padding-left: 20px;">Rs.</h4>
-                  <h4>{{project.collectedDonation}}</h4>
+                 
                 </div>
               </div>
               <div class="col-2">
@@ -235,7 +233,7 @@
                 <button class="tnewbt" (click)="showDetials(project)">Details</button>
                           </div>
               <div class="col-6">
-                <button class="bnewbt" routerLink="/chatbox">Donate</button>
+                <button class="bnewbt" (click)="showDetials(project)">Donate</button>
               </div>
             </div> 
             
