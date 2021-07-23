@@ -19,11 +19,16 @@ export class DonortimelineComponent implements OnInit {
   showDomain: string ;
   searchText;
   totalCampaigns: number = 0;
+    /*below all three are used by the */ 
+    pros: any;
+    orgs: any;
+    cams: any; 
   
   currentUserId: string ;
   constructor(private router:Router, private backendService: BackendService) { }
 
   ngOnInit(): void {
+    this.showAllProjectNGOSORGS(); // this function to display values on the local area on side tabs
     this.currentUserId = localStorage.getItem("userid") ;
     this.backendService.getCampaignsSpecificUser( this.currentUserId) /*get all campaigns*/
     .pipe(first())
@@ -41,5 +46,40 @@ export class DonortimelineComponent implements OnInit {
       });
   }
   
+  showAllProjectNGOSORGS(){
+    
+    this.backendService.getProjects() /*get all projects*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.pros = data.projects;
+        
+        this.backendService.getNgos() /*get all ngos*/
+        
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.orgs = data.ngoProfile;
+     
 
+      },
+      error => {
+        console.log(error);
+      });
+
+      },
+      error => {
+        console.log(error);
+      });
+      this.backendService.getCampaigns() /*get all campaigns*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.cams = data.campaigns;
+      },
+    
+    error => {
+      console.log(error);
+    });
+  }
 }
