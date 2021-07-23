@@ -14,6 +14,11 @@ import { Router } from '@angular/router'
 export class NgtimelineComponent implements OnInit {
   campaigns: any /* array of projects*/
   projects:any
+  ngos = []
+  showChatbox = true;
+ 
+  ngoss:any
+ 
   currentTutorial = null;
   currentIndex = -1;
   title = '';
@@ -21,6 +26,10 @@ export class NgtimelineComponent implements OnInit {
   searchText;
   totalCampaigns: number = 0;
   totalProjects: number = 0;
+  /*below all three are used by the */ 
+  pros: any;
+  orgs: any;
+  cams: any; 
   
   currentUserId: string ;
   constructor(private router:Router, private backendService: BackendService) { }
@@ -28,6 +37,7 @@ export class NgtimelineComponent implements OnInit {
   ngOnInit(): void {
     this.totalCampaign();
     this.totalProject();
+    this.showAllProjectNGOSORGS(); // this function to display values on the local area on side tabs
   }
   totalCampaign(){
     this.currentUserId = localStorage.getItem("userid") ;
@@ -64,4 +74,40 @@ export class NgtimelineComponent implements OnInit {
       });
   }
 
+  showAllProjectNGOSORGS(){
+    
+    this.backendService.getProjects() /*get all projects*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.pros = data.projects;
+        
+        this.backendService.getNgos() /*get all ngos*/
+        
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.orgs = data.ngoProfile;
+        console.log(this.ngos)
+
+      },
+      error => {
+        console.log(error);
+      });
+
+      },
+      error => {
+        console.log(error);
+      });
+      this.backendService.getCampaigns() /*get all campaigns*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.cams = data.campaigns;
+      },
+    
+    error => {
+      console.log(error);
+    });
+  }
 }

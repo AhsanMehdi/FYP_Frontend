@@ -509,28 +509,14 @@
           <button class="newbt" routerLink="/Chatbox"> Chatbox </button>
           <hr>
           <div class="stories"  >
-            <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Campaigns</h4>
+            <h4 class="heading14" routerLink="#" style="color: black; text-align: start;">Campaigns</h4>
             <ul >
-              <li class="list-item" style="text-align: center;">
+              <li class="list-item" style="text-align: center;" *ngFor="let cam of cams">
                 <form action="page6.html">
-                  <button class="tnewbt">Campaign1</button>
+                  <button class="tnewbt">{{cam.nickName}}</button>
                 </form>
               </li>
-              <li class="list-item" style="text-align: center;">
-                <form action="page6.html">
-                  <button class="tnewbt">Campaign2</button>
-                </form>
-              </li>
-              <li class="list-item" style="text-align: center;">
-                <form action="page6.html">
-                  <button class="tnewbt">Campaign3</button>
-                </form>
-              </li>
-              <li class="list-item" style="text-align: center;">
-                <form action="page6.html">
-                  <button class="tnewbt">Campaign4</button>
-                </form>
-              </li>
+
               <li class="list-item" style="text-align: center;">
                 <a href="/campaigns" style="color:dodgerblue; font-size: small;">View more</a>
               </li>
@@ -539,35 +525,19 @@
           </div>
           <hr>
           <div class="stories"  >
-            <h4 class="heading14" routerLink="/projects" style="color: black; text-align: start;">Projects</h4>
+            <h4 class="heading14" routerLink="#" style="color: black; text-align: start;">Projects</h4>
             <ul >
-              <li class="list-item" style="text-align: center;">
+              <li class="list-item" style="text-align: center;" *ngFor="let pro of pros">
                 <form action="page6.html">
-                  <button class="tnewbt">Project1</button>
+                  <button class="tnewbt">{{pro.tittle}}</button>
                 </form>
               </li>
-              <li class="list-item" style="text-align: center;">
-                <form action="page6.html">
-                  <button class="tnewbt">Project2</button>
-                </form>
-              </li>
-              <li class="list-item" style="text-align: center;">
-                <form action="page6.html">
-                  <button class="tnewbt">Project3</button>
-                </form>
-              </li>
-              <li class="list-item" style="text-align: center;">
-                <form action="page6.html">
-                  <button class="tnewbt">Project4</button>
-                </form>
-              </li>
+      
               <li class="list-item" style="text-align: center;">
                 <a href="/projects" style="color:dodgerblue; font-size: small;">View more</a>
               </li>
-              
               </ul>
-        
-            </div>
+          </div>
             <hr>
         </div>
         
@@ -676,23 +646,14 @@
           </div>
           <br>
           <div class="stories"  >
-            <h4 class="heading14" routerLink="/ngos" style="color: black; text-align: start;">Organizations</h4>
+            <h4 class="heading14" routerLink="#" style="color: black; text-align: start;">Organizations</h4>
             <ul >
-              <li class="list-item" style="text-align: center;">
+              <li class="list-item" style="text-align: center;" *ngFor="let org of orgs">
                 <form action="page6.html">
-                  <button class="tnewbt">Org1</button>
+                  <button class="tnewbt">{{org.nickName}}</button>
                 </form>
               </li>
-              <li class="list-item" style="text-align: center;">
-                <form action="page6.html">
-                  <button class="tnewbt">Org2</button>
-                </form>
-              </li>
-              <li class="list-item" style="text-align: center;">
-                <form action="page6.html">
-                  <button class="tnewbt">Org3</button>
-                </form>
-              </li>
+      
               <li class="list-item" style="text-align: center;">
                 <a href="/ngos" style="color:dodgerblue; font-size: small;">View more</a>
               </li>
@@ -700,21 +661,21 @@
           </div>
           <hr>
           <div class="stories"  >
-            <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Nearby Campaigns</h4>
+            <h4 class="heading14" routerLink="#" style="color: black; text-align: start;">Why Campaigns</h4>
             <ul >
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Campaign1</button>
+                  <button class="tnewbt">Local Need</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Campaign2</button>
+                  <button class="tnewbt">Short Time</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="tnewbt">Campaign3</button>
+                  <button class="tnewbt">Urgent Purpose</button>
                 </form>
               </li>
               <li class="list-item" style="text-align: center;">
