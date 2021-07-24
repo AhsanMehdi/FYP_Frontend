@@ -23,11 +23,14 @@ export class DonortimelineComponent implements OnInit {
     pros: any;
     orgs: any;
     cams: any; 
-  
+    donorImage;
+  donorName;
+  donor:any
   currentUserId: string ;
   constructor(private router:Router, private backendService: BackendService) { }
 
   ngOnInit(): void {
+    this.getDonorBYUserId();
     this.showAllProjectNGOSORGS(); // this function to display values on the local area on side tabs
     this.currentUserId = localStorage.getItem("userid") ;
     this.backendService.getCampaignsSpecificUser( this.currentUserId) /*get all campaigns*/
@@ -45,7 +48,22 @@ export class DonortimelineComponent implements OnInit {
         console.log(error);
       });
   }
-  
+    /*to get the name and image url of the corrsponding ngo*/
+    getDonorBYUserId(){
+      this.currentUserId = localStorage.getItem("userid") ;
+      this.backendService.getDonorByUserId( this.currentUserId) /*get all campaigns*/
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.donor= data.donor[0]
+          this.donorName = this.donor.firstName
+          //this.donorImage = this.donor.imageUrl
+          console.log(" donor name is " + this.donorName )
+        },
+        error => {
+          console.log(error);
+        });
+    }
   showAllProjectNGOSORGS(){
     
     this.backendService.getProjects() /*get all projects*/

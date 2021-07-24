@@ -84,7 +84,7 @@ export class ParticipatenowComponent implements OnInit {
         else if (this.userType === "donor")
         this.getDonorProfiles();
         
-        debugger
+        
         },
         error => {
             this.alertService.error(error);

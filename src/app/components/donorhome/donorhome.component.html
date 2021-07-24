@@ -570,12 +570,12 @@
 
         <button class="newbt" routerLink="/donortimeline"> Timeline </button>
         <br>
-        <button class="newbt" routerLink="/editprofile"> Edit Profile </button>
+        <button class="newbt" routerLink="/donorprofile"> Edit Profile </button>
         <br>
         <button class="newbt" routerLink="/campaignadd"> Post Campaign </button>
         <br>
         
-        <button class="newbt" routerLink="/chatbox"> Chatbox </button>
+        <button class="newbt" (click)="openChatBox()"> Chatbox </button>
         <hr>
         <div class="stories"  >
           <h4 class="heading14" routerLink="/campaigns" style="color: black; text-align: start;">Objectives</h4>
@@ -728,3 +728,6 @@
     </div>
   </div>
 </body>
+<div *ngIf="showChatbox">
+  <ng-chat [adapter]="adapter" [userId]="userId"></ng-chat>
+</div>
