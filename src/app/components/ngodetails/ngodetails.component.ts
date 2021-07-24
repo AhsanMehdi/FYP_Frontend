@@ -18,11 +18,15 @@ export class NgoDetailsComponent implements OnInit {
   ngos:any
   nickName:string
   country:string
+  imageUrl: string // to save the image of the ngo
   contactNumber:string
   campaigns:any
   projects:any
+  totalCampaigns: number = 0;
+  totalProjects: number = 0;
   userid:string
   public showDonate;
+  currentUserId: string ;
   inprogressProjects: number = 0 ;
   isDataLoaded=false
   constructor(   private route: ActivatedRoute,
@@ -36,6 +40,8 @@ export class NgoDetailsComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.totalCampaign();
+    this.totalProject();
     console.log (" in ngonint")
     this.backendService.getNgoById(this.ngoId)
    
@@ -47,6 +53,7 @@ export class NgoDetailsComponent implements OnInit {
          this.nickName = this.ngo.nickName
          this.country = this.ngo.country
          this.contactNumber=this.ngo.contactNumber
+         this.imageUrl=this.ngo.imageUrl
          console.log(this.ngo)
          console.log("I am in getting ngo data")
         this.isDataLoaded=true
@@ -123,5 +130,38 @@ export class NgoDetailsComponent implements OnInit {
     this.showDonate = false
 
   }
+  totalCampaign(){
+    this.currentUserId = localStorage.getItem("userid") ;
+    this.backendService.getCampaignsSpecificUser( this.currentUserId) /*get all campaigns*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.campaigns = data.campaign;
+        console.log("user created campaigns:"+data.campaign)
+        for (let i =0 ; i < data.campaign.length ; i++ ){
+           this.totalCampaigns ++ ;
+         }
 
+      },
+      error => {
+        console.log(error);
+      });
+  }
+  totalProject(){
+    this.currentUserId = localStorage.getItem("userid") ;
+    this.backendService.getProjectsSpecificUser( this.currentUserId) /*get all campaigns*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.projects = data.project;
+        console.log("user created projects:"+data.project)
+        for (let i =0 ; i < data.project.length ; i++ ){
+           this.totalProjects ++ ;
+         }
+
+      },
+      error => {
+        console.log(error);
+      });
+  }
 }

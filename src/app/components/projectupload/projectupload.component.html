@@ -369,9 +369,10 @@
       </div>
       <div class="for-group">
         <form action="/action_page.php">
-            <input type="file" id="myFile" name="filename" multiple>
+            <input  (change)="onImageChange($event)" type="file" id="myFile" name="filename" multiple>
           </form>
       </div>
+  
       <button type="submit" class="btn btn-primary">Submit</button>
 
     </form>

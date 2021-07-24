@@ -28,7 +28,7 @@ export class CampaignaddComponent implements OnInit {
   uploadInput: EventEmitter<UploadInput>;
   humanizeBytes: Function;
   dragOver: boolean;
-  
+  imageSrc; // for saving the image url of campaign
   createCampaignForm:  FormGroup; 
   validatingForm: FormGroup; /*for validations*/
  
@@ -72,10 +72,10 @@ export class CampaignaddComponent implements OnInit {
     // }
     this.loading = true;
     console.log ("I am going to display vslues ")
-    if (this.createCampaignForm.value.imageUrl== ""){
-      this.createCampaignForm.value.imageUrl = "https://cdn.searchenginejournal.com/wp-content/uploads/2020/09/outstanding-social-media-campaigns-5f60d3e4bb13b-1280x720.png"
-    }
-    
+    // if (this.createCampaignForm.value.imageUrl== ""){
+    //   this.createCampaignForm.value.imageUrl = "https://cdn.searchenginejournal.com/wp-content/uploads/2020/09/outstanding-social-media-campaigns-5f60d3e4bb13b-1280x720.png"
+    // }
+    this.createCampaignForm.get('imageUrl').setValue(this.imageSrc)
     this.backendService.createCampaign(this.createCampaignForm.value)
         .pipe(first())
         .subscribe(
@@ -98,6 +98,17 @@ export class CampaignaddComponent implements OnInit {
     if(localStorage.getItem("token") === null || localStorage.getItem("token") === undefined){
       this.router.navigate(['/home']);
     }
+  }
+
+  onImageChange(event){ // to upload image
+
+    const image: File = <File>event.target.files[0];
+		const reader = new FileReader();
+		reader.readAsDataURL(image);
+    reader.onload = (event: any) => {
+			this.imageSrc = reader.result;
+      console.log("image source : " + this.imageSrc)
+		};
   }
 
 }

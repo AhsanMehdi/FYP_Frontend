@@ -30,6 +30,10 @@ export class NgtimelineComponent implements OnInit {
   pros: any;
   orgs: any;
   cams: any; 
+  /* to show the name and the image of the ngo*/
+  ngoImage;
+  ngoName;
+  ngo:any
   
   currentUserId: string ;
   constructor(private router:Router, private backendService: BackendService) { }
@@ -38,7 +42,26 @@ export class NgtimelineComponent implements OnInit {
     this.totalCampaign();
     this.totalProject();
     this.showAllProjectNGOSORGS(); // this function to display values on the local area on side tabs
+    this.getNgoBYUserId();
   }
+  /*to get the name and image url of the corrsponding ngo*/
+  getNgoBYUserId(){
+    this.currentUserId = localStorage.getItem("userid") ;
+    this.backendService.getNgoByUserId( this.currentUserId) /*get all campaigns*/
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.ngo = data.ngo[0]
+        this.ngoName = this.ngo.nickName
+        this.ngoImage = this.ngo.imageUrl
+        console.log(" ngo name is " + this.ngoName + " and image url is " + this.ngoImage)
+      },
+      error => {
+        console.log(error);
+      });
+  }
+
+  //////////////////////////////
   totalCampaign(){
     this.currentUserId = localStorage.getItem("userid") ;
     this.backendService.getCampaignsSpecificUser( this.currentUserId) /*get all campaigns*/

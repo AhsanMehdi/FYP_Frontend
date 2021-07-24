@@ -15,7 +15,7 @@ export class EditprofileComponent implements OnInit {
 
   editProfileForm: FormGroup;
   validatingForm: FormGroup; /*for validations*/
-  
+  imageSrc; // for saving the profile image of ngo
   loading = false;
   submitted = false;
   constructor(
@@ -42,7 +42,8 @@ export class EditprofileComponent implements OnInit {
       domainOrphanage:  [false],
       domainEnvironment:  [false],
       domainSocialWelfare:  [false],
-      domainOther:  [false]
+      domainOther:  [false],
+      imageUrl: ['', Validators.required]
       // _id : ["123"]
   });
 
@@ -59,7 +60,7 @@ export class EditprofileComponent implements OnInit {
         
     // }
     this.loading = true;
-  
+    this.editProfileForm.get('imageUrl').setValue(this.imageSrc)
     this.backendService.ngoProfile(this.editProfileForm.value)
         .pipe(first())
         .subscribe(
@@ -110,5 +111,15 @@ export class EditprofileComponent implements OnInit {
     if(localStorage.getItem("token") === null || localStorage.getItem("token") === undefined){
       this.router.navigate(['/home']);
     }
+  }
+  onImageChange(event){ // to upload image
+
+    const image: File = <File>event.target.files[0];
+		const reader = new FileReader();
+		reader.readAsDataURL(image);
+    reader.onload = (event: any) => {
+			this.imageSrc = reader.result;
+      console.log("image source : " + this.imageSrc)
+		};
   }
 }

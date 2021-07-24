@@ -505,8 +505,7 @@
           <button class="newbt" routerLink="/campaignadd"> Post Campaign </button>
           <br>
           <button class="newbt" routerLink="/projectupload"> Post Project </button>
-          <br>
-          <button class="newbt" routerLink="/Chatbox"> Chatbox </button>
+ 
           <hr>
           <div class="stories"  >
             <h4 class="heading14" routerLink="#" style="color: black; text-align: start;">Campaigns</h4>
@@ -550,12 +549,12 @@
               <div class="profile-photo">
 
                 <img
-                  src="/assets/123.jpg"
+                  src="{{ngoImage}}"
                   class="rounded-circle"
                   width="220"
                   height="210"
                   alt=""/>
-                  <h1 style="color: black;">NGO Name</h1>
+                  <h1 style="color: black;">{{ngoName}}</h1>
               </div>
             </div>
             <div class="row">
@@ -574,7 +573,7 @@
           <div class="container" style="padding-bottom: 10px;">
             <div class="row"   style="background-color: whitesmoke; border-radius: 15px;">
               <div class="col-3" style="padding-top: 15px;">
-                <img src="assets/123.jpg" height="150" width="200" alt="Generic placeholder image" />
+                <img src="{{project.imageUrl}}" height="150" width="200" alt="Generic placeholder image" />
               </div>
               <div class="col-7">
                 <h4  style="text-decoration: underline;">{{project.tittle}}</h4> 
@@ -611,7 +610,7 @@
               <div class="container" style="padding-bottom: 10px;">
                 <div class="row"   style="background-color: whitesmoke; border-radius: 15px;">
                   <div class="col-3" style="padding-top: 15px;">
-                    <img src="assets/123.jpg" height="150" width="200" alt="Generic placeholder image" />
+                    <img src="{{campaign.imageUrl}}" height="150" width="200" alt="Generic placeholder image" />
                   </div>
                   <div class="col-7">
                     <h4  style="text-decoration: underline;">{{campaign.nickName}}</h4> 

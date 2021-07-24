@@ -19,6 +19,10 @@ export class DonorhomeComponent implements OnInit {
    
     private backendService: BackendService,
     private alertService: AlertService) { }
+    showDetials(project){  /*when a user click on readmore button then it works*/
+      this.router.navigate(['projectdetails'],{ queryParams: { id: project._id } });
+       
+    }
 
 
   ngOnInit(): void {

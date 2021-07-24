@@ -595,7 +595,7 @@
               <div class="profile-photo">
 
                 <img
-                  src="/assets/123.jpg"
+                  src="{{imageUrl}}"
                   class="rounded-circle"
                   width="220"
                   height="210"
@@ -606,8 +606,7 @@
             <div class="row">
               <div class="col">
              
-                <button class="zzewbt" >Projects Completed<h6>0</h6></button>
-                <button class="zzzewbt" (click)="userProjects()">Projects Inprogress<h6>{{inprogressProjects}}</h6></button>
+                <button class="zzzewbt" routerLink="/createdprojects">Created Projects<h6>{{totalProjects}}</h6></button>
               </div>
               
             </div>
@@ -637,7 +636,7 @@
               </li>
               <li class="list-item" style="text-align: center;">
                 <form action="page6.html">
-                  <button class="yredbt" *ngIf = "!showDonate" routerLink="/home"> Donate </button>
+                  <button class="yredbt" *ngIf = "!showDonate" routerLink="/#"> Donate </button>
                 </form>
               </li>
          

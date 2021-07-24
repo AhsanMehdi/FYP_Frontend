@@ -27,6 +27,7 @@ export class ProjectuploadComponent implements OnInit {
   uploadInput: EventEmitter<UploadInput>;
   humanizeBytes: Function;
   dragOver: boolean;
+  imageSrc;
   
   createProjectForm: FormGroup  ; 
   validatingForm: FormGroup; /*for validations*/
@@ -67,9 +68,10 @@ export class ProjectuploadComponent implements OnInit {
         
     // }
     this.loading = true;
-    if (this.createProjectForm.value.imageUrl== ""){
-      this.createProjectForm.value.imageUrl = "https://i.dawn.com/primary/2018/11/5be9572e29788.png"
-    }
+    // if (this.createProjectForm.value.imageUrl== ""){
+    //   this.createProjectForm.value.imageUrl = "https://i.dawn.com/primary/2018/11/5be9572e29788.png"
+    // }
+   this.createProjectForm.get('imageUrl').setValue(this.imageSrc)
     this.backendService.createProject(this.createProjectForm.value)
         .pipe(first())
         .subscribe(
@@ -92,5 +94,16 @@ export class ProjectuploadComponent implements OnInit {
     if(localStorage.getItem("token") === null || localStorage.getItem("token") === undefined){
       this.router.navigate(['/home']);
     }
+  }
+
+  onImageChange(event){ // to upload image
+
+    const image: File = <File>event.target.files[0];
+		const reader = new FileReader();
+		reader.readAsDataURL(image);
+    reader.onload = (event: any) => {
+			this.imageSrc = reader.result;
+      console.log("image source : " + this.imageSrc)
+		};
   }
 }
