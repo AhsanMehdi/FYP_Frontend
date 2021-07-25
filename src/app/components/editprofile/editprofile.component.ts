@@ -60,7 +60,7 @@ export class EditprofileComponent implements OnInit {
         
     // }
     this.loading = true;
-   // this.editProfileForm.get('imageUrl').setValue(this.imageSrc)
+    this.editProfileForm.get('imageUrl').setValue(this.imageSrc)
     this.backendService.ngoProfile(this.editProfileForm.value)
         .pipe(first())
         .subscribe(

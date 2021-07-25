@@ -348,16 +348,7 @@
       padding-left: 10px;
       padding-right: 10px;
       width: 200px;
-    }
-    .tnewbt:hover{
-      background-color: transparent;
-      color: black;
-      border: thin;
-      border-radius: 10px;
-      border-top-style: solid;
-      border-bottom-style: solid ;
-      border-color: teal;
-      font-weight:bolder;
+      
     }
     
     .succmann {
@@ -466,6 +457,30 @@
       border: none;
       height: 50px;
     }
+    .bnewbt {
+     background:royalblue;
+     color:white;
+     font-weight:normal;
+     border:thin;
+     border-left-style: solid ;
+     border-right-style: solid ;
+     border-color: royalblue;
+     border-radius: 10px;
+     padding-left: 10px;
+     padding-right: 10px;
+     width: 200px;
+   }
+   .bnewbt:hover{
+     background-color: transparent;
+     color: black;
+     border: thin;
+     border-radius: 10px;
+     border-top-style: solid;
+     border-bottom-style: solid ;
+     border-color: royalblue;
+     font-weight:bolder;
+   }
+
     .comment-box-input {
       width: 100%;
       height: 50px;
@@ -505,7 +520,7 @@
           <button class="newbt" routerLink="/campaignadd"> Post Campaign </button>
         
           <hr>
-          <div class="stories"  >
+          <div class="stories" style="pointer-events: none;" >
             <h4 class="heading14" routerLink="#" style="color: black; text-align: start;">Campaigns</h4>
             <ul >
               <li class="list-item" style="text-align: center;" *ngFor="let cam of cams">
@@ -514,14 +529,11 @@
                 </form>
               </li>
 
-              <li class="list-item" style="text-align: center;">
-                <a href="/campaigns" style="color:dodgerblue; font-size: small;">View more</a>
-              </li>
               
               </ul>
           </div>
           <hr>
-          <div class="stories"  >
+          <div class="stories"  style="pointer-events: none;">
             <h4 class="heading14" routerLink="#" style="color: black; text-align: start;">Projects</h4>
             <ul >
               <li class="list-item" style="text-align: center;" *ngFor="let pro of pros">
@@ -530,9 +542,6 @@
                 </form>
               </li>
       
-              <li class="list-item" style="text-align: center;">
-                <a href="/projects" style="color:dodgerblue; font-size: small;">View more</a>
-              </li>
               </ul>
           </div>
             <hr>
@@ -569,8 +578,8 @@
  <br>
  <br>
             <div class="container" *ngFor="let campaign of campaigns">
-              <div class="container" style="padding-bottom: 10px;">
-                <div class="row"   style="background-color: whitesmoke; border-radius: 15px;">
+              <div class="container" style="padding-bottom: 10px;"  >
+                <div class="row"   style="background-color: whitesmoke; border: solid black 1px;">
                   <div class="col-3" style="padding-top: 15px;">
                     <img src="{{campaign.imageUrl}}" height="150" width="200" alt="Generic placeholder image" />
                   </div>
@@ -585,7 +594,7 @@
     
                   </div>
                   <div class="col-6" style="text-align: end;">
-                    <button class="tnewbt" routerLink="/editcampaign">Edit</button>
+                    <button class="bnewbt" routerLink="/editcampaign">Edit</button>
                               </div>
                  
                 </div> 
@@ -598,7 +607,7 @@
         <!-- end panel -->
         <!-- ///////// -->
 
-        <div class="col-2">
+        <div class="col-2" style="pointer-events: none;">
           <br>
           <br>
           <br>
@@ -615,9 +624,7 @@
                 </form>
               </li>
       
-              <li class="list-item" style="text-align: center;">
-                <a href="/ngos" style="color:dodgerblue; font-size: small;">View more</a>
-              </li>
+
               </ul>
           </div>
           <hr>
@@ -638,9 +645,6 @@
                 <form action="page6.html">
                   <button class="tnewbt">Urgent Purpose</button>
                 </form>
-              </li>
-              <li class="list-item" style="text-align: center;">
-                <a href="/campaigns" style="color:dodgerblue; font-size: small;">View more</a>
               </li>
               
               </ul>

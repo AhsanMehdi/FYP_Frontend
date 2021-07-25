@@ -251,7 +251,9 @@ createProject(project:  IProject) {
   donorProfile(donorProfile:  IDonorProfile) {
 
     
-    console.log ("I am going to database")
+
+    
+    console.log ("I am going to database also donorprofile")
     console.log(    JSON.stringify(donorProfile)
     )
     let token = localStorage.getItem('token')
@@ -267,12 +269,12 @@ createProject(project:  IProject) {
     console.log("token",token)
     console.log("authoptions",httpOptions)
     return this.httpClient.post(this.REST_API_SERVER+"/api/profile/donor",  JSON.stringify(donorProfile), httpOptions);
-  }
+}
   /* function to edit profile of an ngo */
   ngoProfileUpdate(ngoProfile:  INgoProfile) {
 
     
-    console.log ("I am going to database")
+    console.log ("I am going to database also ngorprofileupdate")
     console.log(    JSON.stringify(ngoProfile)
     )
     let token = localStorage.getItem('token')
@@ -293,7 +295,7 @@ createProject(project:  IProject) {
     ngoProfile(ngoProfile:  INgoProfile) {
 
     
-      console.log ("I am going to database")
+      console.log ("I am going to database also ngoprofile")
       console.log(    JSON.stringify(ngoProfile)
       )
       let token = localStorage.getItem('token')

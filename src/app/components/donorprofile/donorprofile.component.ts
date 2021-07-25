@@ -35,9 +35,9 @@ export class DonorProfileComponent implements OnInit {
         this.editProfileForm = this.formBuilder.group({
    
      
-      firstName: ['', [Validators.required, Validators.minLength(12)]],
-      middleName: ['', [Validators.required, Validators.minLength(12)]],
-      lastName: ['', [Validators.required, Validators.minLength(12)]],
+      firstName: ['', [Validators.required, Validators.minLength(2)]],
+      middleName: ['', [Validators.required, Validators.minLength(2)]],
+      lastName: ['', [Validators.required, Validators.minLength(2)]],
       dob: ['', [Validators.required, Validators.minLength(8)]],
       cellNumber: ['', Validators.required],
       cnic: ['', Validators.required],
@@ -49,8 +49,8 @@ export class DonorProfileComponent implements OnInit {
       domainOrphanage:  [false],
       domainEnvironment:  [false],
       domainSocialWelfare:  [false],
-      domainOther:  [false],
-      imageUrl: ['', Validators.required]
+      domainOther:  [false]
+//      imageUrl: ['', Validators.required]
  
     });
      }
@@ -67,7 +67,7 @@ export class DonorProfileComponent implements OnInit {
         
     // }
     this.loading = true;
-   this.editProfileForm.get('imageUrl').setValue(this.imageSrc)
+//    this.editProfileForm.get('imageUrl').setValue(this.imageSrc)
     this.backendService.donorProfile(this.editProfileForm.value)
         .pipe(first())
         .subscribe(
