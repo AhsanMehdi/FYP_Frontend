@@ -138,6 +138,14 @@ getProjectOwnerId(id:string): Observable<any> {
   console.log(id)
   return  this.httpClient.get(this.REST_API_SERVER+"/api/project/id/"+id,   this.options)
 }
+
+//api which get ngoid and return userID
+getNgoUserId(id:string): Observable<any> {
+  console.log(id)
+  return  this.httpClient.get(this.REST_API_SERVER+"/api/profile/NGOO/"+id,   this.options)
+}
+
+
 /* api which return user/owner id of a specific campaign*/
 getCampaignOwnerId(id:string): Observable<any> {
   console.log(id)

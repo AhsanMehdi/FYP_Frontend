@@ -626,7 +626,7 @@
           
           <br>
           
-          <div class="stories"  >
+          <div class="stories" style="align-content: center;" >
             <ul >
               <br>
               <li class="list-item" style="text-align: center;">
@@ -634,11 +634,15 @@
                   <h6 > <i class="fa fa-star" style="font-size:20px; color: deeppink;"></i> Rating</h6>
                 </form>
               </li>
-              <li class="list-item" style="text-align: center;">
-                <form action="page6.html">
-                  <button class="yredbt" *ngIf = "!showDonate" routerLink="/donatenow"> Donate </button>
-                </form>
-              </li>
+              <span *ngFor='let in of counter(rating) ;let i = index'>
+                <span class="fa fa-star checked" style="color: greenyellow;"></span>
+              </span>
+    
+              <span *ngFor='let in of counter(runrated) ;let i = index'>
+                <span class="fa fa-star"></span>
+              </span>
+    
+    
          
           
               <br>

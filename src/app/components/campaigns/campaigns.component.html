@@ -206,7 +206,7 @@
           </div> 
         </div>
         <div class="container" *ngFor="let campaign of campaigns | filter:searchText">
-          <div class="container" style="padding-bottom: 10px;">
+          <div class="container" style="padding-bottom: 10px;"  style="border: 1px solid black;">
             <div class="row"   style="background-color: whitesmoke; border-radius: 15px;">
               <div class="col-3" style="padding-top: 15px;">
                 <img src="{{campaign.imageUrl}}" height="150" width="200" alt="Generic placeholder image" />
@@ -230,6 +230,7 @@
             </div> 
             
           </div>
+          <br>
         </div>
          
         
